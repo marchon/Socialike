@@ -21,14 +21,14 @@
       $('body').attr('id', '');
       $('#wrapper').css('display', 'table');
       var pathArray = window.location.pathname;
-      if(pathArray == '' || typeof(pathArray) == 'undefined')
+      if(pathArray == '/')
       {
 
         window.top.location = "//socialike.herokuapp.com/home.html";
         console.log("Redirecting: "+ pathArray);
 
       }
-      else if (pathArray === 'home.html') {
+      else {
 
           console.log("Calling get user & friends function: "+ pathArray);
 
