@@ -7,6 +7,7 @@ function Login()
 FB.login(function(response) { 
 if (response.authResponse) 
 { 
+console.log("Entered in Login function");
 window.top.location = "http://www.socialike.herokuapp.com/home.html";
 getUser();
 getFriends();
