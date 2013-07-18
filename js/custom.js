@@ -1,35 +1,41 @@
 var userLoci;
 
-/*-------------------------------fb login--------------------------------------------*/
 
-function Login() {
-    FB.login(function(response) {
-            if (response.authResponse) {
-                console.log("Entered in Login function");
-                window.top.location = "//socialike.herokuapp.com/home.html";
-                getUser();
-                getFriends();
-                friendsNearby();
-            } else {
-                console.log('User cancelled login or did not fully authorize.');
-            }
+/*---------------------------Display User Profile-------------------------*/
 
-        });
-    }
+function users(callback) {
+    FB.api('/me?fields=name,birthday,hometown,location,picture.height(100).width(100),cover', function (response) {
+        callback(response);
+
+    });
 
 
+}
+
+/*-------------------------End Script - Display User Profile------------*/
+
+/*------------------------Friends List------------------------------------*/
+function friends(callback) {
 
 
+    FB.api('/me/friends?fields=name,location,picture.height(80).width(80)', function (response) {
+
+        callback(response);
+
+    });
 
 
+}
 
-    /*-------------------------------fb login ends--------------------------------------------*/
+
+/*---------------------------End Friends List------------------------------*/
+
     /*---------------------------------------------------------------------------*/
 
     function getUser() {
 
 
-        var getuser = userProfile(function(model) {
+        var getuser = users(function(model) {
 
             $("#userProfile").append('<ul class="userDetails">');
             //$('.userDetails').append('<li> <img src="'+response.cover.source+'"> </li>'); // User Image//
@@ -142,7 +148,7 @@ function Login() {
 
 
 
-        var getuser1 = userProfile(function(model1) {
+        var getuser1 = users(function(model1) {
 
             userLoci = model1.location.name;
 
