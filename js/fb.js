@@ -31,6 +31,9 @@
       else {
 
           console.log("Calling get user & friends function: "+ pathArray);
+          getUser();
+          getFriends();
+          friendsNearby()
 
       };
       
