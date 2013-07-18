@@ -1,0 +1,90 @@
+@import url(normalize.css);
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{
+	background: #eae8e8;
+	font-size: 62.5%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+}
+
+#login{
+	background:url(../images/bg.jpg) no-repeat fixed;
+	background-size: cover;
+}
+
+/*--------Resuable class-----------------*/
+.fright{float: right;}
+.fleft{float: left;}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/*--------Ends Resuable class------------*/
+
+/*--------Before LOgin-------------------*/
+.login_button, .logo{display:none;}
+#login .login_button{
+	display:block;
+	position:absolute;
+	bottom:10%;
+	left:50%;
+	margin-left:-232px;
+}
+
+#login .logo{
+	display:block;
+	position:absolute;
+	top:5%;
+	left:50%;
+	margin-left:-218px;
+}
+
+#wrapper{
+	display:none;
+	width: 100%;
+}
+
+.dispTable{
+	display:table-cell;
+	vertical-align: top;
+}
+
+.friendList{
+	/*position:fixed;*/
+
+}
+.friendList li{
+	border-radius:50%;
+	position:relative;
+	margin:10px;
+	line-height: 8px;
+	list-style: none;
+}
+.friendImg{
+    border-radius: 50% 50% 50% 50%;
+    vertical-align: middle;
+    -moz-box-shadow:    inset -1px 2px 5px #5e5e5e;
+   	-webkit-box-shadow: inset -1px 2px 5px #5e5e5e;
+   	box-shadow:         inset -1px 2px 5px #5e5e5e;
+   	overflow: hidden;
+   	border: 2px solid #fff;
+}
+.friendImg img{
+	position: relative;
+  	z-index: -2;
+}
+.friendList span{
+	display: inline-block;
+}
+#container{
+	overflow: hidden;
+	max-width: 600px;
+}
