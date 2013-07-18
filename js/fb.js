@@ -20,7 +20,21 @@
       
       $('body').attr('id', '');
       $('#wrapper').css('display', 'table');
-      Login();
+      var pathArray = window.location.pathname;
+      if(pathArray == '' || typeof(pathArray) == 'undefined')
+      {
+
+        window.top.location = "//socialike.herokuapp.com/home.html";
+        console.log("Redirecting: "+ pathArray);
+
+      }
+      else if (pathArray === 'home.html') {
+
+          console.log("Calling get user & friends function: "+ pathArray);
+
+      };
+      
+
 
     } else if (response.status === 'not_authorized') {
       // In this case, the person is logged into Facebook, but not into the app, so we call
