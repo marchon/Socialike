@@ -1,7 +1,7 @@
   window.fbAsyncInit = function() {
       FB.init({
           appId: '488181561252340', // App ID
-          channelUrl: 'https://socialike.herokuapp.com/socircle.html', // Channel File
+          channelUrl: 'https://socialike.herokuapp.com/index.html', // Channel File
           status: true, // check login status
           cookie: true, // enable cookies to allow the server to access the session
           xfbml: true // parse XFBML
@@ -59,7 +59,7 @@
               console.log("Calling get user & friends function: ");
               getUser();
               getFriends();
-              friendsNearby()
+              friendsNearby();
 
               // };
           } else if (response.status === 'not_authorized') {
