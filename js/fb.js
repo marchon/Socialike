@@ -16,12 +16,12 @@
               $('body').attr('id', '');
               $('#wrapper').css('display', 'table');
               var pathArray = window.location.pathname;
-              if (pathArray == '/') {
+              // if (pathArray == '/') {
 
-                  window.top.location = "//socialike.herokuapp.com/home.html";
-                  console.log("Redirecting: " + pathArray);
+              window.top.location = "//socialike.herokuapp.com/home.html";
+              console.log("Redirecting: " + pathArray);
 
-              } 
+              // } 
               // else {
 
               //     console.log("Calling get user & friends function: " + pathArray);
@@ -35,16 +35,16 @@
 
           } else if (response.status === 'not_authorized') {
 
-              FB.login();
+              // FB.login();
           } else {
 
-              FB.login();
+              // FB.login();
           }
       });
 
       FB.getLoginStatus(function(response) {
 
-              // if (response.status === 'connected') {
+          if (response.status === 'connected') {
 
               //     $('body').attr('id', '');
               //     $('#wrapper').css('display', 'table');
