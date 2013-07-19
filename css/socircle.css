@@ -3,7 +3,7 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body{
-	background: #eae8e8;
+	background: #ecf0f1;
 	font-size: 62.5%;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color:#333;
@@ -30,8 +30,7 @@ body{
 /*--------Ends Resuable class------------*/
 
 /*--------Before LOgin-------------------*/
-.login_button, .logo{display:none;}
-#login .login_button{
+.login_button{
 	display:block;
 	position:absolute;
 	bottom:10%;
@@ -39,7 +38,7 @@ body{
 	margin-left:-232px;
 }
 
-#login .logo{
+.logo{
 	display:block;
 	position:absolute;
 	top:5%;
@@ -48,17 +47,13 @@ body{
 }
 
 #wrapper{
-	
-	width: 100%;
-}
-
-.dispTable{
-	display:table-cell;
-	vertical-align: top;
+	width:97.8515625%;
 }
 
 .friendList{
-	/*position:fixed;*/
+	position:fixed;
+	right:0;
+	top:0;
 
 }
 .friendList li{
@@ -81,7 +76,7 @@ body{
 	position: relative;
   	z-index: -2;
 }
-.friendList span{
+.nearList span, .friendList span{
 	display: inline-block;
 }
 #container{

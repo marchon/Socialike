@@ -66,7 +66,7 @@ function getFriends() {
         }
 
         /*------------------------- City-Wise friends count Chart---------------*/
-        
+
         chartdat = chartdat.reduce(function(acc, curr) {
             if (typeof acc[curr] == 'undefined') {
                 acc[curr] = 1;
@@ -115,7 +115,12 @@ function getFriends() {
                 series: [{
                     type: 'pie',
                     name: 'City',
-                    data: datasum1
+                    innerSize: '20%',
+                    data: datasum1,
+                    showInLegend: false,
+                    dataLabels: {
+                        enabled: true
+                    }
                 }]
             });
         });
