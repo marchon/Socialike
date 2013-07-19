@@ -56,7 +56,7 @@
 
               //     } else {
 
-              console.log("Calling get user & friends function: " + pathArray);
+              console.log("Calling get user & friends function: ");
               getUser();
               getFriends();
               friendsNearby()
