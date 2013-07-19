@@ -52,7 +52,7 @@ function getUser() {
 /*-------------------------Friends List ------------------------------*/
 
 function getFriends() {
-
+    var chartdat = [];
     var getfriends = friends(function(model) {
 
         for (var i = 0; i < model.data.length; i++) {
@@ -66,7 +66,7 @@ function getFriends() {
         }
 
         /*------------------------- City-Wise friends count Chart---------------*/
-        var chartdat = [];
+        
         chartdat = chartdat.reduce(function(acc, curr) {
             if (typeof acc[curr] == 'undefined') {
                 acc[curr] = 1;
