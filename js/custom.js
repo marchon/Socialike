@@ -204,22 +204,20 @@ function albums() {
             var albumid = myalbum.albums.data[i].id; //Album ID
             var albumPic = pic(albumid, function(albPic) {
 
-                return albPic.data[0].source
+                coverPicture =  albPic.data[0].source
                 //albumPic1 = albPic.data[0].source;
             });
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
-
-            console.log(typeof(albumPic));
             
-            var coverphoto = albumPic; // Album Cover
+            //var coverphoto = albumPic; // Album Cover
 
 
             var list = document.createElement("li");
             list.setAttribute("id", albumid);
 
             var image = document.createElement("img");
-            image.setAttribute("src", coverphoto);
+            image.setAttribute("src", coverPicture);
             image.setAttribute("id", albumid);
             image.setAttribute("width", "100");
             image.setAttribute("height", "100");
