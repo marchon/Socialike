@@ -198,10 +198,10 @@ function albums() {
     var myAlbum = users(function(myalbum) {
 
         var len = myalbum.albums.data.length;
-        var albumid = myalbum.albums.data[i].id; //Album ID
+        
         
         for (var i = 1; i < len; i++) {
-
+            var albumid = myalbum.albums.data[i].id; //Album ID
             var albumPic = photos(albumid, function(albPic) {
 
                 albumPic1 = albPic.data[0].source
