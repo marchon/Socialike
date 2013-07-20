@@ -202,9 +202,10 @@ function albums() {
         for (var i = 1; i < len; i++) {
 
             var albumid = myalbum.albums.data[i].id; //Album ID
-            var albumPic = pic(albumid, function(albPic) {
+            albumPic = pic(albumid, function(albPic) {
 
                 coverPicture =  albPic.data[0].source
+                return coverPicture
                 //albumPic1 = albPic.data[0].source;
             });
 
@@ -217,7 +218,7 @@ function albums() {
             list.setAttribute("id", albumid);
 
             var image = document.createElement("img");
-            image.setAttribute("src", coverPicture);
+            image.setAttribute("src", albumPic);
             image.setAttribute("id", albumid);
             image.setAttribute("width", "100");
             image.setAttribute("height", "100");
