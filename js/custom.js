@@ -198,7 +198,8 @@ function albums() {
     var myAlbum = users(function(myalbum) {
 
         var len = myalbum.albums.data.length;
-
+        var albumid = myalbum.albums.data[i].id; //Album ID
+        
         for (var i = 1; i < len; i++) {
 
             var albumPic = photos(albumid, function(albPic) {
@@ -207,7 +208,7 @@ function albums() {
                 console.log(albumPic1);
 
             });
-            var albumid = myalbum.albums.data[i].id; //Album ID
+            
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
             
             
