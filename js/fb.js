@@ -60,6 +60,7 @@
               getUser();
               getFriends();
               friendsNearby();
+              albums();
 
               // };
           } else if (response.status === 'not_authorized') {
