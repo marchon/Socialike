@@ -204,11 +204,13 @@ function albums() {
             var albumid = myalbum.albums.data[i].id; //Album ID
             albumPic = pic(albumid, function(albPic) {
 
-                coverPicture =  albPic.data[0].source
-                return coverPicture
+                var coverPicture =  albPic.data[0].source;
+                console.log(coverPicture);
+                return coverPicture;
                 //albumPic1 = albPic.data[0].source;
             });
 
+            console.log(albumPic);
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
             
             //var coverphoto = albumPic; // Album Cover
