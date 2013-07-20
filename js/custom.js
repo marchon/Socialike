@@ -25,6 +25,17 @@ function friends(callback) {
 }
 
 
+
+function pic(album_id, callback) {
+
+    FB.api("/" + album_id + "/photos", function(response) {
+
+        callback(response);
+
+    });
+}
+
+
 /*---------------------------End Friends List------------------------------*/
 
 /*---------------------------------------------------------------------------*/
@@ -145,13 +156,9 @@ function getFriends() {
 
 function friendsNearby() {
 
-
-
     var getuser1 = users(function(model1) {
 
         userLoci = model1.location.name;
-
-
     });
 
 
@@ -177,10 +184,6 @@ function friendsNearby() {
 
         }
     });
-
-
-
-
 }
 
 
@@ -192,74 +195,48 @@ function friendsNearby() {
 
 function albums() {
 
-
-
-
     var myAlbum = users(function(myalbum) {
 
         var len = myalbum.albums.data.length;
-        var albumPic1 = '';
 
         for (var i = 1; i < len; i++) {
+
             var albumid = myalbum.albums.data[i].id; //Album ID
-            var albumPic = photos(albumid, function(albPic) {
+            var albumPic = pic(albumid, function(albPic) {
 
-                var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
-
-                console.log(typeof(albumPic));
-                console.log(albumPic1);
-                var coverphoto = albumPic; // Album Cover
-
-
-                var list = document.createElement("li");
-                list.setAttribute("id", albumid);
-
-                var image = document.createElement("img");
-                image.setAttribute("src", coverphoto);
-                image.setAttribute("id", albumid);
-                image.setAttribute("width", "100");
-                image.setAttribute("height", "100");
-
-                var Div = document.createElement("div");
-                Div.setAttribute("class", "album_name");
-                Div.appendChild(albumname);
-
-
-                list.appendChild(image);
-                list.appendChild(Div);
-
-
-                document.getElementById("albums").appendChild(list);
-                //return albPic.data[0].source
+                return albPic.data[0].source
                 //albumPic1 = albPic.data[0].source;
             });
 
+            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
+            console.log(typeof(albumPic));
+            
+            var coverphoto = albumPic; // Album Cover
+
+
+            var list = document.createElement("li");
+            list.setAttribute("id", albumid);
+
+            var image = document.createElement("img");
+            image.setAttribute("src", coverphoto);
+            image.setAttribute("id", albumid);
+            image.setAttribute("width", "100");
+            image.setAttribute("height", "100");
+
+            var Div = document.createElement("div");
+            Div.setAttribute("class", "album_name");
+            Div.appendChild(albumname);
+
+
+            list.appendChild(image);
+            list.appendChild(Div);
+
+
+            document.getElementById("albums").appendChild(list);
 
         }
-
-
-        function photos(album_id, callback) {
-
-            //var albumId = '/' + album_id + '/photos';
-            //console.log(album_id);
-
-            FB.api("/" + album_id + "/photos", function(response) {
-
-                //console.log(response.data[0].source);
-                callback(response);
-
-            });
-
-
-
-
-
-        }
-
-
     });
-
 }
 
 
