@@ -202,7 +202,7 @@ function albums() {
 
         for (var i = 1; i < len; i++) {
             var albumid = myalbum.albums.data[i].id; //Album ID
-            var albumPic = photos(albumid, function(albPic) {
+            var albumPic = photos(albumid, var albumPic1 = function(albPic) {
 
                 return albPic.data[0].source
                 albumPic1 = albPic.data[0].source;
