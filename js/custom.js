@@ -5,7 +5,7 @@ var userLoci;
 
 function users(callback) {
 
-    FB.api('/me?fields=name,birthday,hometown,location,picture.height(100).width(100),cover', function(response) {
+    FB.api('/me?fields=name,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
         callback(response);
 
     });
@@ -186,6 +186,86 @@ function friendsNearby() {
 
 
 /*-------------------------Friends Nearby complete ------------------------------*/
+
+
+/*-------------------------User Album - remove myAlbum and check ------------------------------*/
+
+function albums() {
+
+
+
+
+    var myAlbum = users(function(myalbum) {
+
+        var len = myalbum.albums.data.length;
+
+        for (var i = 1; i < len; i++) {
+
+            var albumid = myalbum.albums.data[i].id; //Album ID
+            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+            var albumPic = photos(albumid,function(albPic) {
+
+                return albPic.data[0].source
+
+
+            });
+            console.log(albumPic);
+            var coverphoto = albumPic; // Album Cover
+
+
+            var list = document.createElement("li");
+            list.setAttribute("id", albumid);
+
+            var image = document.createElement("img");
+            image.setAttribute("src", coverphoto);
+            image.setAttribute("id", albumid);
+            image.setAttribute("width", "100");
+            image.setAttribute("height", "100");
+
+            var Div = document.createElement("div");
+            Div.setAttribute("class", "album_name");
+            Div.appendChild(albumname);
+
+
+            list.appendChild(image);
+            list.appendChild(Div);
+
+
+            document.getElementById("albums").appendChild(list);
+
+        }
+
+
+        function photos(album_id, callback) {
+
+            var albumId = '/' + album_id + '/photos';
+            console.log(albumId);
+
+            FB.api(albumId, function(response) {
+
+                callback(response);
+
+            });
+
+
+
+            //return albumphoto.data[0].source;
+
+
+        }
+
+
+    });
+
+}
+
+
+
+/*-------------------------User Album Ends ------------------------------*/
+
+
+
+
 
 
 /*-------------------------Logout Script ------------------------------*/
