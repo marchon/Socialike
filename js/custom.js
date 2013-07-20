@@ -198,19 +198,20 @@ function albums() {
     var myAlbum = users(function(myalbum) {
 
         var len = myalbum.albums.data.length;
-        
+        var albumPic1 = '';
 
         for (var i = 1; i < len; i++) {
             var albumid = myalbum.albums.data[i].id; //Album ID
             var albumPic = photos(albumid, function(albPic) {
 
                 return albPic.data[0].source
-                
+                albumPic1 = albPic.data[0].source;
             });
             
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
             
-            console.log(albumPic);
+            console.log(typeof(albumPic));
+            console.log(albumPic1);
             var coverphoto = albumPic; // Album Cover
 
 
@@ -240,11 +241,11 @@ function albums() {
         function photos(album_id, callback) {
 
             //var albumId = '/' + album_id + '/photos';
-            console.log(album_id);
+            //console.log(album_id);
 
             FB.api("/" + album_id + "/photos", function(response) {
 
-                console.log(response.data[0].source);
+                //console.log(response.data[0].source);
                 callback(response);
 
             });
