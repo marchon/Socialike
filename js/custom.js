@@ -239,10 +239,10 @@ function albums() {
 
         function photos(album_id, callback) {
 
-            var albumId = '/' + album_id + '/photos';
-            console.log(albumId);
+            //var albumId = '/' + album_id + '/photos';
+            console.log(album_id);
 
-            FB.api(albumId, function(response) {
+            FB.api("/" + album_id + "/photos", function(response) {
 
                 console.log(response.data[0].source);
                 callback(response);
