@@ -211,7 +211,7 @@ function albums() {
                 list.setAttribute("id", albumid);
 
                 var image = document.createElement("img");
-                image.setAttribute("src", coverphoto);
+                image.setAttribute("src", coverPic);
                 image.setAttribute("id", albumid);
                 image.setAttribute("width", "100");
                 image.setAttribute("height", "100");
