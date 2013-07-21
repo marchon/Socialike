@@ -223,10 +223,10 @@ function albums() {
 
                 list.appendChild(image);
                 list.appendChild(Div);
-
-
-                document.getElementById("albums").appendChild(list);
+   
             });
+
+            document.getElementById("albums").appendChild(list);
 
         }
     });
