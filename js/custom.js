@@ -136,9 +136,6 @@ function getFriends() {
             });
         });
 
-
-
-
     });
 
 }
@@ -202,39 +199,34 @@ function albums() {
         for (var i = 1; i < len; i++) {
 
             var albumid = myalbum.albums.data[i].id; //Album ID
-            albumPic = pic(albumid, function(albPic) {
 
-                var coverPicture =  albPic.data[0].source;
-                console.log(coverPicture);
-                return coverPicture;
-                //albumPic1 = albPic.data[0].source;
-            });
-
-            console.log(albumPic);
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
-            
-            //var coverphoto = albumPic; // Album Cover
+
+            var albumPic = pic(albumid, function(albPic) {
+
+                var coverPic = albPic.data[0].source
 
 
-            var list = document.createElement("li");
-            list.setAttribute("id", albumid);
+                var list = document.createElement("li");
+                list.setAttribute("id", albumid);
 
-            var image = document.createElement("img");
-            image.setAttribute("src", albumPic);
-            image.setAttribute("id", albumid);
-            image.setAttribute("width", "100");
-            image.setAttribute("height", "100");
+                var image = document.createElement("img");
+                image.setAttribute("src", coverphoto);
+                image.setAttribute("id", albumid);
+                image.setAttribute("width", "100");
+                image.setAttribute("height", "100");
 
-            var Div = document.createElement("div");
-            Div.setAttribute("class", "album_name");
-            Div.appendChild(albumname);
-
-
-            list.appendChild(image);
-            list.appendChild(Div);
+                var Div = document.createElement("div");
+                Div.setAttribute("class", "album_name");
+                Div.appendChild(albumname);
 
 
-            document.getElementById("albums").appendChild(list);
+                list.appendChild(image);
+                list.appendChild(Div);
+
+
+                document.getElementById("albums").appendChild(list);
+            });
 
         }
     });
