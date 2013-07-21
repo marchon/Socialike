@@ -12,26 +12,7 @@
 
           if (response.status === 'connected') {
 
-
-              $('body').attr('id', '');
-              $('#wrapper').css('display', 'table');
-              var pathArray = window.location.pathname;
-              // if (pathArray == '/') {
-
               window.top.location = "//socialike.herokuapp.com/home.html";
-              console.log("Redirecting: " + pathArray);
-
-              // } 
-              // else {
-
-              //     console.log("Calling get user & friends function: " + pathArray);
-              //     getUser();
-              //     getFriends();
-              //     friendsNearby()
-
-              // };
-
-
 
           } else if (response.status === 'not_authorized') {
 
@@ -46,23 +27,12 @@
 
           if (response.status === 'connected') {
 
-              //     $('body').attr('id', '');
-              //     $('#wrapper').css('display', 'table');
-              //     var pathArray = window.location.pathname;
-              //     if (pathArray == '/') {
-
-              //         window.top.location = "//socialike.herokuapp.com/home.html";
-              //         console.log("Redirecting: " + pathArray);
-
-              //     } else {
-
-              console.log("Calling get user & friends function: ");
               getUser();
               getFriends();
               friendsNearby();
               albums();
 
-              // };
+
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
               // but has not authenticated your app

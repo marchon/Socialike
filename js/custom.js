@@ -154,13 +154,15 @@ function getFriends() {
 
 function friendsNearby() {
 
-    var getuser1 = users(function(model1) {
+    console.log("Friends nearby called")
+
+    users(function(model1) {
 
         userLoci = model1.location.name;
     });
 
 
-    var getfriends1 = friends(function(model) {
+    friends(function(model) {
         //console.log('inside getfriends1 '+userLoci);
 
         for (var i = 0; i < model.data.length; i++) {
@@ -201,7 +203,7 @@ function albums() {
 
             var albumid = myalbum.albums.data[i].id; //Album ID
 
-            albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
             var list = document.createElement("li");
             list.setAttribute("id", albumid);
@@ -219,7 +221,7 @@ function albums() {
 
         }
 
-        
+
     });
 }
 
