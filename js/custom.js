@@ -1,6 +1,7 @@
 var userLoci;
 
 
+
 /*---------------------------Display User Profile-------------------------*/
 
 function users(callback) {
@@ -200,14 +201,13 @@ function albums() {
 
             var albumid = myalbum.albums.data[i].id; //Album ID
 
-             albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
             var albumPic = pic(albumid, function(albPic) {
 
-                var coverPic = albPic.data[0].source
+                var coverPic = albPic.data[0].source;
 
-
-                var list = document.createElement("li");
+                 var list = document.createElement("li");
                 list.setAttribute("id", albumid);
 
                 var image = document.createElement("img");
@@ -223,10 +223,15 @@ function albums() {
 
                 list.appendChild(image);
                 list.appendChild(Div);
-   
-            });
 
-            document.getElementById("albums").appendChild(list);
+
+                document.getElementById("albums").appendChild(list);
+
+                });
+
+                
+                
+            
 
         }
     });
