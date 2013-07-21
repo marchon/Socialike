@@ -156,13 +156,13 @@ function friendsNearby() {
 
     console.log("Friends nearby called")
 
-    users(function(model1) {
+    var userLocationName = users(function(model1) {
 
         userLoci = model1.location.name;
     });
 
 
-    friends(function(model) {
+    var friendsLocationName = friends(function(model) {
         //console.log('inside getfriends1 '+userLoci);
 
         for (var i = 0; i < model.data.length; i++) {
