@@ -199,11 +199,11 @@ function albums() {
 
         for (var i = 1; i < len; i++) {
 
-            var albumid = myalbum.albums.data[i].id; //Album ID
+             pic(albumid, function(albPic) {
 
-             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+                var albumid = myalbum.albums.data[i].id; //Album ID
 
-            var albumPic = pic(albumid, function(albPic) {
+                var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
                 var coverPic = albPic.data[0].source;
 
