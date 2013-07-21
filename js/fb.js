@@ -28,8 +28,8 @@
           if (response.status === 'connected') {
 
               getUser();
-              getFriends();
               friendsNearby();
+              getFriends();       
               //albums();
 
 
