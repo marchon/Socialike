@@ -199,9 +199,11 @@ function albums() {
 
         for (var i = 1; i < len; i++) {
 
+albumid = myalbum.albums.data[i].id; //Album ID
+
              pic(albumid, function(albPic) {
 
-                var albumid = myalbum.albums.data[i].id; //Album ID
+                
 
                 var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
