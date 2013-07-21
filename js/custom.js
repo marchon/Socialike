@@ -27,14 +27,14 @@ function friends(callback) {
 
 
 
-function pic(album_id, callback) {
+// function pic(album_id, callback) {
 
-    FB.api("/" + album_id + "/photos", function(response) {
+//     FB.api("/" + album_id + "/photos", function(response) {
 
-        callback(response);
+//         callback(response);
 
-    });
-}
+//     });
+// }
 
 
 /*---------------------------End Friends List------------------------------*/
@@ -175,7 +175,7 @@ function friendsNearby() {
 
                 if (model.data[i].location.name === userLoci) {
 
-
+console.log("Friends nearby  li called");
                     $('.nearList').append('<li> <span class="friendImg"><img src="' + model.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + model.data[i].name + '</span></li>');
 
                 }
@@ -193,37 +193,37 @@ function friendsNearby() {
 
 /*-------------------------User Album - remove myAlbum and check ------------------------------*/
 
-function albums() {
+// function albums() {
 
-    users(function(myalbum) {
+//     users(function(myalbum) {
 
-        var len = myalbum.albums.data.length;
+//         var len = myalbum.albums.data.length;
 
-        for (var i = 1; i < len; i++) {
+//         for (var i = 1; i < len; i++) {
 
-            var albumid = myalbum.albums.data[i].id; //Album ID
+//             var albumid = myalbum.albums.data[i].id; //Album ID
 
-            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+//             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
-            var list = document.createElement("li");
-            list.setAttribute("id", albumid);
+//             var list = document.createElement("li");
+//             list.setAttribute("id", albumid);
 
 
 
-            var Div = document.createElement("div");
-            Div.setAttribute("class", "album_name");
-            Div.appendChild(albumname);
+//             var Div = document.createElement("div");
+//             Div.setAttribute("class", "album_name");
+//             Div.appendChild(albumname);
 
-            list.appendChild(Div);
+//             list.appendChild(Div);
             
-            document.getElementById("albums").appendChild(list);
+//             document.getElementById("albums").appendChild(list);
 
 
-        }
+//         }
 
 
-    });
-}
+//     });
+// }
 
 
 

@@ -30,7 +30,7 @@
               getUser();
               getFriends();
               friendsNearby();
-              albums();
+              //albums();
 
 
           } else if (response.status === 'not_authorized') {
