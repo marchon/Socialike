@@ -200,7 +200,7 @@ function albums() {
 
             var albumid = myalbum.albums.data[i].id; //Album ID
 
-            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+             albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
             var albumPic = pic(albumid, function(albPic) {
 
