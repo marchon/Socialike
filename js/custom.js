@@ -46,6 +46,7 @@ function getUser() {
 
     var getuser = users(function(model) {
         userLoci = model.location.name;
+        console.log(userLoci);
         $("#userProfile").append('<ul class="userDetails">');
         //$('.userDetails').append('<li> <img src="'+response.cover.source+'"> </li>'); // User Image//
         $('.userDetails').append('<li> <img src="' + model.picture.data.url + '"width="100" height="100" > </li>'); // User Image//
@@ -152,7 +153,7 @@ function getFriends() {
 /*------------------------- Friends Nearby-------------------------*/
 
 
-function friendsNearby() {
+function friendsNearby(userLoci) {
 
     
 
@@ -166,13 +167,6 @@ function friendsNearby() {
     var friendsLocationName = friends(function(model) {
         //console.log('inside getfriends1 '+userLoci);
 
-        users(function(model1) {
-
-       // return model1.location.name;
-       userLoci = model1.location.name;
-        console.log(userLoci);
-      
-    });
 
         for (var i = 0; i < model.data.length; i++) {
 

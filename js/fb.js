@@ -29,7 +29,7 @@
 
               getUser();
               getFriends();
-              friendsNearby();
+              friendsNearby(userLoci);
               //albums();
 
 
