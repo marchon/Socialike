@@ -29,11 +29,11 @@
 
               // getUser();
               // getFriends();
-              // friendsNearby();
+               friendsNearby();
               // //albums();
 
-              users();
-              friends();
+              //users();
+              //friends();
 
 
           } else if (response.status === 'not_authorized') {
