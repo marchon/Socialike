@@ -158,7 +158,7 @@ function friendsNearby() {
    var userLocationName = users(function(model1) {
 
         userLoci = model1.location.name;
-        console.log(userLoci1);
+        console.log(userLoci);
 
     });
 
@@ -175,8 +175,8 @@ function friendsNearby() {
                     $('#friend_nearby').append('<ul class="nearList">');
                 }
             
-console.log(userLoci1);
-                if (model.data[i].location.name === userLoci1) {
+console.log(userLoci);
+                if (model.data[i].location.name === userLoci) {
 
 console.log("Friends nearby  li called");
                     $('.nearList').append('<li> <span class="friendImg"><img src="' + model.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + model.data[i].name + '</span></li>');
