@@ -166,9 +166,9 @@ function friendsNearby() {
     var friendsLocationName = friends(function(model) {
         //console.log('inside getfriends1 '+userLoci);
 
-        var userLoci = users(function(model1) {
+        users(function(model1) {
 
-        return model1.location.name;
+       // return model1.location.name;
         console.log(model1.location.name);
       
     });
