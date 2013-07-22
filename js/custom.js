@@ -1,35 +1,29 @@
-var userLoci;
+//var userLoci;
+
+
 
 /*---------------------------Display User Profile-------------------------*/
 
-function users() {
+function users(callback) {
 
     FB.api('/me?fields=name,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
-         
-         var userLoci = response.location.name;
+        callback(response);
 
     });
 }
-
-function friends() {
-
-   console.log(userLoci);
-}
-
-
 
 /*-------------------------End Script - Display User Profile------------*/
 
 /*------------------------Friends List------------------------------------*/
 
-// function friends(callback) {
+function friends(callback) {
 
-//     FB.api('/me/friends?fields=name,location,picture.height(80).width(80)', function(response) {
+    FB.api('/me/friends?fields=name,location,picture.height(80).width(80)', function(response) {
 
-//         callback(response);
+        callback(response);
 
-//     });
-// }
+    });
+}
 
 
 
@@ -47,105 +41,105 @@ function friends() {
 
 /*---------------------------------------------------------------------------*/
 
-// function getUser() {
+function getUser() {
 
 
-//     var getuser = users(function(model) {
-//         userLoci = model.location.name;
-//         $("#userProfile").append('<ul class="userDetails">');
-//         //$('.userDetails').append('<li> <img src="'+response.cover.source+'"> </li>'); // User Image//
-//         $('.userDetails').append('<li> <img src="' + model.picture.data.url + '"width="100" height="100" > </li>'); // User Image//
-//         $('.userDetails').append('<li> <span>' + model.name + '</span></li>'); // User Name//
-//         $('.userDetails').append('<li> <span>' + model.location.name + '</span></li>'); // User Location//
-//         $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
-//         if (typeof(model.birthday) == 'undefined') {
-//             $('.userDetails').append('<li id="userBday"> <span> Birthday Unknown</span></li>'); // User Birthday if not public//
-//         } else {
-//             $('.userDetails').append('<li id="userBday"> <span>' + model.birthday + '</span></li>'); // User Birthday//
-//         }
+    var getuser = users(function(model) {
+        userLoci = model.location.name;
+        $("#userProfile").append('<ul class="userDetails">');
+        //$('.userDetails').append('<li> <img src="'+response.cover.source+'"> </li>'); // User Image//
+        $('.userDetails').append('<li> <img src="' + model.picture.data.url + '"width="100" height="100" > </li>'); // User Image//
+        $('.userDetails').append('<li> <span>' + model.name + '</span></li>'); // User Name//
+        $('.userDetails').append('<li> <span>' + model.location.name + '</span></li>'); // User Location//
+        $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
+        if (typeof(model.birthday) == 'undefined') {
+            $('.userDetails').append('<li id="userBday"> <span> Birthday Unknown</span></li>'); // User Birthday if not public//
+        } else {
+            $('.userDetails').append('<li id="userBday"> <span>' + model.birthday + '</span></li>'); // User Birthday//
+        }
 
-//     });
-// }
+    });
+}
 
 /*-------------------------Friends List ------------------------------*/
 
-// function getFriends() {
-//     var chartdat = [];
-//     var getfriends = friends(function(model) {
+function getFriends() {
+    var chartdat = [];
+    var getfriends = friends(function(model) {
 
-//         for (var i = 0; i < model.data.length; i++) {
+        for (var i = 0; i < model.data.length; i++) {
 
-//             if (i === 0) {
-//                 $('#friend_list').append('<ul class="friendList">');
-//             }
-//             $('.friendList').append('<li> <span class="friendImg"><img src="' + model.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + model.data[i].name + '</span></li>');
+            if (i === 0) {
+                $('#friend_list').append('<ul class="friendList">');
+            }
+            $('.friendList').append('<li> <span class="friendImg"><img src="' + model.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + model.data[i].name + '</span></li>');
 
-//             if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
-//         }
+            if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
+        }
 
-//         /*------------------------- City-Wise friends count Chart---------------*/
+        /*------------------------- City-Wise friends count Chart---------------*/
 
-//         chartdat = chartdat.reduce(function(acc, curr) {
-//             if (typeof acc[curr] == 'undefined') {
-//                 acc[curr] = 1;
-//             } else {
-//                 acc[curr] += 1;
-//             }
-//             return acc;
-//         }, {});
+        chartdat = chartdat.reduce(function(acc, curr) {
+            if (typeof acc[curr] == 'undefined') {
+                acc[curr] = 1;
+            } else {
+                acc[curr] += 1;
+            }
+            return acc;
+        }, {});
 
-//         var datasum1 = [];
-//         for (var j in chartdat) {
-//             if (chartdat[j] > 5) {
-//                 datasum1.push([j, chartdat[j]]);
-//             }
+        var datasum1 = [];
+        for (var j in chartdat) {
+            if (chartdat[j] > 5) {
+                datasum1.push([j, chartdat[j]]);
+            }
 
-//         }
+        }
 
 
-//         $(function() {
-//             chart = new Highcharts.Chart({
-//                 chart: {
-//                     renderTo: container,
-//                     plotBackgroundColor: null,
-//                     plotBorderWidth: null,
-//                     plotShadow: false
-//                 },
-//                 title: {
-//                     text: 'Top locations where your friends are'
-//                 },
-//                 tooltip: {
-//                     pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
-//                 },
-//                 plotOptions: {
-//                     pie: {
-//                         size: 200,
-//                         allowPointSelect: true,
-//                         cursor: 'pointer',
-//                         dataLabels: {
-//                             enabled: true,
-//                             color: '#000000',
-//                             connectorColor: '#000000',
-//                             format: '<b>{point.name}</b>: {point.y:.0f} '
-//                         }
-//                     }
-//                 },
-//                 series: [{
-//                     type: 'pie',
-//                     name: 'City',
-//                     innerSize: '20%',
-//                     data: datasum1,
-//                     showInLegend: false,
-//                     dataLabels: {
-//                         enabled: true
-//                     }
-//                 }]
-//             });
-//         });
+        $(function() {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: container,
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: 'Top locations where your friends are'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        size: 200,
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000',
+                            connectorColor: '#000000',
+                            format: '<b>{point.name}</b>: {point.y:.0f} '
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'City',
+                    innerSize: '20%',
+                    data: datasum1,
+                    showInLegend: false,
+                    dataLabels: {
+                        enabled: true
+                    }
+                }]
+            });
+        });
 
-//     });
+    });
 
-// }
+}
 
 
 
@@ -158,39 +152,40 @@ function friends() {
 /*------------------------- Friends Nearby-------------------------*/
 
 
-// function friendsNearby() {
+function friendsNearby() {
 
-//     var friendsLocationName = friends(function(model) {
+    var userLocationName = users(function(userData) {
 
-//         var test = users(function(model1) {
+        var userLoci = userData.location.name;
 
-//             userLoci = model1.location.name;
-//             //return userLoci;
+        var friendsLocationName = friends(function(friendsData) {
+        
 
-//             for (var i = 0; i < model.data.length; i++) {
+        for (var i = 0; i < friendsData.data.length; i++) {
 
-//                 if (typeof(model.data[i].location) != 'undefined') {
+            if (typeof(friendsData.data[i].location) != 'undefined') {
 
-//                     if (i === 0) {
-//                         $('#friend_nearby').append('<ul class="nearList">');
-//                     }
+                if (friendsData.data[i].location.name === userLoci) {
 
-//                     if (model.data[i].location.name === userLoci) {
+                    console.log(userLoci);
 
-//                         console.log("Friends nearby  li called");
-//                         $('.nearList').append('<li> <span class="friendImg"><img src="' + model.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + model.data[i].name + '</span></li>');
+                    $('.nearList').append('<li> <span class="friendImg"><img src="' + friendsData.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + friendsData.data[i].name + '</span></li>');
 
-//                     }
+                }
 
-//                 }
+            }
 
-//             }
+        }
+    });
 
-//         });
+    });
 
 
-//     });
-// }
+    
+}
+
+
+
 
 
 
@@ -199,37 +194,37 @@ function friends() {
 
 /*-------------------------User Album - remove myAlbum and check ------------------------------*/
 
-// function albums() {
+function albums() {
 
-//     users(function(myalbum) {
+    users(function(myalbum) {
 
-//         var len = myalbum.albums.data.length;
+        var len = myalbum.albums.data.length;
 
-//         for (var i = 1; i < len; i++) {
+        for (var i = 1; i < len; i++) {
 
-//             var albumid = myalbum.albums.data[i].id; //Album ID
+            var albumid = myalbum.albums.data[i].id; //Album ID
 
-//             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
-//             var list = document.createElement("li");
-//             list.setAttribute("id", albumid);
-
-
-
-//             var Div = document.createElement("div");
-//             Div.setAttribute("class", "album_name");
-//             Div.appendChild(albumname);
-
-//             list.appendChild(Div);
-
-//             document.getElementById("albums").appendChild(list);
+            var list = document.createElement("li");
+            list.setAttribute("id", albumid);
 
 
-//         }
+
+            var Div = document.createElement("div");
+            Div.setAttribute("class", "album_name");
+            Div.appendChild(albumname);
+
+            list.appendChild(Div);
+            
+            document.getElementById("albums").appendChild(list);
 
 
-//     });
-// }
+        }
+
+
+    });
+}
 
 
 
