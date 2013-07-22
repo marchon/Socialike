@@ -159,27 +159,27 @@ function friendsNearby() {
         var userLoci = userData.location.name;
 
         var friendsLocationName = friends(function(friendsData) {
-        
 
-        for (var i = 0; i < friendsData.data.length; i++) {
 
-            if (typeof(friendsData.data[i].location) != 'undefined') {
+            for (var i = 0; i < friendsData.data.length; i++) {
 
-                if (friendsData.data[i].location.name === userLoci) {
+                if (typeof(friendsData.data[i].location) != 'undefined') {
 
-                    $('.nearList').append('<li> <span class="friendImg"><img src="' + friendsData.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + friendsData.data[i].name + '</span></li>');
+                    if (friendsData.data[i].location.name === userLoci) {
+
+                        $('.nearList').append('<li> <span class="friendImg"><img src="' + friendsData.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + friendsData.data[i].name + '</span></li>');
+
+                    }
 
                 }
 
             }
-
-        }
-    });
+        });
 
     });
 
 
-    
+
 }
 
 
@@ -204,22 +204,39 @@ function albums() {
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
-            var list = document.createElement("li");
-            list.setAttribute("id", albumid);
+            (function(albumid, albumname) {
+
+                var albumPic = pic(albumid, function(albPic) {
+
+                    console.log(albumid);
+                    console.log(albumname);
+
+                    var coverPic = albPic.data[0].source;
+
+                    var list = document.createElement("li");
+                    list.setAttribute("id", albumid);
 
 
 
-            var Div = document.createElement("div");
-            Div.setAttribute("class", "album_name");
-            Div.appendChild(albumname);
+                    var Div = document.createElement("div");
+                    Div.setAttribute("class", "album_name");
+                    Div.appendChild(albumname);
 
-            list.appendChild(Div);
-            
-            document.getElementById("albums").appendChild(list);
+                    var image = document.createElement("img");
+                    image.setAttribute("src", coverPic);
+                    image.setAttribute("id", albumid);
+                    image.setAttribute("width", "100");
+                    image.setAttribute("height", "100");
 
+                    list.appendChild(Div);
+                    list.appendChild(image);
 
+                    document.getElementById("albums").appendChild(list);
+
+                });
+
+            })(albumid, albumname);
         }
-
 
     });
 }
