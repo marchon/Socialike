@@ -182,7 +182,7 @@ function friendsNearby() {
                     $('#friend_nearby').append('<ul class="nearList">');
                 }
             
-
+console.log(userLoci);
                 if (model.data[i].location.name === userLoci) {
 
 console.log("Friends nearby  li called");
