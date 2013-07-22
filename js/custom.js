@@ -198,7 +198,7 @@ function albums() {
 
         var len = myalbum.albums.data.length;
 
-        for (var i = 1; i < len; i++) {
+        for (var i = 0; i < len; i++) {
 
             var albumid = myalbum.albums.data[i].id; //Album ID
 
