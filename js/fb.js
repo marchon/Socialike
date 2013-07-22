@@ -27,10 +27,13 @@
 
           if (response.status === 'connected') {
 
-              getUser();
-              getFriends();
-              friendsNearby();
-              //albums();
+              // getUser();
+              // getFriends();
+              // friendsNearby();
+              // //albums();
+
+              users();
+              friends();
 
 
           } else if (response.status === 'not_authorized') {
