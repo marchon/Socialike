@@ -174,7 +174,8 @@ var userLoci1 = '';
                     $('#friend_nearby').append('<ul class="nearList">');
                     users(function(model1) {
 
-        userLoci1 = model1.location.name;
+        window.userLoci1 = model1.location.name;
+        console.log(userLoci1);
 
     });
                 }
