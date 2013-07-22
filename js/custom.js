@@ -155,16 +155,17 @@ function getFriends() {
 function friendsNearby() {
 
 
-  //  var userLocationName = users(function(model1) {
+   var userLocationName = users(function(model1) {
 
-      //  userLoci = model1.location.name;
+        userLoci = model1.location.name;
+        console.log(userLoci1);
 
-   // });
+    });
 
 
     var friendsLocationName = friends(function(model) {
         //console.log('inside getfriends1 '+userLoci);
-var userLoci1 = '';
+
 
         for (var i = 0; i < model.data.length; i++) {
 
@@ -172,12 +173,6 @@ var userLoci1 = '';
 
                 if (i === 0) {
                     $('#friend_nearby').append('<ul class="nearList">');
-                    users(function(model1) {
-
-        window.userLoci1 = model1.location.name;
-        console.log(userLoci1);
-
-    });
                 }
             
 console.log(userLoci1);
