@@ -1,7 +1,5 @@
 var userLoci;
 
-
-
 /*---------------------------Display User Profile-------------------------*/
 
 function users(callback) {
@@ -156,12 +154,21 @@ function friendsNearby() {
 
     var friendsLocationName = friends(function(model) {
 
-        var userLocationName = users(function(model1) {
+    //     var userLocationName = users(function(model1) {
 
-        userLoci = model1.location.name;
-        console.log(userLoci);
+    //     userLoci = model1.location.name;
+    //     console.log(userLoci);
+
+    // });
+
+    var test = users(function(model1) {
+
+         userLoci = model1.location.name;
+         return userLoci;
 
     });
+
+    console.log(test);
 
         for (var i = 0; i < model.data.length; i++) {
 
@@ -171,7 +178,6 @@ function friendsNearby() {
                     $('#friend_nearby').append('<ul class="nearList">');
                 }
             
-console.log(userLoci);
                 if (model.data[i].location.name === userLoci) {
 
 console.log("Friends nearby  li called");
