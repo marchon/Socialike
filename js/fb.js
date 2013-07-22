@@ -27,14 +27,10 @@
 
           if (response.status === 'connected') {
 
-              // getUser();
-              // getFriends();
+              getUser();
+               getFriends();
                friendsNearby();
-              // //albums();
-
-              //users();
-              //friends();
-
+                albums();
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 

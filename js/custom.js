@@ -27,14 +27,14 @@ function friends(callback) {
 
 
 
-// function pic(album_id, callback) {
+function pic(album_id, callback) {
 
-//     FB.api("/" + album_id + "/photos", function(response) {
+    FB.api("/" + album_id + "/photos", function(response) {
 
-//         callback(response);
+        callback(response);
 
-//     });
-// }
+    });
+}
 
 
 /*---------------------------End Friends List------------------------------*/
@@ -166,8 +166,6 @@ function friendsNearby() {
             if (typeof(friendsData.data[i].location) != 'undefined') {
 
                 if (friendsData.data[i].location.name === userLoci) {
-
-                    console.log(userLoci);
 
                     $('.nearList').append('<li> <span class="friendImg"><img src="' + friendsData.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + friendsData.data[i].name + '</span></li>');
 
