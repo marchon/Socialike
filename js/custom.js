@@ -169,6 +169,7 @@ function friendsNearby() {
         var userLoci = users(function(model1) {
 
         return model1.location.name;
+        console.log(model1.location.name);
       
     });
 
@@ -179,8 +180,8 @@ function friendsNearby() {
                 if (i === 0) {
                     $('#friend_nearby').append('<ul class="nearList">');
                 }
-            console.log(userLoci);
             
+
                 if (model.data[i].location.name === userLoci) {
 
 console.log("Friends nearby  li called");
