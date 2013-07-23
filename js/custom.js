@@ -214,7 +214,7 @@ function albums() {
 
                     var list = document.createElement("li");
                     list.setAttribute("id", albumid);
-                    list.setAttribute("onclick", "albumpictures("+this.id+")");
+                    list.setAttribute("onclick", "albumpictures(this.id)");
 
 
 
