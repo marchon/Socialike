@@ -243,10 +243,13 @@ function albums() {
 
 
 /*-------------------------User Album Ends ------------------------------*/
+$(document).ready(function() {
 
-$('#albums li').click(function(){
-    var albumId = $(this).attr('id');
-    console.log(albumId);
+    $('#albums li').click(function(){
+        var albumId = $(this).attr('id');
+        console.log(albumId);
+    });
+
 });
 
 
