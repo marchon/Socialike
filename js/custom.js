@@ -241,37 +241,9 @@ function albums() {
     });
 }
 
+
+
 /*-------------------------User Album Ends ------------------------------*/
-
-/*-------------------------Album Pics ------------------------------*/
-
-
-
-/*-------------------------Album Pics Ends ------------------------------*/
-
-
-$('#albums li').click(function(){
-
-    var albumid = $(this).attr('id');
-
-    console.log(albumid);
-
-    // pic(function(albumpicture){
-
-
-
-
-
-    // });
-
-
-});
-
-    
-
-
-
-
 
 
 
