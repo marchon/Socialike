@@ -219,7 +219,7 @@ function albums() {
 
                     var Div = document.createElement("div");
                     Div.setAttribute("class", "album_name");
-                    Div.setAttribute("onclick", "albumpictures(this.id)");
+                    Div.setAttribute("onclick", "albumpictures("+this.id+")");
                     Div.appendChild(albumname);
 
                     var image = document.createElement("img");
