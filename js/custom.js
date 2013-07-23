@@ -273,7 +273,7 @@ $('#albums li').click(function(){
 
 
 
-}
+
 
 
 
