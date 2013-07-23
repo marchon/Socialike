@@ -214,12 +214,12 @@ function albums() {
 
                     var list = document.createElement("li");
                     list.setAttribute("id", albumid);
+                    list.setAttribute("onclick", "albumpictures("+this.id+")");
 
 
 
                     var Div = document.createElement("div");
                     Div.setAttribute("class", "album_name");
-                    Div.setAttribute("onclick", "albumpictures("+this.id+")");
                     Div.appendChild(albumname);
 
                     var image = document.createElement("img");
