@@ -208,8 +208,7 @@ function albums() {
 
                 var albumPic = pic(albumid, function(albPic) {
 
-                    console.log(albumid);
-                    console.log(albumname);
+   
 
                     var coverPic = albPic.data[0].source;
 
@@ -245,6 +244,10 @@ function albums() {
 
 /*-------------------------User Album Ends ------------------------------*/
 
+$('#albums li').click(function(){
+    var albumId = $(this).attr('id');
+    console.log(albumId);
+});
 
 
 
