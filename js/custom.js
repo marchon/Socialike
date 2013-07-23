@@ -219,6 +219,7 @@ function albums() {
 
                     var Div = document.createElement("div");
                     Div.setAttribute("class", "album_name");
+                    Div.setAttribute("onclick", "albumpictures(this.id)");
                     Div.appendChild(albumname);
 
                     var image = document.createElement("img");
@@ -243,14 +244,14 @@ function albums() {
 
 
 /*-------------------------User Album Ends ------------------------------*/
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    $('#albums li').click(function(){
-        var albumId = $(this).attr('id');
-        console.log(albumId);
-    });
+//     $('#albums li').click(function(){
+//         var albumId = $(this).attr('id');
+//         console.log(albumId);
+//     });
 
-});
+// });
 
 
 
