@@ -214,7 +214,7 @@ function albums() {
 
                     var list = document.createElement("li");
                     list.setAttribute("id", albumid);
-                    list.setAttribute("onclick", "albumpictures(this.id)");
+                    list.setAttribute("onClick", "albumPictures(this.id)");
 
 
 
@@ -244,14 +244,15 @@ function albums() {
 
 
 /*-------------------------User Album Ends ------------------------------*/
-// $(document).ready(function() {
 
-//     $('#albums li').click(function(){
-//         var albumId = $(this).attr('id');
-//         console.log(albumId);
-//     });
+function albumPictures(albumId){
 
-// });
+
+console.log(albumId);
+
+
+
+}
 
 
 
