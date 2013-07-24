@@ -250,6 +250,22 @@ function albumPictures(albumId){
 
 console.log(albumId);
 
+pic(albumId,function(albumpict){
+
+
+
+var len = albumpict.data.length
+
+for(var j = 0; j < len; j++)
+{
+
+console.log(albumpict.data[i].source);
+
+
+}
+
+});
+
 
 
 }
@@ -267,3 +283,50 @@ function fbLogout() {
 }
 
 /*------------------------- Logout Script End -------------------------*/
+
+
+
+$(function() {
+                
+                $('#carousel span').append('<img src="images/gui/carousel_glare.png" class="glare" />');
+                $('#thumbs a').append('<img src="images/gui/carousel_glare_small.png" class="glare" />');
+
+                $('#carousel').carouFredSel({
+                    responsive: true,
+                    circular: false,
+                    auto: false,
+                    items: {
+                        visible: 1,
+                        width: 100,
+                        height: '56%'
+                    },
+                    scroll: {
+                        fx: 'directscroll'
+                    }
+                });
+
+                $('#thumbs').carouFredSel({
+                    responsive: true,
+                    circular: false,
+                    infinite: false,
+                    auto: false,
+                    prev: '#prev',
+                    next: '#next',
+                    items: {
+                        visible: {
+                            min: 2,
+                            max: 6
+                        },
+                        width: 150,
+                        height: '66%'
+                    }
+                });
+
+                $('#thumbs a').click(function() {
+                    $('#carousel').trigger('slideTo', '#' + this.href.split('#').pop() );
+                    $('#thumbs a').removeClass('selected');
+                    $(this).addClass('selected');
+                    return false;
+                });
+
+            });
