@@ -274,7 +274,7 @@ function albumPictures (albumId) {
             smallImageContainer.setAttribute('href', "#" + j);
 
             var smallImage = document.createElement('img');
-            smallImage.setAttribute('src', smallbigPic);
+            smallImage.setAttribute('src', bigPic);
             smallImage.setAttribute('width', '73');
             smallImage.setAttribute('height', '42');
 
