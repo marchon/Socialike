@@ -247,9 +247,9 @@ function albums() {
 
 function albumPictures (albumId) {
 
-    $('#carousel').empty();
-    $('#thumb').empty();
-    
+    $('#carousel-wrapper').empty().append('<div id="carousel"></div>');
+    $('#thumbs-wrapper').empty().append('<div id="thumbs"></div><a id="prev" href="#"></a><a id="next" href="#"></a>');
+
 
     pic(albumId, function(albumpict) {
             var len = albumpict.data.length
