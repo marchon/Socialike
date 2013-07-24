@@ -247,7 +247,7 @@ function albums() {
 
 function albumPictures (albumId) {
 
-    $('#carousel, #thumb').empty();
+    //$('#carousel, #thumb').empty();
 
     pic(albumId, function(albumpict) {
             var len = albumpict.data.length
@@ -283,6 +283,7 @@ function albumPictures (albumId) {
 
         }
 
+        carouselPop();
     });
 }
 
@@ -302,7 +303,7 @@ function fbLogout() {
 
 
 
-$(function() {
+function carouselPop() {
 
     $('#carousel span').append('<img src="images/gui/carousel_glare.png" class="glare" />');
     $('#thumbs a').append('<img src="images/gui/carousel_glare_small.png" class="glare" />');
@@ -345,4 +346,4 @@ $(function() {
         return false;
     });
 
-});
+}
