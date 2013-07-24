@@ -27,9 +27,9 @@
 
           if (response.status === 'connected') {
 
-              getUser();
-               getFriends();
-               friendsNearby();
+              //getUser();
+               //getFriends();
+               //friendsNearby();
                 albums();
 
           } else if (response.status === 'not_authorized') {
