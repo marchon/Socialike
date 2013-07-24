@@ -208,7 +208,7 @@ function albums() {
 
                 var albumPic = pic(albumid, function(albPic) {
 
-   
+
 
                     var coverPic = albPic.data[0].source;
 
@@ -245,29 +245,45 @@ function albums() {
 
 /*-------------------------User Album Ends ------------------------------*/
 
-function albumPictures(albumId){
+function albumPictures (albumId) {
+
+    $('#carousel, #thumb').empty();
+
+    pic(albumId, function(albumpict) {
+            var len = albumpict.data.length
+
+            for (var j = 0; j < len; j++)
+
+            {
+
+                var bigPic = albumpict.data[j].source;
+
+            /*-- For Big Image --*/
+            var bigImageContainer = document.createElement('span');
+            bigImageContainer.setAttribute('id', j);
+
+            var bigImage = document.createElement('img');
+            bigImage.setAttribute('src', bigPic);
+
+            bigImageContainer.appendChild(bigImage);
+            document.getElementById('carousel').appendChild(bigImageContainer);
 
 
-//console.log(albumId);
+            /*-- For Small Image --*/
+            var smallImageContainer = document.createElement('a');
+            smallImageContainer.setAttribute('href', "#" + j);
 
-pic(albumId,function(albumpict){
+            var smallImage = document.createElement('img');
+            smallImage.setAttribute('src', smallbigPic);
+            smallImage.setAttribute('width', '73');
+            smallImage.setAttribute('height', '42');
 
+            smallImageContainer.appendChild(smallImage);
+            document.getElementById('thumbs').appendChild(smallImageContainer);
 
+        }
 
-var len = albumpict.data.length
-
-for(var j = 0; j < len; j++)
-{
-
-console.log(albumpict.data[j].source);
-
-
-}
-
-});
-
-
-
+    });
 }
 
 
@@ -287,46 +303,46 @@ function fbLogout() {
 
 
 $(function() {
-                
-                $('#carousel span').append('<img src="images/gui/carousel_glare.png" class="glare" />');
-                $('#thumbs a').append('<img src="images/gui/carousel_glare_small.png" class="glare" />');
 
-                $('#carousel').carouFredSel({
-                    responsive: true,
-                    circular: false,
-                    auto: false,
-                    items: {
-                        visible: 1,
-                        width: 100,
-                        height: '56%'
-                    },
-                    scroll: {
-                        fx: 'directscroll'
-                    }
-                });
+    $('#carousel span').append('<img src="images/gui/carousel_glare.png" class="glare" />');
+    $('#thumbs a').append('<img src="images/gui/carousel_glare_small.png" class="glare" />');
 
-                $('#thumbs').carouFredSel({
-                    responsive: true,
-                    circular: false,
-                    infinite: false,
-                    auto: false,
-                    prev: '#prev',
-                    next: '#next',
-                    items: {
-                        visible: {
-                            min: 2,
-                            max: 6
-                        },
-                        width: 150,
-                        height: '66%'
-                    }
-                });
+    $('#carousel').carouFredSel({
+        responsive: true,
+        circular: false,
+        auto: false,
+        items: {
+            visible: 1,
+            width: 100,
+            height: '56%'
+        },
+        scroll: {
+            fx: 'directscroll'
+        }
+    });
 
-                $('#thumbs a').click(function() {
-                    $('#carousel').trigger('slideTo', '#' + this.href.split('#').pop() );
-                    $('#thumbs a').removeClass('selected');
-                    $(this).addClass('selected');
-                    return false;
-                });
+    $('#thumbs').carouFredSel({
+        responsive: true,
+        circular: false,
+        infinite: false,
+        auto: false,
+        prev: '#prev',
+        next: '#next',
+        items: {
+            visible: {
+                min: 2,
+                max: 6
+            },
+            width: 150,
+            height: '66%'
+        }
+    });
 
-            });
+    $('#thumbs a').click(function() {
+        $('#carousel').trigger('slideTo', '#' + this.href.split('#').pop());
+        $('#thumbs a').removeClass('selected');
+        $(this).addClass('selected');
+        return false;
+    });
+
+});
