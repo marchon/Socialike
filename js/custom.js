@@ -248,7 +248,7 @@ function albums() {
 function albumPictures(albumId){
 
 
-console.log(albumId);
+//console.log(albumId);
 
 pic(albumId,function(albumpict){
 
@@ -259,7 +259,7 @@ var len = albumpict.data.length
 for(var j = 0; j < len; j++)
 {
 
-console.log(albumpict.data[i].source);
+console.log(albumpict.data[j].source);
 
 
 }
