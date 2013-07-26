@@ -247,8 +247,8 @@ function albums() {
 
 function albumPictures (albumId) {
 
-    $('#carousel-wrapper').empty().append('<div id="carousel"></div>');
-    $('#thumbs-wrapper').empty().append('<div id="thumbs"></div><a id="prev" href="#"></a><a id="next" href="#"></a>');
+    $('#fotorama').empty().append('<div id="carousel"></div>');
+    // $('#thumbs-wrapper').empty().append('<div id="thumbs"></div><a id="prev" href="#"></a><a id="next" href="#"></a>');
 
 
     pic(albumId, function(albumpict) {
@@ -261,31 +261,31 @@ function albumPictures (albumId) {
                 var bigPic = albumpict.data[j].source;
 
             /*-- For Big Image --*/
-            var bigImageContainer = document.createElement('span');
-            bigImageContainer.setAttribute('id', j);
+            // var bigImageContainer = document.createElement('span');
+            // bigImageContainer.setAttribute('id', j);
 
             var bigImage = document.createElement('img');
             bigImage.setAttribute('src', bigPic);
 
-            bigImageContainer.appendChild(bigImage);
-            document.getElementById('carousel').appendChild(bigImageContainer);
+            // bigImageContainer.appendChild(bigImage);
+            document.getElementById('fotorama').appendChild(bigImage);
 
 
             /*-- For Small Image --*/
-            var smallImageContainer = document.createElement('a');
-            smallImageContainer.setAttribute('href', "#" + j);
+            // var smallImageContainer = document.createElement('a');
+            // smallImageContainer.setAttribute('href', "#" + j);
 
-            var smallImage = document.createElement('img');
-            smallImage.setAttribute('src', bigPic);
-            smallImage.setAttribute('width', '73');
-            smallImage.setAttribute('height', '42');
+            // var smallImage = document.createElement('img');
+            // smallImage.setAttribute('src', bigPic);
+            // smallImage.setAttribute('width', '73');
+            // smallImage.setAttribute('height', '42');
 
-            smallImageContainer.appendChild(smallImage);
-            document.getElementById('thumbs').appendChild(smallImageContainer);
+            // smallImageContainer.appendChild(smallImage);
+            // document.getElementById('thumbs').appendChild(smallImageContainer);
 
         }
 
-        carouselPop();
+        // carouselPop();
     });
 }
 
@@ -305,47 +305,3 @@ function fbLogout() {
 
 
 
-function carouselPop() {
-
-    $('#carousel span').append('<img src="images/gui/carousel_glare.png" class="glare" />');
-    $('#thumbs a').append('<img src="images/gui/carousel_glare_small.png" class="glare" />');
-
-    $('#carousel').carouFredSel({
-        responsive: true,
-        circular: false,
-        auto: false,
-        items: {
-            visible: 1,
-            width: 100,
-            height: '56%'
-        },
-        scroll: {
-            fx: 'directscroll'
-        }
-    });
-
-    $('#thumbs').carouFredSel({
-        responsive: true,
-        circular: false,
-        infinite: false,
-        auto: false,
-        prev: '#prev',
-        next: '#next',
-        items: {
-            visible: {
-                min: 2,
-                max: 6
-            },
-            width: 150,
-            height: '66%'
-        }
-    });
-
-    $('#thumbs a').click(function() {
-        $('#carousel').trigger('slideTo', '#' + this.href.split('#').pop());
-        $('#thumbs a').removeClass('selected');
-        $(this).addClass('selected');
-        return false;
-    });
-
-}
