@@ -27,7 +27,7 @@ function homePage() {
             //var docfrag = document.createDocumentFragment();
 
             if (i === 0) {
-                var getuser = users(function(me) {
+                //var getuser = users(function(me) {
 
                     var list = document.createElement("li");
                     list.setAttribute("class", "grid_items main_user");
@@ -35,10 +35,10 @@ function homePage() {
 
                     var cover = document.createElement("div");
                     cover.setAttribute("class", "cover_photo");
-                    cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
+                    //cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
 
                     list.appendChild(cover);
-                });
+                //});
 
             } else {
 
