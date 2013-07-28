@@ -1,9 +1,9 @@
 function homePage() {
 
 
-    var getfriends = friends(function(dostdata) {
+    var getfriends = friends(function(dostData) {
 
-        var dostLength = dostdata.data.length;
+        var dostLength = dostData.data.length;
 
         for (i = 0; i < dostLength; i++) {
 
