@@ -24,7 +24,7 @@ function homePage() {
             var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
             var ran = Math.floor(Math.random() * colors.length);
 
-            var docfrag = document.createDocumentFragment();
+            //var docfrag = document.createDocumentFragment();
 
             if (i !== 0) {
                 var list = document.createElement("li");
@@ -75,9 +75,9 @@ function homePage() {
 
 
 
-            docfrag.appendChild(list);
+            //docfrag.appendChild(list);
 
-            document.getElementById('container').appendChild(docfrag);
+            document.getElementById('container').appendChild(list);
         }
 
 
