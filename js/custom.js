@@ -12,7 +12,7 @@ function homePage() {
         cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
 
         list.appendChild(cover);
-        document.getElementById('container').innerHtml(list);
+        document.getElementById('container').appendChild(list);
 
         //Adding Friends list//
         var getfriends = friends(function(dostData) {
