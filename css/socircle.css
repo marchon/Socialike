@@ -90,25 +90,25 @@ body {
 
     margin:0 auto;
 
-    -moz-transition:all 0.5s ease;
+    -moz-transition:all 0.3s  ease;
 
-    -webkit-transition:all 0.5s ease;
+    -webkit-transition:all 0.3s  ease;
 
-    transition:all 0.5s ease;
+    transition:all 0.3s  ease;
 
 }
 
 .grid_items:hover .pic {
 
-    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(325deg);
 
-    -moz-transform: rotate(360deg);
+    -moz-transform: rotate(325deg);
 
-    -ms-transform: rotate(360deg);
+    -ms-transform: rotate(325deg);
 
-    -o-transform: rotate(360deg);
+    -o-transform: rotate(325deg);
 
-    transform: rotate(360deg);
+    transform: rotate(325deg);
 
     border-color:#fff;
 
