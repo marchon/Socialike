@@ -26,7 +26,7 @@ function homePage() {
 
             //var docfrag = document.createDocumentFragment();
 
-            //if (i !== 0) {
+            if (i !== 0) {
                 var list = document.createElement("li");
                 list.setAttribute("class", "grid_items");
                 list.style.backgroundColor = colors[ran];
@@ -58,7 +58,7 @@ function homePage() {
                 list.appendChild(usernaamCont);
                 list.appendChild(locationCont);
 
-            //} else {
+            } //else {
 
                 // var getuser = users(function(me) {
                 //     var list = document.createElement("li");
