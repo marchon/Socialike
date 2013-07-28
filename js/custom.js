@@ -1,46 +1,45 @@
 function homePage() {
 
 
-    var getfriends = friends(function(dostData) {
+    var getuser = users(function(me) {
 
-        var dostLength = dostData.data.length;
+        var list = document.createElement("li");
+        list.setAttribute("class", "grid_items main_user");
+        list.style.backgroundColor = "#fff";
 
-        for (i = 0; i < dostLength; i++) {
+        var cover = document.createElement("div");
+        cover.setAttribute("class", "cover_photo");
+        cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
 
-            var dostCommon = dostData.data[i],
-                dostImg = dostCommon.picture.data.url, // Image Url
-                usernaam = document.createTextNode(dostCommon.username), // Username
-                naam = document.createTextNode(dostCommon.name), // Name
-                dostLocate = dostCommon.location;
+        list.appendChild(cover);
+        document.getElementById('container').innerHtml(list);
 
-            if (dostLocate && dostLocate.name) {
-                var dostLocation = document.createTextNode(dostLocate.name); // Location
+        //Adding Friends list//
+        var getfriends = friends(function(dostData) {
 
-            } else {
-                var dostLocation = document.createTextNode("Milky Way");
-            }
+            var dostLength = dostData.data.length;
 
-            // Random Colors tiles//
-            var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
-            var ran = Math.floor(Math.random() * colors.length);
+            for (i = 0; i < dostLength; i++) {
 
-            //var docfrag = document.createDocumentFragment();
+                var dostCommon = dostData.data[i],
+                    dostImg = dostCommon.picture.data.url, // Image Url
+                    usernaam = document.createTextNode(dostCommon.username), // Username
+                    naam = document.createTextNode(dostCommon.name), // Name
+                    dostLocate = dostCommon.location;
 
-            if (i === 0) {
-                //var getuser = users(function(me) {
+                if (dostLocate && dostLocate.name) {
+                    var dostLocation = document.createTextNode(dostLocate.name); // Location
 
-                    var list = document.createElement("li");
-                    list.setAttribute("class", "grid_items main_user");
-                    list.style.backgroundColor = "#fff";
+                } else {
+                    var dostLocation = document.createTextNode("Milky Way");
+                }
 
-                    var cover = document.createElement("div");
-                    cover.setAttribute("class", "cover_photo");
-                    //cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
+                // Random Colors tiles//
+                var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
+                var ran = Math.floor(Math.random() * colors.length);
 
-                    list.appendChild(cover);
-                //});
+                var docfrag = document.createDocumentFragment();
 
-            } else {
 
                 var list = document.createElement("li");
                 list.setAttribute("class", "grid_items");
@@ -73,31 +72,30 @@ function homePage() {
                 list.appendChild(usernaamCont);
                 list.appendChild(locationCont);
 
+                docfrag.appendChild(list);
 
+                document.getElementById('container').appendChild(docfrag);
             }
 
 
+            $('img').load(function() {
+                $(this).fadeIn();
+            });
 
-            //docfrag.appendChild(list);
+            var container = document.querySelector('#container');
+            var msnry = new Masonry(container, {
+                // options
+                columnWidth: 2,
+                itemSelector: '.grid_items',
+                "isFitWidth": true
+            });
 
-            document.getElementById('container').appendChild(list);
-        }
 
-
-        $('img').load(function() {
-            $(this).fadeIn();
         });
-
-        var container = document.querySelector('#container');
-        var msnry = new Masonry(container, {
-            // options
-            columnWidth: 2,
-            itemSelector: '.grid_items',
-            "isFitWidth": true
-        });
-
-
     });
+
+
+
 }
 
 
