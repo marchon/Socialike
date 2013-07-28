@@ -30,7 +30,8 @@
               //getUser();
                //getFriends();
                //friendsNearby();
-                albums();
+                //albums();
+                homePage();
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
