@@ -95,12 +95,14 @@ function homePage() {
 
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
-                isInitLayout: false,
+                
                 columnWidth: 2,
                 itemSelector: '.grid_items',
                 "isFitWidth": true
             });
-
+            container.appendChild( elem );
+            msnry.appended( elem );
+            msnry.layout();
 
 
         });
