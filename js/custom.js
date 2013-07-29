@@ -26,7 +26,7 @@ function homePage() {
             for (i = 0; i < dostLength; i++) {
 
                 var dostCommon = dostData.data[i],
-                dostImg = dostCommon.picture.data.url; // Image Url
+                    dostImg = dostCommon.picture.data.url; // Image Url
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -89,14 +89,7 @@ function homePage() {
                 document.getElementById('container').appendChild(docfrag);
             }
 
-
-           
-
-
-        });
-    });
-
- $('img').load(function() {
+            $('img').load(function() {
                 $(this).fadeIn();
             });
 
@@ -107,6 +100,13 @@ function homePage() {
                 itemSelector: '.grid_items',
                 "isFitWidth": true
             });
+
+
+
+        });
+    });
+
+
 
 }
 
