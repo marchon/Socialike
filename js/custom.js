@@ -24,7 +24,7 @@ function homePage() {
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url, // Image Url
 
-                    if(typeof(dostCommon) == 'undefined')
+                    if(typeof(dostCommon.username) == 'undefined')
                     {
                         usernaam = document.createTextNode("007"),
                     } else
@@ -156,8 +156,8 @@ function pic(album_id, callback) {
 //         $('.userDetails').append('<li> <img src="' + model.picture.data.url + '"width="100" height="100" > </li>'); // User Image//
 //         $('.userDetails').append('<li> <span>' + model.name + '</span></li>'); // User Name//
 //         $('.userDetails').append('<li> <span>' + model.location.name + '</span></li>'); // User Location//
-//         $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
-//         if (typeof(model.birthday) == 'undefined') {
+        // $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
+        // if (typeof(model.birthday) == 'undefined') {
 //             $('.userDetails').append('<li id="userBday"> <span> Birthday Unknown</span></li>'); // User Birthday if not public//
 //         } else {
 //             $('.userDetails').append('<li id="userBday"> <span>' + model.birthday + '</span></li>'); // User Birthday//
