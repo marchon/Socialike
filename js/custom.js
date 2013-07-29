@@ -9,8 +9,12 @@ function homePage() {
 
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
+        if(me.cover){
         cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
+} else{
 
+    cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
+}
         list.appendChild(cover);
         document.getElementById('container').appendChild(list);
 
