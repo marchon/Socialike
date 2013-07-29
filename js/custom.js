@@ -23,16 +23,16 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
+                    console.log("dostCommon: "dostCommon);
+                    if(dostCommon){
+                    var usernaam = document.createTextNode(dostCommon.username); // Username
+                    console.log("if dostCommon: "usernaam);
+                } else{
+                    console.log(usernaam);
 
-                    if(dostCommon)
-                    {
-                        usernaam = document.createTextNode(dostCommon.username); // Username
-
-                    } else
-                    {
-                        usernaam = document.createTextNode("007");
-                    }
-
+                    var usernaam = document.createTextNode("007"); // Username
+                    console.log(usernaam);
+                }
                     naam = document.createTextNode(dostCommon.name), // Name
                     dostLocate = dostCommon.location;
 
@@ -157,8 +157,8 @@ function pic(album_id, callback) {
 //         $('.userDetails').append('<li> <img src="' + model.picture.data.url + '"width="100" height="100" > </li>'); // User Image//
 //         $('.userDetails').append('<li> <span>' + model.name + '</span></li>'); // User Name//
 //         $('.userDetails').append('<li> <span>' + model.location.name + '</span></li>'); // User Location//
-        // $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
-        // if (typeof(model.birthday) == 'undefined') {
+//         $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
+//         if (typeof(model.birthday) == 'undefined') {
 //             $('.userDetails').append('<li id="userBday"> <span> Birthday Unknown</span></li>'); // User Birthday if not public//
 //         } else {
 //             $('.userDetails').append('<li id="userBday"> <span>' + model.birthday + '</span></li>'); // User Birthday//
