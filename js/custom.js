@@ -26,7 +26,7 @@ function homePage() {
             for (i = 0; i < dostLength; i++) {
 
                 var dostCommon = dostData.data[i],
-                    dostImg = dostCommon.picture.data.url; // Image Url
+                dostImg = dostCommon.picture.data.url; // Image Url
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -102,7 +102,7 @@ function homePage() {
 
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
-                isInitLayout: false
+                isInitLayout: false,
                 columnWidth: 2,
                 itemSelector: '.grid_items',
                 "isFitWidth": true
