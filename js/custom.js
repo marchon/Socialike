@@ -90,12 +90,7 @@ function homePage() {
             }
 
 
-            
-
-
-        });
-
-        $('img').load(function() {
+            $('img').load(function() {
                 $(this).fadeIn();
             });
 
@@ -106,6 +101,9 @@ function homePage() {
                 itemSelector: '.grid_items',
                 "isFitWidth": true
             });
+
+
+        });
     });
 
 
