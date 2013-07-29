@@ -23,14 +23,14 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                    console.log("dostCommon: "+dostCommon);
-                    if(dostCommon){
+
+                    if(dostCommon.username){
                     var usernaam = document.createTextNode(dostCommon.username); // Username
-                    console.log("if dostCommon: "+usernaam);
+     
                 } else{
 
                     var usernaam = document.createTextNode("007"); // Username
-                    console.log(usernaam);
+      
                 }
                     naam = document.createTextNode(dostCommon.name), // Name
                     dostLocate = dostCommon.location;
