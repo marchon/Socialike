@@ -9,12 +9,12 @@ function homePage() {
 
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
-        if(me.cover){
-        cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
-} else{
+        if (me.cover) {
+            cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
+        } else {
 
-    cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
-}
+            cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
+        }
         list.appendChild(cover);
         document.getElementById('container').appendChild(list);
 
@@ -28,16 +28,16 @@ function homePage() {
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
 
-                    if(dostCommon.username){
+                if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
-     
-                } else{
+
+                } else {
 
                     var usernaam = document.createTextNode("007"); // Username
-      
+
                 }
-                    naam = document.createTextNode(dostCommon.name), // Name
-                    dostLocate = dostCommon.location;
+                naam = document.createTextNode(dostCommon.name), // Name
+                dostLocate = dostCommon.location;
 
                 if (dostLocate && dostLocate.name) {
                     var dostLocation = document.createTextNode(dostLocate.name); // Location
@@ -50,7 +50,7 @@ function homePage() {
                 var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
                 var ran = Math.floor(Math.random() * colors.length);
 
-                var docfrag = document.createDocumentFragment();
+                var docfrag = document.createDocumentFragment(); // Document Fragment
 
 
                 var list = document.createElement("li");
@@ -88,25 +88,20 @@ function homePage() {
 
                 document.getElementById('container').appendChild(docfrag);
             }
-
-
-            $('img').load(function() {
-                $(this).fadeIn();
-            });
-
-            var container = document.querySelector('#container');
-            var msnry = new Masonry(container, {
-                // options
-                columnWidth: 2,
-                itemSelector: '.grid_items',
-                "isFitWidth": true
-            });
-
-
         });
     });
 
+    $('img').load(function() {
+        $(this).fadeIn();
+    });
 
+    var container = document.querySelector('#container');
+    var msnry = new Masonry(container, {
+        // options
+        columnWidth: 2,
+        itemSelector: '.grid_items',
+        "isFitWidth": true
+    });
 
 }
 
