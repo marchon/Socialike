@@ -24,13 +24,13 @@ function homePage() {
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url, // Image Url
 
-                    if(typeof(dostCommon.username) == 'undefined')
-                    {
-                        usernaam = document.createTextNode("007"),
-                    } else
-                    {
+                    // if(typeof(dostCommon.username) == 'undefined')
+                    // {
+                    //     usernaam = document.createTextNode("007"),
+                    // } else
+                    // {
                     usernaam = document.createTextNode(dostCommon.username), // Username
-                    }
+                    // }
 
                     naam = document.createTextNode(dostCommon.name), // Name
                     dostLocate = dostCommon.location;
