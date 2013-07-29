@@ -21,12 +21,12 @@ function homePage() {
 
             for (i = 0; i < dostLength; i++) {
 
-                var dostCommon = dostData.data[i].username,
+                var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
 
                     if(dostCommon)
                     {
-                        usernaam = document.createTextNode(dostCommon); // Username
+                        usernaam = document.createTextNode(dostCommon.username); // Username
 
                     } else
                     {
