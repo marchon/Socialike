@@ -93,13 +93,13 @@ function homePage() {
                 $(this).fadeIn();
             });
 
-            var container = document.querySelector('#container');
-            var msnry = new Masonry(container, {
-                isInitLayout: false,
-                columnWidth: 2,
-                itemSelector: '.grid_items',
-                "isFitWidth": true
-            });
+            // var container = document.querySelector('#container');
+            // var msnry = new Masonry(container, {
+            //     isInitLayout: false,
+            //     columnWidth: 2,
+            //     itemSelector: '.grid_items',
+            //     "isFitWidth": true
+            // });
 
 
 
