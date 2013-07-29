@@ -21,14 +21,6 @@ function homePage() {
         //Adding Friends list//
         var getfriends = friends(function(dostData) {
 
-            var container = document.querySelector('#container');
-            var msnry = new Masonry(container, {
-                
-                columnWidth: 2,
-                itemSelector: '.grid_items',
-                "isFitWidth": true
-            });
-
             var dostLength = dostData.data.length;
 
             for (i = 0; i < dostLength; i++) {
@@ -94,21 +86,21 @@ function homePage() {
 
                 docfrag.appendChild(list);
 
-                //document.getElementById('container').appendChild(docfrag);
-
-                container.appendChild( docfrag );
-                
+                document.getElementById('container').appendChild(docfrag);
             }
 
-            msnry.appended( docfrag );
-                msnry.layout();
 
             $('img').load(function() {
                 $(this).fadeIn();
             });
 
-            
-            
+            var container = document.querySelector('#container');
+            var msnry = new Masonry(container, {
+        
+                columnWidth: 2,
+                itemSelector: '.grid_items',
+                "isFitWidth": true
+            });
 
 
         });
