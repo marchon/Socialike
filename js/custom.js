@@ -97,9 +97,11 @@ function homePage() {
                 //document.getElementById('container').appendChild(docfrag);
 
                 container.appendChild( docfrag );
-                msnry.appended( docfrag );
-                msnry.layout();
+                
             }
+
+            msnry.appended( docfrag );
+                msnry.layout();
 
             $('img').load(function() {
                 $(this).fadeIn();
