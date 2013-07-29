@@ -23,12 +23,11 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                    console.log("dostCommon: "dostCommon);
+                    console.log("dostCommon: "+dostCommon);
                     if(dostCommon){
                     var usernaam = document.createTextNode(dostCommon.username); // Username
-                    console.log("if dostCommon: "usernaam);
+                    console.log("if dostCommon: "+usernaam);
                 } else{
-                    console.log(usernaam);
 
                     var usernaam = document.createTextNode("007"); // Username
                     console.log(usernaam);
