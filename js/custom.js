@@ -23,7 +23,15 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url, // Image Url
+
+                    if(typeof(dostCommon) == 'undefined')
+                    {
+                        usernaam = document.createTextNode("007"),
+                    } else
+                    {
                     usernaam = document.createTextNode(dostCommon.username), // Username
+                    }
+
                     naam = document.createTextNode(dostCommon.name), // Name
                     dostLocate = dostCommon.location;
 
@@ -115,7 +123,7 @@ function users(callback) {
 
 function friends(callback) {
 
-    FB.api('/me/friends?fields=name,location,picture.height(80).width(80)', function(response) {
+    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
 
         callback(response);
 
