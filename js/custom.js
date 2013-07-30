@@ -1,22 +1,64 @@
 function homePage() {
 
+    var docfrag = document.createDocumentFragment(); // Document Fragment
 
     var getuser = users(function(me) {
 
-        var list = document.createElement("li");
-        list.setAttribute("class", "grid_items main_user");
-        list.style.backgroundColor = "#fff";
+        // All variables for loged in user//
+        var inName = document.createTextNode(me.name);
+        var inusername = document.createTextNode(me.username);
+        var inhome = document.createTextNode(me.hometown.name);
+        var inLocation = document.createTextNode(me.location.name);
+        var inCover = me.cover.source;
+        var inCoverPos = me.cover.offset_y;
+        var inBday = document.createTextNode(me.birthday);
+        var inPicture = me.picture.data.url;
 
+        //Creating first List Item //
+        var listFirst = document.createElement("li");
+        listFirst.setAttribute("class", "grid_items main_user");
+        listFirst.style.backgroundColor = "#fff";
+
+        //Creating Cover//
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
         if (me.cover) {
-            cover.setAttribute("style", "background:url(" + me.cover.source + ") no-repeat 0 " + me.cover.offset_y + "%;");
+            cover.setAttribute("style", "background:url(" + inCover + ") no-repeat 0 " + inCoverPos + "%;");
         } else {
 
             cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
         }
-        list.appendChild(cover);
-        document.getElementById('container').appendChild(list);
+
+        //Creating Name & Picture Container//
+        var userBg = cover.cloneNode(false);
+        userBg.setAttribute("class", "userbg");
+        userBg.removeAttribute("style");
+
+        //Creating Picture//
+        var mePhoto = document.createElement("img");
+        mePhoto.setAttribute("src", inPicture);
+        mePhoto.setAttribute("class", "me_photo");
+        mePhoto.setAttribute("width", "100px");
+        mePhoto.setAttribute("height", "100px");
+        mePhoto.removeAttribute("style");
+
+        //Creating Name//
+        var meName = cover.cloneNode(false);
+        meName.setAttribute("class", "me_name");
+        meName.removeAttribute("style");
+        meName.appendChild(inName);
+
+        userBg.appendChild(mePhoto); // appending user photo to BG
+        userBg.appendChild(meName); // appending user name to BG
+
+        cover.appendChild(userBg); // appending BG to cover container
+
+        listFirst.appendChild(cover); // appending cover container to 1st List item
+
+        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
+
+        document.getElementById('container').appendChild(docfrag);
+        
 
         //Adding Friends list//
         var getfriends = friends(function(dostData) {
@@ -50,7 +92,7 @@ function homePage() {
                 var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
                 var ran = Math.floor(Math.random() * colors.length);
 
-                var docfrag = document.createDocumentFragment(); // Document Fragment
+
 
 
                 var list = document.createElement("li");
@@ -96,7 +138,7 @@ function homePage() {
 
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
-        
+
                 columnWidth: 2,
                 itemSelector: '.grid_items',
                 "isFitWidth": true
