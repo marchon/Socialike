@@ -168,6 +168,7 @@ function homePage() {
                 document.getElementById('container').appendChild(list);
             }
 
+            $('img').hide();
             $('img').load(function() {
                 $(this).fadeIn();
             });
