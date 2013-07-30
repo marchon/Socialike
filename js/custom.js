@@ -58,7 +58,7 @@ function homePage() {
         docfrag.appendChild(listFirst); // appending 1st List item to document fragment
 
         document.getElementById('container').appendChild(docfrag);
-        
+
 
         //Adding Friends list//
         var getfriends = friends(function(dostData) {
@@ -75,17 +75,17 @@ function homePage() {
 
                 } else {
 
-                    var usernaam = document.createTextNode("007"); // Username
+                    usernaam = document.createTextNode("007"); // Username
 
                 }
-                naam = document.createTextNode(dostCommon.name), // Name
+                naam = document.createTextNode(dostCommon.name); // Name
                 dostLocate = dostCommon.location;
 
                 if (dostLocate && dostLocate.name) {
                     var dostLocation = document.createTextNode(dostLocate.name); // Location
 
                 } else {
-                    var dostLocation = document.createTextNode("Milky Way");
+                    dostLocation = document.createTextNode("Milky Way");
                 }
 
                 // Random Colors tiles//
@@ -132,10 +132,6 @@ function homePage() {
             }
 
 
-            $('img').load(function() {
-                $(this).fadeIn();
-            });
-
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
 
@@ -148,7 +144,9 @@ function homePage() {
         });
     });
 
-
+    $('img').load(function() {
+        $(this).fadeIn();
+    });
 
 }
 
