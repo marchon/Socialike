@@ -1,17 +1,3 @@
-$(document).ready(function() {
-    $('img').load(function() {
-        $(this).fadeIn();
-    });
-
-    var container = document.querySelector('#container');
-    var msnry = new Masonry(container, {
-
-        columnWidth: 2,
-        itemSelector: '.grid_items',
-        "isFitWidth": true
-    });
-});
-
 /*---------------------------Display User Profile-------------------------*/
 
 function users(callback) {
@@ -154,6 +140,7 @@ function homePage() {
                 image.setAttribute("src", dostImg);
                 image.setAttribute("width", "80");
                 image.setAttribute("height", "80");
+                image.setAttribute("style", "display:none;");
 
                 var photoCont = document.createElement("div");
                 photoCont.setAttribute("class", "pic");
@@ -182,8 +169,17 @@ function homePage() {
                 document.getElementById('container').appendChild(list);
             }
 
+            $('.pic img').load(function() {
+                $(this).fadeIn();
+            });
 
+            var container = document.querySelector('#container');
+            var msnry = new Masonry(container, {
 
+                columnWidth: 2,
+                itemSelector: '.grid_items',
+                "isFitWidth": true
+            });
 
 
         });
