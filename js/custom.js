@@ -132,7 +132,13 @@ function homePage() {
             }
 
 
-            
+            var container = document.querySelector('#container');
+            var msnry = new Masonry(container, {
+
+                columnWidth: 2,
+                itemSelector: '.grid_items',
+                "isFitWidth": true
+            });
 
 
         });
@@ -140,14 +146,6 @@ function homePage() {
 
     $('img').load(function() {
         $(this).fadeIn();
-
-        var container = document.querySelector('#container');
-            var msnry = new Masonry(container, {
-
-                columnWidth: 2,
-                itemSelector: '.grid_items',
-                "isFitWidth": true
-            });
     });
 
 }
