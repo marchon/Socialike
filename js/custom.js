@@ -1,6 +1,43 @@
+/*---------------------------Display User Profile-------------------------*/
+
+function users(callback) {
+
+    FB.api('/me?fields=name,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
+        callback(response);
+
+    });
+}
+
+/*-------------------------End Script - Display User Profile------------*/
+
+/*------------------------Friends List------------------------------------*/
+
+function friends(callback) {
+
+    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
+
+        callback(response);
+
+    });
+}
+
+
+
+// function pic(album_id, callback) {
+
+//     FB.api("/" + album_id + "/photos", function(response) {
+
+//         callback(response);
+
+//     });
+// }
+
+
+/*---------------------------End Friends List------------------------------*/
+
 function homePage() {
 
-    var docfrag = document.createDocumentFragment(); // Document Fragment
+    //var docfrag = document.createDocumentFragment(); // Document Fragment
 
     var getuser = users(function(me) {
 
@@ -55,9 +92,9 @@ function homePage() {
 
         listFirst.appendChild(cover); // appending cover container to 1st List item
 
-        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
+        //docfrag.appendChild(listFirst); // appending 1st List item to document fragment
 
-        document.getElementById('container').appendChild(docfrag);
+        document.getElementById('container').appendChild(listFirst);
 
 
         //Adding Friends list//
@@ -126,11 +163,14 @@ function homePage() {
                 list.appendChild(usernaamCont);
                 list.appendChild(locationCont);
 
-                docfrag.appendChild(list);
+                //docfrag.appendChild(list);
 
-                document.getElementById('container').appendChild(docfrag);
+                document.getElementById('container').appendChild(list);
             }
 
+            $('img').load(function() {
+                $(this).fadeIn();
+            });
 
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
@@ -144,49 +184,9 @@ function homePage() {
         });
     });
 
-    $('img').load(function() {
-        $(this).fadeIn();
-    });
+
 
 }
-
-
-/*---------------------------Display User Profile-------------------------*/
-
-function users(callback) {
-
-    FB.api('/me?fields=name,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
-        callback(response);
-
-    });
-}
-
-/*-------------------------End Script - Display User Profile------------*/
-
-/*------------------------Friends List------------------------------------*/
-
-function friends(callback) {
-
-    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
-
-        callback(response);
-
-    });
-}
-
-
-
-function pic(album_id, callback) {
-
-    FB.api("/" + album_id + "/photos", function(response) {
-
-        callback(response);
-
-    });
-}
-
-
-/*---------------------------End Friends List------------------------------*/
 
 /*---------------------------------------------------------------------------*/
 
