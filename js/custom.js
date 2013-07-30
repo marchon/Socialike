@@ -40,7 +40,7 @@ function homePage() {
         mePhoto.setAttribute("class", "me_photo");
         mePhoto.setAttribute("width", "100px");
         mePhoto.setAttribute("height", "100px");
-        mePhoto.removeAttribute("style");
+        //mePhoto.removeAttribute("style");
 
         //Creating Name//
         var meName = cover.cloneNode(false);
