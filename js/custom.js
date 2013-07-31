@@ -46,8 +46,6 @@ function homePage() {
         var inusername = document.createTextNode(me.username);
         var inhome = document.createTextNode(me.hometown.name);
         var inLocation = document.createTextNode(me.location.name);
-        var inCover = me.cover.source;
-        var inCoverPos = me.cover.offset_y;
         var inBday = document.createTextNode(me.birthday);
         var inPicture = me.picture.data.url;
 
@@ -60,6 +58,9 @@ function homePage() {
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
         if (me.cover) {
+            var inCover = me.cover.source;
+            var inCoverPos = me.cover.offset_y;
+            
             cover.setAttribute("style", "background:url(" + inCover + ") no-repeat 0 " + inCoverPos + "%;");
         } else {
 
@@ -140,7 +141,6 @@ function homePage() {
                 image.setAttribute("src", dostImg);
                 image.setAttribute("width", "80");
                 image.setAttribute("height", "80");
-                image.setAttribute("style", "display:none;");
 
                 var photoCont = document.createElement("div");
                 photoCont.setAttribute("class", "pic");
@@ -169,7 +169,8 @@ function homePage() {
                 document.getElementById('container').appendChild(list);
             }
 
-            $('.pic img').load(function() {
+            $('img').hide();
+            $('img').load(function() {
                 $(this).fadeIn();
             });
 
