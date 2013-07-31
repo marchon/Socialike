@@ -177,7 +177,7 @@ function homePage() {
                 isResizable: false,
                 isAnimated: true,
                 columnWidth: 200,
-                "gutter": 8,
+                "gutter": 6,
                 itemSelector: '.grid_items',
                 "isFitWidth": true
             });
