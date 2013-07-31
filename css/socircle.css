@@ -2,6 +2,7 @@
 
 
 
+
 *, *:before, *:after {
 
     -moz-box-sizing: border-box;
@@ -41,10 +42,11 @@ body {
     /*width:100%;*/
 
     height: 212px;
+    float:left;
 
     /*max-height: 212px;*/
 
-    margin:2px;
+    margin-bottom:5px;
 
     padding: 18px 5px 0;
 
@@ -58,7 +60,9 @@ body {
 
 .grid_items img {
 
-     -moz-border-radius:50%;
+    display:none;
+
+    -moz-border-radius:50%;
 
     -webkit-border-radius:50%;
 
@@ -152,7 +156,7 @@ body {
 
 .main_user {
 
-    width:811px;
+    width:824px;
 
     height:765px !important;
 
