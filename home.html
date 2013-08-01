@@ -6,32 +6,26 @@
     <title>Socircle: Circular FB profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/socircle.css">
-	<script src="js/jquery.min.js"></script>
+
 </head>
 
 <body>
     <div id="fb-root"></div>
     <div id="wrapper">
         <ul id="container" ></ul>
+
+        <div id="preloader" style="width:100px; height:100px; position:absolute; left:50%; top:50%; margin:-50px 0 0 -50px;">
+			<img src="http://careers.utc.com/Styles/Sites/UTS/images/preloader_transparent.gif" />
+        </div>
     </div>
 
 
-<script type="text/javascript">
-    //<![CDATA[
-        $(window).load(function() { // makes sure the whole site is loaded
-            //$("#status").fadeOut(); // will first fade out the loading animation
-            //$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
-            console.log('I am coming---');
-        })
-    //]]>
-</script>
-
 </body>
-
+<script src="js/jquery.min.js"></script>
     
 <!--<script src="js/highcharts.js"></script>-->
 <script src="js/fb.js"></script>
-<script src="js/masnory.js"></script>
+<!--<script src="js/masnory.js"></script>-->
 <script src="js/custom.js"></script>
 
 </html>

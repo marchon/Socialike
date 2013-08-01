@@ -95,7 +95,7 @@ function homePage() {
 
         docfrag.appendChild(listFirst); // appending 1st List item to document fragment
 
-        document.getElementById('container').appendChild(docfrag);
+        //document.getElementById('container').appendChild(docfrag);
 
 
         //Adding Friends list//
@@ -169,7 +169,7 @@ function homePage() {
                 document.getElementById('container').appendChild(docfrag);
             }
 
-
+            $('#preloader').fadeIn();
 
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
