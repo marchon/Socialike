@@ -178,7 +178,7 @@ function homePage() {
                 isAnimated: true,
                 columnWidth: 200,
                 "gutter": 6,
-                transitionDuration: 0.6s,
+                transitionDuration: '0.6s',
                 itemSelector: '.grid_items',
                 "isFitWidth": true
             });
