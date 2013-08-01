@@ -88,11 +88,6 @@ body {
 
     border:4px solid transparent;
 
-    -moz-border-radius:50%;
-
-    -webkit-border-radius:50%;
-
-    border-radius:50%;
 
     overflow: hidden;
 
@@ -102,7 +97,15 @@ body {
 
     margin:0 auto;
 
-    /*-moz-transition:all 0.3s ease;
+    /*
+    
+    -moz-border-radius:50%;
+
+    -webkit-border-radius:50%;
+
+    border-radius:50%;
+
+    -moz-transition:all 0.3s ease;
 
     -webkit-transition:all 0.3s ease;
 
@@ -112,7 +115,7 @@ body {
 
 .grid_items:hover .pic {
 
-    -webkit-transform: rotate(325deg);
+    /*-webkit-transform: rotate(325deg);
 
     -moz-transform: rotate(325deg);
 
@@ -122,7 +125,7 @@ body {
 
     transform: rotate(325deg);
 
-    border-color:#fff;
+    border-color:#fff;*/
 
     box-shadow: 0 2px 2px #333;
 
