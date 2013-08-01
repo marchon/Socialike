@@ -102,7 +102,7 @@ function homePage() {
         var getfriends = friends(function(dostData) {
 
             var dostLength = dostData.data.length;
-
+            console.log(dostLength);
             for (i = 0; i < dostLength; i++) {
 
                 var dostCommon = dostData.data[i],
@@ -167,9 +167,13 @@ function homePage() {
                 docfrag.appendChild(list);
 
                 document.getElementById('container').appendChild(docfrag);
+                
+                if(i === (dostLength-2)){
+                     $('#preloader').fadeOut();
+                }
             }
 
-            $('#preloader').fadeOut();
+            
 
             /*var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
