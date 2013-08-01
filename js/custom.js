@@ -169,7 +169,7 @@ function homePage() {
                 document.getElementById('container').appendChild(docfrag);
             }
 
-            $('#preloader').fadeIn();
+            $('#preloader').fadeOut();
 
             /*var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
