@@ -171,7 +171,7 @@ function homePage() {
 
             $('#preloader').fadeIn();
 
-            var container = document.querySelector('#container');
+            /*var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
                 // options
                 //isResizable: false,
@@ -183,13 +183,12 @@ function homePage() {
                 "isFitWidth": true
             });
 
-            $('#container').imagesLoaded()
-                .progress(function(instance, image) {
+            $('#container').imagesLoaded().progress(function(instance, image) {
                     var result = image.isLoaded ? 'loaded' : 'broken';
                     if (result) {
                         $(image.img).fadeIn();
                     }
-                });
+                });*/
 
 
         });
