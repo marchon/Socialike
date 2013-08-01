@@ -37,7 +37,7 @@ function friends(callback) {
 
 function homePage() {
 
-    //var docfrag = document.createDocumentFragment(); // Document Fragment
+    var docfrag = document.createDocumentFragment(); // Document Fragment
 
     var getuser = users(function(me) {
 
@@ -93,9 +93,9 @@ function homePage() {
 
         listFirst.appendChild(cover); // appending cover container to 1st List item
 
-        //docfrag.appendChild(listFirst); // appending 1st List item to document fragment
+        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
 
-        document.getElementById('container').appendChild(listFirst);
+        document.getElementById('container').appendChild(docfrag);
 
 
         //Adding Friends list//
@@ -164,9 +164,9 @@ function homePage() {
                 list.appendChild(usernaamCont);
                 list.appendChild(locationCont);
 
-                //docfrag.appendChild(list);
+                docfrag.appendChild(list);
 
-                document.getElementById('container').appendChild(list);
+                document.getElementById('container').appendChild(docfrag);
             }
 
 
@@ -174,10 +174,11 @@ function homePage() {
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
                 // options
-                isResizable: false,
+                //isResizable: false,
                 isAnimated: true,
                 columnWidth: 200,
                 "gutter": 6,
+                transitionDuration: 0.6s,
                 itemSelector: '.grid_items',
                 "isFitWidth": true
             });
