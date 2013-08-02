@@ -60,11 +60,13 @@ function homePage() {
 
         var inCover = me.cover.source;
         inCover = inCover.replace(/s720/i, 'l720');
-      var inCoverPos = me.cover.offset_y;
+        var inCoverPos = me.cover.offset_y;
 
         var coverImg = document.createElement("img");
         coverImg.setAttribute('src', inCover);
         coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
+
+        cover.appendChild(coverImg);
         // if (me.cover) {
         //     var inCover = me.cover.source;
         //     inCover = inCover.replace(/s720/i, 'l720');

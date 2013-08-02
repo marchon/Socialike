@@ -189,7 +189,7 @@ body {
 
 }
 
-.cover_photo img{
+.cover_photo > img{
     image-rendering: optimizequality;
     left: 0;
     min-height: 100%;
