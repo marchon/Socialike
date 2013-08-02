@@ -153,7 +153,7 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                    console.log(dostCommon.bio);
+                    console.log(dostCommon.about);
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
