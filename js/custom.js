@@ -91,8 +91,7 @@ function homePage() {
 
         cover.appendChild(userBg); // appending BG to cover container
 
-        listFirst.appendChild(cover); // appending cover container to 1st List item
-        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
+        
 
 
         //---------Creating user details elements----------//
@@ -126,12 +125,15 @@ function homePage() {
             }
             
             detailsList.appendChild(detailListItems);
-            docfrag.appendChild(detailsList);
+            //listFirst.appendChild(detailsList);
+            //docfrag.appendChild(detailsList);
 
         }
 
 
-
+        listFirst.appendChild(cover); // appending cover container to 1st List item
+        listFirst.appendChild(detailsList);
+        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
        
 
         document.getElementById('container').appendChild(docfrag);
