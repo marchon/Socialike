@@ -58,6 +58,8 @@ function homePage() {
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
 
+        var inCover = me.cover.source;
+        
         var coverImg = document.createElement("img");
         coverImg.setAttribute('src', inCover);
         coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
