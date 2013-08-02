@@ -37,6 +37,12 @@ function friends(callback) {
 
 function homePage() {
 
+
+    // Random Colors tiles//
+    var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
+    var ran = Math.floor(Math.random() * colors.length);
+
+
     var docfrag = document.createDocumentFragment(); // Document Fragment
 
     var getuser = users(function(me) {
@@ -107,6 +113,7 @@ function homePage() {
             var detailListItems = document.createElement('li')
 
             var iconContainer = document.createElement('span');
+            iconContainer.style.backgroundColor = colors[ran];
 
             iconContainer.setAttribute('class', 'melist_' + j);
 
@@ -153,7 +160,7 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                    console.log(dostCommon.about);
+                console.log(dostCommon.about);
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -172,11 +179,6 @@ function homePage() {
                 } else {
                     dostLocation = document.createTextNode("Milky Way");
                 }
-
-                // Random Colors tiles//
-                var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
-                var ran = Math.floor(Math.random() * colors.length);
-
 
 
 
