@@ -57,16 +57,20 @@ function homePage() {
         //Creating Cover//
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
-        if (me.cover) {
-            var inCover = me.cover.source;
-            inCover = inCover.replace(/s720/i, 'l720');
-            var inCoverPos = me.cover.offset_y;
 
-            cover.setAttribute("style", "background:url(" + inCover + ") no-repeat 0 " + inCoverPos + "%;");
-        } else {
+        var coverImg = document.createElement("img");
+        coverImg.setAttribute('src', inCover);
+        coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
+        // if (me.cover) {
+        //     var inCover = me.cover.source;
+        //     inCover = inCover.replace(/s720/i, 'l720');
+        //     var inCoverPos = me.cover.offset_y;
 
-            cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
-        }
+        //     cover.setAttribute("style", "background:url(" + inCover + ") no-repeat 0 " + inCoverPos + "%;");
+        // } else {
+
+        //     cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
+        // }
 
         //Creating Name & Picture Container//
         var userBg = cover.cloneNode(false);

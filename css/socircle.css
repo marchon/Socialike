@@ -183,10 +183,19 @@ body {
 
     border-radius:6px;
 
-    height:266px;
+    height:315px;
 
     position: relative;
 
+}
+
+.cover_photo img{
+    image-rendering: optimizequality;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    border-radius:4px;
 }
 
 .userbg {
@@ -261,6 +270,7 @@ body {
     position: absolute;
     width: 40px;
 }
+
 
 
 /*@media only screen and (min-width : 768px) {
