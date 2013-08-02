@@ -106,7 +106,7 @@ function homePage() {
 
         for (j = 0; j < 4; j++) {
 
-            iconContainer.setAttribute('class', 'melist_' + j + );
+            iconContainer.setAttribute('class', 'melist_' + j );
 
             detailListItems.appendChild(iconContainer);
 
