@@ -2,7 +2,7 @@
 
 function users(callback) {
 
-    FB.api('/me?fields=name,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
+    FB.api('/me?fields=name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
         callback(response);
 
     });
@@ -103,7 +103,7 @@ function homePage() {
 
         for (j = 0; j < 4; j++) {
 
-            var detailListItems = listFirst.cloneNode(false);
+            var detailListItems = document.createElement('li')
             
             var iconContainer = document.createElement('span');
 
