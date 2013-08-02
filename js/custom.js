@@ -91,7 +91,7 @@ function homePage() {
 
         cover.appendChild(userBg); // appending BG to cover container
 
-        
+
 
 
         //---------Creating user details elements----------//
@@ -99,13 +99,15 @@ function homePage() {
         var detailsList = document.createElement('ul');
         detailsList.setAttribute('class', 'user_details');
 
-        var detailListItems = listFirst.cloneNode(false);
-        //meUsername.setAttribute("class", "me_username");
-        var iconContainer = document.createElement('span');
+
 
         for (j = 0; j < 4; j++) {
 
-            iconContainer.setAttribute('class', 'melist_' + j );
+            var detailListItems = listFirst.cloneNode(false);
+            
+            var iconContainer = document.createElement('span');
+
+            iconContainer.setAttribute('class', 'melist_' + j);
 
             detailListItems.appendChild(iconContainer);
 
@@ -123,7 +125,7 @@ function homePage() {
                     detailListItems.appendChild(inBday);
                     break;
             }
-            
+
             detailsList.appendChild(detailListItems);
             //listFirst.appendChild(detailsList);
             //docfrag.appendChild(detailsList);
@@ -134,7 +136,7 @@ function homePage() {
         listFirst.appendChild(cover); // appending cover container to 1st List item
         listFirst.appendChild(detailsList);
         docfrag.appendChild(listFirst); // appending 1st List item to document fragment
-       
+
 
         document.getElementById('container').appendChild(docfrag);
 
