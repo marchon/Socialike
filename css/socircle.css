@@ -188,7 +188,7 @@ body {
     position: relative;
 
 }
-.cover_wrapper{position: relative; overflow: hidden;}
+.cover_wrapper{position: relative; overflow: hidden;height:315px;}
 .cover_wrapper > img{
     display: block;
     image-rendering: optimizequality;
@@ -221,7 +221,7 @@ body {
 
     width:100%;
     height:100px;
-
+    z-index: 2;
 
 }
 

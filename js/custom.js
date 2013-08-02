@@ -61,25 +61,25 @@ function homePage() {
         var coverWrapper = cover.cloneNode(false);
         coverWrapper.setAttribute("class", "cover_wrapper");
 
-        var inCover = me.cover.source;
-        inCover = inCover.replace(/s720/i, 'l720');
-        var inCoverPos = me.cover.offset_y;
+        // var inCover = me.cover.source;
+        // inCover = inCover.replace(/s720/i, 'l720');
+        // var inCoverPos = me.cover.offset_y;
 
         var coverImg = document.createElement("img");
-        coverImg.setAttribute('src', inCover);
-        coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
+        
 
         coverWrapper.appendChild(coverImg);
-        // if (me.cover) {
-        //     var inCover = me.cover.source;
-        //     inCover = inCover.replace(/s720/i, 'l720');
-        //     var inCoverPos = me.cover.offset_y;
+        if (me.cover) {
+            var inCover = me.cover.source;
+            inCover = inCover.replace(/s720/i, 'l720');
+            var inCoverPos = me.cover.offset_y;
 
-        //     cover.setAttribute("style", "background:url(" + inCover + ") no-repeat 0 " + inCoverPos + "%;");
-        // } else {
+            coverImg.setAttribute('src', inCover);
+            coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
+        } else {
 
-        //     cover.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
-        // }
+            coverImg.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
+        }
 
         //Creating Name & Picture Container//
         var userBg = cover.cloneNode(false);
