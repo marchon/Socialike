@@ -43,8 +43,8 @@ function homePage() {
 
         // All variables for loged in user//
         var inName = document.createTextNode(me.name);
-        var inusername = document.createTextNode(me.username);
-        var inhome = document.createTextNode(me.hometown.name);
+        var inUsername = document.createTextNode(me.username);
+        var inHome = document.createTextNode(me.hometown.name);
         var inLocation = document.createTextNode(me.location.name);
         var inBday = document.createTextNode(me.birthday);
         var inPicture = me.picture.data.url;
@@ -92,13 +92,52 @@ function homePage() {
         cover.appendChild(userBg); // appending BG to cover container
 
         listFirst.appendChild(cover); // appending cover container to 1st List item
-
         docfrag.appendChild(listFirst); // appending 1st List item to document fragment
 
-        //document.getElementById('container').appendChild(docfrag);
+
+        //---------Creating user details elements----------//
+
+        var detailsList = document.createElement('ul');
+        detailsList.setAttribute('class', 'user_details');
+
+        var detailListItems = listFirst.cloneNode(false);
+        //meUsername.setAttribute("class", "me_username");
+        var iconContainer = document.createElement('span');
+
+        for (j = 0; j < 4; j++) {
+
+            iconContainer.setAttribute('class', 'melist_' + j + );
+
+            detailListItems.appendChild(iconContainer);
+
+            switch (j) {
+                case 0:
+                    detailListItems.appendChild(inUsername);
+                    break;
+                case 1:
+                    detailListItems.appendChild(inLocation);
+                    break;
+                case 2:
+                    detailListItems.appendChild(inHome);
+                    break;
+                default:
+                    detailListItems.appendChild(inBday);
+                    break;
+            }
+            
+            detailsList.appendChild(detailListItems);
+            docfrag.appendChild(detailsList);
+
+        }
 
 
-        //Adding Friends list//
+
+       
+
+        document.getElementById('container').appendChild(docfrag);
+
+
+        //=========================Adding Friends list====================================================//
         var getfriends = friends(function(dostData) {
 
             var dostLength = dostData.data.length;
@@ -167,13 +206,13 @@ function homePage() {
                 docfrag.appendChild(list);
 
                 document.getElementById('container').appendChild(docfrag);
-                
-                if(i === (dostLength-2)){
-                     $('#preloader').fadeOut();
+
+                if (i === (dostLength - 2)) {
+                    $('#preloader').fadeOut();
                 }
             }
 
-            
+
 
             /*var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
