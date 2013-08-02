@@ -14,7 +14,7 @@ function users(callback) {
 
 function friends(callback) {
 
-    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
+    FB.api('/me/friends?fields=name,username,location,name,bio,about,picture.height(80).width(80)', function(response) {
 
         callback(response);
 
@@ -42,12 +42,12 @@ function homePage() {
     var getuser = users(function(me) {
 
         // All variables for loged in user//
-        var inName = document.createTextNode(me.name);
-        var inUsername = document.createTextNode(me.username);
-        var inHome = document.createTextNode(me.hometown.name);
-        var inLocation = document.createTextNode(me.location.name);
-        var inBday = document.createTextNode(me.birthday);
-        var inPicture = me.picture.data.url;
+        var inName = document.createTextNode(me.name),
+            inUsername = document.createTextNode(me.username),
+            inHome = document.createTextNode(me.hometown.name),
+            inLocation = document.createTextNode(me.location.name),
+            inBday = document.createTextNode(me.birthday),
+            inPicture = me.picture.data.url;
 
         //Creating first List Item //
         var listFirst = document.createElement("li");
@@ -59,6 +59,7 @@ function homePage() {
         cover.setAttribute("class", "cover_photo");
         if (me.cover) {
             var inCover = me.cover.source;
+            inCover = inCover.replace(/s720/i, 'l720');
             var inCoverPos = me.cover.offset_y;
 
             cover.setAttribute("style", "background:url(" + inCover + ") no-repeat 0 " + inCoverPos + "%;");
@@ -104,7 +105,7 @@ function homePage() {
         for (j = 0; j < 4; j++) {
 
             var detailListItems = document.createElement('li')
-            
+
             var iconContainer = document.createElement('span');
 
             iconContainer.setAttribute('class', 'melist_' + j);
@@ -145,11 +146,14 @@ function homePage() {
         var getfriends = friends(function(dostData) {
 
             var dostLength = dostData.data.length;
-            console.log(dostLength);
+
             for (i = 0; i < dostLength; i++) {
+
+
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
+                    console.log(dostCommon.bio);
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -201,6 +205,10 @@ function homePage() {
                 locationCont.setAttribute("class", "location");
                 locationCont.appendChild(dostLocation);
 
+                // var aboutFriends = photoCont.cloneNode(false);
+                // locationCont.setAttribute("class", "about_friends");
+                // locationCont.appendChild(dostLocation);
+
 
                 list.appendChild(photoCont);
                 list.appendChild(naamCont);
@@ -211,14 +219,14 @@ function homePage() {
 
                 document.getElementById('container').appendChild(docfrag);
 
-                if (i === (dostLength - 2)) {
+                if (i === (dostLength - 1)) {
                     $('#preloader').fadeOut();
                 }
             }
 
 
 
-            /*var container = document.querySelector('#container');
+            var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
                 // options
                 //isResizable: false,
@@ -231,11 +239,11 @@ function homePage() {
             });
 
             $('#container').imagesLoaded().progress(function(instance, image) {
-                    var result = image.isLoaded ? 'loaded' : 'broken';
-                    if (result) {
-                        $(image.img).fadeIn();
-                    }
-                });*/
+                var result = image.isLoaded ? 'loaded' : 'broken';
+                if (result) {
+                    $(image.img).fadeIn();
+                }
+            });
 
 
         });
