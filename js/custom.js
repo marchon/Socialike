@@ -58,6 +58,9 @@ function homePage() {
         var cover = document.createElement("div");
         cover.setAttribute("class", "cover_photo");
 
+        var coverWrapper = cover.cloneNode(false);
+        coverWrapper.setAttribute("class", "cover_wrapper");
+
         var inCover = me.cover.source;
         inCover = inCover.replace(/s720/i, 'l720');
         var inCoverPos = me.cover.offset_y;
@@ -66,7 +69,7 @@ function homePage() {
         coverImg.setAttribute('src', inCover);
         coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
 
-        cover.appendChild(coverImg);
+        coverWrapper.appendChild(coverImg);
         // if (me.cover) {
         //     var inCover = me.cover.source;
         //     inCover = inCover.replace(/s720/i, 'l720');
@@ -101,6 +104,7 @@ function homePage() {
         userBg.appendChild(meName); // appending user name to BG
 
         cover.appendChild(userBg); // appending BG to cover container
+        cover.appendChild(coverWrapper);
 
 
 

@@ -188,8 +188,9 @@ body {
     position: relative;
 
 }
-
-.cover_photo > img{
+.cover_wrapper{position: relative; overflow: hidden;}
+.cover_wrapper > img{
+    display: block;
     image-rendering: optimizequality;
     left: 0;
     min-height: 100%;
