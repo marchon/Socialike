@@ -181,7 +181,7 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                console.log(dostCommon.about);
+                // console.log(dostCommon.about);
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -252,7 +252,7 @@ function homePage() {
                 }
             }
 
-
+            console.log(chartdat);
             highCharts(chartdat);
 
 
