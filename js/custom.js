@@ -97,7 +97,7 @@ function homePage() {
 
         //Creating HighChart Container
         var chartContainer = document.createElement("div");
-            chartContainer.setAttribute("id","chart_container");
+        chartContainer.setAttribute("id", "chart_container");
 
         //Creating Name//
         var meName = cover.cloneNode(false);
@@ -252,7 +252,7 @@ function homePage() {
                 }
             }
 
-            console.log(chartdat);
+            //console.log(chartdat);
             highCharts(chartdat);
 
 
@@ -313,65 +313,73 @@ function highCharts(chartdat) {
     // var chartdat = [];
     // var getfriends = friends(function(model) {
 
-        // for (var i = 0; i < model.data.length; i++) {
+    // for (var i = 0; i < model.data.length; i++) {
 
-        //     if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
-        // }
+    //     if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
+    // }
 
-        /*------------------------- City-Wise friends count Chart---------------*/
-        console.log("function highCharts called");
+    /*------------------------- City-Wise friends count Chart---------------*/
+    //console.log("function highCharts called");
 
-        chartdat = chartdat.reduce(function(acc, curr) {
-            if (typeof acc[curr] == 'undefined') {
-                acc[curr] = 1;
-            } else {
-                acc[curr] += 1;
-            }
-            return acc;
-        }, {});
+    chartdat = chartdat.reduce(function(acc, curr) {
+        if (typeof acc[curr] == 'undefined') {
+            acc[curr] = 1;
+        } else {
+            acc[curr] += 1;
+        }
+        return acc;
+    }, {});
 
-        var datasum1 = [];
-        for (var j in chartdat) {
-            if (chartdat[j] > 5) {
-                datasum1.push([j, chartdat[j]]);
-            }
-
+    var datasum1 = [];
+    for (var j in chartdat) {
+        if (chartdat[j] > 5) {
+            datasum1.push([j, chartdat[j]]);
         }
 
+    }
+    console.log(datasum1);
 
-        $(function() {
-            chart = new Highcharts.Chart({
-                chart: {
-                    renderTo: chart_container,
-                    plotBackgroundColor: null,
-                    plotBorderWidth: null,
-                    plotShadow: false
-                },
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
-                },
-                plotOptions: {
-                    pie: {
-                        size: '100%',
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        dataLabels: {
-                            enabled: false
-                        }
-                    }
-                },
-                series: [{
-                    type: 'pie',
-                    name: 'City',
-                    innerSize: '20%',
-                    data: datasum1,
-                    showInLegend: false,
+
+    $(function() {
+
+        Highcharts.setOptions({
+            colors: ["#c0392b", "#f39c12", "#16a085", "#2980b9", "#8e44ad"]
+        });
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: chart_container,
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
+            },
+            plotOptions: {
+                pie: {
+                    size: '100%',
+                    allowPointSelect: true,
+                    cursor: 'pointer',
                     dataLabels: {
                         enabled: false
                     }
-                }]
-            });
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                type: 'pie',
+                name: 'City',
+                innerSize: '40%',
+                data: datasum1,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
         });
+    });
 
     // });
 
