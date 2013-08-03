@@ -254,6 +254,7 @@ body {
     padding: 16px 0;
     font-size: 2em;
     color: #95a5a6;
+    width:350px;
 }
 
 .user_details li{
@@ -270,6 +271,11 @@ body {
     left: -20px;
     position: absolute;
     width: 40px;
+}
+
+#chart_container{
+    width:430px;
+    margin:0 10px;
 }
 
 

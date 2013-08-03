@@ -355,11 +355,11 @@ function highCharts(chartdat) {
                 },
                 plotOptions: {
                     pie: {
-                        size: 200,
-                        allowPointSelect: true,
-                        cursor: 'pointer',
+                        size: '100%',
+                        // allowPointSelect: true,
+                        // cursor: 'pointer',
                         dataLabels: {
-                            enabled: true,
+                            enabled: false,
                             color: '#000000',
                             connectorColor: '#000000',
                             format: '<b>{point.name}</b>: {point.y:.0f} '
