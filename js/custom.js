@@ -339,7 +339,9 @@ function highCharts(chartdat) {
         }
 
     }
-    console.log(datasum1.sort(function(a, b) {return a[1] - b[1]}));
+
+    datasum1 = datasum1.sort(function(a, b) {return a[1] - b[1]})); // Sorted array
+    datasum1 = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
 
     $(function() {
@@ -373,7 +375,7 @@ function highCharts(chartdat) {
             series: [{
                 type: 'pie',
                 name: 'City',
-                innerSize: '40%',
+                innerSize: '60%',
                 data: datasum1,
                 showInLegend: false,
                 dataLabels: {
