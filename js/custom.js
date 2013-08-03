@@ -367,7 +367,7 @@ function highCharts(chartdat) {
                     data: datasum1,
                     showInLegend: false,
                     dataLabels: {
-                        enabled: true
+                        enabled: false
                     }
                 }]
             });
