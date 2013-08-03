@@ -338,7 +338,7 @@ function highCharts(chartdat) {
             datasum1.push([j, chartdat[j]]);
         }
 
-    }
+    };
 
     datasum1 = datasum1.sort(function(a, b) {return a[1] - b[1]})); // Sorted array
     datasum1 = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
