@@ -339,7 +339,7 @@ function highCharts(chartdat) {
         }
 
     }
-    console.log(datasum1.sort());
+    console.log(datasum1.sort(function(a, b) {return a[1] - b[1]}));
 
 
     $(function() {
