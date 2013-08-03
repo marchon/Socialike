@@ -246,13 +246,13 @@ function homePage() {
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
                 // options
-                isResizable: true,
+                //isResizable: true,
                 isAnimated: true,
                 columnWidth: 200,
                 "gutter": 6,
                 transitionDuration: '0.6s',
-                itemSelector: '.grid_items',
-                "isFitWidth": true
+                itemSelector: '.grid_items'
+                //"isFitWidth": true
             });
 
             $('#container').imagesLoaded().progress(function(instance, image) {
