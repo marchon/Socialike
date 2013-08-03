@@ -347,17 +347,14 @@ function highCharts(chartdat) {
                     plotBorderWidth: null,
                     plotShadow: false
                 },
-                title: {
-                    text: 'Top locations where your friends are'
-                },
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
                 },
                 plotOptions: {
                     pie: {
-                        size: '100%',
-                        // allowPointSelect: true,
-                        // cursor: 'pointer',
+                        size: '100%'
+                        allowPointSelect: true,
+                        cursor: 'pointer',
                         dataLabels: {
                             enabled: false
                         }
