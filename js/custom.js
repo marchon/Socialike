@@ -39,6 +39,7 @@ function homePage() {
 
     var docfrag = document.createDocumentFragment(); // Document Fragment
 
+
     var getuser = users(function(me) {
 
         // All variables for loged in user//
@@ -66,7 +67,7 @@ function homePage() {
         // var inCoverPos = me.cover.offset_y;
 
         var coverImg = document.createElement("img");
-        
+
 
         coverWrapper.appendChild(coverImg);
         if (me.cover) {
@@ -75,7 +76,7 @@ function homePage() {
             var inCoverPos = me.cover.offset_y;
 
             coverImg.setAttribute('src', inCover);
-            coverImg.setAttribute('style', '"top:'+inCoverPos+'; width:100%;"');
+            coverImg.setAttribute('style', '"top:' + inCoverPos + '; width:100%;"');
         } else {
 
             coverImg.setAttribute("style", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
@@ -93,6 +94,10 @@ function homePage() {
         mePhoto.setAttribute("width", "100px");
         mePhoto.setAttribute("height", "100px");
         //mePhoto.removeAttribute("style");
+
+        //Creating HighChart Container
+        var chartContainer = document.createElement("div");
+            chartContainer.setAttribute("id","chart_container");
 
         //Creating Name//
         var meName = cover.cloneNode(false);
@@ -162,15 +167,20 @@ function homePage() {
         //=========================Adding Friends list====================================================//
         var getfriends = friends(function(dostData) {
 
+
+            var chartdat = [];
             var dostLength = dostData.data.length;
 
             for (i = 0; i < dostLength; i++) {
 
+                if (typeof(model.data[i].location) != 'undefined') {
 
+                    chartdat.push(model.data[i].location.name);
+                }
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                    console.log(dostCommon.about);
+                console.log(dostCommon.about);
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -242,6 +252,8 @@ function homePage() {
             }
 
 
+            highCharts(chartdat);
+
 
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
@@ -251,9 +263,11 @@ function homePage() {
                 columnWidth: 200,
                 "gutter": 6,
                 transitionDuration: '0.6s',
-                itemSelector: '.grid_items'
-                //"isFitWidth": true
+                itemSelector: '.grid_items',
+                "isFitWidth": true
             });
+
+
 
             $('#container').imagesLoaded().progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
@@ -294,83 +308,79 @@ function homePage() {
 
 // /*-------------------------Friends List ------------------------------*/
 
-// function getFriends() {
-//     var chartdat = [];
-//     var getfriends = friends(function(model) {
+function highCharts(chartdat) {
+    // var chartdat = [];
+    // var getfriends = friends(function(model) {
 
-//         for (var i = 0; i < model.data.length; i++) {
+        // for (var i = 0; i < model.data.length; i++) {
 
-//             if (i === 0) {
-//                 $('#friend_list').append('<ul class="friendList">');
-//             }
-//             $('.friendList').append('<li> <span class="friendImg"><img src="' + model.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + model.data[i].name + '</span></li>');
+        //     if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
+        // }
 
-//             if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
-//         }
+        /*------------------------- City-Wise friends count Chart---------------*/
+        console.log("function highCharts called");
 
-//         /*------------------------- City-Wise friends count Chart---------------*/
+        chartdat = chartdat.reduce(function(acc, curr) {
+            if (typeof acc[curr] == 'undefined') {
+                acc[curr] = 1;
+            } else {
+                acc[curr] += 1;
+            }
+            return acc;
+        }, {});
 
-//         chartdat = chartdat.reduce(function(acc, curr) {
-//             if (typeof acc[curr] == 'undefined') {
-//                 acc[curr] = 1;
-//             } else {
-//                 acc[curr] += 1;
-//             }
-//             return acc;
-//         }, {});
+        var datasum1 = [];
+        for (var j in chartdat) {
+            if (chartdat[j] > 5) {
+                datasum1.push([j, chartdat[j]]);
+            }
 
-//         var datasum1 = [];
-//         for (var j in chartdat) {
-//             if (chartdat[j] > 5) {
-//                 datasum1.push([j, chartdat[j]]);
-//             }
-
-//         }
+        }
 
 
-//         $(function() {
-//             chart = new Highcharts.Chart({
-//                 chart: {
-//                     renderTo: container,
-//                     plotBackgroundColor: null,
-//                     plotBorderWidth: null,
-//                     plotShadow: false
-//                 },
-//                 title: {
-//                     text: 'Top locations where your friends are'
-//                 },
-//                 tooltip: {
-//                     pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
-//                 },
-//                 plotOptions: {
-//                     pie: {
-//                         size: 200,
-//                         allowPointSelect: true,
-//                         cursor: 'pointer',
-//                         dataLabels: {
-//                             enabled: true,
-//                             color: '#000000',
-//                             connectorColor: '#000000',
-//                             format: '<b>{point.name}</b>: {point.y:.0f} '
-//                         }
-//                     }
-//                 },
-//                 series: [{
-//                     type: 'pie',
-//                     name: 'City',
-//                     innerSize: '20%',
-//                     data: datasum1,
-//                     showInLegend: false,
-//                     dataLabels: {
-//                         enabled: true
-//                     }
-//                 }]
-//             });
-//         });
+        $(function() {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: chart_container,
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: 'Top locations where your friends are'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        size: 200,
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000',
+                            connectorColor: '#000000',
+                            format: '<b>{point.name}</b>: {point.y:.0f} '
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'City',
+                    innerSize: '20%',
+                    data: datasum1,
+                    showInLegend: false,
+                    dataLabels: {
+                        enabled: true
+                    }
+                }]
+            });
+        });
 
-//     });
+    // });
 
-// }
+}
 
 
 
