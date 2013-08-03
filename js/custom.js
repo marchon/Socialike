@@ -340,49 +340,85 @@ function highCharts(chartdat) {
 
     }
 
-    datasum1.sort(function(a, b) {return a[1] - b[1];}); // Sorted array
+    datasum1.sort(function(a, b) {
+        return a[1] - b[1];
+    }); // Sorted array
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
 
     $(function() {
 
         Highcharts.setOptions({
-            colors: ["#c0392b", "#f39c12", "#16a085", "#2980b9", "#8e44ad"]
+            colors: ["#8e44ad", "#2980b9", "#16a085", "#f39c12", "#c0392b"]
         });
         chart = new Highcharts.Chart({
-            chart: {
-                renderTo: chart_container,
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
-            },
-            plotOptions: {
-                pie: {
-                    size: '100%',
-                    allowPointSelect: true,
-                    cursor: 'pointer',
+                chart: {
+                    renderTo: chart_container,
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    borderRadius: '50%',
+                    borderWidth: 8,
+                    useHTML: true,
+                    headerFormat: '<div style="text-align:center; width:150px; height:150px;"><span>{point.key}</span><br/>',
+                    pointFormat: '<span><b>{point.y:.0f}</b><span>',
+                    footerFormat: '</div>',
+                    //pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
+                    //formatter: function() {
+                    //  return 'The value for <b>'+ this.y +
+                    //     '</b> is <b>'+ this.x +'</b>';
+                    //}
+
+                    positioner: function() {
+                        return {
+                            x: 90,
+                            y: 130
+                        };
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        size: '100%',
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        }
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'City',
+                    innerSize: '85%',
+                    data: chartInput,
+                    showInLegend: false,
                     dataLabels: {
                         enabled: false
                     }
-                }
-            },
-            credits: {
-                enabled: false
-            },
-            series: [{
-                type: 'pie',
-                name: 'City',
-                innerSize: '60%',
-                data: chartInput,
-                showInLegend: false,
-                dataLabels: {
-                    enabled: false
-                }
-            }]
-        });
+                }]
+            });
+
+            // function(chart) { // on complete
+            //     var textX = chart.plotLeft + (chart.plotWidth * 0.5);
+            //     var textY = chart.plotTop + (chart.plotHeight * 0.5);
+
+            //     var span = '<span id="pieChartInfoText" style="position:absolute; text-align:center;">';
+            //     span += '<span style="font-size: 32px">Friend\'s</span><br>';
+            //     span += '<span style="font-size: 16px">Top</span></br>';
+            //     span += '<span style="font-size: 16px">Location</span>';
+            //     span += '</span>';
+
+            //     $("#chart_container").append(span);
+            //     span = $('#pieChartInfoText');
+            //     span.css('left', textX + (span.width() * -0.5));
+            //     span.css('top', textY + (span.height() * -0.5));
+            // });
     });
 
     // });
