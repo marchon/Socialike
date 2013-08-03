@@ -246,7 +246,7 @@ function homePage() {
             var container = document.querySelector('#container');
             var msnry = new Masonry(container, {
                 // options
-                //isResizable: false,
+                isResizable: true,
                 isAnimated: true,
                 columnWidth: 200,
                 "gutter": 6,
