@@ -330,6 +330,8 @@ function highCharts(chartdat) {
         return acc;
     }, {});
 
+    var maxFriends = Math.max.apply(Math, chartdat);
+
     var datasum1 = [];
     for (var j in chartdat) {
         if (chartdat[j] > 5) {
@@ -337,7 +339,7 @@ function highCharts(chartdat) {
         }
 
     }
-    console.log(datasum1);
+    console.log(datasum1.sort());
 
 
     $(function() {
