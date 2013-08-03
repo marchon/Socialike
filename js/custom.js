@@ -359,10 +359,7 @@ function highCharts(chartdat) {
                         // allowPointSelect: true,
                         // cursor: 'pointer',
                         dataLabels: {
-                            enabled: false,
-                            color: '#000000',
-                            connectorColor: '#000000',
-                            format: '<b>{point.name}</b>: {point.y:.0f} '
+                            enabled: false
                         }
                     }
                 },
