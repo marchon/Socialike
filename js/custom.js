@@ -158,6 +158,7 @@ function homePage() {
 
         listFirst.appendChild(cover); // appending cover container to 1st List item
         listFirst.appendChild(detailsList);
+        listFirst.appendChild(chartContainer);
         docfrag.appendChild(listFirst); // appending 1st List item to document fragment
 
 
@@ -173,9 +174,9 @@ function homePage() {
 
             for (i = 0; i < dostLength; i++) {
 
-                if (typeof(model.data[i].location) != 'undefined') {
+                if (typeof(dostData.data[i].location) != 'undefined') {
 
-                    chartdat.push(model.data[i].location.name);
+                    chartdat.push(dostData.data[i].location.name);
                 }
 
                 var dostCommon = dostData.data[i],
