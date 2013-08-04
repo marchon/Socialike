@@ -310,16 +310,6 @@ function homePage() {
 // /*-------------------------Friends List ------------------------------*/
 
 function highCharts(chartdat) {
-    // var chartdat = [];
-    // var getfriends = friends(function(model) {
-
-    // for (var i = 0; i < model.data.length; i++) {
-
-    //     if (typeof(model.data[i].location) != 'undefined') chartdat.push(model.data[i].location.name);
-    // }
-
-    /*------------------------- City-Wise friends count Chart---------------*/
-    //console.log("function highCharts called");
 
     chartdat = chartdat.reduce(function(acc, curr) {
         if (typeof acc[curr] == 'undefined') {
@@ -329,8 +319,6 @@ function highCharts(chartdat) {
         }
         return acc;
     }, {});
-
-    //var maxFriends = Math.max.apply(Math, chartdat);
 
     var datasum1 = [];
     for (var j in chartdat) {
@@ -354,71 +342,55 @@ function highCharts(chartdat) {
         });
 
         chart = new Highcharts.Chart({
-                chart: {
-                    renderTo: chart_container,
-                    plotBackgroundColor: null,
-                    plotBorderWidth: null,
-                    plotShadow: false
-                },
-                tooltip: {
-                    backgroundColor: '#fff',
-                    borderRadius: '50%',
-                    borderWidth: 8,
-                    useHTML: true,
-                    headerFormat: '<div style="text-align:center; width:150px; height:150px;"><span>{point.key}</span><br/>',
-                    pointFormat: '<span><b>{point.y:.0f}</b><span>',
-                    footerFormat: '</div>',
+            chart: {
+                renderTo: chart_container,
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            tooltip: {
+                backgroundColor: '#fff',
+                borderRadius: '50%',
+                borderWidth: 8,
+                useHTML: true,
+                headerFormat: '<div style="text-align:center; width:150px; height:150px;"><span>{point.key}</span><br/>',
+                pointFormat: '<span><b>{point.y:.0f}</b><span>',
+                footerFormat: '</div>',
 
-                    positioner: function() {
-                        return {
-                            x: 90,
-                            y: 130
-                        };
-                    }
-                },
-                plotOptions: {
-                    pie: {
-                        size: '100%',
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        dataLabels: {
-                            enabled: false
-                        }
-                    }
-                },
-                credits: {
-                    enabled: false
-                },
-                series: [{
-                    type: 'pie',
-                    name: 'City',
-                    innerSize: '85%',
-                    data: chartInput,
-                    showInLegend: false,
+                positioner: function() {
+                    return {
+                        x: 90,
+                        y: 130
+                    };
+                }
+            },
+            plotOptions: {
+                pie: {
+                    size: '100%',
+                    allowPointSelect: true,
+                    cursor: 'pointer',
                     dataLabels: {
                         enabled: false
                     }
-                }]
-            });
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                type: 'pie',
+                name: 'City',
+                innerSize: '85%',
+                data: chartInput,
+                showInLegend: false,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
 
-            (function(chart) { // on complete
-                var textX = chart.plotLeft + (chart.plotWidth * 0.5);
-                var textY = chart.plotTop + (chart.plotHeight * 0.5);
 
-                var span = '<span id="pieChartInfoText" style="position:absolute; text-align:center;">';
-                span += '<span style="font-size: 32px">Friend\'s</span><br>';
-                span += '<span style="font-size: 16px">Top</span></br>';
-                span += '<span style="font-size: 16px">Location</span>';
-                span += '</span>';
-
-                $("#chart_container").append(span);
-                span = $('#pieChartInfoText');
-                span.css('left', textX + (span.width() * -0.5));
-                span.css('top', textY + (span.height() * -0.5));
-            });
     });
-
-    // });
 
 }
 
