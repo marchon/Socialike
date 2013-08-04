@@ -384,8 +384,8 @@ function highCharts(chartdat) {
             plotOptions: {
                 pie: {
                     size: '100%',
-                    allowPointSelect: true,
-                    cursor: 'pointer',
+                    //allowPointSelect: true,
+                    //cursor: 'pointer',
                     dataLabels: {
                         enabled: false
                     }
