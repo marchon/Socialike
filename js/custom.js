@@ -363,8 +363,8 @@ function highCharts(chartdat) {
                 borderRadius: '50%',
                 borderWidth: 8,
                 useHTML: true,
-                headerFormat: '<div class="tooltip_main"><span class="tooltip_count">{point.key}</span>',
-                pointFormat: '<span class="tooltip_location"><b>{point.y:.0f}</b><span>',
+                headerFormat: '<div class="tooltip_main"><span class="tooltip_location">{point.key}</span>',
+                pointFormat: '<span class="tooltip_count"><b>{point.y:.0f}</b><span>',
                 footerFormat: '</div>',
 
                 positioner: function() {
