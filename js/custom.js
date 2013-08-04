@@ -99,6 +99,13 @@ function homePage() {
         var chartContainer = document.createElement("div");
         chartContainer.setAttribute("id", "chart_container");
 
+        var chartTextContainer = document.createElement("div");
+        chartTextContainer.setAttribute("class", "chart_text");
+        chartTextContainer.appendChild('Friends Top Location');
+
+        chartContainer.appendChild(chartTextContainer);
+
+
         //Creating Name//
         var meName = cover.cloneNode(false);
         meName.setAttribute("class", "me_name");
