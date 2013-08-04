@@ -343,7 +343,7 @@ function highCharts(chartdat) {
     datasum1.sort(function(a, b) {
         return a[1] - b[1];
     }); // Sorted array
-    
+
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
 
@@ -352,6 +352,7 @@ function highCharts(chartdat) {
         Highcharts.setOptions({
             colors: ["#8e44ad", "#2980b9", "#16a085", "#f39c12", "#c0392b"]
         });
+
         chart = new Highcharts.Chart({
                 chart: {
                     renderTo: chart_container,
@@ -367,11 +368,6 @@ function highCharts(chartdat) {
                     headerFormat: '<div style="text-align:center; width:150px; height:150px;"><span>{point.key}</span><br/>',
                     pointFormat: '<span><b>{point.y:.0f}</b><span>',
                     footerFormat: '</div>',
-                    //pointFormat: '{series.name}: <b>{point.y:.0f}</b>'
-                    //formatter: function() {
-                    //  return 'The value for <b>'+ this.y +
-                    //     '</b> is <b>'+ this.x +'</b>';
-                    //}
 
                     positioner: function() {
                         return {
@@ -419,7 +415,7 @@ function highCharts(chartdat) {
                 span = $('#pieChartInfoText');
                 span.css('left', textX + (span.width() * -0.5));
                 span.css('top', textY + (span.height() * -0.5));
-            });
+            }
     });
 
     // });
