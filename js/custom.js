@@ -374,7 +374,7 @@ function highCharts(chartdat) {
 
                 positioner: function() {
                     return {
-                        x: 58,
+                        x: 68,
                         y: 90
                     };
                 }
@@ -391,7 +391,7 @@ function highCharts(chartdat) {
                 useHTML: true,
                 text: '<div class="chart_title"><div class="headingelem_1" >Friend\'s</div> <div class="headingelem_2" >Top</div> <div class="headingelem_3" >Location</div></div>',
                 verticalAlign: 'top',
-                y: 150,
+                y: 130,
                 floating: true,
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif', 

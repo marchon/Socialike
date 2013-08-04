@@ -280,10 +280,10 @@ body {
     position:relative;
 }
 
-.chart_title{font-weight: 100;}
+.chart_title{text-transform: uppercase;font-weight: 100;}
 .headingelem_1{font-size: 2em;}
 .headingelem_2{font-size: 4.6em;}
-.headingelem_3{font-size: 1.7em;}
+.headingelem_3{font-size: 1.7em; line-height: 0.4em;}
 
 .highcharts-tooltip > span {
     background-color:#fff;
