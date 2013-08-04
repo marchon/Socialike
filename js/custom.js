@@ -391,6 +391,7 @@ function highCharts(chartdat) {
                 y: 150,
                 floating: true,
                 style: {
+                    fontFamily: '\'Open Sans\', sans-serif', 
                     color: '#333',
                     fontSize: '2em',
                     width: '300px',
