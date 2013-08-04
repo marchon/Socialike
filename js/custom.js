@@ -365,7 +365,7 @@ function highCharts(chartdat) {
                 shadow: false,
                 useHTML: true,
                 headerFormat: '<div class="tooltip_main"><span class="tooltip_location">{point.key}</span>',
-                pointFormat: '<span class="tooltip_count">{point.y:.0f}<span>',
+                pointFormat: '<span class="tooltip_count">{point.y:.0f}</span>',
                 footerFormat: '</div>',
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif',
@@ -374,7 +374,7 @@ function highCharts(chartdat) {
 
                 positioner: function() {
                     return {
-                        x: 68,
+                        x: 58,
                         y: 90
                     };
                 }
