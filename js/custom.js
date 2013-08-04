@@ -361,7 +361,8 @@ function highCharts(chartdat) {
             tooltip: {
                 backgroundColor: '#fff',
                 borderRadius: '50%',
-                borderWidth: 2,
+                borderWidth: 4,
+                shadow: false,
                 useHTML: true,
                 headerFormat: '<div class="tooltip_main"><span class="tooltip_location">{point.key}</span>',
                 pointFormat: '<span class="tooltip_count">{point.y:.0f}<span>',
