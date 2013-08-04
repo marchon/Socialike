@@ -291,10 +291,13 @@ body {
     display:block;
     position:relative;
 }
-.tooltip_main .friend_count{
+.tooltip_main .tooltip_count{
     position:absolute;
     left:50px;
     bottom:0;
+    font-size:4em;
+    font-weight: 100;
+    color:#95a5a6;
  }
 .tooltip_main .tooltip_location{
     position:absolute;

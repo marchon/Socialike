@@ -364,7 +364,7 @@ function highCharts(chartdat) {
                 borderWidth: 8,
                 useHTML: true,
                 headerFormat: '<div class="tooltip_main"><span class="tooltip_location">{point.key}</span>',
-                pointFormat: '<span class="tooltip_count"><b>{point.y:.0f}</b><span>',
+                pointFormat: '<span class="tooltip_count">{point.y:.0f}<span>',
                 footerFormat: '</div>',
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif', 
