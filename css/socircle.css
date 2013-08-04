@@ -294,19 +294,20 @@ body {
 .tooltip_main .tooltip_count{
     position:absolute;
     left:35px;
-    top:35px;
+    top:42px;
     font-size:4em;
     font-weight: 100;
-    color:#95a5a6;
+    color:#34495e;
  }
 .tooltip_main .tooltip_location{
     position:absolute;
-    width:150px;
+    color:#2c3e50;
+    width:200px;
     left:50%;
-    margin-left:-75px;
+    bottom:40px;
+    margin-left:-100px;
     font-size:0.5em;
     font-weight: 600;
-    bottom:20px;
     line-height:18px;
      white-space: pre-wrap;      /* CSS3 */   
    white-space: -moz-pre-wrap; /* Firefox */    
