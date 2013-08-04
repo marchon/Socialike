@@ -343,6 +343,7 @@ function highCharts(chartdat) {
     datasum1.sort(function(a, b) {
         return a[1] - b[1];
     }); // Sorted array
+    
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
 
@@ -404,21 +405,21 @@ function highCharts(chartdat) {
                 }]
             });
 
-            // function(chart) { // on complete
-            //     var textX = chart.plotLeft + (chart.plotWidth * 0.5);
-            //     var textY = chart.plotTop + (chart.plotHeight * 0.5);
+            function(chart) { // on complete
+                var textX = chart.plotLeft + (chart.plotWidth * 0.5);
+                var textY = chart.plotTop + (chart.plotHeight * 0.5);
 
-            //     var span = '<span id="pieChartInfoText" style="position:absolute; text-align:center;">';
-            //     span += '<span style="font-size: 32px">Friend\'s</span><br>';
-            //     span += '<span style="font-size: 16px">Top</span></br>';
-            //     span += '<span style="font-size: 16px">Location</span>';
-            //     span += '</span>';
+                var span = '<span id="pieChartInfoText" style="position:absolute; text-align:center;">';
+                span += '<span style="font-size: 32px">Friend\'s</span><br>';
+                span += '<span style="font-size: 16px">Top</span></br>';
+                span += '<span style="font-size: 16px">Location</span>';
+                span += '</span>';
 
-            //     $("#chart_container").append(span);
-            //     span = $('#pieChartInfoText');
-            //     span.css('left', textX + (span.width() * -0.5));
-            //     span.css('top', textY + (span.height() * -0.5));
-            // });
+                $("#chart_container").append(span);
+                span = $('#pieChartInfoText');
+                span.css('left', textX + (span.width() * -0.5));
+                span.css('top', textY + (span.height() * -0.5));
+            });
     });
 
     // });
