@@ -99,14 +99,14 @@ function homePage() {
         var chartContainer = document.createElement("div");
         chartContainer.setAttribute("id", "chart_container");
 
-        var chartTextContainer = document.createElement("div");
-        chartTextContainer.setAttribute("class", "chart_text");
+        // var chartTextContainer = document.createElement("div");
+        // chartTextContainer.setAttribute("class", "chart_text");
 
-        var chartText = document.createTextNode('Friends Top Location');
+        // var chartText = document.createTextNode('Friends Top Location');
 
-        chartTextContainer.appendChild(chartText);
+        // chartTextContainer.appendChild(chartText);
 
-        chartContainer.appendChild(chartTextContainer);
+        // chartContainer.appendChild(chartTextContainer);
 
 
         //Creating Name//
@@ -165,7 +165,7 @@ function homePage() {
 
         }
 
-        
+
         listFirst.appendChild(cover); // appending cover container to 1st List item
         listFirst.appendChild(detailsList);
         listFirst.appendChild(chartContainer);
@@ -382,6 +382,15 @@ function highCharts(chartdat) {
                     dataLabels: {
                         enabled: false
                     }
+                }
+            },
+            title: {
+                text: 'Friend\'s Top Location',
+                verticalAlign: 'middle',
+                floating: true,
+                style: {
+                    color: '#333',
+                    fontSize: '1.5em'
                 }
             },
             credits: {
