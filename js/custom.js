@@ -366,6 +366,12 @@ function highCharts(chartdat) {
                 headerFormat: '<div class="tooltip_main"><span class="tooltip_location">{point.key}</span>',
                 pointFormat: '<span class="tooltip_count"><b>{point.y:.0f}</b><span>',
                 footerFormat: '</div>',
+                style: {
+                    fontFamily: '\'Open Sans\', sans-serif', 
+                    color:'#333',
+                    fontSize: '2em',
+                    width: '300px',
+                },
 
                 positioner: function() {
                     return {
@@ -386,7 +392,7 @@ function highCharts(chartdat) {
             },
             title: {
                 useHTML: true,
-                text: '<span class="svs" style="margin-top:-100px;">Friend\'s <br />Top Location</span>',
+                text: '<span class="svs">Friend\'s <br />Top Location</span>',
                 verticalAlign: 'top',
                 y: 150,
                 floating: true,
