@@ -275,16 +275,35 @@ body {
 }
 
 #chart_container{
+    font-family:'Open Sans', sans-serif !important;
     width:350px;
     margin:0 10px;
     position:relative;
 }
 
-.highcharts-tooltip span {
-    background-color:white;
+.highcharts-tooltip > span {
+    background-color:#fff;
     z-index:2!important;  
     border-radius:50%;
 }
+.tooltip_main{
+    width:200px; 
+    height:200px;
+    display:block;
+    position:relative;
+}
+.tooltip_main .friend_count{
+    position:absolute;
+    left:50px;
+    bottom:0;
+ }
+.tooltip_main .tooltip_location{
+    position:absolute;
+    width:100px;
+    left:50%;
+    margin-left:-50px;
+    font-size:3em;
+ }
 
 
 
