@@ -401,7 +401,7 @@ function highCharts(chartdat) {
                 }]
             });
 
-            function(chart) { // on complete
+            (function(chart) { // on complete
                 var textX = chart.plotLeft + (chart.plotWidth * 0.5);
                 var textY = chart.plotTop + (chart.plotHeight * 0.5);
 
@@ -415,7 +415,7 @@ function highCharts(chartdat) {
                 span = $('#pieChartInfoText');
                 span.css('left', textX + (span.width() * -0.5));
                 span.css('top', textY + (span.height() * -0.5));
-            }
+            });
     });
 
     // });
