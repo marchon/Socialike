@@ -368,10 +368,8 @@ function highCharts(chartdat) {
                 pointFormat: '<span class="tooltip_count">{point.y:.0f}<span>',
                 footerFormat: '</div>',
                 style: {
-                    fontFamily: '\'Open Sans\', sans-serif', 
-                    color:'#333',
-                    fontSize: '2em',
-                    width: '300px',
+                    fontFamily: '\'Open Sans\', sans-serif',
+                    width: '300px'
                 },
 
                 positioner: function() {
@@ -384,8 +382,6 @@ function highCharts(chartdat) {
             plotOptions: {
                 pie: {
                     size: '100%',
-                    //allowPointSelect: true,
-                    //cursor: 'pointer',
                     dataLabels: {
                         enabled: false
                     }
@@ -393,15 +389,14 @@ function highCharts(chartdat) {
             },
             title: {
                 useHTML: true,
-                text: '<span class="svs">Friend\'s <br />Top Location</span>',
+                text: '<div class="chart_title"><div class="headingelem_1" >Friend\'s</div> <div class="headingelem_2" >Top</div> <div class="headingelem_3" >Location</div></div>',
                 verticalAlign: 'top',
                 y: 150,
                 floating: true,
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif', 
-                    color: '#333',
-                    fontSize: '2em',
-                    width: '300px',
+                    color: '#34495e',
+                    width: '300px'
                 }
             },
             credits: {
