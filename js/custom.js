@@ -385,12 +385,15 @@ function highCharts(chartdat) {
                 }
             },
             title: {
-                text: 'Friend\'s Top Location',
-                verticalAlign: 'middle',
+                useHTML: true,
+                text: '<span class="svs" style="margin-top:-100px;">Friend\'s <br />Top Location</span>',
+                verticalAlign: 'top',
+                y: 150,
                 floating: true,
                 style: {
                     color: '#333',
-                    fontSize: '1.5em'
+                    fontSize: '2em',
+                    width: '300px',
                 }
             },
             credits: {

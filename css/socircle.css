@@ -280,6 +280,12 @@ body {
     position:relative;
 }
 
+.highcharts-tooltip span {
+    background-color:white;
+    z-index:2!important;  
+    border-radius:50%;
+}
+
 
 
 /*@media only screen and (min-width : 768px) {
