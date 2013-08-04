@@ -101,7 +101,10 @@ function homePage() {
 
         var chartTextContainer = document.createElement("div");
         chartTextContainer.setAttribute("class", "chart_text");
-        chartTextContainer.appendChild('Friends Top Location');
+
+        var chartText = document.createTextNode('Friends Top Location');
+
+        chartTextContainer.appendChild(chartText);
 
         chartContainer.appendChild(chartTextContainer);
 
