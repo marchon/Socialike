@@ -165,7 +165,7 @@ function homePage() {
 
         }
 
-
+        
         listFirst.appendChild(cover); // appending cover container to 1st List item
         listFirst.appendChild(detailsList);
         listFirst.appendChild(chartContainer);
