@@ -264,7 +264,6 @@ body {
     width: 30px;
     top:50%;
     margin-top:-15px;
-    line-height: 27px;
     text-align: center;
 }
 .user_details span img{
@@ -273,12 +272,12 @@ body {
 
 .melist_0{line-height:32px;}
 .melist_1{line-height:37px;}
-.melist_1{line-height:34px;}
+.melist_2{line-height:34px;}
 
 #chart_container{
     width:350px;
     height:350px;
-    margin:50px 10px 0 0;
+    margin:30px 10px 0 0;
     position:relative;
     float:right;
 }
