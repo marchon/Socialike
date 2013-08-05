@@ -264,11 +264,9 @@ body {
     width: 40px;
 }
 
-
-
 #chart_container{
-    width:300px;
-    height:300px;
+    width:350px;
+    height:350px;
     margin:50px 10px 0 0;
     position:relative;
     float:right;
