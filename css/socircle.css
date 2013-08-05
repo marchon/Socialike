@@ -265,6 +265,7 @@ body {
     top:50%;
     margin-top:-15px;
     line-height: 27px;
+    text-align: center;
 }
 
 #chart_container{
