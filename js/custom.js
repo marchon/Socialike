@@ -385,8 +385,8 @@ function highCharts(chartdat) {
 
                 positioner: function() {
                     return {
-                        x: 68,
-                        y: 65
+                        x: 65,
+                        y: 50
                     };
                 }
             },
