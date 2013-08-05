@@ -285,7 +285,7 @@ function homePage() {
             $('#container').imagesLoaded().progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 if (result) {
-                    $(image.img).parents('li').addClass('slideLeft').delay(600);
+                    //$(image.img).parents('li').addClass('slideLeft').delay(600);
                     $(image.img).fadeIn();
                 }
             });
