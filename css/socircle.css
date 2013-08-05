@@ -282,6 +282,7 @@ body {
     height:350px;
     margin:0 10px;
     position:relative;
+    float:right;
 }
 
 .chart_title{text-transform: uppercase;font-weight: 100;}
