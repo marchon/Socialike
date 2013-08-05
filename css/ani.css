@@ -515,8 +515,8 @@ bigEntrance
 	animation-duration: 1.6s;	
 	-webkit-animation-duration: 1.6s;
 
-	animation-timing-function: ease-out;	
-	-webkit-animation-timing-function: ease-out;	
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;	
 
 	visibility: visible !important;			
 }
