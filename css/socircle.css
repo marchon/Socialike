@@ -238,7 +238,7 @@ body {
 }
 
 .user_details{
-    border-left: 1px solid #bdc3c7;
+    border-left: 4px solid #ecf0f1;
     list-style-type: none;
     margin: 16px 0 0 80px;
     padding: 16px 0;
@@ -258,12 +258,12 @@ body {
     /*background: none repeat scroll 0 0 #333333;*/
     border-radius: 50%;
     display: block;
-    height: 30px;
-    left: -17px;
+    height: 38px;
+    left: -22px;
     position: absolute;
-    width: 30px;
+    width: 38px;
     top:50%;
-    margin-top:-15px;
+    margin-top:-19px;
     text-align: center;
 }
 .user_details span img{
