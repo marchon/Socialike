@@ -267,6 +267,13 @@ body {
     line-height: 27px;
     text-align: center;
 }
+.user_details span img{
+    border-radius: 0;
+}
+
+.melist_0{line-height:32px;}
+.melist_1{line-height:37px;}
+.melist_1{line-height:34px;}
 
 #chart_container{
     width:350px;
