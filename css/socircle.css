@@ -153,7 +153,7 @@ body {
 
     width:818px;
 
-    height:765px !important;
+    height:734px !important;
 
     background:#f1c40f;
 
@@ -250,18 +250,21 @@ body {
 
 .user_details li{
     line-height: 42px;
-    padding: 25px 0 25px 35px;
+    padding: 25px 0 25px 25px;
     position: relative;
 }
 
 .user_details span{
     /*background: none repeat scroll 0 0 #333333;*/
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50%;
     display: block;
-    height: 40px;
-    left: -20px;
+    height: 30px;
+    left: -17px;
     position: absolute;
-    width: 40px;
+    width: 30px;
+    top:50%;
+    margin-top:-15px;
+    line-height: 27px;
 }
 
 #chart_container{
