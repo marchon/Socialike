@@ -301,7 +301,7 @@ body {
 .tooltip_count{
     position:absolute;
     left:50%;
-    top:42px;
+    top:35px;
     width:215px;
     margin-left:-108px;
     font-size:8em;
@@ -314,7 +314,7 @@ body {
     width:180px;
     left:50%;
     bottom:40px;
-    margin-left:-100px;
+    margin-left:-90px;
     font-size:1.1em;
     font-weight: 600;
     line-height:18px;
