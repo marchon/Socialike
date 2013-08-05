@@ -12,36 +12,20 @@
 <body>
     <div id="fb-root"></div>
     <div id="wrapper">
-        <ul id="container" ></ul>
+        <ul id="container"></ul>
 
         <div id="preloader" style="width:100px; height:100px; position:absolute; left:50%; top:50%; margin:-50px 0 0 -50px;">
-			<img src="http://careers.utc.com/Styles/Sites/UTS/images/preloader_transparent.gif" />
+            <img src="http://careers.utc.com/Styles/Sites/UTS/images/preloader_transparent.gif" />
         </div>
     </div>
 
 
 </body>
 <script src="js/jquery.min.js"></script>
-    
+
 <script src="js/highcharts.js"></script>
 <script src="js/fb.js"></script>
 <script src="js/masnory.js"></script>
 <script src="js/custom.js"></script>
-
-<script>
-    $(document).ready(function() {
-    var container = document.querySelector('#container');
-    msnry = new Masonry(container, {
-        // options
-        //isResizable: true,
-        isAnimated: true,
-        columnWidth: 200,
-        "gutter": 6,
-        transitionDuration: '0.6s',
-        itemSelector: '.grid_items',
-        "isFitWidth": true
-    });
-});
-</script>
 
 </html>

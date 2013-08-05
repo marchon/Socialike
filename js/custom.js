@@ -1,4 +1,3 @@
-
 /*---------------------------Display User Profile-------------------------*/
 
 function users(callback) {
@@ -262,6 +261,20 @@ function homePage() {
                     $('#preloader').fadeOut();
                 }
             }
+
+            $(document).ready(function() {
+                var container = document.querySelector('#container');
+                msnry = new Masonry(container, {
+                    // options
+                    //isResizable: true,
+                    isAnimated: true,
+                    columnWidth: 200,
+                    "gutter": 6,
+                    transitionDuration: '0.6s',
+                    itemSelector: '.grid_items',
+                    "isFitWidth": true
+                });
+            });
 
 
             setTimeout(function() {
