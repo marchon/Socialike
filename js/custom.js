@@ -378,7 +378,7 @@ function highCharts(chartdat) {
                 positioner: function() {
                     return {
                         x: 68,
-                        y: 50
+                        y: 65
                     };
                 }
             },
