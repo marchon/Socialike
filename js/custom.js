@@ -1,3 +1,16 @@
+$(document).ready(function() {
+    var container = document.querySelector('#container');
+    msnry = new Masonry(container, {
+        // options
+        //isResizable: true,
+        isAnimated: true,
+        columnWidth: 200,
+        "gutter": 6,
+        transitionDuration: '0.6s',
+        itemSelector: '.grid_items',
+        "isFitWidth": true
+    });
+});
 /*---------------------------Display User Profile-------------------------*/
 
 function users(callback) {
@@ -262,27 +275,16 @@ function homePage() {
                 }
             }
 
-            //console.log(chartdat);
-            highCharts(chartdat);
 
-
-            var container = document.querySelector('#container');
-            var msnry = new Masonry(container, {
-                // options
-                //isResizable: true,
-                isAnimated: true,
-                columnWidth: 200,
-                "gutter": 6,
-                transitionDuration: '0.6s',
-                itemSelector: '.grid_items',
-                "isFitWidth": true
-            });
-
+            setTimeout(function() {
+                highCharts(chartdat);
+            }, 1000)
 
 
             $('#container').imagesLoaded().progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 if (result) {
+                    $(image.img).parents('li').addClass('slideLeft').delay(600);
                     $(image.img).fadeIn();
                 }
             });
@@ -394,7 +396,7 @@ function highCharts(chartdat) {
                 y: 150,
                 floating: true,
                 style: {
-                    fontFamily: '\'Open Sans\', sans-serif', 
+                    fontFamily: '\'Open Sans\', sans-serif',
                     color: '#34495e',
                     width: '300px'
                 }

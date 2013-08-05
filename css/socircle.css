@@ -34,6 +34,7 @@ body {
 .grid_items {
 
     list-style-type:none;
+    visibility: hidden;
 
     /*background:#ecf0f1 !important;*/
     
