@@ -32,14 +32,6 @@ body {
 
 }
 
-.transition{
-    -webkit-transition:all 0.3s ease;
-    -moz-transition:all 0.3s ease;
-    -o-transition:all 0.3s ease;
-    -ms-transition:all 0.3s ease;
-    transition:all 0.3s ease;
-}
-
 #container {
     margin: 0 auto;
     padding: 0;
@@ -303,9 +295,9 @@ body {
     overflow: hidden;
     z-index: 999;
 
-    -moz-box-shadow:    inset -3px 0 10px #000000;
-    -webkit-box-shadow: inset -3px 0 10px #000000;
-    box-shadow:         inset -3px 0 10px #000000;
+    -moz-box-shadow:    inset -3px -5px 5px #333;
+    -webkit-box-shadow: inset -3px -5px 5px #333;
+    box-shadow:         inset -3px -5px 5px #333;
 
     -webkit-transform: translateX(-210px);
     -moz-transform: translateX(-210px);
@@ -317,6 +309,7 @@ body {
     padding:10px 15px;
     list-style-type:none;
     font-weight:400;
+    color:#bdc3c7;
     border-bottom:1px solid #46596b;
 }
 .leftnav li:hover{
