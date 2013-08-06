@@ -275,7 +275,6 @@ function homePage() {
                 msnry = new Masonry(container, {
                     // options
                     //isResizable: true,
-                    "isOriginLeft": false,
                     isAnimated: true,
                     columnWidth: 200,
                     "gutter": 6,
