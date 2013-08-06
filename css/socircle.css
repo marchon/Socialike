@@ -25,11 +25,16 @@ body {
 
     color:#fff;
 
+    margin:0;
+
+    padding:0;
+
 }
 
 #container {
 
-    /*margin:0 auto;*/
+    margin:0 auto;
+    padding:0;
 
 }
 
@@ -39,7 +44,7 @@ body {
     visibility: hidden;    
     border:1px solid #e3e5e5;
 
-    width:200px;
+    width:195px;
 
     height: 212px;
     float:left;
