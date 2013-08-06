@@ -9,6 +9,7 @@
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
+    
     -webkit-transition: all 0.3s ease;
     -moz-transition:    all 0.3s ease;
     -ms-transition:     all 0.3s ease;
@@ -35,6 +36,7 @@ body {
 #container {
     margin: 0 auto;
     padding: 0;
+    -webkit-backface-visibility: hidden;
 }
 
 .grid_items {
