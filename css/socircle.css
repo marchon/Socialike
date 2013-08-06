@@ -313,7 +313,7 @@ body {
     border-bottom:1px solid #ecf0f1;
 }
 
-.bodypush{
+#container.bodypush{
     -webkit-transform: translateX(250px);
     -moz-transform: translateX(250px);
     -o-transform: translateX(250px);
