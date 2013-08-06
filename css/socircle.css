@@ -23,6 +23,14 @@ body {
 
 }
 
+.transition{
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    transition:all 0.3s ease;
+}
+
 #container {
     margin: 0;
     padding: 0;
@@ -59,28 +67,13 @@ body {
 }
 
 .grid_items .pic {
-
     text-align: center;
-
     border:4px solid transparent;
-
-
     overflow: hidden;
-
     width:88px;
-
     height:88px;
-
     margin:0 auto;
-
     border-radius:50%;
-
-    -webkit-transition:all 0.3s ease;
-    -moz-transition:all 0.3s ease;
-    -o-transition:all 0.3s ease;
-    -ms-transition:all 0.3s ease;
-    transition:all 0.3s ease;
-
 }
 
 .grid_items:hover .pic {
@@ -295,7 +288,7 @@ body {
 /*--------Left navigation-------*/
 
  .leftnav{
-    background:#fff;
+    background:#34495e;
     position:fixed;
     height:100%;
     top:0;
@@ -305,16 +298,14 @@ body {
     padding: 0;
     box-shadow:1px 0 5px #999;
     width:250px;
-    left:-210px;
     overflow: hidden;
     z-index: 999;
-    -moz-transition:all 0.3s ease;
-    -webkit-transition:all 0.3s ease;
-    transition:all 0.3s ease;
-
+    -webkit-transform: translateX(-210px);
+    -moz-transform: translateX(-210px);
+    -o-transform: translateX(-210px);
+    -ms-transform: translateX(-210px);
+    transform: translateX(-210px);
 }
-
-
 .leftnav li{
     padding:10px 15px;
     list-style-type:none;
@@ -322,18 +313,20 @@ body {
     border-bottom:1px solid #ecf0f1;
 }
 
-.leftnav:hover{
-    left:250px;
-}
-
-.leftnav:hover #container{
+.bodypush{
     -webkit-transform: translateX(250px);
     -moz-transform: translateX(250px);
     -o-transform: translateX(250px);
     -ms-transform: translateX(250px);
     transform: translateX(250px);
 }
-
+.menupush{
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
 
 
 
