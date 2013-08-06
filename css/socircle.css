@@ -5,7 +5,14 @@
 
 
 
-*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+*, *:before, *:after {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    -o-transition:      all 0.3s ease;}
 
 body {
 
@@ -21,6 +28,8 @@ body {
 
     padding:0;
 
+    overflow-x:hidden; 
+
 }
 
 .transition{
@@ -32,14 +41,8 @@ body {
 }
 
 #container {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    -webkit-transform: translateX(80px);
-    -moz-transform: translateX(80px);
-    -o-transform: translateX(80px);
-    -ms-transform: translateX(80px);
-    transform: translateX(80px);
-
 }
 
 .grid_items {
@@ -296,10 +299,14 @@ body {
     font-size:16px;
     margin: 0;
     padding: 0;
-    box-shadow:1px 0 5px #999;
     width:250px;
     overflow: hidden;
     z-index: 999;
+
+    -moz-box-shadow:    inset -3px 0 10px #000000;
+    -webkit-box-shadow: inset -3px 0 10px #000000;
+    box-shadow:         inset -3px 0 10px #000000;
+
     -webkit-transform: translateX(-210px);
     -moz-transform: translateX(-210px);
     -o-transform: translateX(-210px);
@@ -309,8 +316,12 @@ body {
 .leftnav li{
     padding:10px 15px;
     list-style-type:none;
-    position:relative;
-    border-bottom:1px solid #ecf0f1;
+    font-weight:400;
+    border-bottom:1px solid #46596b;
+}
+.leftnav li:hover{
+    background:#2c3e50;
+    color:#fff;
 }
 
 #container.bodypush{
