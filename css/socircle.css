@@ -5,15 +5,7 @@
 
 
 
-*, *:before, *:after {
-
-    -moz-box-sizing: border-box;
-
-    -webkit-box-sizing: border-box;
-
-    box-sizing: border-box;
-
-}
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 body {
 
@@ -252,7 +244,7 @@ body {
 #chart_container{
     width:350px;
     height:350px;
-    margin:30px 10px 0 0;
+    margin:30px 0 0 0;
     position:relative;
     float:right;
 }
@@ -304,7 +296,7 @@ body {
 
  .leftnav{
     background:#fff;
-    position:relative;
+    position:fixed;
     height:100%;
     top:0;
     color:#333;
@@ -328,6 +320,18 @@ body {
     list-style-type:none;
     position:relative;
     border-bottom:1px solid #ecf0f1;
+}
+
+.leftnav:hover{
+    left:250px;
+}
+
+.leftnav:hover #container{
+    -webkit-transform: translateX(250px);
+    -moz-transform: translateX(250px);
+    -o-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
 }
 
 
