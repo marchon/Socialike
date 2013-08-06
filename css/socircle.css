@@ -33,7 +33,7 @@ body {
 
 #container {
 
-    margin:0 auto;
+    margin:0;
     padding:0;
 
 }
@@ -156,7 +156,7 @@ body {
 
 .main_user {
 
-    width:818px;
+    width:791px;
 
     height:734px !important;
 
