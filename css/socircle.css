@@ -32,10 +32,13 @@ body {
 }
 
 #container {
-
-    margin:0 15px 0 0;
-    padding:0;
-    float:right;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+    -o-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    transform: translateX(80px);
 
 }
 
@@ -44,44 +47,23 @@ body {
     list-style-type:none;
     visibility: hidden;    
     border:1px solid #e3e5e5;
-
     width:195px;
-
     height: 212px;
     float:left;
-
     margin-bottom:5px;
-
     padding: 18px 5px 0;
-
-    -moz-border-radius:4px;
-
-    -webkit-border-radius:4px;
-
     border-radius:4px;
-
 }
 
+
 .grid_items img {
-
     display:none;
-
-    -moz-border-radius:50%;
-
-    -webkit-border-radius:50%;
-
     border-radius:50%;
-
 }
 
 .grid_items div {
-
     display:block;
-
     text-align: center;
-
-    
-
 }
 
 .grid_items .pic {
@@ -98,36 +80,25 @@ body {
     height:88px;
 
     margin:0 auto;
-    -moz-border-radius:50%;
-
-    -webkit-border-radius:50%;
 
     border-radius:50%;
 
-    -moz-transition:all 0.3s ease;
-
     -webkit-transition:all 0.3s ease;
-
+    -moz-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
     transition:all 0.3s ease;
 
 }
 
 .grid_items:hover .pic {
-
     -webkit-transform: rotate(325deg);
-
     -moz-transform: rotate(325deg);
-
-    -ms-transform: rotate(325deg);
-
     -o-transform: rotate(325deg);
-
+    -ms-transform: rotate(325deg);
     transform: rotate(325deg);
-
     border-color:#fff;
-
     box-shadow: 0 2px 2px #333;
-
 }
 
 .grid_items .name {
@@ -142,9 +113,7 @@ body {
     font-style:italic;
     font-size: 1.2em;
     margin:3px 0 10px;
-
-    font-weight:600;
-
+    font-weight:400;
 }
 
 .grid_items .location {
@@ -226,9 +195,9 @@ body {
     left:4%;
     bottom:-33px;
     border:3px solid #fff;
-    -moz-box-shadow:0 1px 4px #333333;
     -webkit-box-shadow:0 1px 4px #333333;
     box-shadow:0 1px 4px #333333;
+
 }
 
 .me_name{
@@ -330,6 +299,8 @@ body {
    white-space: -o-pre-wrap;   /* Opera 7 */    
    word-wrap: break-word;      /* IE */
  }
+
+/*--------Left navigation-------*/
 
  .leftnav{
     background:#fff;
