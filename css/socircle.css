@@ -33,8 +33,9 @@ body {
 
 #container {
 
-    margin:0;
+    margin:0 15px 0 0;
     padding:0;
+    float:right;
 
 }
 
@@ -178,7 +179,7 @@ body {
 
     border-radius:6px;
 
-    height:315px;
+    height:100%;
 
     position: relative;
 
@@ -189,7 +190,7 @@ body {
     image-rendering: optimizequality;
     left: 0;
     min-height: 100%;
-    min-width: 100%;
+    width: 100%;
     position: absolute;
     border-radius:4px;
 }
