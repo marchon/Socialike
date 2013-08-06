@@ -13,7 +13,7 @@
     <div id="fb-root"></div>
     <div id="wrapper">
 
-        <ul class="leftnav">
+        <ul class="leftnav transition">
             <li>Home</li>
             <li>Photos</li>
             <li>Friends</li>
@@ -21,7 +21,7 @@
         </ul>
 
         <!-- Main container -->
-        <ul id="container"></ul>
+        <ul id="container" class="transition"></ul>
 
         <div id="preloader" style="width:100px; height:100px; position:absolute; left:50%; top:50%; margin:-50px 0 0 -50px;">
             <img src="http://careers.utc.com/Styles/Sites/UTS/images/preloader_transparent.gif" />
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     $('.leftnav').hover(function() {
         $(this).toggleClass('menupush');
-        $('#container').toggleClass('menupush');
+        $('#container').toggleClass('bodypush');
                 
     });
 });
