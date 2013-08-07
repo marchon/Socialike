@@ -314,9 +314,15 @@ body {
     -o-transform: translateX(-250px);
     -ms-transform: translateX(-250px);
     transform: translateX(-250px);
+
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -o-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
 }
 
-#wrapper.bodypush{
+#container.bodypush{
    -webkit-transform: translateX(250px);
     -moz-transform: translateX(250px);
     -o-transform: translateX(250px);
