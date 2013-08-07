@@ -378,6 +378,8 @@ function highCharts(chartdat) {
                 headerFormat: '<div class="tooltip_main"><div class="tooltip_location">{point.key}</div>',
                 pointFormat: '<div class="tooltip_count">{point.y:.0f}</div>',
                 footerFormat: '</div>',
+                hideDelay: 300,
+                followTouchMove: true,
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif',
                     width: '300px'
