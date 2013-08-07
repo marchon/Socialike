@@ -41,7 +41,7 @@ body {
 }
 
 #container {
-    margin: 0 auto;
+    margin: 70px auto 0 auto;
     padding: 0;
     
 }
@@ -359,6 +359,7 @@ body {
     color:#95a5a6;
     margin:0 0 20px 0;
     position: fixed;
+    width:100%;
     top:0; left:0;
 }
 .menu_show{
