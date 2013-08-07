@@ -36,6 +36,10 @@ body {
 
 }
 
+#wrapper{
+    
+}
+
 #container {
     margin: 0 auto;
     padding: 0;
@@ -304,14 +308,14 @@ body {
     -webkit-box-shadow: inset -3px -5px 5px #333;
     box-shadow:         inset -3px -5px 5px #333;
 
-    -webkit-transform: translateX(-210px);
-    -moz-transform: translateX(-210px);
-    -o-transform: translateX(-210px);
-    -ms-transform: translateX(-210px);
-    transform: translateX(-210px);
+    -webkit-transform: translateX(-250px);
+    -moz-transform: translateX(-250px);
+    -o-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    transform: translateX(-250px);
 }
 
-#container.bodypush{
+#wrapper.bodypush{
    -webkit-transform: translateX(250px);
     -moz-transform: translateX(250px);
     -o-transform: translateX(250px);
