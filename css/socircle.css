@@ -311,14 +311,14 @@ body {
     transform: translateX(-210px);
 }
 
--#container.bodypush{
+#container.bodypush{
    -webkit-transform: translateX(250px);
     -moz-transform: translateX(250px);
     -o-transform: translateX(250px);
     -ms-transform: translateX(250px);
     transform: translateX(250px);
 }
--.menupush{
+.menupush{
     -webkit-transform: translateX(0px);
    -moz-transform: translateX(0px);
     -o-transform: translateX(0px);
