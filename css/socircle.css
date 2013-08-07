@@ -307,6 +307,15 @@ body {
     -ms-transform: translateX(-210px);
     transform: translateX(-210px);
 }
+
+.leftnav:hover{
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
 .leftnav li{
     padding:10px 15px;
     list-style-type:none;
@@ -319,20 +328,6 @@ body {
     color:#fff;
 }
 
-#container.bodypush{
-    -webkit-transform: translateX(250px);
-    -moz-transform: translateX(250px);
-    -o-transform: translateX(250px);
-    -ms-transform: translateX(250px);
-    transform: translateX(250px);
-}
-.menupush{
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    -o-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    transform: translateX(0px);
-}
 
 
 
