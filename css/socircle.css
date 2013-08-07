@@ -372,7 +372,7 @@ body {
     font-size:3em;
     font-weight: 200;
     text-align: center;
-    margin: 0 auto;
+    overflow: hidden;
     line-height: 44px;
     text-shadow:1px 1px 0px #ecf0f1;
 }
