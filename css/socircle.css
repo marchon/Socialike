@@ -10,10 +10,10 @@
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
     
-    -webkit-transition: all 0.2s ease;
-    -moz-transition:    all 0.2s ease;
-    -ms-transition:     all 0.2s ease;
-    -o-transition:      all 0.2s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    -o-transition:      all 0.3s ease;
     /*-webkit-transform:translate3d(0,0,0);*/
     -webkit-backface-visibility: hidden;
 }
@@ -344,6 +344,31 @@ body {
 .leftnav li:hover{
     background:#2c3e50;
     color:#fff;
+}
+
+.topnav{
+    margin:0;
+    padding:0;
+    background:#fff;
+    height:50px;
+    border-bottom:2px solid #E3E5E5;
+    color:#95a5a6;
+    margin:0 0 20px 0;
+}
+.menu_show{
+    background:#c0392b;
+    width:50px;
+    height:50px;
+    float:left;
+}
+
+.logo{
+    font-size:3em;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 44px;
+    text-shadow:1px 1px 0px #ecf0f1;
 }
 
 
