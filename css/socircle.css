@@ -187,6 +187,7 @@ body {
     border:3px solid #fff;
     -webkit-box-shadow:0 1px 4px #333333;
     box-shadow:0 1px 4px #333333;
+    overflow: hidden;
 
 }
 
@@ -350,7 +351,7 @@ body {
     width:100%;
     top:0; left:0;
     z-index: 99;
-    /*-webkit-backface-visibility: hidden;*/
+    opacity: 0.95;
 }
 .menu_show{
     background:url(../images/menu.png) no-repeat center center #34495e;
