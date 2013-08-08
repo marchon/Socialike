@@ -250,8 +250,8 @@ body {
 
 .chart_title{text-transform: uppercase;font-weight: 100;}
 .headingelem_1{font-size: 2em;}
-.headingelem_2{font-size: 4.6em;}
-.headingelem_3{font-size: 1.7em; line-height: 0.4em;}
+.headingelem_2{font-size: 4.6em;line-height: 0.6em;}
+.headingelem_3{font-size: 1.7em; line-height: 1.8em;}
 
 .highcharts-tooltip > span {
     background-color:#fff;
