@@ -15,7 +15,7 @@
     -ms-transition:     all 0.3s ease;
     -o-transition:      all 0.3s ease;
     /*-webkit-transform:translate3d(0,0,0);*/
-    -webkit-backface-visibility: hidden;
+    /*-webkit-backface-visibility: hidden;*/
 }
 
 body {
@@ -41,9 +41,9 @@ body {
 }
 
 #container {
-    margin: 70px 0 0 0;
+    margin: 70px auto 0 auto;
     padding: 0;
-    
+    -webkit-backface-visibility: hidden;
 }
 
 .grid_items {
@@ -349,7 +349,7 @@ body {
     width:100%;
     top:0; left:0;
     z-index: 99;
-    -webkit-backface-visibility: hidden;
+    /*-webkit-backface-visibility: hidden;*/
 }
 .menu_show{
     background:url(../images/menu.png) no-repeat center center #34495e;
