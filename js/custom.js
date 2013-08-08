@@ -50,6 +50,7 @@ function homePage() {
             inBday = document.createTextNode(me.birthday),
             inPicture = me.picture.data.url;
 
+
         //Creating first List Item //
         var listFirst = document.createElement("li");
         listFirst.setAttribute("class", "grid_items main_user");
@@ -156,13 +157,27 @@ function homePage() {
                     userIcons.setAttribute('src', 'images/icon_location.png');
                     break;
                 case 2:
+                if(inHome){
                     detailListItems.appendChild(inHome);
                     userIcons.setAttribute('src', 'images/icon_home.png');
-                    break;
-                default:
-                    detailListItems.appendChild(inBday);
+                    break;}
+                    else
+                    {
+                        detailListItems.appendChild("Where is my HomeTown");
                     userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
+                    }
+                default:
+                if(inBday){
+                    detailListItems.appendChild(inBday);
+                    userIcons.setAttribute('src', 'images/icon_home.png');
+                    break;} else {
+
+                        detailListItems.appendChild("B'day?");
+                    userIcons.setAttribute('src', 'images/icon_home.png');
+                    break;
+
+                    }
             }
 
             iconContainer.appendChild(userIcons);
