@@ -352,7 +352,7 @@ body {
 }
 .menu_show{
     background:url(../images/menu.png) no-repeat center center #34495e;
-    border-right:1px solid #ecf0f1;
+    border-right:1px solid #45596e;
     width:50px;
     height:50px;
     float:left;
@@ -362,6 +362,7 @@ body {
 .menu_wide{
     background-color:#c0392b;
     background-position:center 180px;
+    border-right:1px solid #ce5549;
     width:250px;
 }
 
@@ -370,8 +371,10 @@ body {
     font-weight: 200;
     text-align: center;
     overflow: hidden;
+    height:50px;
     line-height: 44px;
     text-shadow:1px 1px 0px #34495e;
+    border-left:1px solid #203244;
 }
 
 #container.bodypush{
