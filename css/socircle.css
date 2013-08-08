@@ -361,12 +361,13 @@ body {
 }
 .menu_wide{
     background-color:#c0392b;
-    background-position:180px center;
+    background-position:208px center;
     border-right:1px solid #ce5549;
     width:250px;
 }
 
 .logo{
+    background:url();
     font-size:3em;
     font-weight: 200;
     text-align: center;
@@ -375,6 +376,12 @@ body {
     line-height: 44px;
     text-shadow:1px 1px 0px #34495e;
     border-left:1px solid #203244;
+}
+.logo a{
+    background:url(../images/logo_inner.png) no-repeat;
+    width:120px;
+    height:34px;
+    color:#fff;
 }
 
 #container.bodypush{
