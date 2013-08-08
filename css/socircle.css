@@ -315,20 +315,7 @@ body {
     transform: translateX(-250px);
 }
 
-#container.bodypush{
-   -webkit-transform: translateX(250px);
-    -moz-transform: translateX(250px);
-    -o-transform: translateX(250px);
-    -ms-transform: translateX(250px);
-    transform: translateX(250px);
-}
-.menupush{
-    -webkit-transform: translateX(0px);
-   -moz-transform: translateX(0px);
-    -o-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-   transform: translateX(0px);
-}
+
 
 /*.leftnav:hover{
     -webkit-transform: translateX(0px);
@@ -365,6 +352,7 @@ body {
 }
 .menu_show{
     background:#c0392b;
+    border-right:1px solid #ecf0f1;
     width:50px;
     height:50px;
     float:left;
@@ -381,6 +369,20 @@ body {
     text-shadow:1px 1px 0px #34495e;
 }
 
+#container.bodypush{
+   -webkit-transform: translateX(250px);
+    -moz-transform: translateX(250px);
+    -o-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
+}
+.menupush{
+    -webkit-transform: translateX(0px);
+   -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+   transform: translateX(0px);
+}
 
 
 
