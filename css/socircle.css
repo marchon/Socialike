@@ -373,7 +373,7 @@ body {
     text-align: center;
     overflow: hidden;
     height:50px;
-    line-height: 44px;
+    line-height: 66px;
     text-shadow:1px 1px 0px #34495e;
     border-left:1px solid #203244;
 }
@@ -382,6 +382,7 @@ body {
     width:120px;
     height:34px;
     color:#fff;
+    display: inline-block;
 }
 
 #container.bodypush{
