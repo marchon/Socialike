@@ -361,7 +361,7 @@ body {
 }
 .menu_wide{
     background-color:#c0392b;
-    background-position:center 180px;
+    background-position:180px center;
     border-right:1px solid #ce5549;
     width:250px;
 }
