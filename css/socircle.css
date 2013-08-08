@@ -33,7 +33,7 @@ body {
     padding:0;
 
     overflow-x:hidden; 
-
+    
 }
 
 #wrapper{
@@ -43,7 +43,7 @@ body {
 #container {
     margin: 70px auto 0 auto;
     padding: 0;
-    -webkit-backface-visibility: hidden;
+   
 }
 
 .grid_items {
@@ -57,6 +57,7 @@ body {
     margin-bottom:5px;
     padding: 18px 5px 0;
     border-radius:4px;
+     -webkit-backface-visibility: hidden;
 }
 
 
