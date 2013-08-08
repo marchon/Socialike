@@ -44,10 +44,10 @@ function homePage() {
 
         // All variables for loged in user//
         var inName = document.createTextNode(me.name),
-            inUsername = document.createTextNode(me.username != 'undefined' ? me.username : "Username?"),
-            inHome = document.createTextNode(me.hometown.name != 'undefined' ? me.hometown.name : "Hometown?"),
-            inLocation = document.createTextNode(me.location.name != 'undefined' ? me.location.name : "Location?"),
-            inBday = document.createTextNode(me.birthday != 'undefined' ? me.birthday : "Birthday?"),
+            inUsername = document.createTextNode(typeof(me.username) != 'undefined' ? me.username : "Username?"),
+            inHome = document.createTextNode(typeof(me.hometown.name) != 'undefined' ? me.hometown.name : "Hometown?"),
+            inLocation = document.createTextNode(typeof(me.location.name) != 'undefined' ? me.location.name : "Location?"),
+            inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
 
