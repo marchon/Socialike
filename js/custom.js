@@ -44,11 +44,12 @@ function homePage() {
 
         // All variables for loged in user//
         var inName = document.createTextNode(me.name),
-            inUsername = document.createTextNode(me.username),
-            inHome = document.createTextNode(me.hometown.name),
-            inLocation = document.createTextNode(me.location.name),
-            inBday = document.createTextNode(me.birthday),
+            inUsername = document.createTextNode(me.username != 'undefined' ? me.username : "Username?"),
+            inHome = document.createTextNode(me.hometown.name != 'undefined' ? me.hometown.name : "Hometown?"),
+            inLocation = document.createTextNode(me.location.name != 'undefined' ? me.location.name : "Location?"),
+            inBday = document.createTextNode(me.birthday != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
+
 
 
         //Creating first List Item //
@@ -157,27 +158,13 @@ function homePage() {
                     userIcons.setAttribute('src', 'images/icon_location.png');
                     break;
                 case 2:
-                if(inHome){
                     detailListItems.appendChild(inHome);
                     userIcons.setAttribute('src', 'images/icon_home.png');
-                    break;}
-                    else
-                    {
-                        detailListItems.appendChild("Where is my HomeTown");
-                    userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
-                    }
                 default:
-                if(inBday){
                     detailListItems.appendChild(inBday);
                     userIcons.setAttribute('src', 'images/icon_home.png');
-                    break;} else {
-
-                        detailListItems.appendChild("B'day?");
-                    userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
-
-                    }
             }
 
             iconContainer.appendChild(userIcons);
