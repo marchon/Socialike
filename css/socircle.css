@@ -351,7 +351,7 @@ body {
     z-index: 99;
 }
 .menu_show{
-    background:url(images/menu.png) no-repeat center center #34495e;
+    background:url(../images/menu.png) no-repeat center center #34495e;
     border-right:1px solid #ecf0f1;
     width:50px;
     height:50px;
