@@ -374,13 +374,13 @@ function highCharts(chartdat) {
             tooltip: {
                 backgroundColor: '#fff',
                 borderRadius: '50%',
-                borderWidth: 1,
+                borderWidth: 0,
                 shadow: false,
                 useHTML: true,
                 headerFormat: '<div class="tooltip_main"><div class="tooltip_location">{point.key}</div>',
                 pointFormat: '<div class="tooltip_count">{point.y:.0f}</div>',
                 footerFormat: '</div>',
-                hideDelay: 300,
+                //hideDelay: 300,
                 followTouchMove: true,
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif',
