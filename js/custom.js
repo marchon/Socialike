@@ -307,7 +307,7 @@ function homePage() {
 
                     $("li").show();
 
-                    msnry.layout();
+                    //msnry.layout();
 
                 });
 
