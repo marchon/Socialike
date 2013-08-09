@@ -416,7 +416,7 @@ body {
 }
 
 #albums li{
-    width:300px;
+    width:200px;
     height: 200px;
     position:relative;
     overflow:hidden;
@@ -444,9 +444,10 @@ body {
     right:0;
     /*height: 100px;*/
     box-shadow:0px -3px 5px #333;
-    font-size:20px;
-    padding:15px;
+    font-size:1.6em;
+    padding:10px 5px;
     font-weight: 400;
+    word-wrap:break-word;
 }
 
 #albums li:nth-child(2n) .album_title{
