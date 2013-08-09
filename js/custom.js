@@ -1,4 +1,5 @@
 /*---------------------------User Data-------------------------*/
+
 function users(callback) {
 
     FB.api('/me?fields=name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
@@ -20,6 +21,7 @@ function friends(callback) {
 
 
 /*---------------------------User Album Data-------------------------*/
+
 function pic(album_id, callback) {
 
     FB.api("/" + album_id + "/photos", function(response) {
@@ -121,7 +123,7 @@ function homePage() {
 
             var iconContainer = document.createElement('span');
             iconContainer.setAttribute('class', 'detailsicon melist_' + j);
-            
+
             switch (j) {
                 case 0:
                     detailListItems.appendChild(inUsername);
@@ -197,7 +199,7 @@ function homePage() {
 
                 var list = document.createElement("li");
                 list.setAttribute("class", "grid_items");
-                list.style.backgroundColor = colors[ran];
+                list.style.backgroundColor = flatColors();
 
                 var image = document.createElement("img");
                 image.setAttribute("src", dostImg);
@@ -438,7 +440,7 @@ function albums() {
 
 
 
-                    
+
 
                     list.appendChild(coverCont);
                     list.appendChild(albumNameCont);
@@ -453,7 +455,14 @@ function albums() {
     });
 }
 
+/*Random Colors*/
+// Random Colors tiles//
 
+function flatColors() {
+    var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
+    var ran = Math.floor(Math.random() * colors.length);
+    return colors[ran];
+}
 
 /*-------------------------User Album Ends ------------------------------*/
 
