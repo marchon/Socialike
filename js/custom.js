@@ -422,20 +422,26 @@ function albums() {
                     list.setAttribute("id", albumid);
                     list.setAttribute("onClick", "albumPictures(this.id)");
 
-
-
-                    var Div = document.createElement("div");
-                    Div.setAttribute("class", "album_name");
-                    Div.appendChild(albumname);
-
                     var image = document.createElement("img");
                     image.setAttribute("src", coverPic);
                     image.setAttribute("id", albumid);
-                    image.setAttribute("width", "100");
-                    image.setAttribute("height", "100");
+                    //image.setAttribute("width", "100");
+                    //image.setAttribute("height", "100");
 
-                    list.appendChild(Div);
-                    list.appendChild(image);
+                    var coverCont = document.createElement("div");
+                    coverCont.setAttribute("class", "img_container");
+                    coverCont.appendChild(image);
+
+                    var albumNameCont = document.createElement("div");
+                    albumNameCont.setAttribute("class", "album_title");
+                    albumNameCont.appendChild(albumname);
+
+
+
+                    
+
+                    list.appendChild(coverCont);
+                    list.appendChild(albumNameCont);
 
                     document.getElementById("albums").appendChild(list);
 
