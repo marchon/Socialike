@@ -43,7 +43,6 @@ body {
 #container {
     margin: 70px auto 0 auto;
     padding: 0;
-    min-width: 100%;
 }
 
 .grid_items {
@@ -335,7 +334,7 @@ body {
     border-bottom:1px solid #46596b;
 }
 .leftnav li:hover{
-    background:#2c3e50;
+    background:#1b2c3c;
     color:#fff;
 }
 
