@@ -305,7 +305,7 @@ function homePage() {
                     // myLoci = myLoci.split(',')[0];
                     // //console.log(myLoci);
 
-                    // $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+                    $("li").show();
 
                     msnry.layout();
 

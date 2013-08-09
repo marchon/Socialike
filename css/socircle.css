@@ -331,6 +331,7 @@ body {
     list-style-type:none;
     font-weight:400;
     color:#bdc3c7;
+    cursor:pointer;
     border-bottom:1px solid #46596b;
 }
 .leftnav li:hover{
