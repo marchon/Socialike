@@ -275,6 +275,8 @@ function homePage() {
 
             setTimeout(function() {
                 highCharts(chartdat);
+                albums()
+                
             }, 2000)
 
 
@@ -289,34 +291,10 @@ function homePage() {
 
         });
     });
-
-
-
 }
 
-/*---------------------------------------------------------------------------*/
 
-// function getUser() {
-
-
-//     var getuser = users(function(model) {
-//         userLoci = model.location.name;
-//         $("#userProfile").append('<ul class="userDetails">');
-//         //$('.userDetails').append('<li> <img src="'+response.cover.source+'"> </li>'); // User Image//
-//         $('.userDetails').append('<li> <img src="' + model.picture.data.url + '"width="100" height="100" > </li>'); // User Image//
-//         $('.userDetails').append('<li> <span>' + model.name + '</span></li>'); // User Name//
-//         $('.userDetails').append('<li> <span>' + model.location.name + '</span></li>'); // User Location//
-//         $('.userDetails').append('<li> <span>' + model.hometown.name + '</span></li>'); // User Hometown//
-//         if (typeof(model.birthday) == 'undefined') {
-//             $('.userDetails').append('<li id="userBday"> <span> Birthday Unknown</span></li>'); // User Birthday if not public//
-//         } else {
-//             $('.userDetails').append('<li id="userBday"> <span>' + model.birthday + '</span></li>'); // User Birthday//
-//         }
-
-//     });
-// }
-
-// /*-------------------------Friends List ------------------------------*/
+/*-------------------------Pie Chart------------------------------*/
 
 function highCharts(chartdat) {
 
@@ -421,104 +399,56 @@ function highCharts(chartdat) {
 }
 
 
-
-
-
-
-/*------------------------- Friends List complete-------------------------*/
-
-
-/*------------------------- Friends Nearby-------------------------*/
-
-
-// function friendsNearby() {
-
-//     var userLocationName = users(function(userData) {
-
-//         var userLoci = userData.location.name;
-
-//         var friendsLocationName = friends(function(friendsData) {
-
-
-//             for (var i = 0; i < friendsData.data.length; i++) {
-
-//                 if (typeof(friendsData.data[i].location) != 'undefined') {
-
-//                     if (friendsData.data[i].location.name === userLoci) {
-
-//                         $('.nearList').append('<li> <span class="friendImg"><img src="' + friendsData.data[i].picture.data.url + '" width="40" height="40" ></span> <span>' + friendsData.data[i].name + '</span></li>');
-
-//                     }
-
-//                 }
-
-//             }
-//         });
-
-//     });
-
-
-
-// }
-
-
-
-
-
-
-/*-------------------------Friends Nearby complete ------------------------------*/
-
-
 /*-------------------------User Album - remove myAlbum and check ------------------------------*/
 
-// function albums() {
+function albums() {
 
-//     users(function(myalbum) {
+    users(function(myalbum) {
 
-//         var len = myalbum.albums.data.length;
+        var len = myalbum.albums.data.length;
 
-//         for (var i = 0; i < len; i++) {
+        for (var i = 0; i < len; i++) {
 
-//             var albumid = myalbum.albums.data[i].id; //Album ID
+            var albumid = myalbum.albums.data[i].id; //Album ID
 
-//             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
-//             (function(albumid, albumname) {
+            (function(albumid, albumname) {
 
-//                 var albumPic = pic(albumid, function(albPic) {
-
-
-
-//                     var coverPic = albPic.data[0].source;
-
-//                     var list = document.createElement("li");
-//                     list.setAttribute("id", albumid);
-//                     list.setAttribute("onClick", "albumPictures(this.id)");
+                var albumPic = pic(albumid, function(albPic) {
 
 
 
-//                     var Div = document.createElement("div");
-//                     Div.setAttribute("class", "album_name");
-//                     Div.appendChild(albumname);
+                    var coverPic = albPic.data[0].source;
 
-//                     var image = document.createElement("img");
-//                     image.setAttribute("src", coverPic);
-//                     image.setAttribute("id", albumid);
-//                     image.setAttribute("width", "100");
-//                     image.setAttribute("height", "100");
+                    var list = document.createElement("li");
+                    list.setAttribute("id", albumid);
+                    list.setAttribute("onClick", "albumPictures(this.id)");
 
-//                     list.appendChild(Div);
-//                     list.appendChild(image);
 
-//                     document.getElementById("albums").appendChild(list);
 
-//                 });
+                    var Div = document.createElement("div");
+                    Div.setAttribute("class", "album_name");
+                    Div.appendChild(albumname);
 
-//             })(albumid, albumname);
-//         }
+                    var image = document.createElement("img");
+                    image.setAttribute("src", coverPic);
+                    image.setAttribute("id", albumid);
+                    image.setAttribute("width", "100");
+                    image.setAttribute("height", "100");
 
-//     });
-// }
+                    list.appendChild(Div);
+                    list.appendChild(image);
+
+                    document.getElementById("albums").appendChild(list);
+
+                });
+
+            })(albumid, albumname);
+        }
+
+    });
+}
 
 
 
