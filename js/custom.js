@@ -39,7 +39,7 @@ function homePage() {
 
     var getuser = users(function(me) {
 
-        var docfrag = document.createDocumentFragment(); // Document Fragment
+        docfrag = document.createDocumentFragment(); // Document Fragment
         userAllDetails(me)
 
 
