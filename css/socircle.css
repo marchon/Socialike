@@ -457,9 +457,9 @@ body {
 }
 
 #albums li:hover .img_container{
-     transform: translateX(-25px);
-    -ms-transform: translateX(-25px); /* IE 9 */
-    -webkit-transform: translateX(-25px);
+     transform: translateX(-45px);
+    -ms-transform: translateX(-45px); /* IE 9 */
+    -webkit-transform: translateX(-45px);
 }
 
 
