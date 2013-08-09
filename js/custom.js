@@ -291,13 +291,26 @@ function homePage() {
 
                     var myLoci = $(this).attr('data-location');
                     myLoci = myLoci.split(',')[0];
-                    console.log(myLoci);
+                    //console.log(myLoci);
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
                     msnry.layout();
 
                 });
+
+                $('#home').click(function() {
+
+                    // var myLoci = $(this).attr('data-location');
+                    // myLoci = myLoci.split(',')[0];
+                    // //console.log(myLoci);
+
+                    // $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+
+                    msnry.layout();
+
+                });
+
             });
 
 
