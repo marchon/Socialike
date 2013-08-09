@@ -294,20 +294,15 @@ function homePage() {
                     //console.log(myLoci);
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
-
-                    setTimeout(function() {
-                        msnry.layout();
-                    }, 500)
                     
+                    msnry.layout();
 
                 });
 
                 $('#home').click(function() {
 
                     $("li").show();
-                    setTimeout(function() {
-                        msnry.layout();
-                    }, 500)
+                    msnry.layout();
 
                 });
 
