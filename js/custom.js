@@ -610,11 +610,11 @@ function highCharts(chartdat) {
 
 /*-------------------------Logout Script ------------------------------*/
 
-// function fbLogout() {
-//     FB.logout(function(response) {
-//         window.location.reload();
-//     });
-// }
+function fbLogout() {
+    FB.logout(function(response) {
+        window.location.reload();
+    });
+}
 
 /*------------------------- Logout Script End -------------------------*/
 
