@@ -283,7 +283,7 @@ function homePage() {
                     columnWidth: 195,
                     "gutter": 4,
                     transitionDuration: '0.6s',
-                    itemSelector: '.grid_items',
+                    itemSelector: '.grid_items:visible',
                     "isFitWidth": true
                 });
 
@@ -293,9 +293,9 @@ function homePage() {
                     myLoci = myLoci.split(',')[0];
                     //console.log(myLoci);
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').msnry.hide();
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
-                   // msnry.reloadItems()
+                    //msnry.layout();
 
                 });
 
@@ -307,7 +307,7 @@ function homePage() {
 
                     $("li").show();
 
-                    msnry.layout().reloadItems()
+                   // msnry.layout();
 
                 });
 
