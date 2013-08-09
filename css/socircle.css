@@ -431,21 +431,15 @@ body {
     /*height: 150px;*/
     overflow:hidden;
     position:absolute;
-    /* Safari and Chrome */
-
-    -moz-transition:all 0.3s ease;
 
     -webkit-transition:all 0.3s ease;
-
-    transition:all 0.3s ease;
 }
 .img_container img{height:100%; }
 
 .album_title{
-    font-family: 'Times New Roman', sans-serif;
     background:#16a085;
     position: absolute;
-    width:50%;
+    width:60%;
     height: 100%;
     right:0;
     /*height: 100px;*/
@@ -463,9 +457,9 @@ body {
 }
 
 #albums li:hover .img_container{
-     transform: translateX(-15px);
-    -ms-transform: translateX(-15px); /* IE 9 */
-    -webkit-transform: translateX(-15px);
+     transform: translateX(-25px);
+    -ms-transform: translateX(-25px); /* IE 9 */
+    -webkit-transform: translateX(-25px);
 }
 
 
