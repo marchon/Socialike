@@ -279,7 +279,7 @@ function homePage() {
                 myLoci = myLoci.split(',')[0];
                 //console.log(myLoci);
 
-                $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+                $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
                 msnry.layout();
 
@@ -287,7 +287,7 @@ function homePage() {
 
             $('#home').click(function() {
 
-                $("li").show().addClass('bigEntrance');
+                $("li").show();
                 msnry.layout();
 
             });
