@@ -130,30 +130,30 @@ function homePage() {
             var detailListItems = document.createElement('li')
 
             var iconContainer = document.createElement('span');
-            iconContainer.style.backgroundColor = arrColor[j];
+            //iconContainer.style.backgroundColor = arrColor[j];
 
-            iconContainer.setAttribute('class', 'melist_' + j);
+            iconContainer.setAttribute('class', 'detailsicon melist_' + j);
 
-            userIcons = document.createElement('img');
+            //userIcons = document.createElement('img');
 
 
 
             switch (j) {
                 case 0:
                     detailListItems.appendChild(inUsername);
-                    userIcons.setAttribute('src', 'images/icon_link.png');
+                    //userIcons.setAttribute('src', 'images/icon_link.png');
                     break;
                 case 1:
                     detailListItems.appendChild(inLocation);
-                    userIcons.setAttribute('src', 'images/icon_location.png');
+                    //userIcons.setAttribute('src', 'images/icon_location.png');
                     break;
                 case 2:
                     detailListItems.appendChild(inHome);
-                    userIcons.setAttribute('src', 'images/icon_home.png');
+                   // userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
                 default:
                     detailListItems.appendChild(inBday);
-                    userIcons.setAttribute('src', 'images/icon_home.png');
+                   // userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
             }
 
