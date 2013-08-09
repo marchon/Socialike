@@ -272,7 +272,7 @@ function homePage() {
                 }
             }
 
-            $(document).ready(function() {
+            //$(document).ready(function() {
 
                 //Masonry initiated//
                 var container = document.querySelector('#container');
@@ -306,7 +306,7 @@ function homePage() {
 
                 });
 
-            });
+           // });
 
 
             setTimeout(function() {
