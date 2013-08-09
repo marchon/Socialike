@@ -101,16 +101,6 @@ function homePage() {
         var chartContainer = document.createElement("div");
         chartContainer.setAttribute("id", "chart_container");
 
-        // var chartTextContainer = document.createElement("div");
-        // chartTextContainer.setAttribute("class", "chart_text");
-
-        // var chartText = document.createTextNode('Friends Top Location');
-
-        // chartTextContainer.appendChild(chartText);
-
-        // chartContainer.appendChild(chartTextContainer);
-
-
         //Creating Name//
         var meName = cover.cloneNode(false);
         meName.setAttribute("class", "me_name");
@@ -253,10 +243,6 @@ function homePage() {
                 locationCont.setAttribute("class", "location");
                 locationCont.appendChild(dostLocation);
 
-                // var aboutFriends = photoCont.cloneNode(false);
-                // locationCont.setAttribute("class", "about_friends");
-                // locationCont.appendChild(dostLocation);
-
 
                 list.appendChild(photoCont);
                 list.appendChild(naamCont);
@@ -272,46 +258,44 @@ function homePage() {
                 }
             }
 
-            //$(document).ready(function() {
 
-                //Masonry initiated//
-                var container = document.querySelector('#container');
-                msnry = new Masonry(container, {
-                    // options
-                    isResizable: true,
-                    isAnimated: true,
-                    columnWidth: 195,
-                    "gutter": 4,
-                    transitionDuration: '0.6s',
-                    itemSelector: '.grid_items',
-                    "isFitWidth": true
-                });
 
-                $('#fnu').click(function() {
+            //Masonry initiated//
+            var container = document.querySelector('#container');
+            msnry = new Masonry(container, {
+                // options
+                isResizable: true,
+                isAnimated: true,
+                columnWidth: 195,
+                "gutter": 4,
+                transitionDuration: '0.6s',
+                itemSelector: '.grid_items',
+                "isFitWidth": true
+            });
 
-                    var myLoci = $(this).attr('data-location');
-                    myLoci = myLoci.split(',')[0];
-                    //console.log(myLoci);
+            $('#fnu').click(function() {
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+                var myLoci = $(this).attr('data-location');
+                myLoci = myLoci.split(',')[0];
+                //console.log(myLoci);
 
-                    msnry.layout();
+                $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
-                });
+                msnry.layout();
 
-                $('#home').click(function() {
+            });
 
-                    $("li").show();
-                    msnry.layout();
+            $('#home').click(function() {
 
-                });
+                $("li").show();
+                msnry.layout();
 
-           // });
+            });
 
 
             setTimeout(function() {
                 highCharts(chartdat);
-            }, 1000)
+            }, 2000)
 
 
             $('#container').imagesLoaded().progress(function(instance, image) {
