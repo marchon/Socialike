@@ -235,10 +235,12 @@ body {
     border-radius: 0;
 }
 
-.melist_0{line-height:32px;}
-.melist_1{line-height:37px;}
-.melist_2{line-height:34px;}
-.melist_3{line-height:34px;}
+/*["#f1c40f", "#3498db", "#1abc9c", "#7f8c8d"]*/
+
+.melist_0{background:url(../images/icon_link.png) no-repeat center center #f1c40f;}
+.melist_1{background:url(../images/icon_location.png) no-repeat center center #3498db;}
+.melist_2{background:url(../images/icon_home.png) no-repeat center center #1abc9c;}
+.melist_3{background:url(../images/icon_bday.png) no-repeat center center #7f8c8d;}
 
 #chart_container{
     width:350px;
