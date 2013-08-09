@@ -295,14 +295,19 @@ function homePage() {
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
-                    msnry.reloadItems();
+                    setTimeout(function() {
+                        msnry.layout();
+                    }, 500)
+                    
 
                 });
 
                 $('#home').click(function() {
 
                     $("li").show();
-                    msnry.reloadItems();
+                    setTimeout(function() {
+                        msnry.layout();
+                    }, 500)
 
                 });
 
