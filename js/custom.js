@@ -64,10 +64,6 @@ function homePage() {
         var coverWrapper = cover.cloneNode(false);
         coverWrapper.setAttribute("class", "cover_wrapper");
 
-        // var inCover = me.cover.source;
-        // inCover = inCover.replace(/s720/i, 'l720');
-        // var inCoverPos = me.cover.offset_y;
-
         var coverImg = document.createElement("img");
 
 
@@ -95,7 +91,6 @@ function homePage() {
         mePhoto.setAttribute("class", "me_photo");
         mePhoto.setAttribute("width", "100px");
         mePhoto.setAttribute("height", "100px");
-        //mePhoto.removeAttribute("style");
 
         //Creating HighChart Container
         var chartContainer = document.createElement("div");
@@ -125,43 +120,28 @@ function homePage() {
 
         for (j = 0; j < 4; j++) {
 
-            var arrColor = ["#f1c40f", "#3498db", "#1abc9c", "#7f8c8d"]
-
             var detailListItems = document.createElement('li')
 
             var iconContainer = document.createElement('span');
-            //iconContainer.style.backgroundColor = arrColor[j];
-
             iconContainer.setAttribute('class', 'detailsicon melist_' + j);
-
-            //userIcons = document.createElement('img');
-
-
-
+            
             switch (j) {
                 case 0:
                     detailListItems.appendChild(inUsername);
-                    //userIcons.setAttribute('src', 'images/icon_link.png');
                     break;
                 case 1:
                     detailListItems.appendChild(inLocation);
-                    //userIcons.setAttribute('src', 'images/icon_location.png');
                     break;
                 case 2:
                     detailListItems.appendChild(inHome);
-                   // userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
                 default:
                     detailListItems.appendChild(inBday);
-                   // userIcons.setAttribute('src', 'images/icon_home.png');
                     break;
             }
 
-            //iconContainer.appendChild(userIcons);
             detailListItems.appendChild(iconContainer);
             detailsList.appendChild(detailListItems);
-            //listFirst.appendChild(detailsList);
-            //docfrag.appendChild(detailsList);
 
         }
 
@@ -287,7 +267,7 @@ function homePage() {
 
             $('#home').click(function() {
 
-                $("li").show().addClass('bigEntrance');
+                $(".grid_items").show().addClass('bigEntrance');
                 msnry.layout();
 
             });
