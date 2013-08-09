@@ -293,7 +293,7 @@ function homePage() {
                     myLoci = myLoci.split(',')[0];
                     //console.log(myLoci);
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('grid_items').hide();
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
                     msnry.layout();
 
@@ -305,7 +305,7 @@ function homePage() {
                     // myLoci = myLoci.split(',')[0];
                     // //console.log(myLoci);
 
-                    $("li").addClass('grid_items')show();
+                    $("li").show();
 
                    msnry.reloadItems();
 
