@@ -301,13 +301,8 @@ function homePage() {
 
                 $('#home').click(function() {
 
-                    // var myLoci = $(this).attr('data-location');
-                    // myLoci = myLoci.split(',')[0];
-                    // //console.log(myLoci);
-
-                    $("li").css({'display': 'list-items'});
-
-                     msnry.layout();
+                    $("li").show();
+                    msnry.layout();
 
                 });
 
