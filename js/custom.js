@@ -1,5 +1,4 @@
-/*---------------------------Display User Profile-------------------------*/
-
+/*---------------------------User Data-------------------------*/
 function users(callback) {
 
     FB.api('/me?fields=name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
@@ -8,9 +7,7 @@ function users(callback) {
     });
 }
 
-/*-------------------------End Script - Display User Profile------------*/
-
-/*------------------------Friends List------------------------------------*/
+/*------------------------Friends Data------------------------------------*/
 
 function friends(callback) {
 
@@ -22,7 +19,7 @@ function friends(callback) {
 }
 
 
-
+/*---------------------------User Albums Data-------------------------*/
 function pic(album_id, callback) {
 
     FB.api("/" + album_id + "/photos", function(response) {
@@ -42,117 +39,7 @@ function homePage() {
 
     var getuser = users(function(me) {
 
-        // All variables for loged in user//
-        var inName = document.createTextNode(me.name),
-            inUsername = document.createTextNode(typeof(me.username) != 'undefined' ? me.username : "Username?"),
-            inHome = document.createTextNode(typeof(me.hometown.name) != 'undefined' ? me.hometown.name : "Hometown?"),
-            inLocation = document.createTextNode(typeof(me.location.name) != 'undefined' ? me.location.name : "Location?"),
-            inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
-            inPicture = me.picture.data.url;
-
-        document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
-
-        //Creating first List Item //
-        var listFirst = document.createElement("li");
-        listFirst.setAttribute("class", "grid_items main_user");
-        listFirst.style.backgroundColor = "#fff";
-
-        //Creating Cover//
-        var cover = document.createElement("div");
-        cover.setAttribute("class", "cover_photo");
-
-        var coverWrapper = cover.cloneNode(false);
-        coverWrapper.setAttribute("class", "cover_wrapper");
-
-        var coverImg = document.createElement("img");
-
-
-        coverWrapper.appendChild(coverImg);
-        if (me.cover) {
-            var inCover = me.cover.source;
-            inCover = inCover.replace(/s720/i, 'l720');
-            var inCoverPos = me.cover.offset_y;
-
-            coverImg.setAttribute('src', inCover);
-            coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
-        } else {
-
-            coverImg.setAttribute("src", "http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg");
-        }
-
-        //Creating Name & Picture Container//
-        var userBg = cover.cloneNode(false);
-        userBg.setAttribute("class", "userbg");
-        userBg.removeAttribute("style");
-
-        //Creating Picture//
-        var mePhoto = document.createElement("img");
-        mePhoto.setAttribute("src", inPicture);
-        mePhoto.setAttribute("class", "me_photo");
-        mePhoto.setAttribute("width", "100px");
-        mePhoto.setAttribute("height", "100px");
-
-        //Creating HighChart Container
-        var chartContainer = document.createElement("div");
-        chartContainer.setAttribute("id", "chart_container");
-
-        //Creating Name//
-        var meName = cover.cloneNode(false);
-        meName.setAttribute("class", "me_name");
-        meName.removeAttribute("style");
-        meName.appendChild(inName);
-
-        userBg.appendChild(mePhoto); // appending user photo to BG
-        userBg.appendChild(meName); // appending user name to BG
-
-        cover.appendChild(userBg); // appending BG to cover container
-        cover.appendChild(coverWrapper);
-
-
-
-
-        //---------Creating user details elements----------//
-
-        var detailsList = document.createElement('ul');
-        detailsList.setAttribute('class', 'user_details');
-
-
-
-        for (j = 0; j < 4; j++) {
-
-            var detailListItems = document.createElement('li')
-
-            var iconContainer = document.createElement('span');
-            iconContainer.setAttribute('class', 'detailsicon melist_' + j);
-            
-            switch (j) {
-                case 0:
-                    detailListItems.appendChild(inUsername);
-                    break;
-                case 1:
-                    detailListItems.appendChild(inLocation);
-                    break;
-                case 2:
-                    detailListItems.appendChild(inHome);
-                    break;
-                default:
-                    detailListItems.appendChild(inBday);
-                    break;
-            }
-
-            detailListItems.appendChild(iconContainer);
-            detailsList.appendChild(detailListItems);
-
-        }
-
-
-        listFirst.appendChild(cover); // appending cover container to 1st List item
-        listFirst.appendChild(detailsList);
-        listFirst.appendChild(chartContainer);
-        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
-
-
-        document.getElementById('container').appendChild(docfrag);
+        userAllDetails(me)
 
 
         //=========================Adding Friends list====================================================//
@@ -276,7 +163,7 @@ function homePage() {
             setTimeout(function() {
                 highCharts(chartdat);
                 albums()
-                
+
             }, 2000)
 
 
@@ -450,6 +337,122 @@ function albums() {
     });
 }
 
+
+
+function userAllDetails(me){
+
+    // All variables for loged in user//
+        var inName = document.createTextNode(me.name),
+            inUsername = document.createTextNode(typeof(me.username) != 'undefined' ? me.username : "Username?"),
+            inHome = document.createTextNode(typeof(me.hometown.name) != 'undefined' ? me.hometown.name : "Hometown?"),
+            inLocation = document.createTextNode(typeof(me.location.name) != 'undefined' ? me.location.name : "Location?"),
+            inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
+            inPicture = me.picture.data.url;
+
+        document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
+
+        //Creating first List Item //
+        var listFirst = document.createElement("li");
+        listFirst.setAttribute("class", "grid_items main_user");
+        listFirst.style.backgroundColor = "#fff";
+
+        //Creating Cover//
+        var cover = document.createElement("div");
+        cover.setAttribute("class", "cover_photo");
+
+        var coverWrapper = cover.cloneNode(false);
+        coverWrapper.setAttribute("class", "cover_wrapper");
+
+        var coverImg = document.createElement("img");
+
+
+        coverWrapper.appendChild(coverImg);
+        if (me.cover) {
+            var inCover = me.cover.source;
+            inCover = inCover.replace(/s720/i, 'l720');
+            var inCoverPos = me.cover.offset_y;
+
+            coverImg.setAttribute('src', inCover);
+            coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
+        } else {
+
+            coverImg.setAttribute("src", "http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg");
+        }
+
+        //Creating Name & Picture Container//
+        var userBg = cover.cloneNode(false);
+        userBg.setAttribute("class", "userbg");
+        userBg.removeAttribute("style");
+
+        //Creating Picture//
+        var mePhoto = document.createElement("img");
+        mePhoto.setAttribute("src", inPicture);
+        mePhoto.setAttribute("class", "me_photo");
+        mePhoto.setAttribute("width", "100px");
+        mePhoto.setAttribute("height", "100px");
+
+        //Creating HighChart Container
+        var chartContainer = document.createElement("div");
+        chartContainer.setAttribute("id", "chart_container");
+
+        //Creating Name//
+        var meName = cover.cloneNode(false);
+        meName.setAttribute("class", "me_name");
+        meName.removeAttribute("style");
+        meName.appendChild(inName);
+
+        userBg.appendChild(mePhoto); // appending user photo to BG
+        userBg.appendChild(meName); // appending user name to BG
+
+        cover.appendChild(userBg); // appending BG to cover container
+        cover.appendChild(coverWrapper);
+
+
+
+
+        //---------Creating user details elements----------//
+
+        var detailsList = document.createElement('ul');
+        detailsList.setAttribute('class', 'user_details');
+
+
+
+        for (j = 0; j < 4; j++) {
+
+            var detailListItems = document.createElement('li')
+
+            var iconContainer = document.createElement('span');
+            iconContainer.setAttribute('class', 'detailsicon melist_' + j);
+            
+            switch (j) {
+                case 0:
+                    detailListItems.appendChild(inUsername);
+                    break;
+                case 1:
+                    detailListItems.appendChild(inLocation);
+                    break;
+                case 2:
+                    detailListItems.appendChild(inHome);
+                    break;
+                default:
+                    detailListItems.appendChild(inBday);
+                    break;
+            }
+
+            detailListItems.appendChild(iconContainer);
+            detailsList.appendChild(detailListItems);
+
+        }
+
+
+        listFirst.appendChild(cover); // appending cover container to 1st List item
+        listFirst.appendChild(detailsList);
+        listFirst.appendChild(chartContainer);
+        docfrag.appendChild(listFirst); // appending 1st List item to document fragment
+
+
+        document.getElementById('container').appendChild(docfrag);
+}
 
 
 /*-------------------------User Album Ends ------------------------------*/
