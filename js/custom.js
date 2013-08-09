@@ -157,7 +157,7 @@ function homePage() {
                     break;
             }
 
-            iconContainer.appendChild(userIcons);
+            //iconContainer.appendChild(userIcons);
             detailListItems.appendChild(iconContainer);
             detailsList.appendChild(detailListItems);
             //listFirst.appendChild(detailsList);
