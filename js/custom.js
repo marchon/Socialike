@@ -50,7 +50,7 @@ function homePage() {
             inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
-            document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
+        document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
 
         //Creating first List Item //
         var listFirst = document.createElement("li");
@@ -146,7 +146,7 @@ function homePage() {
 
             userIcons = document.createElement('img');
 
-            
+
 
             switch (j) {
                 case 0:
@@ -273,6 +273,8 @@ function homePage() {
             }
 
             $(document).ready(function() {
+
+                //Masonry initiated//
                 var container = document.querySelector('#container');
                 msnry = new Masonry(container, {
                     // options
@@ -283,6 +285,18 @@ function homePage() {
                     transitionDuration: '0.6s',
                     itemSelector: '.grid_items',
                     "isFitWidth": true
+                });
+
+                $('#fnu').click(function() {
+
+                    var myLoci = $(this).attr('data-location');
+                    myLoci = myLoci.split(',')[0];
+                    console.log(myLoci);
+
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+
+                    msnry.layout();
+
                 });
             });
 
