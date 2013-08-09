@@ -46,19 +46,24 @@
 <script>
 $(document).ready(function() {
 
-    $('.menu_show').click(function() {
-        // $(this).toggleClass('menu_wide');
-        $('.leftnav').toggleClass('menupush');
-        //$('#container').toggleClass('bodypush');
 
-    });
 
     $(document).click(function() {
         // $(this).toggleClass('menu_wide');
-        $('.leftnav').removeClass('menupush');
+        $('.leftnav').hasClass('menupush').removeClass('menupush');
         //$('#container').toggleClass('bodypush');
 
     });
+
+     $('.menu_show').click(function(event) {
+        // $(this).toggleClass('menu_wide');
+        event.stopPropagation();
+        $('.leftnav').toggleClass('menupush');
+        
+        //$('#container').toggleClass('bodypush');
+
+    });
+
 });
 </script>
 
