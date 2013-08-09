@@ -283,7 +283,7 @@ function homePage() {
                     columnWidth: 195,
                     "gutter": 4,
                     transitionDuration: '0.6s',
-                    itemSelector: '.grid_items:visible',
+                    itemSelector: '.grid_items',
                     "isFitWidth": true
                 });
 
@@ -293,7 +293,7 @@ function homePage() {
                     myLoci = myLoci.split(',')[0];
                     //console.log(myLoci);
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('grid_items').hide();
 
                     //msnry.layout();
 
