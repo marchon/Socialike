@@ -34,13 +34,10 @@ function pic(album_id, callback) {
 
 function homePage() {
 
-   
-
-
-    var getuser = users(function(me) {
+   var getuser = users(function(me) {
 
         docfrag = document.createDocumentFragment(); // Document Fragment
-        userAllDetails(me)
+        userAllDetails()
 
 
         //=========================Adding Friends list====================================================//
@@ -340,7 +337,7 @@ function albums() {
 
 
 
-function userAllDetails(me){
+function userAllDetails(){
 
     // All variables for loged in user//
         var inName = document.createTextNode(me.name),
