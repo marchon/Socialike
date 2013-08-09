@@ -293,7 +293,7 @@ function homePage() {
                     myLoci = myLoci.split(',')[0];
                     //console.log(myLoci);
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').css({'visibility': 'hidden', 'display': 'none'});
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
                     msnry.layout();
 
@@ -305,9 +305,9 @@ function homePage() {
                     // myLoci = myLoci.split(',')[0];
                     // //console.log(myLoci);
 
-                    $("li").css({'visibility': 'visible', 'display': 'list-items'});
+                    $("li").css({'display': 'list-items'});
 
-                    msnry.reloadItems();
+                     msnry.layout();
 
                 });
 
