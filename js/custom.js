@@ -295,7 +295,7 @@ function homePage() {
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('grid_items').hide();
 
-                    //msnry.layout();
+                    msnry.layout();
 
                 });
 
@@ -305,9 +305,9 @@ function homePage() {
                     // myLoci = myLoci.split(',')[0];
                     // //console.log(myLoci);
 
-                    $("li").show();
+                    $("li").addClass('grid_items')show();
 
-                   // msnry.layout();
+                   msnry.reloadItems();
 
                 });
 
