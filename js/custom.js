@@ -436,6 +436,7 @@ function albums() {
 
                     var albumNameCont = document.createElement("div");
                     albumNameCont.setAttribute("class", "album_title");
+                    albumNameCont.setAttribute("style", "background-color:"+flatColors()+";");
                     albumNameCont.appendChild(albumname);
 
 
