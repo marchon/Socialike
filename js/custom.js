@@ -293,9 +293,9 @@ function homePage() {
                     myLoci = myLoci.split(',')[0];
                     //console.log(myLoci);
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').msnry.hide();
 
-                    msnry.reloadItems()
+                   // msnry.reloadItems()
 
                 });
 
@@ -307,7 +307,7 @@ function homePage() {
 
                     $("li").show();
 
-                    msnry.reloadItems()
+                    msnry.layout().reloadItems()
 
                 });
 
