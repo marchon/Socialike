@@ -303,14 +303,15 @@ body {
     padding: 0;
     width:250px;
     overflow: hidden;
-    z-index: 999;
+    z-index: 99;
+    opacity: 0.95;
 
     -moz-box-shadow:    inset -3px -5px 5px #333;
     -webkit-box-shadow: inset -3px -5px 5px #333;
     box-shadow:         inset -3px -5px 5px #333;
 
     -webkit-transition: all 0.3s ease;
-    
+
     -webkit-transform: translateX(-250px);
     -moz-transform: translateX(-250px);
     -o-transform: translateX(-250px);
