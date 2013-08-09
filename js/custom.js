@@ -50,7 +50,7 @@ function homePage() {
             inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
-            document.getElementById('fnu').setAttribute('data-location', inLocation.childNodes[0].nodeValue);
+            document.getElementById('fnu').setAttribute('data-location', inLocation.firstChild.firstChild.nodeValue);
 
         //Creating first List Item //
         var listFirst = document.createElement("li");
