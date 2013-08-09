@@ -50,7 +50,7 @@ function homePage() {
             inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
-
+            document.getElementById('fnu').setAttribute('data-location', inLocation)
 
         //Creating first List Item //
         var listFirst = document.createElement("li");
@@ -380,7 +380,7 @@ function highCharts(chartdat) {
                 headerFormat: '<div class="tooltip_main"><div class="tooltip_location">{point.key}</div>',
                 pointFormat: '<div class="tooltip_count">{point.y:.0f}</div>',
                 footerFormat: '</div>',
-                //hideDelay: 300,
+                hideDelay: 100,
                 followTouchMove: true,
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif',
