@@ -295,7 +295,7 @@ function homePage() {
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').fadeOut();
 
-                    msnry.reloadItems();
+                    msnry.layout();
 
                 });
 
@@ -307,8 +307,7 @@ function homePage() {
 
                     $("li").fadeIn();
 
-                    msnry.reloadItems();
-
+                    msnry.layout();
 
                 });
 
