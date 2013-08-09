@@ -293,8 +293,8 @@ function homePage() {
                     myLoci = myLoci.split(',')[0];
                     //console.log(myLoci);
 
-                    $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
-
+                    var hideItems = $(".location").not(":contains(" + myLoci + ")").parent('li');
+                    msnry.hide(hideItems)
                     msnry.layout();
 
                 });
