@@ -295,14 +295,14 @@ function homePage() {
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
 
-                    msnry.layout();
+                    msnry.reloadItems();
 
                 });
 
                 $('#home').click(function() {
 
                     $("li").show();
-                    msnry.layout();
+                    msnry.reloadItems();
 
                 });
 
