@@ -279,7 +279,7 @@ function homePage() {
                 myLoci = myLoci.split(',')[0];
                 //console.log(myLoci);
 
-                $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
+                $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
 
                 msnry.layout();
 
@@ -287,7 +287,7 @@ function homePage() {
 
             $('#home').click(function() {
 
-                $("li").show();
+                $("li").show().addClass('bigEntrance');
                 msnry.layout();
 
             });
@@ -301,7 +301,7 @@ function homePage() {
             $('#container').imagesLoaded().progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 if (result) {
-                    $(image.img).parents('li').addClass('bigEntrance');
+                    $(image.img).parent('li').addClass('bigEntrance');
                     $(image.img).fadeIn();
                 }
             });
