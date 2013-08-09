@@ -34,11 +34,12 @@ function pic(album_id, callback) {
 
 function homePage() {
 
-    var docfrag = document.createDocumentFragment(); // Document Fragment
+   
 
 
     var getuser = users(function(me) {
 
+        var docfrag = document.createDocumentFragment(); // Document Fragment
         userAllDetails(me)
 
 
