@@ -50,12 +50,12 @@ body {
     list-style-type:none;
     visibility: hidden;    
     /*border:1px solid #e3e5e5;*/
-    width:190px;
+    width:195px;
     height: 212px;
     float:left;
-    margin-bottom:0px;
+    margin-bottom:5px;
     padding: 18px 5px 0;
-    /*border-radius:4px;*/
+    border-radius:4px;
      -webkit-backface-visibility: hidden;
 }
 
@@ -116,7 +116,7 @@ body {
 
 .main_user {
 
-    width:781px;
+    width:791px;
 
     height:734px !important;
 
