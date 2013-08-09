@@ -81,7 +81,7 @@ function homePage() {
             coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
         } else {
 
-            coverImg.setAttribute("src", "background:url( http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg ) no-repeat 0 0");
+            coverImg.setAttribute("src", "http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg");
         }
 
         //Creating Name & Picture Container//
