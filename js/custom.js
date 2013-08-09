@@ -246,7 +246,7 @@ function homePage() {
                 isResizable: true,
                 isAnimated: true,
                 columnWidth: 195,
-                "gutter": 1,
+                "gutter": 0,
                 transitionDuration: '0.6s',
                 itemSelector: '.grid_items',
                 "isFitWidth": true
