@@ -23,14 +23,14 @@ function friends(callback) {
 
 
 
-// function pic(album_id, callback) {
+function pic(album_id, callback) {
 
-//     FB.api("/" + album_id + "/photos", function(response) {
+    FB.api("/" + album_id + "/photos", function(response) {
 
-//         callback(response);
+        callback(response);
 
-//     });
-// }
+    });
+}
 
 
 /*---------------------------End Friends List------------------------------*/
