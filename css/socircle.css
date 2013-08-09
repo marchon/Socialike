@@ -80,7 +80,11 @@ body {
     border-radius:50%;
     -webkit-transition: all 0.3s ease;
 }
-
+.grid_items .pic img{
+     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+}
 .grid_items:hover .pic {
     -webkit-transform: rotate(325deg);
     -moz-transform: rotate(325deg);
@@ -89,6 +93,10 @@ body {
     transform: rotate(325deg);
     border-color:#fff;
     box-shadow: 0 2px 2px #333;
+}
+.grid_items:hover .pic img{
+     filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+    -webkit-filter: grayscale(0%);
 }
 
 .grid_items .name {
