@@ -196,7 +196,7 @@ body {
     bottom:5px;
     color:#fff;
     font-size:3.2em;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: capitalize;
     text-shadow:0 1px 0 #333333;
     
@@ -378,7 +378,7 @@ body {
 .logo{
     background:url();
     font-size:3em;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     overflow: hidden;
     height:50px;
@@ -416,6 +416,11 @@ body {
     width: 98%;
     margin: 70px auto 0 auto;
 }
+.album_container h1{
+    font-weight: 300;
+    color: #34495E;
+    font-size: 3em;
+}
 #albums{
     /*visibility: hidden;*/
     overflow:hidden;
@@ -427,6 +432,7 @@ body {
     position:relative;
     overflow:hidden;
     float:left;
+    padding: 0;
     margin:0 5px 5px 0;
     /*border-bottom:2px solid #ccc;*/
     cursor: pointer;
@@ -451,7 +457,7 @@ body {
     /*box-shadow:0px -3px 5px #333;*/
     font-size:3em;
     padding:10px 5px;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 25px;
     word-wrap:break-word;
 }
@@ -473,7 +479,7 @@ body {
 }
 
 
- #galleria{height:600px; width:900px; margin:70px auto 0;}
+ #galleria{height:600px; width:900px; margin:60px auto 0;}
 
  #close_gallery{
     position: absolute;
