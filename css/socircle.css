@@ -473,7 +473,7 @@ body {
 }
 
 
- #galleria{height:600px; margin-top:70px;}
+ #galleria{height:600px; width:900px; margin-top:70px auto 0;}
 
  #close_gallery{
     position: absolute;
