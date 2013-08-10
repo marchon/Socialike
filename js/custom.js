@@ -274,16 +274,17 @@ function homePage() {
 
             setTimeout(function() {
                 highCharts(chartdat);
-                albums()
 
             }, 2000)
 
+
+                //albums()
 
             $('#container').imagesLoaded().progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 if (result) {
                     $(image.img).parents('.grid_items').addClass('bigEntrance');
-                    $(image.img).fadeIn();
+                    //$(image.img).fadeIn();
                 }
             });
 
