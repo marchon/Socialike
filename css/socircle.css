@@ -240,7 +240,7 @@ body {
 .melist_0{background:url(../images/icon_link.png) no-repeat center center #f1c40f;}
 .melist_1{background:url(../images/icon_location.png) no-repeat center center #3498db;}
 .melist_2{background:url(../images/icon_home.png) no-repeat center center #1abc9c;}
-.melist_3{background:url(../images/icon_bday.png) no-repeat center center #7f8c8d;}
+.melist_3{background:url(../images/icon_bday.png) no-repeat center center #c0392b;}
 
 #chart_container{
     width:350px;
@@ -412,7 +412,7 @@ body {
 
 /*------------Album----------------*/
 #albums{
-    display: none;
+    visibility: hidden;
     overflow:hidden;
 }
 
