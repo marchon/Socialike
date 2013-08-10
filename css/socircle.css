@@ -422,7 +422,8 @@ body {
     font-size: 3em;
 }
 #albums{
-    /*visibility: hidden;*/
+    
+    padding: 0;
     overflow:hidden;
 }
 
@@ -432,7 +433,6 @@ body {
     position:relative;
     overflow:hidden;
     float:left;
-    padding: 0;
     margin:0 5px 5px 0;
     /*border-bottom:2px solid #ccc;*/
     cursor: pointer;
