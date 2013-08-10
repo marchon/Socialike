@@ -26,10 +26,12 @@
     left: 10px;
     right: 10px;
     z-index: 2;
+    text-align: center;
 }
 .galleria-carousel .galleria-thumbnails-list {
     margin-left: 30px;
     margin-right: 30px;
+    display: inline-block;
 }
 .galleria-thumbnails .galleria-image {
     height: 40px;

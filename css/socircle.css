@@ -356,7 +356,7 @@ body {
     position: fixed;
     width:100%;
     top:0; left:0;
-    z-index: 99;
+    z-index: 9;
     opacity: 0.95;
 }
 .menu_show{
@@ -466,16 +466,16 @@ body {
     top:0px;
     height: 100%;
     width: 100%;
-    z-index:9999;
-    background:rgba(0,0,0,0.7);
+    z-index:99;
+    background:rgba(0,0,0,0.9);
 }
 
 
- #galleria{height:600px; position:relative;}
+ #galleria{height:600px; position:relative; margin-top:70px;}
 
  #close_gallery{
     position: absolute;
-    top:-50px;
+    top:50px;
     right:50px;
     font-size:5em;
  }

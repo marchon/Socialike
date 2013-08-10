@@ -482,7 +482,7 @@ pic(albumId, function(albumpict) {
             $('.albumpopup').show();
             $('.albumpopup').empty();
 
-            $('.albumpopup').append('<div id="galleria"><div class="close_gallery">X</div></div>')
+            $('.albumpopup').append('<div class="close_gallery">X</div><div id="galleria"></div>')
 
             for (var i = 0; i < albumpict.data.length; i++) {
 
