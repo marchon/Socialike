@@ -467,6 +467,7 @@ function flatColors() {
 /*---------------------------Menu Click function-------------------*/
 
 function menuClick(elemId) {
+
     switch (elemId) {
         case showhide:
             $('.leftnav').toggleClass('menupush');
@@ -486,11 +487,10 @@ function menuClick(elemId) {
             msnry.layout();
             break;
         default:
-            //detailListItems.appendChild(inBday);
+            alert('Document Clicked!!')
             break;
     }
 
-   // console.log(elemId);
 }
 
 /*-------------------------User Album Ends ------------------------------*/
