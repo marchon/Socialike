@@ -436,7 +436,7 @@ function albums() {
 
                     var albumNameCont = document.createElement("div");
                     albumNameCont.setAttribute("class", "album_title");
-                    albumNameCont.setAttribute("style", "background-color:"+flatColors()+";");
+                    albumNameCont.setAttribute("style", "background-color:" + flatColors() + ";");
                     albumNameCont.appendChild(albumname);
 
 
@@ -467,6 +467,26 @@ function flatColors() {
 /*---------------------------Menu Click function-------------------*/
 
 function menuClick(elemId) {
+    switch (elemId) {
+        case home:
+            $(".grid_items").show().addClass('bigEntrance');
+            msnry.layout();
+            break;
+        case photos:
+            $('#container').slideUp();
+            $('#albums').slideUp().delay(3000);
+            break;
+        case fnu:
+            var myLoci = $(this).attr('data-location');
+            myLoci = myLoci.split(',')[0];
+            $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+            msnry.layout();
+            break;
+        default:
+            detailListItems.appendChild(inBday);
+            break;
+    }
+
     console.log(elemId);
 }
 
