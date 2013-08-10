@@ -250,7 +250,7 @@ body {
     float:right;
 }
 
-.chart_title{text-transform: uppercase;font-weight: 100;}
+.chart_title{text-transform: uppercase;font-weight: 300;}
 .headingelem_1{font-size: 2em;}
 .headingelem_2{font-size: 4.6em;line-height: 0.6em;}
 .headingelem_3{font-size: 1.7em; line-height: 1.8em;}
@@ -269,11 +269,12 @@ body {
 .tooltip_count{
     position:absolute;
     left:50%;
-    top:35px;
+    top:38px;
     width:215px;
     margin-left:-108px;
     font-size:8em;
-    font-weight: 100;
+    font-weight: 300;
+    line-height: 85px;
     color:#34495e;
  }
 .tooltip_location{
@@ -281,7 +282,7 @@ body {
     color:#2c3e50;
     width:180px;
     left:50%;
-    bottom:40px;
+    top:140px;
     margin-left:-90px;
     font-size:1.1em;
     font-weight: 600;
@@ -436,6 +437,7 @@ body {
     margin:0 5px 5px 0;
     /*border-bottom:2px solid #ccc;*/
     cursor: pointer;
+    border-radius:0 4px 4px 0;
 }
 
 .img_container{
@@ -486,7 +488,7 @@ body {
     top:-5px;
     right:40px;
     font-size:6em;
-    font-weight: 100;
+    font-weight: 300;
     z-index: 9999;
     cursor: pointer;
  }
