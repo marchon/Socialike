@@ -247,32 +247,16 @@ function homePage() {
                 "isFitWidth": true
             });
 
-            // $('#fnu').click(function() {
-
-            //     var myLoci = $(this).attr('data-location');
-            //     myLoci = myLoci.split(',')[0];
-            //     //console.log(myLoci);
-
-            //     $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
-
-            //     msnry.layout();
-
-            // });
-
-            // $('#home').click(function() {
-
-            //     $(".grid_items").show().addClass('bigEntrance');
-            //     msnry.layout();
-
-            // });
-
 
             setTimeout(function() {
                 highCharts(chartdat);
 
             }, 2000)
 
+            setTimeout(function() {
+                albums()
 
+            }, 10000)
                 //albums()
 
             $('#container').imagesLoaded().progress(function(instance, image) {
