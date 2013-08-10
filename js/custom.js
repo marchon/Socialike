@@ -457,7 +457,7 @@ function menuClick(elemId) {
     }
     if (elemId === 'photos') {
         $('#container').slideUp(300);
-        $('.album_container').addClass('slideLeft');
+        $('.album_container').show()
     }
     if (elemId === 'fnu') {
         var myLoci = $("#" + elemId).attr('data-location');
