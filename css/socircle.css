@@ -61,7 +61,7 @@ body {
 
 
 .grid_items img {
-    display:none;
+    /*display:none;*/
     border-radius:50%;
 }
 
