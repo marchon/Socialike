@@ -468,27 +468,22 @@ function flatColors() {
 
 function menuClick(elemId) {
 
-    switch (elemId) {
-        case showhide:
+    if(elemId === 'showhide') {
             $('.leftnav').toggleClass('menupush');
-            break;
-        case home:
+    }
+    if(elemId === 'home') {
             $(".grid_items").show().addClass('bigEntrance');
             msnry.layout();
-            break;
-        case photos:
+    }
+    if(elemId === 'photos') {
             $('#container').slideUp();
             $('#albums').slideUp().delay(3000);
-            break;
-        case fnu:
+    }
+    if(elemId === 'fnu') {
             var myLoci = $(this).attr('data-location');
             myLoci = myLoci.split(',')[0];
             $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
             msnry.layout();
-            break;
-        default:
-            alert('Document Clicked!!')
-            break;
     }
 
 }
