@@ -486,7 +486,7 @@ pic(albumId, function(albumpict) {
 
             }
             // Initialize Galleria
-            Galleria.loadTheme('/js/galleria.classic.min.js');
+            Galleria.loadTheme('galleria.classic.min.js');
             Galleria.run('#galleria');
 
     });
