@@ -460,6 +460,14 @@ body {
     -webkit-transform: translateX(-45px);
 }
 
+.albumpopup{
+    position:fixed;
+
+    top:100px;
+
+    z-index:9999;
+}
+
 
 
 
