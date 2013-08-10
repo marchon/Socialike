@@ -476,7 +476,7 @@ function menuClick(elemId) {
             $('#albums').slideUp().delay(3000);
     }
     if(elemId === 'fnu') {
-            var myLoci = $(elemId).attr('data-location');
+            var myLoci = $("#"elemId).attr('data-location');
             console.log(myLoci);
             myLoci = myLoci.split(',')[0];
             $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
