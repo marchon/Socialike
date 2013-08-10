@@ -411,8 +411,11 @@ body {
 
 
 /*------------Album----------------*/
+.album_container{
+    display: none;
+}
 #albums{
-    visibility: hidden;
+    /*visibility: hidden;*/
     overflow:hidden;
 }
 

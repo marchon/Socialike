@@ -456,8 +456,8 @@ function menuClick(elemId) {
             msnry.layout();
     }
     if(elemId === 'photos') {
-            $('#container').slideUp(3000).hide();
-            $('#albums').fadeIn();
+            $('#container').slideUp(3000);
+            $('.album_container').fadeIn();
     }
     if(elemId === 'fnu') {
             var myLoci = $("#"+elemId).attr('data-location');
