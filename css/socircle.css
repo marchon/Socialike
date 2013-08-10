@@ -471,13 +471,16 @@ body {
 }
 
 
- #galleria{height:600px; position:relative; margin-top:70px;}
+ #galleria{height:600px; margin-top:70px;}
 
  #close_gallery{
     position: absolute;
     top:50px;
     right:50px;
     font-size:5em;
+    font-weight: 100;
+    z-index: 9999;
+    cursor: pointer;
  }
 
 
