@@ -456,7 +456,7 @@ function menuClick(elemId) {
             msnry.layout();
     }
     if(elemId === 'photos') {
-            $('#container').slideUp(3000);
+            $('#container').slideUp(300);
             $('.album_container').fadeIn();
     }
     if(elemId === 'fnu') {
