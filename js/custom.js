@@ -482,7 +482,7 @@ pic(albumId, function(albumpict) {
             $('.albumpopup').show();
             $('.albumpopup').empty();
 
-            $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)">X</div><div id="galleria"></div>')
+            $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)">x</div><div id="galleria"></div>')
 
             for (var i = 0; i < albumpict.data.length; i++) {
 
