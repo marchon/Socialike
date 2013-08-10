@@ -479,7 +479,7 @@ function albumPictures(albumId) {
 
 pic(albumId, function(albumpict) {
 
-
+            $('.albumpopup').show();
             $('.albumpopup').empty();
 
             $('.albumpopup').append('<div id="galleria"><div class="close_gallery">X</div></div>')
