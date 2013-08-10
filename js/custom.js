@@ -252,24 +252,24 @@ function homePage() {
                 "isFitWidth": true
             });
 
-            $('#fnu').click(function() {
+            // $('#fnu').click(function() {
 
-                var myLoci = $(this).attr('data-location');
-                myLoci = myLoci.split(',')[0];
-                //console.log(myLoci);
+            //     var myLoci = $(this).attr('data-location');
+            //     myLoci = myLoci.split(',')[0];
+            //     //console.log(myLoci);
 
-                $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+            //     $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
 
-                msnry.layout();
+            //     msnry.layout();
 
-            });
+            // });
 
-            $('#home').click(function() {
+            // $('#home').click(function() {
 
-                $(".grid_items").show().addClass('bigEntrance');
-                msnry.layout();
+            //     $(".grid_items").show().addClass('bigEntrance');
+            //     msnry.layout();
 
-            });
+            // });
 
 
             setTimeout(function() {
@@ -456,13 +456,18 @@ function albums() {
     });
 }
 
-/*Random Colors*/
-// Random Colors tiles//
+/*---------------------------Random Colors--------------------------*/
 
 function flatColors() {
     var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
     var ran = Math.floor(Math.random() * colors.length);
     return colors[ran];
+}
+
+/*---------------------------Menu Click function-------------------*/
+
+function menuClick(elemId) {
+    console.log(elemId);
 }
 
 /*-------------------------User Album Ends ------------------------------*/
