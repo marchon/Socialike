@@ -412,6 +412,7 @@ body {
 
 /*------------Album----------------*/
 #albums{
+    display: none;
     overflow:hidden;
 }
 
