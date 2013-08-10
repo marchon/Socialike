@@ -466,6 +466,10 @@ function menuClick(elemId) {
         $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
         msnry.layout();
     }
+    if (elemId === 'close_gallery') {
+        $('.albumpopup').empty();
+        $('.albumpopup').hide();
+    }
 
 }
 
@@ -478,7 +482,7 @@ pic(albumId, function(albumpict) {
 
             $('.albumpopup').empty();
 
-            $('.albumpopup').append('<div id="galleria"></div>')
+            $('.albumpopup').append('<div id="galleria"><div class="close_gallery">X</div></div>')
 
             for (var i = 0; i < albumpict.data.length; i++) {
 
