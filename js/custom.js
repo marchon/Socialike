@@ -468,6 +468,9 @@ function flatColors() {
 
 function menuClick(elemId) {
     switch (elemId) {
+        case showhide:
+            $('.leftnav').toggleClass('menupush');
+            break;
         case home:
             $(".grid_items").show().addClass('bigEntrance');
             msnry.layout();
