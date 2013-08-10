@@ -483,11 +483,11 @@ function menuClick(elemId) {
             msnry.layout();
             break;
         default:
-            detailListItems.appendChild(inBday);
+            //detailListItems.appendChild(inBday);
             break;
     }
 
-    console.log(elemId);
+   // console.log(elemId);
 }
 
 /*-------------------------User Album Ends ------------------------------*/
