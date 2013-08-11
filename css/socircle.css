@@ -2,20 +2,14 @@
 @import url(ani.css);
 
 
-
-
-
 *, *:before, *:after {
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
-    
-    /*-webkit-transition: all 0.3s ease;*/
+
     -moz-transition:    all 0.3s ease;
     -ms-transition:     all 0.3s ease;
     -o-transition:      all 0.3s ease;
-    /*-webkit-transform:translate3d(0,0,0);*/
-    /*-webkit-backface-visibility: hidden;*/
 }
 
 body {
@@ -179,15 +173,18 @@ body {
 
 }
 
-.me_photo{
+.picture_container{
     position: absolute;
     left:4%;
     bottom:-33px;
-    border:3px solid #fff;
-    -webkit-box-shadow:0 1px 4px #333333;
-    box-shadow:0 1px 4px #333333;
+    border:5px solid #ecf0f1;
+    border-radius:50%;
     overflow: hidden;
 
+}
+
+.me_photo{
+   
 }
 
 .me_name{

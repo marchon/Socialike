@@ -32,11 +32,6 @@
 
             console.log('getLoginStatus satisfied');
 
-              //getUser();
-              //getFriends();
-              //friendsNearby();
-              //albums();
-
               homePage();
 
           } else if (response.status === 'not_authorized') {

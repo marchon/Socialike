@@ -82,14 +82,19 @@ function homePage() {
         //Creating Name & Picture Container//
         var userBg = cover.cloneNode(false);
         userBg.setAttribute("class", "userbg");
-        userBg.removeAttribute("style");
 
-        //Creating Picture//
+        //Creating Picture & Container//
+
+        var pictureCont = cover.cloneNode(false);
+        pictureCont.setAttribute("class", "picture_container");
+
         var mePhoto = document.createElement("img");
         mePhoto.setAttribute("src", inPicture);
         mePhoto.setAttribute("class", "me_photo");
         mePhoto.setAttribute("width", "100px");
         mePhoto.setAttribute("height", "100px");
+
+        pictureCont.appendChild(mePhoto);
 
         //Creating HighChart Container
         var chartContainer = document.createElement("div");
@@ -101,7 +106,7 @@ function homePage() {
         meName.removeAttribute("style");
         meName.appendChild(inName);
 
-        userBg.appendChild(mePhoto); // appending user photo to BG
+        userBg.appendChild(pictureCont); // appending user photo to BG
         userBg.appendChild(meName); // appending user name to BG
 
         cover.appendChild(userBg); // appending BG to cover container
@@ -410,9 +415,9 @@ function albums() {
                     //image.setAttribute("width", "100");
                     //image.setAttribute("height", "100");
 
-                    var coverCont = document.createElement("div");
-                    coverCont.setAttribute("class", "img_container");
-                    coverCont.appendChild(image);
+                    var albumCoverCont = document.createElement("div");
+                    albumCoverCont.setAttribute("class", "img_container");
+                    albumCoverCont.appendChild(image);
 
                     var albumNameCont = document.createElement("div");
                     albumNameCont.setAttribute("class", "album_title");
@@ -423,7 +428,7 @@ function albums() {
 
 
 
-                    list.appendChild(coverCont);
+                    list.appendChild(albumCoverCont);
                     list.appendChild(albumNameCont);
 
                     document.getElementById("albums").appendChild(list);
