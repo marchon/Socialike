@@ -506,7 +506,7 @@ function menuClick(elemId) {
 
         case "showhide":
             //stopPropagation();
-            $("#"elemId).toggleClass('menubg');
+            $("#"+elemId).toggleClass('menubg');
             $('.leftnav').toggleClass('menupush');
             break;
 
