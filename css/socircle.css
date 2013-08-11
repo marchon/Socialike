@@ -13,21 +13,13 @@
 }
 
 body {
-
     background:#ecf0f1;
-
     font-family:'Open Sans', Verdana, Arial, Helvetica, sans-serif;
-
     font-size:62.5%;
-
     color:#fff;
-
     margin:0;
-
     padding:0;
-
     overflow-x:hidden; 
-    
 }
 
 #wrapper{
@@ -65,11 +57,16 @@ body {
     width:88px;
     height:88px;
     margin:0 auto;
-    border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
     -webkit-transition: all 0.3s ease;
 }
 .pic img{
     margin-top:5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 .grid_items:hover .pic {
     -webkit-transform: rotate(325deg);
@@ -78,7 +75,7 @@ body {
     -ms-transform: rotate(325deg);
     transform: rotate(325deg);
     background:#fff;
-    box-shadow: 0 2px 2px #333;
+    /*box-shadow: 0 2px 2px #333;*/
 }
 
 
@@ -86,7 +83,7 @@ body {
 
     margin-top:10px;
     font-size: 1.2em;
-    font-weight:800;
+    font-weight:700;
 }
 
 .grid_items .username {
@@ -183,7 +180,9 @@ body {
 
 .me_photo{
     margin-top:5px;
-   
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;   
 }
 
 .me_name{
