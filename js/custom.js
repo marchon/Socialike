@@ -479,7 +479,7 @@ function menuClick(elemId) {
         var myLoci = $("#" + elemId).attr('data-location');
         console.log(myLoci);
         myLoci = myLoci.split(',')[0];
-        $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+        $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
         msnry.layout();
     }
     if (elemId === 'close_gallery') {
