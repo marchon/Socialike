@@ -12,7 +12,7 @@
 
           if (response.status === 'connected') {
 
-            window.top.location = "//socialike.herokuapp.com/home.html";
+            window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -31,12 +31,14 @@
                //getFriends();
                //friendsNearby();
                 //albums();
-            if(window.top.location === "//socialike.herokuapp.com/"){
+            if(window.top.location === "/"){
 
-              window.top.location = "//socialike.herokuapp.com/home.html";
+              window.top.location = "/home.html";
               
+            }else if(window.top.location === "/home.html"){
+              homePage();
             }
-            homePage();
+            
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
