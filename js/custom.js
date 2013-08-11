@@ -506,6 +506,7 @@ function menuClick(elemId) {
 
         case "showhide":
             //stopPropagation();
+            $(this).toggleClass('menubg');
             $('.leftnav').toggleClass('menupush');
             break;
 
@@ -537,7 +538,7 @@ function menuClick(elemId) {
                 $("#container").show().addClass('slideRight');
 
                 setTimeout(function() {
-                    
+
                     $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
                     msnry.layout();
 
@@ -556,7 +557,7 @@ function menuClick(elemId) {
 
         default:
 
-            console.log('body_clicked');
+            console.log(elemID);
             break;
     }
 
