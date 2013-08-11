@@ -457,12 +457,13 @@ function menuClick(elemId) {
         $('.leftnav').toggleClass('menupush');
     }
     if (elemId === 'home') {
+        
         if ($("#container").css('display') === 'none') {
 
             $("#container").show();
             $(".grid_items").show().addClass('bigEntrance');
             msnry.layout();
-            
+
         } else {
             $(".grid_items").show().addClass('bigEntrance');
             msnry.layout();
