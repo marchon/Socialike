@@ -512,7 +512,7 @@ function menuClick(elemId) {
         case "home":
             if ($(".album_container").css('display') === 'block') {
 
-                $(".album_container").slideUp('slow').removeClass('slideRight');
+                $(".album_container").slideUp().removeClass('slideRight');
                 $("#container").show().addClass('slideRight');
                 $(".grid_items").show().addClass('bigEntrance');
                 msnry.layout();
@@ -524,7 +524,7 @@ function menuClick(elemId) {
             break;
 
         case "photos":
-            $('#container').removeClass('slideRight').slideUp('slow');
+            $('#container').removeClass('slideRight').slideUp();
             $('.album_container').show().addClass('slideRight');
             break;
 
@@ -533,7 +533,7 @@ function menuClick(elemId) {
             //console.log(myLoci);
             myLoci = myLoci.split(',')[0];
             if ($(".album_container").css('display') === 'block') {
-                $(".album_container").slideUp('slow');
+                $(".album_container").slideUp();
                 $("#container").show().addClass('slideRight');
                 $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
                 msnry.layout();
