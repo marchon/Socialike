@@ -2,7 +2,7 @@
 
 function users(callback) {
 
-    FB.api('/me?fields=name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
+    FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
         callback(response);
 
     });
@@ -12,7 +12,7 @@ function users(callback) {
 
 function friends(callback) {
 
-    FB.api('/me/friends?fields=name,username,location,name,first_name,picture.height(80).width(80)', function(response) {
+    FB.api('/me/friends?fields=name,username,location,name,picture.height(80).width(80)', function(response) {
 
         callback(response);
 
@@ -50,7 +50,7 @@ function homePage() {
             inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
-        $("#preloader").text("Howdy!" +inFirstName);
+        $("#preloader h1").text("Howdy! " +inFirstName);
         document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
 
         //Creating first List Item //
@@ -505,7 +505,7 @@ function menuClick(elemId) {
     switch (elemId) {
 
         case "showhide":
-            elemId.stopPropagation();
+            stopPropagation();
             $('.leftnav').toggleClass('menupush');
             break;
 

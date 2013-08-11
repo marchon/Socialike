@@ -22,6 +22,12 @@ body {
     overflow-x:hidden; 
 }
 
+h1{
+    font-weight: 300;
+    color: #34495E;
+    font-size: 3em;
+}
+
 #wrapper{
     
 }
@@ -412,11 +418,11 @@ body {
     width: 96.6%;
     margin: 70px auto 0 auto;
 }
-.album_container h1{
+/*.album_container h1{
     font-weight: 300;
     color: #34495E;
     font-size: 3em;
-}
+}*/
 #albums{
     
     padding: 0;
