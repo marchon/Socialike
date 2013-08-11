@@ -177,10 +177,11 @@ body {
     position: absolute;
     left:4%;
     bottom:-33px;
-    border:5px solid #ecf0f1;
+    background:#ecf0f1;
     border-radius:50%;
     overflow: hidden;
-
+    width:110px;
+    height:110px;
 }
 
 .me_photo{
