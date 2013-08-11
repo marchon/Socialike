@@ -458,14 +458,15 @@ function menuClick(elemId) {
     }
     if (elemId === 'home') {
         
-        if ($("#container").css('display') === 'none') {
+        if ($(".album_container").css('display') === 'block') {
 
+            $(".album_container").addClass('slideLeft').hide()
             $("#container").show();
-            $(".grid_items").show().addClass('bigEntrance');
+            $(".grid_items").show();
             msnry.layout();
 
         } else {
-            $(".grid_items").show().addClass('bigEntrance');
+            $(".grid_items").show();
             msnry.layout();
         }
 
@@ -505,7 +506,7 @@ function albumPictures(albumId) {
 
         }
         // Initialize Galleria
-        Galleria.loadTheme('/js/galleria.classic.min.js');
+        //Galleria.loadTheme('/js/galleria.classic.min.js');
         Galleria.run('#galleria');
 
     });
