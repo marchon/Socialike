@@ -459,7 +459,7 @@ function menuClick(elemId) {
     if (elemId === 'home') {
         if ($("#container").css('visibility') === 'hidden') {
 
-            $(this).slideDown('slow', function() {
+            $("#container").slideDown('slow', function() {
                 $(".grid_items").show().addClass('bigEntrance');
                 msnry.layout();
             });
