@@ -44,7 +44,7 @@
 
       FB.Event.subscribe('auth.statusChange', function(response) {
           // do something with response
-          if (response.status === 'connected' && window.top.location = "/";) {
+          if (response.status === 'connected' && window.top.location === "/";) {
             window.top.location = "/home.html";
           }
       });
