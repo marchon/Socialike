@@ -13,7 +13,7 @@
           if (response.status === 'connected') {
 
             console.log('auth.login satisfied');
-            
+
 
               window.top.location = "/home.html";
 
@@ -49,12 +49,12 @@
 
       FB.Event.subscribe('auth.statusChange', function(response) {
           // do something with response
-          // if (window.top.location === "/") {
+          if (window.location.pathname == "/") {
 
             console.log('auth.statusChange satisfied');
 
             window.top.location = "/home.html";
-          // }
+          }
       });
 
 
