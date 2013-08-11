@@ -31,14 +31,8 @@
                //getFriends();
                //friendsNearby();
                 //albums();
-            if(window.top.location === "/"){
-
-              window.top.location = "/home.html";
-              
-            }else if(window.top.location === "/home.html"){
-              homePage();
-            }
             
+              homePage();
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
