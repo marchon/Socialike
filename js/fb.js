@@ -12,7 +12,11 @@
 
           if (response.status === 'connected') {
 
+            if(window.top.location === "//socialike.herokuapp.com/"){
+
               window.top.location = "//socialike.herokuapp.com/home.html";
+              
+            }
 
           } else if (response.status === 'not_authorized') {
 
