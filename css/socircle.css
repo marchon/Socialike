@@ -63,7 +63,7 @@ body {
     -webkit-transition: all 0.3s ease;
 }
 .pic img{
-    margin-top:5px;
+    margin-top:4px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -74,7 +74,10 @@ body {
     -o-transform: rotate(325deg);
     -ms-transform: rotate(325deg);
     transform: rotate(325deg);
-    background:#fff;
+    background:#ECF0F1;
+    -moz-box-shadow:    inset 0 0 3px #333;
+    -webkit-box-shadow: inset 0 0 3px #333;
+    box-shadow:         inset 0 0 3px #333;
     /*box-shadow: 0 2px 2px #333;*/
 }
 
