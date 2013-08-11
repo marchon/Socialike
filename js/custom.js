@@ -451,40 +451,98 @@ function flatColors() {
 
 /*---------------------------Menu Click function-------------------*/
 
+// function menuClick(elemId) {
+
+//     if (elemId === 'showhide') {
+//         $('.leftnav').toggleClass('menupush');
+//     }
+//     if (elemId === 'home') {
+
+//         if ($(".album_container").css('display') === 'block') {
+
+//             $(".album_container").slideUp('slow');
+//             $("#container").show().addClass('slideRight');
+//             $(".grid_items").show().addClass('bigEntrance');
+//             msnry.layout();
+
+//         } else {
+//             $(".grid_items").show().addClass('bigEntrance');
+//             msnry.layout();
+//         }
+
+//     }
+//     if (elemId === 'photos') {
+//         $('#container').slideUp(300);
+//         $('.album_container').show()
+//     }
+//     if (elemId === 'fnu') {
+//         var myLoci = $("#" + elemId).attr('data-location');
+//         //console.log(myLoci);
+//         myLoci = myLoci.split(',')[0];
+//         if ($(".album_container").css('display') === 'block') {
+//             $(".album_container").slideUp('slow');
+//             $("#container").show().addClass('slideRight');
+//             $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+//             msnry.layout();
+//         }else{
+//             $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+//             msnry.layout();
+//         }
+//     }
+//     if (elemId === 'close_gallery') {
+//         $('.albumpopup').empty();
+//         $('.albumpopup').hide();
+//     }
+
+
+// }
+
+
 function menuClick(elemId) {
 
-    if (elemId === 'showhide') {
-        $('.leftnav').toggleClass('menupush');
-    }
-    if (elemId === 'home') {
-        
-        if ($(".album_container").css('display') === 'block') {
+    switch (elemId) {
+        case "showhide":
+            //elemId.stopPropagation();
+            $('.leftnav').toggleClass('menupush');
+            break;
+        case "home":
+            if ($(".album_container").css('display') === 'block') {
 
-            $(".album_container").addClass('slideLeft').hide()
-            $("#container").show();
-            $(".grid_items").show();
-            msnry.layout();
+                $(".album_container").slideUp('slow');
+                $("#container").show().addClass('slideRight');
+                $(".grid_items").show().addClass('bigEntrance');
+                msnry.layout();
 
-        } else {
-            $(".grid_items").show();
-            msnry.layout();
-        }
-
-    }
-    if (elemId === 'photos') {
-        $('#container').slideUp(300);
-        $('.album_container').show()
-    }
-    if (elemId === 'fnu') {
-        var myLoci = $("#" + elemId).attr('data-location');
-        console.log(myLoci);
-        myLoci = myLoci.split(',')[0];
-        $(".location").not(":contains(" + myLoci + ")").parent('li').hide();
-        msnry.layout();
-    }
-    if (elemId === 'close_gallery') {
-        $('.albumpopup').empty();
-        $('.albumpopup').hide();
+            } else {
+                $(".grid_items").show().addClass('bigEntrance');
+                msnry.layout();
+            }
+            break;
+        case "photos":
+            $('#container').slideUp(300);
+            $('.album_container').show().addClass('slideRight');
+            break;
+        case "fnu":
+            var myLoci = $("#" + elemId).attr('data-location');
+            //console.log(myLoci);
+            myLoci = myLoci.split(',')[0];
+            if ($(".album_container").css('display') === 'block') {
+                $(".album_container").slideUp('slow');
+                $("#container").show().addClass('slideRight');
+                $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+                msnry.layout();
+            } else {
+                $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+                msnry.layout();
+            }
+            break;
+        case "close_gallery":
+            $('.albumpopup').empty();
+            $('.albumpopup').hide();
+            break;
+        default:
+            $('.leftnav').removeClass('menupush');
+            break;
     }
 
 }
