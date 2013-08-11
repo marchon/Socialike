@@ -12,7 +12,7 @@
 
           if (response.status === 'connected') {
 
-            window.top.location = "/home.html";
+              window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -28,10 +28,10 @@
           if (response.status === 'connected') {
 
               //getUser();
-               //getFriends();
-               //friendsNearby();
-                //albums();
-            
+              //getFriends();
+              //friendsNearby();
+              //albums();
+
               homePage();
 
           } else if (response.status === 'not_authorized') {
@@ -39,6 +39,13 @@
               // but has not authenticated your app
           } else {
               // the user isn't logged in to Facebook.
+          }
+      });
+
+      FB.Event.subscribe('auth.statusChange', function(response) {
+          // do something with response
+          if (response.status === 'connected' && window.top.location = "/";) {
+            window.top.location = "/home.html";
           }
       });
 
