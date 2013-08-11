@@ -457,8 +457,17 @@ function menuClick(elemId) {
         $('.leftnav').toggleClass('menupush');
     }
     if (elemId === 'home') {
-        $(".grid_items").show().addClass('bigEntrance');
-        msnry.layout();
+        if ($("#container").css('visibility') === 'hidden') {
+
+            $(this).slideDown('slow', function() {
+                $(".grid_items").show().addClass('bigEntrance');
+                msnry.layout();
+            });
+        }else{
+            $(".grid_items").show().addClass('bigEntrance');
+            msnry.layout();
+        }
+        
     }
     if (elemId === 'photos') {
         $('#container').slideUp(300);
@@ -482,21 +491,21 @@ function menuClick(elemId) {
 
 function albumPictures(albumId) {
 
-pic(albumId, function(albumpict) {
+    pic(albumId, function(albumpict) {
 
-            $('.albumpopup').show();
-            $('.albumpopup').empty();
+        $('.albumpopup').show();
+        $('.albumpopup').empty();
 
-            $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)">x</div><div id="galleria"></div>')
+        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)">x</div><div id="galleria"></div>')
 
-            for (var i = 0; i < albumpict.data.length; i++) {
+        for (var i = 0; i < albumpict.data.length; i++) {
 
-                $("#galleria").append("<a href=" + albumpict.data[i].source + "> <img src=" + albumpict.data[i].picture + "> </a>");
+            $("#galleria").append("<a href=" + albumpict.data[i].source + "> <img src=" + albumpict.data[i].picture + "> </a>");
 
-            }
-            // Initialize Galleria
-            Galleria.loadTheme('/js/galleria.classic.min.js');
-            Galleria.run('#galleria');
+        }
+        // Initialize Galleria
+        Galleria.loadTheme('/js/galleria.classic.min.js');
+        Galleria.run('#galleria');
 
     });
 }
