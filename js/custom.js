@@ -457,17 +457,17 @@ function menuClick(elemId) {
         $('.leftnav').toggleClass('menupush');
     }
     if (elemId === 'home') {
-        if ($("#container").css('visibility') === 'hidden') {
+        if ($("#container").css('display') === 'none') {
 
-            $("#container").slideDown('slow', function() {
-                $(".grid_items").show().addClass('bigEntrance');
-                msnry.layout();
-            });
-        }else{
+            $("#container").show();
+            $(".grid_items").show().addClass('bigEntrance');
+            msnry.layout();
+            
+        } else {
             $(".grid_items").show().addClass('bigEntrance');
             msnry.layout();
         }
-        
+
     }
     if (elemId === 'photos') {
         $('#container').slideUp(300);
