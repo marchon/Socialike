@@ -535,8 +535,14 @@ function menuClick(elemId) {
             if ($(".album_container").css('display') === 'block') {
                 $(".album_container").slideUp();
                 $("#container").show().addClass('slideRight');
-                $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
-                msnry.layout();
+
+                setTimeout(function() {
+                    
+                    $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
+                    msnry.layout();
+
+                }, 600)
+                
             } else {
                 $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
                 msnry.layout();
