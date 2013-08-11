@@ -12,6 +12,9 @@
 
           if (response.status === 'connected') {
 
+            console.log('auth.login satisfied');
+            
+
               window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
@@ -26,6 +29,8 @@
       FB.getLoginStatus(function(response) {
 
           if (response.status === 'connected') {
+
+            console.log('getLoginStatus satisfied');
 
               //getUser();
               //getFriends();
@@ -44,7 +49,10 @@
 
       FB.Event.subscribe('auth.statusChange', function(response) {
           // do something with response
-          if (response.status === 'connected' && window.top.location === "/") {
+          if (window.top.location === "/") {
+
+            console.log('auth.statusChange satisfied');
+
             window.top.location = "/home.html";
           }
       });
