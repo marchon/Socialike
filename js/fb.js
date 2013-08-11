@@ -49,12 +49,12 @@
 
       FB.Event.subscribe('auth.statusChange', function(response) {
           // do something with response
-          if (window.top.location === "/") {
+          // if (window.top.location === "/") {
 
             console.log('auth.statusChange satisfied');
 
             window.top.location = "/home.html";
-          }
+          // }
       });
 
 
