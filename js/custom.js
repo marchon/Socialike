@@ -12,7 +12,7 @@ function users(callback) {
 
 function friends(callback) {
 
-    FB.api('/me/friends?fields=name,username,location,name,bio,about,picture.height(80).width(80)', function(response) {
+    FB.api('/me/friends?fields=name,username,location,name,first_name,picture.height(80).width(80)', function(response) {
 
         callback(response);
 
@@ -43,12 +43,14 @@ function homePage() {
 
         // All variables for loged in user//
         var inName = document.createTextNode(me.name),
+            inFirstName = me.first_name,
             inUsername = document.createTextNode(typeof(me.username) != 'undefined' ? me.username : "Username?"),
             inHome = document.createTextNode(typeof(me.hometown.name) != 'undefined' ? me.hometown.name : "Hometown?"),
             inLocation = document.createTextNode(typeof(me.location.name) != 'undefined' ? me.location.name : "Location?"),
             inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
+        $("#preloader").text("Howdy!" +inFirstName);
         document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
 
         //Creating first List Item //
@@ -501,14 +503,16 @@ function flatColors() {
 function menuClick(elemId) {
 
     switch (elemId) {
+
         case "showhide":
-            //elemId.stopPropagation();
+            elemId.stopPropagation();
             $('.leftnav').toggleClass('menupush');
             break;
+
         case "home":
             if ($(".album_container").css('display') === 'block') {
 
-                $(".album_container").slideUp('slow');
+                $(".album_container").slideUp('slow').removeClass('slideRight');
                 $("#container").show().addClass('slideRight');
                 $(".grid_items").show().addClass('bigEntrance');
                 msnry.layout();
@@ -518,10 +522,12 @@ function menuClick(elemId) {
                 msnry.layout();
             }
             break;
+
         case "photos":
-            $('#container').slideUp(300);
+            $('#container').removeClass('slideRight').slideUp('slow');
             $('.album_container').show().addClass('slideRight');
             break;
+
         case "fnu":
             var myLoci = $("#" + elemId).attr('data-location');
             //console.log(myLoci);
@@ -536,10 +542,12 @@ function menuClick(elemId) {
                 msnry.layout();
             }
             break;
+
         case "close_gallery":
             $('.albumpopup').empty();
             $('.albumpopup').hide();
             break;
+
         default:
             $('.leftnav').removeClass('menupush');
             break;
