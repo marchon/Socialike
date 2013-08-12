@@ -56,7 +56,6 @@ function homePage() {
         //Creating first List Item //
         var listFirst = document.createElement("li");
         listFirst.setAttribute("class", "grid_items main_user");
-        listFirst.style.backgroundColor = "#fff";
 
         //Creating Cover//
         var cover = document.createElement("div");
@@ -245,13 +244,13 @@ function homePage() {
             var container = document.querySelector('#container');
             msnry = new Masonry(container, {
                 // options
-                isResizable: true,
+                //isResizable: true,
                 isAnimated: true,
                 columnWidth: 195,
                 "gutter": 4,
                 transitionDuration: '0.6s',
-                itemSelector: '.grid_items',
-                "isFitWidth": true
+                itemSelector: '.grid_items'
+                //"isFitWidth": true
             });
 
 
