@@ -136,7 +136,6 @@ h1{
     left: 0;
     min-height: 100%;
     position: absolute;
-    border-radius:4px;
 }
 
 .userbg {
@@ -330,9 +329,12 @@ h1{
 .leftnav li:hover{
     background-color:#1b2c3c;
 }
-#home{
-    background-position: -56px 0; 
-}
+
+#home{background-position: -38px 16px;}
+#photos{background-position: -38px 16px;}
+#fnu{background-position: -38px 16px;}
+#logout{background-position: -38px 16px;}
+
 .topnav{
     margin:0;
     padding:0;
