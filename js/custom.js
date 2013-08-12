@@ -244,13 +244,13 @@ function homePage() {
             var container = document.querySelector('#container');
             msnry = new Masonry(container, {
                 // options
-                //isResizable: true,
+                isResizable: true,
                 isAnimated: true,
                 columnWidth: 195,
                 "gutter": 4,
                 transitionDuration: '0.6s',
-                itemSelector: '.grid_items'
-                //"isFitWidth": true
+                itemSelector: '.grid_items',
+                "isFitWidth": true
             });
 
 
@@ -262,7 +262,7 @@ function homePage() {
             setTimeout(function() {
                 albums()
 
-            }, 10000)
+            }, 5000)
             //albums()
 
             $('#container').imagesLoaded().progress(function(instance, image) {
