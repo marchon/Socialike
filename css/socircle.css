@@ -28,7 +28,7 @@ h1{
     font-size: 3em;
 }
 
-ul{margin:0; padding:0;}
+ul{margin:0; padding:0; list-style-type:none;}
 
 #wrapper{
     width:94.253%;
@@ -115,7 +115,7 @@ ul{margin:0; padding:0;}
 }
 
 .main_user {
-    width:791px;
+    width:792px;
     height:710px !important;
     background:#fff;
     color:#95a5a6;
