@@ -565,6 +565,10 @@ function menuClick(elemId) {
             $('.albumpopup').hide();
             break;
 
+        case "theme":
+            $('body').toggleClass('dark');
+            break;
+
         default:
             break;
     }
@@ -580,7 +584,7 @@ function albumPictures(albumId) {
         $('.albumpopup').show();
         $('.albumpopup').empty();
 
-        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)">x</div><div id="galleria"></div>')
+        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)">x</div><div class="galleria_container"><div id="galleria"></div></div>')
 
         for (var i = 0; i < albumpict.data.length; i++) {
 
