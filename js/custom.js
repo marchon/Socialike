@@ -452,24 +452,41 @@ function flatColors() {
 
 /*---------------------------Menu Hover function-------------------*/
 
+$('.leftnav').on({
+    mouseenter: function() {
+        console.log('mouseIN!!');
+        var counter;
 
-$('.leftnav').on('hover', function(event) {
+        clearTimeout(counter);
+    },
 
-    console.log('mouseIN!!');
-    var counter;
+    mouseleave: function() {
+        console.log('mouseout!!');
+        counter = setTimeout(function() {
 
-    clearTimeout(counter);
+            $(this).removeClass('menupush');
 
-
-}, function() {
-    console.log('mouseout!!');
-    counter = setTimeout(function() {
-
-        $(this).removeClass('menupush');
-
-    }, 5000);
-
+        }, 5000);
+    }
 });
+
+// $('.leftnav').on('hover', function(event) {
+
+//     console.log('mouseIN!!');
+//     var counter;
+
+//     clearTimeout(counter);
+
+
+// }, function() {
+//     console.log('mouseout!!');
+//     counter = setTimeout(function() {
+
+//         $(this).removeClass('menupush');
+
+//     }, 5000);
+
+// });
 
 
 
