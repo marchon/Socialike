@@ -48,7 +48,6 @@ ul{margin:0; padding:0;}
 }
 
 .grid_items {
-    list-style-type:none;
     visibility: hidden;
     width:195px;
     height: 212px;
@@ -199,7 +198,6 @@ ul{margin:0; padding:0;}
 
 .user_details{
     border-left: 4px solid #ecf0f1;
-    list-style-type: none;
     margin: 16px 0 0 80px;
     padding: 16px 0;
     font-size: 1.5em;
@@ -295,15 +293,13 @@ ul{margin:0; padding:0;}
     top:50px;
     left:0;
     font-size:1.6em;
+    font-weight:400;
+    text-indent:-9999px;
     width:55px;
     overflow: hidden;
     z-index: 99;
     opacity: 0.95;
-/*
-    -moz-box-shadow:    inset -3px -5px 5px #333;
-    -webkit-box-shadow: inset -3px -5px 5px #333;
-    box-shadow:         inset -3px -5px 5px #333;*/
-
+     border-right: 1px solid #45596E;
     -webkit-transition: all 0.3s ease;
 
     -webkit-transform: translateX(-250px);
@@ -315,17 +311,15 @@ ul{margin:0; padding:0;}
 
 .leftnav:hover{
     width:250px;
+    text-indent:0;
 }
 
 .leftnav li{
     padding:20px 0 20px 57px;
-    list-style-type:none;
-    font-weight:400;
     cursor:pointer;
     border-bottom:1px solid #46596b;
     opacity: 0.8;
     height: 64px;
-    overflow: hidden;
 }
 .leftnav li:hover{
     background-color:#c0392b;
