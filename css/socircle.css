@@ -312,7 +312,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 .leftnav:hover{
     width:250px;
     text-indent:0;
-    opacity: 1;
+
 }
 
 .leftnav li{
@@ -324,6 +324,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 .leftnav li:hover{
     background-color:#c0392b;
+    opacity: 1;
 }
 
 #home{background-position: -38px 16px;}
