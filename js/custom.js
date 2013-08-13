@@ -451,10 +451,10 @@ function flatColors() {
 }
 
 /*---------------------------Menu Hover function-------------------*/
-
+var counter;
 $('.leftnav').on({
 
-    var counter;
+    
 
     mouseenter: function() {
         console.log('mouseIN!!');
