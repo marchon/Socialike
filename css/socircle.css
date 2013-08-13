@@ -413,14 +413,10 @@ ul{margin:0; padding:0;}
 /*------------Album----------------*/
 .album_container{
     display: none;
-    width: 96.6%;
+    width: 97.6%;
     margin: 70px auto 0 auto;
 }
-/*.album_container h1{
-    font-weight: 300;
-    color: #34495E;
-    font-size: 3em;
-}*/
+
 #albums{
     
     padding: 0;
@@ -428,7 +424,7 @@ ul{margin:0; padding:0;}
 }
 
 #albums li{
-    width:300px;
+    width:285px;
     height: 200px;
     position:relative;
     overflow:hidden;
@@ -447,7 +443,7 @@ ul{margin:0; padding:0;}
 .album_title{
     background:#16a085;
     position: absolute;
-    width:70%;
+    width:65%;
     height: 100%;
     right:0;
     /*box-shadow:0px -3px 5px #333;*/
