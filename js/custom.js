@@ -249,8 +249,8 @@ function homePage() {
                 columnWidth: 195,
                 "gutter": 4,
                 transitionDuration: '0.6s',
-                itemSelector: '.grid_items',
-                "isFitWidth": true
+                itemSelector: '.grid_items'
+                //"isFitWidth": true
             });
 
 
