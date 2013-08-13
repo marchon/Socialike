@@ -176,7 +176,6 @@ function homePage() {
 
                 var dostCommon = dostData.data[i],
                     dostImg = dostCommon.picture.data.url; // Image Url
-                // console.log(dostCommon.about);
 
                 if (dostCommon.username) {
                     var usernaam = document.createTextNode(dostCommon.username); // Username
@@ -454,48 +453,16 @@ function flatColors() {
 var counter;
 $('.leftnav').on({
 
-   
-
     mouseenter: function() {
-        
-         
-        console.log('mouseIN!!');
-        
-
-        clearTimeout(counter);
+    clearTimeout(counter);
     },
 
     mouseleave: function() {
-        console.log('mouseout!!');
         counter = setTimeout(function() {
-            console.log('hiding');
             $('.leftnav').removeClass('menupush');
-
         }, 5000);
     }
 });
-
-// $('.leftnav').on('hover', function(event) {
-
-//     console.log('mouseIN!!');
-//     var counter;
-
-//     clearTimeout(counter);
-
-
-// }, function() {
-//     console.log('mouseout!!');
-//     counter = setTimeout(function() {
-
-//         $(this).removeClass('menupush');
-
-//     }, 5000);
-
-// });
-
-
-
-
 
 /*---------------------------Menu Click function-------------------*/
 
@@ -551,8 +518,6 @@ function menuClick(elemId) {
     switch (elemId) {
 
         case "showhide":
-            //stopPropagation();
-            $("#" + elemId).toggleClass('menubg');
             $('.leftnav').toggleClass('menupush');
             break;
 
@@ -577,7 +542,6 @@ function menuClick(elemId) {
 
         case "fnu":
             var myLoci = $("#" + elemId).attr('data-location');
-            //console.log(myLoci);
             myLoci = myLoci.split(',')[0];
             if ($(".album_container").css('display') === 'block') {
                 $(".album_container").slideUp();
@@ -602,8 +566,6 @@ function menuClick(elemId) {
             break;
 
         default:
-
-            //console.log(elemID);
             break;
     }
 

@@ -312,6 +312,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 .leftnav:hover{
     width:250px;
     text-indent:0;
+    opacity: 1;
 }
 
 .leftnav li{
