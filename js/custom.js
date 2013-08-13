@@ -451,12 +451,14 @@ function flatColors() {
 }
 
 /*---------------------------Menu Hover function-------------------*/
-var counter;
+
 $('.leftnav').on({
 
-    
+   
 
     mouseenter: function() {
+        
+         var counter;
         console.log('mouseIN!!');
         
 
@@ -466,8 +468,8 @@ $('.leftnav').on({
     mouseleave: function() {
         console.log('mouseout!!');
         counter = setTimeout(function() {
-            console.log('hiding!!');
-            $(this).removeClass('menupush');
+            console.log('hiding');
+            $('.leftnav').removeClass('menupush');
 
         }, 5000);
     }
