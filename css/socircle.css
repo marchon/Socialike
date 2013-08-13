@@ -28,6 +28,8 @@ h1{
     font-size: 3em;
 }
 
+ul{margin:0; padding:0;}
+
 #wrapper{
     width:94.253%;
     margin:0 auto;
@@ -43,7 +45,6 @@ h1{
 #container {
     margin-top: 70px;
     /*width:90.252525252525%;*/
-    padding: 0;
 }
 
 .grid_items {
@@ -292,17 +293,16 @@ h1{
     position:fixed;
     height:100%;
     top:50px;
+    left:0;
     font-size:1.6em;
-    margin: 0;
-    padding: 0;
     width:55px;
     overflow: hidden;
     z-index: 99;
     opacity: 0.95;
-
+/*
     -moz-box-shadow:    inset -3px -5px 5px #333;
     -webkit-box-shadow: inset -3px -5px 5px #333;
-    box-shadow:         inset -3px -5px 5px #333;
+    box-shadow:         inset -3px -5px 5px #333;*/
 
     -webkit-transition: all 0.3s ease;
 
@@ -328,7 +328,7 @@ h1{
     overflow: hidden;
 }
 .leftnav li:hover{
-    background-color:#1b2c3c;
+    background-color:#c0392b;
 }
 
 #home{background-position: -38px 16px;}
