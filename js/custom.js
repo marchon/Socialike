@@ -244,12 +244,13 @@ function homePage() {
             var container = document.querySelector('#container');
             msnry = new Masonry(container, {
                 // options
-                isResizable: true,
+                //isResizable: true,
                 isAnimated: true,
                 columnWidth: 195,
                 "gutter": 4,
                 transitionDuration: '0.6s',
-                itemSelector: '.grid_items'
+                itemSelector: '.grid_items',
+                isInitLayout:false
                 //"isFitWidth": true
             });
 
