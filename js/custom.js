@@ -467,7 +467,7 @@ $('.leftnav').hover(function() {
 
         }, 5000);
 
-    }
+});
 
 
 
