@@ -29,7 +29,8 @@ h1{
 }
 
 #wrapper{
-    
+    width:94.253%;
+    margin:0 auto;
 }
 
 /*All sprite images*/
@@ -40,8 +41,8 @@ h1{
 }
 
 #container {
-    margin: 70px auto 0 auto;
-    width:90.252525252525%;
+    margin-top: 70px;
+    /*width:90.252525252525%;*/
     padding: 0;
 }
 
