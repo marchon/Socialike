@@ -30,6 +30,9 @@ h1{
 
 ul{margin:0; padding:0; list-style-type:none;}
 
+.fleft{float:left;}
+.fright{float:right;}
+
 #wrapper{
     width:94.253%;
     margin:0 auto;
@@ -37,7 +40,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 
 /*All sprite images*/
 
-.user_details span, .leftnav li, #innerlogo, .menu_show{
+.user_details span, .leftnav li, #innerlogo, .corner_menu{
     background-image: url(../images/socialike_sprite.png);
     background-repeat: no-repeat;
 }
@@ -332,21 +335,28 @@ ul{margin:0; padding:0; list-style-type:none;}
 #fnu{background-position: -38px -116px;}
 #logout{background-position: -33px -190px;}
 
-.menu_show{
-    background-position:10px -197px; background-color:#34495e;
-    border-right:1px solid #45596e;
+.corner_menu{
+    background-color:#34495e;
     width:55px;
     height:50px;
-    float:left;
-    display:block;
     cursor: pointer;
 }
+
+#showhide{
+    background-position:10px -197px; 
+    border-right:1px solid #45596e;
+}
+#theme{
+    background-position:10px -197px;
+    border-left:1px solid #45596e;
+}
+
 .topnav{
     margin:0;
     padding:0;
     background:#2c3e50;
     height:50px;
-    /*border-bottom:2px solid #E3E5E5;*/
+    text-align:center;
     color:#fff;
     margin:0 0 20px 0;
     position: fixed;
@@ -364,20 +374,17 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 
 .logo{
-    font-size:3em;
-    font-weight: 300;
-    text-align: center;
-    overflow: hidden;
-    height:50px;
-    line-height: 66px;
-    text-shadow:1px 1px 0px #34495e;
-    border-left:1px solid #203244;
+    
 }
 #innerlogo{
+    font-size:3em;
+    font-weight: 300;
+    color:#fff;
+    line-height: 66px;
+    text-shadow:1px 1px 0px #34495e;
     background-position:0 -267px;
     width:120px;
     height:34px;
-    color:#fff;
     display: inline-block;
 }
 
