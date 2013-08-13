@@ -316,6 +316,7 @@ function highCharts(chartdat) {
             chart: {
                 renderTo: chart_container,
                 plotBackgroundColor: null,
+                backgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false
             },
@@ -345,6 +346,7 @@ function highCharts(chartdat) {
             plotOptions: {
                 pie: {
                     size: '100%',
+                    borderColor: 'transparent'
                     dataLabels: {
                         enabled: false
                     }
