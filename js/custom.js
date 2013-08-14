@@ -317,6 +317,7 @@ function highCharts(chartdat) {
                 renderTo: chart_container,
                 plotBackgroundColor: null,
                 backgroundColor: null,
+                plotBorderWidth: null,
                 plotShadow: false
             },
             tooltip: {
@@ -343,17 +344,9 @@ function highCharts(chartdat) {
                 }
             },
             plotOptions: {
-                series: {
-                    states: {
-                        hover: {
-                            enabled: false,
-                            lineWidth: 3
-                        }
-                    }
-                },
                 pie: {
                     size: '100%',
-                    borderColor: '#ecf0f1',
+                    borderWidth: 0,
                     dataLabels: {
                         enabled: false
                     }
@@ -463,7 +456,7 @@ var counter;
 $('.leftnav').on({
 
     mouseenter: function() {
-        clearTimeout(counter);
+    clearTimeout(counter);
     },
 
     mouseleave: function() {
@@ -576,7 +569,6 @@ function menuClick(elemId) {
 
         case "theme":
             $('body').toggleClass('dark');
-            $('path').attr('stroke', '#2c3e50')
             break;
 
         default:
