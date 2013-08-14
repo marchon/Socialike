@@ -343,6 +343,14 @@ function highCharts(chartdat) {
                 }
             },
             plotOptions: {
+                series: {
+                    states: {
+                        hover: {
+                            enabled: false,
+                            lineWidth: 3
+                        }
+                    }
+                },
                 pie: {
                     size: '100%',
                     borderColor: '#ecf0f1',
@@ -455,7 +463,7 @@ var counter;
 $('.leftnav').on({
 
     mouseenter: function() {
-    clearTimeout(counter);
+        clearTimeout(counter);
     },
 
     mouseleave: function() {
