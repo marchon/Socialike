@@ -309,7 +309,7 @@ function highCharts(chartdat) {
     $(function() {
 
         Highcharts.setOptions({
-            colors: ["#8e44ad", "#2980b9", "#16a085", "#f39c12", "#c0392b"]
+            colors: ["#d35400", "#2980b9", "#16a085", "#f39c12", "#e74c3c"]
         });
 
         chart = new Highcharts.Chart({
