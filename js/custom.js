@@ -317,7 +317,6 @@ function highCharts(chartdat) {
                 renderTo: chart_container,
                 plotBackgroundColor: null,
                 backgroundColor: null,
-                plotBorderWidth: null,
                 plotShadow: false
             },
             tooltip: {

@@ -78,6 +78,10 @@ ul{margin:0; padding:0; list-style-type:none;}
     -moz-border-radius: 50%;
     border-radius: 50%;
     -webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    -o-transition:      all 0.3s ease;
+    transtion:all 0.3s ease;
 }
 .pic img{
     margin-top:4px;
@@ -299,13 +303,16 @@ ul{margin:0; padding:0; list-style-type:none;}
     left:0;
     font-size:1.6em;
     font-weight:400;
-    text-indent:-9999px;
     width:55px;
     overflow: hidden;
     z-index: 99;
     opacity: 0.95;
-     border-right: 1px solid #45596E;
+    border-right: 1px solid #45596E;
     -webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    -o-transition:      all 0.3s ease;
+    transtion:all 0.3s ease;
 
     -webkit-transform: translateX(-250px);
     -moz-transform: translateX(-250px);
@@ -316,8 +323,6 @@ ul{margin:0; padding:0; list-style-type:none;}
 
 .leftnav:hover{
     width:250px;
-    text-indent:0;
-
 }
 
 .leftnav li{
@@ -340,7 +345,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 .corner_menu{
     background-color:#34495e;
     width:55px;
-    height:50px;
+    height:49px;
     cursor: pointer;
 }
 
@@ -366,6 +371,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     top:0; left:0;
     z-index: 9;
     opacity: 0.95;
+    border-bottom:1px solid #45596E;
 }
 
 .menu_wide{
@@ -441,7 +447,11 @@ ul{margin:0; padding:0; list-style-type:none;}
 .img_container{
     height:200px;
     position:absolute;
-    -webkit-transition:all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    -o-transition:      all 0.3s ease;
+    transtion:all 0.3s ease;
 }
 .img_container img{height:100%; }
 
