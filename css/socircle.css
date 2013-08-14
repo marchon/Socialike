@@ -28,7 +28,9 @@ body {
 }
 
 
-
+h1{
+    font-weight: 300;
+    color: #34495E;
     font-size: 3em;
 }
 
