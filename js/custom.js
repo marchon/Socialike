@@ -346,7 +346,7 @@ function highCharts(chartdat) {
             plotOptions: {
                 pie: {
                     size: '100%',
-                    borderColor: '#2c3e50',
+                    borderWidth: 0,
                     dataLabels: {
                         enabled: false
                     }
