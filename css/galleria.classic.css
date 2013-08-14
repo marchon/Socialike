@@ -22,7 +22,7 @@
 }
 .galleria-thumbnails-container {
     height: 50px;
-    bottom: 60px;
+    bottom: 16px;
     position: absolute;
     left: 10px;
     right: 10px;
@@ -188,13 +188,13 @@
 .notouch .galleria-thumb-nav-right:hover {
     opacity: 1;
     filter: alpha(opacity=100);
-    background-color: #111;
+    /*background-color: #111;*/
 }
 .touch .galleria-thumb-nav-left:active,
 .touch .galleria-thumb-nav-right:active {
     opacity: 1;
     filter: alpha(opacity=100);
-    background-color: #111;
+    /*background-color: #111;*/
 }
 .notouch .galleria-thumbnails-container .disabled:hover {
     opacity: .2;
