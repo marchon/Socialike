@@ -568,6 +568,7 @@ function menuClick(elemId) {
 
         case "theme":
             $('body').toggleClass('dark');
+            $('path').attr('stroke', '#2c3e50')
             break;
 
         default:
