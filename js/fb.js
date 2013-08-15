@@ -1,7 +1,7 @@
   window.fbAsyncInit = function() {
       FB.init({
           appId: '488181561252340', // App ID
-          channelUrl: 'https://socialike.herokuapp.com/index.html', // Channel File
+          channelUrl: 'https://socialike.herokuapp.com/home.html', // Channel File
           status: true, // check login status
           cookie: true, // enable cookies to allow the server to access the session
           xfbml: true // parse XFBML
@@ -15,7 +15,7 @@
             console.log('auth.login satisfied');
 
 
-              window.top.location = "/home.html";
+             // window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -44,12 +44,12 @@
 
       FB.Event.subscribe('auth.statusChange', function(response) {
           // do something with response
-          if (window.location.pathname == "/") {
+          // if (window.location.pathname == "/") {
 
-            console.log('auth.statusChange satisfied');
+          //   console.log('auth.statusChange satisfied');
 
-            window.top.location = "/home.html";
-          }
+          //   window.top.location = "/home.html";
+          // }
       });
 
 
