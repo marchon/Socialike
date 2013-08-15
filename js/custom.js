@@ -306,7 +306,7 @@ function highCharts(chartdat) {
 
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
-
+    console.log(chartInput);
     $(function() {
 
         Highcharts.setOptions({

@@ -40,9 +40,6 @@
 
           if (response.status === 'connected') {
 
-              console.log('getLoginStatus satisfied');
-
-
               homePage();
 
           } else if (response.status === 'not_authorized') {
