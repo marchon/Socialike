@@ -44,8 +44,6 @@
 
           if (response.status === 'connected') {
 
-
-              getLoginStatus
               homePage();
 
           } else if (response.status === 'not_authorized') {
