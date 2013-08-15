@@ -188,7 +188,7 @@ function homePage() {
                 naam = document.createTextNode(dostCommon.name); // Name
                 dostLocate = dostCommon.location;
 
-                console.log(dostLocate.name);
+
                 if (dostLocate && dostLocate.name) {
                     var dostLocation = document.createTextNode(dostLocate.name); // Location
 
