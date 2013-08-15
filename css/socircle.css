@@ -144,7 +144,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     position: relative;
 
 }
-.cover_wrapper{position: relative; overflow: hidden;height:100%;}
+.cover_wrapper{position: relative; height:100%;}
 .cover_wrapper > img{
     display: block;
     image-rendering: optimizequality;
@@ -519,6 +519,7 @@ ul{margin:0; padding:0; list-style-type:none;}
  .dark .user_details{border-left: 4px solid #2c3e50; color: #BDC3C7;}
  .dark .user_details span{border: 4px solid #2c3e50;}
  .dark .chart_title{color: #BDC3C7;}
+ .dark .picture_container{background:#2c3e50;}
  .dark h1{color: #BDC3C7;}
 
 
