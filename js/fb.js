@@ -35,10 +35,11 @@
           if (response.authResponse) {
               var access_token = FB.getAuthResponse()['accessToken'];
               console.log('Access Token = ' + access_token);
-              FB.api('/me', function(response) {
-                  console.log('Good to see you, ' + response.hometown.name + '.');
-                  console.log('Good to see you, ' + response.location.name + '.');
-              });
+              homePage();
+              // FB.api('/me', function(response) {
+                  // console.log('Good to see you, ' + response.hometown.name + '.');
+                  // console.log('Good to see you, ' + response.location.name + '.');
+              // });
           } else {
               console.log('User cancelled login or did not fully authorize.');
           }
