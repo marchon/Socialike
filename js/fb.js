@@ -44,6 +44,7 @@
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
               // but has not authenticated your app
+              fbLogin();
           } else {
               // the user isn't logged in to Facebook.
           }
