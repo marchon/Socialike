@@ -5,21 +5,20 @@
           status: true, // check login status
           cookie: true, // enable cookies to allow the server to access the session
           xfbml: true // parse XFBML
+
       });
 
 
       FB.Event.subscribe('auth.login', function(response) {
 
-if (response.authResponse) {
-     var access_token =   FB.getAuthResponse()['accessToken'];
-     console.log('Access Token = '+ access_token);
+
 
           if (response.status === 'connected') {
 
-            console.log('auth.login satisfied');
+              console.log('auth.login satisfied');
 
 
-             // window.top.location = "/home.html";
+              // window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -28,18 +27,33 @@ if (response.authResponse) {
 
               // FB.login();
           }
-}
 
+
+      });
+
+      FB.login(function(response) {
+          if (response.authResponse) {
+              var access_token = FB.getAuthResponse()['accessToken'];
+              console.log('Access Token = ' + access_token);
+              FB.api('/me', function(response) {
+                  console.log('Good to see you, ' + response.hometown.name + '.');
+                  console.log('Good to see you, ' + response.location.name + '.');
+              });
+          } else {
+              console.log('User cancelled login or did not fully authorize.');
+          }
+      }, {
+          scope: ''
       });
 
       FB.getLoginStatus(function(response) {
 
           if (response.status === 'connected') {
 
-            console.log('getLoginStatus satisfied');
+              console.log('getLoginStatus satisfied');
 
 
-              homePage();
+              //homePage();
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
