@@ -54,7 +54,7 @@
       });
 
       FB.Event.subscribe('auth.statusChange', function(response) {
-          do something with response
+          //do something with response
           if (window.location.pathname == "/") {
 
             console.log('auth.statusChange satisfied');
