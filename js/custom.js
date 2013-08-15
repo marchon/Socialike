@@ -568,6 +568,7 @@ function menuClick(elemId) {
             break;
 
         case "theme":
+            $('#'+elemId).toggleClass('dark_bulb');
             $('body').toggleClass('dark');
             break;
 
