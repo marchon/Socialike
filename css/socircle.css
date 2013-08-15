@@ -144,7 +144,6 @@ ul{margin:0; padding:0; list-style-type:none;}
 .cover_wrapper > img{
     display: block;
     image-rendering: optimizequality;
-    min-height: 100%;
     width:100%;
 }
 

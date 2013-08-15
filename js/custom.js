@@ -12,7 +12,7 @@ function users(callback) {
 
 function friends(callback) {
 
-    FB.api('/me/friends?fields=name,username,location,name,picture.height(80).width(80)', function(response) {
+    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
 
         callback(response);
 
@@ -188,6 +188,7 @@ function homePage() {
                 naam = document.createTextNode(dostCommon.name); // Name
                 dostLocate = dostCommon.location;
 
+                console.log(dostLocate.name);
                 if (dostLocate && dostLocate.name) {
                     var dostLocation = document.createTextNode(dostLocate.name); // Location
 
