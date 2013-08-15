@@ -74,7 +74,7 @@ function homePage() {
             //var inCoverPos = me.cover.offset_y;
 
             coverImg.setAttribute('src', inCover);
-            coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
+            //coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
         } else {
 
             coverImg.setAttribute("src", "http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg");
