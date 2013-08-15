@@ -10,11 +10,6 @@
 
       //Facebook Login asking for user extra permission//
 
-      function fbLogin() {
-          FB.login(function(response) {}, {
-              scope: 'user_location,user_hometown,user_photos,friends_location'
-          });
-      }
 
 
 
