@@ -360,7 +360,6 @@ function highCharts(chartdat) {
                 floating: true,
                 style: {
                     fontFamily: '\'Open Sans\', sans-serif',
-                    color: '#34495e',
                     width: '300px'
                 }
             },
@@ -446,7 +445,7 @@ function albums() {
 /*---------------------------Random Colors--------------------------*/
 
 function flatColors() {
-    var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2c3e50", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
+    var colors = ["#1abc9c", "#3498db", "#34495e", "#f39c12", "#c0392b", "#7f8c8d", "#2980b9", "#16a085", "#e74c3c", "#95a5a6", "#9b59b6", "#27ae60", "#8e44ad", "#d35400", "#e67e22"];
     var ran = Math.floor(Math.random() * colors.length);
     return colors[ran];
 }
@@ -568,8 +567,8 @@ function menuClick(elemId) {
             break;
 
         case "theme":
-            $('#'+elemId).toggleClass('dark_bulb');
-            $('body').toggleClass('dark');
+            $('#'+elemId).toggleClass('light_bulb');
+            $('body').toggleClass('light');
             break;
 
         default:
