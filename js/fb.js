@@ -8,21 +8,28 @@
 
       });
 
+      //Facebook Login asking for user extra permission//
+
+      function fbLogin() {
+          FB.login(function(response) {}, {
+              scope: 'user_location,user_hometown,user_photos,friends_location'
+          });
+      }
+
+
 
       FB.Event.subscribe('auth.login', function(response) {
-
-
 
           if (response.status === 'connected') {
 
               console.log('auth.login satisfied');
-
 
               window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
               // FB.login();
+              console.log('auth.login not autorised');
           } else {
 
               // FB.login();
@@ -31,15 +38,14 @@
 
       });
 
-      FB.login(function(response) {
-      }, {
-          scope: 'user_location,user_hometown,user_photos,friends_location'
-      });
+
 
       FB.getLoginStatus(function(response) {
 
           if (response.status === 'connected') {
 
+
+              getLoginStatus
               homePage();
 
           } else if (response.status === 'not_authorized') {
@@ -54,9 +60,9 @@
           //do something with response
           if (window.location.pathname == "/") {
 
-            console.log('auth.statusChange satisfied');
+              console.log('auth.statusChange satisfied');
 
-            window.top.location = "/home.html";
+              window.top.location = "/home.html";
           }
       });
 
