@@ -45,8 +45,8 @@ function homePage() {
         var inName = document.createTextNode(me.name),
             inFirstName = me.first_name,
             inUsername = document.createTextNode(typeof(me.username) != 'undefined' ? me.username : "Username?"),
-            inHome = document.createTextNode(typeof(me.hometown.name) != 'undefined' ? me.hometown.name : "Hometown?"),
-            inLocation = document.createTextNode(typeof(me.location.name) != 'undefined' ? me.location.name : "Location?"),
+            inHome = document.createTextNode(typeof(me.hometown) != 'undefined' ? me.hometown.name : "Hometown?"),
+            inLocation = document.createTextNode(typeof(me.location) != 'undefined' ? me.location.name : "Location?"),
             inBday = document.createTextNode(typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
             inPicture = me.picture.data.url;
 
@@ -71,7 +71,7 @@ function homePage() {
         if (me.cover) {
             var inCover = me.cover.source;
             inCover = inCover.replace(/s720/i, 'l720');
-            var inCoverPos = me.cover.offset_y;
+            //var inCoverPos = me.cover.offset_y;
 
             coverImg.setAttribute('src', inCover);
             coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
