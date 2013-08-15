@@ -44,7 +44,7 @@
               console.log('User cancelled login or did not fully authorize.');
           }
       }, {
-          scope: 'user_location,user_hometown'
+          scope: 'user_location,user_hometown,user_photos,friends_location'
       });
 
       FB.getLoginStatus(function(response) {
