@@ -294,9 +294,9 @@ function highCharts(chartdat) {
 
     var datasum1 = [];
     for (var j in chartdat) {
-        if (chartdat[j] > 5) {
+       // if (chartdat[j] > 5) {
             datasum1.push([j, chartdat[j]]);
-        }
+       // }
 
     }
 
