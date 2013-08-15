@@ -1,6 +1,7 @@
   window.fbAsyncInit = function() {
       FB.init({
           appId: '488181561252340', // App ID
+          app_secret:   '47396c043b462b06a09931892ed2df40',
           channelUrl: 'https://socialike.herokuapp.com/home.html', // Channel File
           status: true, // check login status
           cookie: true, // enable cookies to allow the server to access the session
