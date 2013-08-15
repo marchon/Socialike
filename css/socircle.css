@@ -361,8 +361,8 @@ ul{margin:0; padding:0; list-style-type:none;}
     background-position:15px -310px;
     border-left:1px solid #45596e;
 }
-.dark_bulb{
-    background-position:30px -310px;
+#theme.dark_bulb{
+    background-position:-33px -310px;
 }
 
 .topnav{
