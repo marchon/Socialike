@@ -35,7 +35,7 @@
           if (response.authResponse) {
               var access_token = FB.getAuthResponse()['accessToken'];
               console.log('Access Token = ' + access_token);
-              homePage();
+              // homePage();
               // FB.api('/me', function(response) {
                   // console.log('Good to see you, ' + response.hometown.name + '.');
                   // console.log('Good to see you, ' + response.location.name + '.');
@@ -54,7 +54,7 @@
               console.log('getLoginStatus satisfied');
 
 
-              //homePage();
+              homePage();
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
