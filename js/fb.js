@@ -18,7 +18,7 @@
               console.log('auth.login satisfied');
 
 
-              // window.top.location = "/home.html";
+              window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -32,17 +32,6 @@
       });
 
       FB.login(function(response) {
-          // if (response.authResponse) {
-          //     var access_token = FB.getAuthResponse()['accessToken'];
-          //     console.log('Access Token = ' + access_token);
-          //     // homePage();
-          //     // FB.api('/me', function(response) {
-          //         // console.log('Good to see you, ' + response.hometown.name + '.');
-          //         // console.log('Good to see you, ' + response.location.name + '.');
-          //     // });
-          // } else {
-          //     console.log('User cancelled login or did not fully authorize.');
-          // }
       }, {
           scope: 'user_location,user_hometown,user_photos,friends_location'
       });
@@ -65,13 +54,13 @@
       });
 
       FB.Event.subscribe('auth.statusChange', function(response) {
-          // do something with response
-          // if (window.location.pathname == "/") {
+          do something with response
+          if (window.location.pathname == "/") {
 
-          //   console.log('auth.statusChange satisfied');
+            console.log('auth.statusChange satisfied');
 
-          //   window.top.location = "/home.html";
-          // }
+            window.top.location = "/home.html";
+          }
       });
 
 
