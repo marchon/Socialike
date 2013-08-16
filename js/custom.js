@@ -611,7 +611,7 @@ function albumPictures(albumId) {
 
 function fbLogout() {
     FB.logout(function(response) {
-        window.location.reload();
+        window.top.location = "/";
     });
 }
 
