@@ -53,6 +53,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 
 #container {
     margin-top: 70px;
+    position: relative;
     /*width:90.252525252525%;*/
 }
 
@@ -208,8 +209,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     color: #BDC3C7;    
     margin: 16px 0 0 80px;
     padding: 16px 0;
-    font-size: 1.5em;    
-    width:350px;
+    font-size: 1.5em;
     float:left;
 }
 
