@@ -1,4 +1,4 @@
-  window.fbAsyncInit = function() {
+  window.fbAsyncInit = function () {
       FB.init({
           appId: '488181561252340', // App ID
           channelUrl: 'https://socialike.herokuapp.com/home.html', // Channel File
@@ -13,13 +13,13 @@
 
 
 
-      FB.Event.subscribe('auth.login', function(response) {
+      FB.Event.subscribe('auth.login', function (response) {
 
           if (response.status === 'connected') {
 
               console.log('auth.login satisfied');
 
-              //window.top.location = "/home.html";
+              window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -36,20 +36,20 @@
 
 
 
-      FB.getLoginStatus(function(response) {
+      FB.getLoginStatus(function (response) {
 
-          if (response.status === 'connected' ) {
+          if (response.status === 'connected') {
 
-            //if(response.authResponse){
+
               console.log('Logged in & authorized app');
-            //}
-            //else{
-              //console.log('Logged in to facebook, but not autorized to app');
-           // }
 
-             
+              if (window.location.pathname == "/") {
 
-              //homePage();
+                  window.top.location = "/home.html";
+
+              } else if (window.location.pathname == "/home.html") {
+                  homePage();
+              }
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
@@ -62,7 +62,7 @@
           }
       });
 
-      FB.Event.subscribe('auth.statusChange', function(response) {
+      FB.Event.subscribe('auth.statusChange', function (response) {
           //do something with response
           // if (window.location.pathname == "/") {
 
@@ -76,8 +76,8 @@
 
   };
 
-   // Load the SDK asynchronously
-  (function(d) {
+  // Load the SDK asynchronously
+  (function (d) {
       var js, id = 'facebook-jssdk',
           ref = d.getElementsByTagName('script')[0];
       if (d.getElementById(id)) {
