@@ -294,23 +294,23 @@ function highCharts(chartdat) {
 
     var datasum1 = [];
     for (var j in chartdat) {
-       // if (chartdat[j] > 5) {
-            datasum1.push([j, chartdat[j]]);
-       // }
+        // if (chartdat[j] > 5) {
+        datasum1.push([j, chartdat[j]]);
+        // }
 
     }
 
-    console.log("chartdat:"+chartdat);
+    console.log("chartdat:" + chartdat);
 
     datasum1.sort(function(a, b) {
         return a[1] - b[1];
     }); // Sorted array
 
-    console.log("datasum1:"+datasum1);
+    console.log("datasum1:" + datasum1);
 
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
-    console.log('chartInput:'+chartInput);
+    console.log('chartInput:' + chartInput);
     $(function() {
 
         Highcharts.setOptions({
@@ -460,7 +460,7 @@ var counter;
 $('.leftnav').on({
 
     mouseenter: function() {
-    clearTimeout(counter);
+        clearTimeout(counter);
     },
 
     mouseleave: function() {
@@ -572,7 +572,7 @@ function menuClick(elemId) {
             break;
 
         case "theme":
-            $('#'+elemId).toggleClass('light_bulb');
+            $('#' + elemId).toggleClass('light_bulb');
             $('body').toggleClass('light');
             break;
 
@@ -616,10 +616,15 @@ function fbLogout() {
 }
 
 
-      function fbLogin() {
-          FB.login(function(response) {}, {
-              scope: 'user_birthday,user_location,user_hometown,user_photos,friends_location'
-          });
-      }
+function fbLogin() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+
+            window.top.location = "/home.html";
+        }
+    }, {
+        scope: 'user_birthday,user_location,user_hometown,user_photos,friends_location'
+    });
+}
 
 /*------------------------- Logout Script End -------------------------*/
