@@ -360,8 +360,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 
 .topnav{
-    margin:0;
-    padding:0;
+    
     background:#2c3e50;
     height:50px;
     text-align:center;
@@ -373,6 +372,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     z-index: 9;
     opacity: 0.95;
     border-bottom:1px solid #45596E;
+    display: none;
 }
 
 .menu_wide{

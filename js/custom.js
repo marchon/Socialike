@@ -233,8 +233,14 @@ function homePage() {
 
                 document.getElementById('container').appendChild(docfrag);
 
-                if (i === (dostLength - 1)) {
-                    $('#preloader').fadeOut();
+                if (i === (dostLength - 2)) {
+                    $('#preloader').hide();
+                    //$('.topnav').slideDown();
+                }
+
+                if (i === (dostLength - 4)) {
+                    //$('#preloader').hide();
+                    $('.topnav').slideDown();
                 }
             }
 
