@@ -65,7 +65,7 @@
 
              // window.top.location = "/home.html";
           }
-      });
+      //});
 
 
 
