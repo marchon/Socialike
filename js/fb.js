@@ -40,7 +40,7 @@
           if (response.status === 'connected') {
 
             if (window.location.pathname == "/") {
-
+              window.top.location = "/home.html";
               //homePage();
             }else if(window.location.pathname == "/home.html")
             {
@@ -69,7 +69,6 @@
 
 
 
-  };
 
    // Load the SDK asynchronously
   (function(d) {
