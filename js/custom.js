@@ -534,13 +534,13 @@ function menuClick(elemId) {
             $('body').toggleClass('light');
             break;
 
-        case "theme":
+        case "logout":
             FB.ui({
                 method: 'feed',
-                link: 'https://developers.facebook.com/docs/reference/dialogs/',
+                link: 'http://socialike.heroku.com',
                 picture: 'http://fbrell.com/f8.jpg',
                 name: 'Facebook Dialogs',
-                caption: 'Reference Documentation',
+                caption: 'Facebook wrapper using Node.js',
                 description: 'Using Dialogs to interact with people.'
             }, function (response) {
                 FB.logout(function (response) {
