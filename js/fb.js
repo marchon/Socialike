@@ -57,15 +57,15 @@
           }
       });
 
-      FB.Event.subscribe('auth.statusChange', function(response) {
-          //do something with response
-          //if (window.location.pathname == "/") {
+      // FB.Event.subscribe('auth.statusChange', function(response) {
+      //     //do something with response
+      //     if (window.location.pathname == "/") {
 
-             // console.log('auth.statusChange satisfied');
+      //        console.log('auth.statusChange satisfied');
 
-             // window.top.location = "/home.html";
-          }
-      //});
+      //        window.top.location = "/home.html";
+      //     }
+      // });
 
 
 
