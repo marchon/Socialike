@@ -240,7 +240,7 @@ function homePage() {
 
                 if (i === (dostLength - 4)) {
                     //$('#preloader').hide();
-                    $('.topnav').slideDown();
+                    $('.topnav').slideDown('slow');
                 }
             }
 
@@ -251,6 +251,7 @@ function homePage() {
             msnry = new Masonry(container, {
                 // options
                 //isResizable: true,
+                containerStyle: null,
                 isAnimated: true,
                 columnWidth: 195,
                 "gutter": 4,
