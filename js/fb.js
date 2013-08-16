@@ -19,7 +19,7 @@
 
               console.log('auth.login satisfied');
 
-              window.top.location = "/home.html";
+              //window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
@@ -39,12 +39,19 @@
 
           if (response.status === 'connected') {
 
+            if (window.location.pathname == "/") {
+
+              //homePage();
+            }else if(window.location.pathname == "/home.html")
+            {
+
               homePage();
+            }
 
           } else if (response.status === 'not_authorized') {
               // the user is logged in to Facebook, 
               // but has not authenticated your app
-              fbLogin();
+              //fbLogin();
           } else {
               // the user isn't logged in to Facebook.
           }
@@ -52,11 +59,11 @@
 
       FB.Event.subscribe('auth.statusChange', function(response) {
           //do something with response
-          if (window.location.pathname == "/") {
+          //if (window.location.pathname == "/") {
 
-              console.log('auth.statusChange satisfied');
+             // console.log('auth.statusChange satisfied');
 
-              window.top.location = "/home.html";
+             // window.top.location = "/home.html";
           }
       });
 

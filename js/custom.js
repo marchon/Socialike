@@ -618,7 +618,7 @@ function fbLogout() {
 
       function fbLogin() {
           FB.login(function(response) {}, {
-              scope: 'user_location,user_hometown,user_photos,friends_location'
+              scope: 'user_location,user_hometown,user_photos,friends_location,user_birthday'
           });
       }
 
