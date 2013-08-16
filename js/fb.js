@@ -40,12 +40,12 @@
 
           if (response.status === 'connected' ) {
 
-            if(response.authResponse){
+            //if(response.authResponse){
               console.log('Logged in & authorized app');
-            }
-            else{
-              console.log('Logged in to facebook, but not autorized to app');
-            }
+            //}
+            //else{
+              //console.log('Logged in to facebook, but not autorized to app');
+           // }
 
              
 
@@ -55,7 +55,7 @@
               // the user is logged in to Facebook, 
               // but has not authenticated your app
               //fbLogin();
-              console.log('FB.getLoginStatus authorized');
+              console.log('FB.getLoginStatus not authorized');
 
           } else {
               // the user isn't logged in to Facebook.
