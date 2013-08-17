@@ -109,8 +109,8 @@ function homePage() {
         meName.removeAttribute("style");
         meName.appendChild(inName);
 
-        userBg.appendChild(pictureCont); // appending user photo to BG
-        userBg.appendChild(meName); // appending user name to BG
+        cover.appendChild(pictureCont); // appending user photo to BG
+        cover.appendChild(meName); // appending user name to BG
 
         cover.appendChild(userBg); // appending BG to cover container
         cover.appendChild(coverWrapper);
