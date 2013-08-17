@@ -50,7 +50,7 @@ function homePage() {
             inBday = typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?",
             inPicture = me.picture.data.url;
 
-            console.log(Bdayformatter(inBday));
+            console.log(bDayFormatter(inBday));
 
         $("#preloader h1").text("Howdy! " + inFirstName);
         document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
