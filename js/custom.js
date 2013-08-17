@@ -2,7 +2,7 @@
 
 function users(callback) {
 
-    FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function (response) {
+    FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
         callback(response);
 
     });
@@ -12,7 +12,7 @@ function users(callback) {
 
 function friends(callback) {
 
-    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function (response) {
+    FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
 
         callback(response);
 
@@ -24,7 +24,7 @@ function friends(callback) {
 
 function pic(album_id, callback) {
 
-    FB.api("/" + album_id + "/photos", function (response) {
+    FB.api("/" + album_id + "/photos", function(response) {
 
         callback(response);
 
@@ -39,15 +39,15 @@ function homePage() {
     var docfrag = document.createDocumentFragment(); // Document Fragment
 
 
-    var getuser = users(function (me) {
+    var getuser = users(function(me) {
 
         // All variables for loged in user//
         var inName = document.createTextNode(me.name),
             inFirstName = me.first_name,
-            inUsername = document.createTextNode(typeof (me.username) != 'undefined' ? me.username : "Username?"),
-            inHome = document.createTextNode(typeof (me.hometown) != 'undefined' ? me.hometown.name : "Hometown?"),
-            inLocation = document.createTextNode(typeof (me.location) != 'undefined' ? me.location.name : "Location?"),
-            inBday = document.createTextNode(typeof (me.birthday) != 'undefined' ? me.birthday : "Birthday?"),
+            inUsername = document.createTextNode(typeof(me.username) != 'undefined' ? me.username : "Username?"),
+            inHome = document.createTextNode(typeof(me.hometown) != 'undefined' ? me.hometown.name : "Hometown?"),
+            inLocation = document.createTextNode(typeof(me.location) != 'undefined' ? me.location.name : "Location?"),
+            inBday = typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?",
             inPicture = me.picture.data.url;
 
         $("#preloader h1").text("Howdy! " + inFirstName);
@@ -121,8 +121,6 @@ function homePage() {
         var detailsList = document.createElement('ul');
         detailsList.setAttribute('class', 'user_details');
 
-
-
         for (j = 0; j < 4; j++) {
 
             var detailListItems = document.createElement('li');
@@ -141,7 +139,7 @@ function homePage() {
                     detailListItems.appendChild(inHome);
                     break;
                 default:
-                    detailListItems.appendChild(inBday);
+                    detailListItems.appendChild(Bdayformatter(inBday));
                     break;
             }
 
@@ -161,7 +159,7 @@ function homePage() {
 
 
         //=========================Adding Friends list====================================================//
-        var getfriends = friends(function (dostData) {
+        var getfriends = friends(function(dostData) {
 
 
             var chartdat = [];
@@ -169,7 +167,7 @@ function homePage() {
 
             for (i = 0; i < dostLength; i++) {
 
-                if (typeof (dostData.data[i].location) != 'undefined') {
+                if (typeof(dostData.data[i].location) != 'undefined') {
 
                     chartdat.push(dostData.data[i].location.name);
                 }
@@ -254,25 +252,25 @@ function homePage() {
                 containerStyle: null,
                 isAnimated: true,
                 columnWidth: 195,
-                    "gutter": 4,
+                "gutter": 4,
                 transitionDuration: '0.6s',
                 itemSelector: '.grid_items'
                 //"isFitWidth": true
             });
 
 
-            setTimeout(function () {
+            setTimeout(function() {
                 highCharts(chartdat);
 
             }, 2000)
 
-            setTimeout(function () {
+            setTimeout(function() {
                 albums()
 
             }, 5000)
             //albums()
 
-            $('#container').imagesLoaded().progress(function (instance, image) {
+            $('#container').imagesLoaded().progress(function(instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 if (result) {
                     $(image.img).parents('.grid_items').addClass('bigEntrance');
@@ -290,7 +288,7 @@ function homePage() {
 
 function highCharts(chartdat) {
 
-    chartdat = chartdat.reduce(function (acc, curr) {
+    chartdat = chartdat.reduce(function(acc, curr) {
         if (typeof acc[curr] == 'undefined') {
             acc[curr] = 1;
         } else {
@@ -309,7 +307,7 @@ function highCharts(chartdat) {
 
     console.log("chartdat:" + chartdat);
 
-    datasum1.sort(function (a, b) {
+    datasum1.sort(function(a, b) {
         return a[1] - b[1];
     }); // Sorted array
 
@@ -318,7 +316,7 @@ function highCharts(chartdat) {
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
     console.log('chartInput:' + chartInput);
-    $(function () {
+    $(function() {
 
         Highcharts.setOptions({
             colors: ["#1abc9c", "#2980b9", "#d35400", "#f39c12", "#e74c3c"]
@@ -348,7 +346,7 @@ function highCharts(chartdat) {
                     width: '300px'
                 },
 
-                positioner: function () {
+                positioner: function() {
                     return {
                         x: 68,
                         y: 65
@@ -400,7 +398,7 @@ function highCharts(chartdat) {
 
 function albums() {
 
-    users(function (myalbum) {
+    users(function(myalbum) {
 
         var len = myalbum.albums.data.length;
 
@@ -410,9 +408,9 @@ function albums() {
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
-            (function (albumid, albumname) {
+            (function(albumid, albumname) {
 
-                var albumPic = pic(albumid, function (albPic) {
+                var albumPic = pic(albumid, function(albPic) {
 
 
 
@@ -464,12 +462,12 @@ function flatColors() {
 var counter;
 $('.leftnav').on({
 
-    mouseenter: function () {
+    mouseenter: function() {
         clearTimeout(counter);
     },
 
-    mouseleave: function () {
-        counter = setTimeout(function () {
+    mouseleave: function() {
+        counter = setTimeout(function() {
             $('.leftnav').removeClass('menupush');
         }, 5000);
     }
@@ -511,7 +509,7 @@ function menuClick(elemId) {
                 $(".album_container").slideUp();
                 $("#container").show().addClass('slideRight');
 
-                setTimeout(function () {
+                setTimeout(function() {
 
                     $(".location").not(":contains(" + myLoci + ")").parent('li').removeClass('bigEntrance').hide();
                     msnry.layout();
@@ -542,8 +540,8 @@ function menuClick(elemId) {
                 name: 'Facebook Dialogs',
                 caption: 'Facebook wrapper using Node.js',
                 description: 'Using Dialogs to interact with people.'
-            }, function (response) {
-                FB.logout(function (response) {
+            }, function(response) {
+                FB.logout(function(response) {
                     window.top.location = "/";
                 });
             });
@@ -561,7 +559,7 @@ function menuClick(elemId) {
 
 function albumPictures(albumId) {
 
-    pic(albumId, function (albumpict) {
+    pic(albumId, function(albumpict) {
 
         $('.albumpopup').show();
         $('.albumpopup').empty();
@@ -591,7 +589,7 @@ function albumPictures(albumId) {
 
 
 function fbLogin() {
-    FB.login(function (response) {
+    FB.login(function(response) {
         if (response.authResponse) {
 
             window.top.location = "/home.html";
@@ -602,3 +600,32 @@ function fbLogin() {
 }
 
 /*------------------------- Logout Script End -------------------------*/
+
+
+/*-------------------------format Birthday ------------------------------*/
+
+// function fbLogout() {
+//     FB.logout(function(response) {
+//         window.top.location = "/";
+//     });
+// }
+
+
+function Bdayformatter(fbBday) {
+
+if(fbBday != 'Birthday?'){
+    var date = fbBday;
+    var Mon = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+    Month = date.split('/')[0];
+    Date = date.split('/')[1];
+
+    return(Date + ' ' + Mon[Month - 1]);
+} else {
+
+    return('Birthday?');
+}
+
+}
+
+/*------------------------- format Birthday End -------------------------*/
