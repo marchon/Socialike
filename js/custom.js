@@ -429,7 +429,7 @@ function albums() {
                     image.setAttribute("id", albumid);
 
                     var albumCoverCont = document.createElement("div");
-                    albumCoverCont.setAttribute("class", "img_container");
+                    albumCoverCont.setAttribute("class", "img_container transition");
                     albumCoverCont.appendChild(image);
 
                     var albumNameCont = document.createElement("div");
