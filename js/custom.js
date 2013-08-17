@@ -139,7 +139,8 @@ function homePage() {
                     detailListItems.appendChild(inHome);
                     break;
                 default:
-                    detailListItems.appendChild(Bdayformatter(inBday));
+                    var formattedBday = Bdayformatter(inBday);
+                    detailListItems.appendChild(formattedBday);
                     break;
             }
 
