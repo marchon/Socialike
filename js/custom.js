@@ -89,11 +89,11 @@ function homePage() {
         //Creating Picture & Container//
 
         var pictureCont = cover.cloneNode(false);
-        pictureCont.setAttribute("class", "picture_container");
+        pictureCont.setAttribute("class", "picture_container circle");
 
         var mePhoto = document.createElement("img");
         mePhoto.setAttribute("src", inPicture);
-        mePhoto.setAttribute("class", "me_photo");
+        mePhoto.setAttribute("class", "me_photo circle");
         mePhoto.setAttribute("width", "100px");
         mePhoto.setAttribute("height", "100px");
 
@@ -128,7 +128,7 @@ function homePage() {
             var detailListItems = document.createElement('li');
 
             var iconContainer = document.createElement('span');
-            iconContainer.setAttribute('class', 'detailsicon melist_' + j);
+            iconContainer.setAttribute('class', 'detailsicon circle melist_' + j);
 
             switch (j) {
                 case 0:
@@ -205,11 +205,12 @@ function homePage() {
 
                 var image = document.createElement("img");
                 image.setAttribute("src", dostImg);
+                image.setAttribute("class", "circle");
                 image.setAttribute("width", "80");
                 image.setAttribute("height", "80");
 
                 var photoCont = document.createElement("div");
-                photoCont.setAttribute("class", "pic");
+                photoCont.setAttribute("class", "pic circle tansition");
                 photoCont.appendChild(image);
 
                 var naamCont = photoCont.cloneNode(false);
