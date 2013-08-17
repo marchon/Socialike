@@ -210,7 +210,7 @@ function homePage() {
                 image.setAttribute("height", "80");
 
                 var photoCont = document.createElement("div");
-                photoCont.setAttribute("class", "pic circle tansition");
+                photoCont.setAttribute("class", "pic circle transition");
                 photoCont.appendChild(image);
 
                 var naamCont = photoCont.cloneNode(false);
