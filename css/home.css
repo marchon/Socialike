@@ -79,9 +79,13 @@ body{
 	.logo_text{
 		font-size:4em;
 	}
+
+	.logo_inner{
+		font-size:1.4em;
+	}
 }
 
-@media all and (max-width: 700px) and (min-width: 320px){
+@media all and (max-width: 766px) and (min-width: 320px){
 
 	.logo{
 		margin:20px 0 60px;
@@ -100,6 +104,7 @@ body{
 		display:none;
 	}
 	.privacy{
-		display:none;
+		position: static;
+		margin-top:100px;
 	}
 }
