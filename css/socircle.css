@@ -177,12 +177,17 @@ ul{margin:0; padding:0; list-style-type:none;}
     padding: 16px 0;
     font-size: 1.5em;
     float:left;
+    
 }
 
 .user_details li{
     line-height: 42px;
     padding: 25px 0 25px 25px;
     position: relative;
+    max-width: 320px;
+    white-space:nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;
 }
 
 .user_details span{
