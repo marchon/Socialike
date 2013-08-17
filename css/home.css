@@ -44,7 +44,6 @@ body{
 	font-size:6em;
 }
 .logo_inner{
-	
 	font-size: 1.9em;
 }
 
@@ -81,4 +80,26 @@ body{
 		font-size:4em;
 	}
 }
+
+@media all and (max-width: 768px) and (min-width: 320px){
+
+	.logo{
+		margin:20px 0 60px;
+	}
+
+  	.logocontainer{
+		width: 160px;
+		height:160px;
+	}
+
+	.logo_text{
+		font-size:3.2em;
+	}
+
+	.logo_inner{
+		display:none;
+	}
+	.privacy{
+		display:none;
+	}
 }
