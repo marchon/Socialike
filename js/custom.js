@@ -141,8 +141,8 @@ function homePage() {
                     detailListItems.appendChild(inHome);
                     break;
                 default:
-                    //var formattedBday = document.createTextNode(Bdayformatter(inBday));
-                    //detailListItems.appendChild();
+                    var formattedBday = document.createTextNode(bDayFormatter(inBday));
+                    detailListItems.appendChild(formattedBday);
                     break;
             }
 
@@ -614,16 +614,15 @@ function fbLogin() {
 // }
 
 
-function Bdayformatter(fbBday) {
+function bDayFormatter(fbBday) {
 
 if(fbBday != 'Birthday?'){
-    var date = fbBday;
-    var Mon = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    //var date = fbBday;
+    var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    month = fbBday.split('/')[0],
+    date = fbBday.split('/')[1];
 
-    Month = date.split('/')[0];
-    Date = date.split('/')[1];
-
-    return(Date + ' ' + Mon[Month - 1]);
+    return(date + ' ' + monthArray[month - 1]);
 } else {
 
     return('Birthday?');
