@@ -139,7 +139,7 @@ function homePage() {
                     detailListItems.appendChild(inHome);
                     break;
                 default:
-                    var formattedBday = Bdayformatter(inBday);
+                    var formattedBday = document.createTextNode(Bdayformatter(inBday));
                     detailListItems.appendChild(formattedBday);
                     break;
             }
