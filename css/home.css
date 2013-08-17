@@ -1,0 +1,65 @@
+body{
+	margin:0;
+	padding:0;
+	background:url(../images/bg1.jpg) no-repeat 0 0;
+	background-size: cover;
+	font-family: 'Myriad Pro',Verdana,Arial,Helvetica,sans-serif;
+	font-size:62.5%;
+	text-align: center;
+	color:#fff;
+}
+.logo{
+	display:inline-block;
+	margin:50px auto 100px;
+	display:inline-block;
+	text-shadow: 1px 1px 1px #636363;
+    filter: dropshadow(color=#636363, offx=1, offy=1);
+
+}
+.logocontainer{
+	width: 237px;
+	height:237px;
+	margin: 0 auto;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition:    all 0.3s ease;
+    -ms-transition:     all 0.3s ease;
+    -o-transition:      all 0.3s ease;
+    transtion:all 0.3s ease;
+}
+.logo:hover .logocontainer{
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.logo_text{
+	font-family: 'Pacifico', cursive;
+	font-size:6em;
+}
+.logo_inner{
+	
+	font-size: 1.9em;
+}
+
+.login_button{
+	background:#3e5278;
+	display:inline-block;
+	font-size: 1.7em;
+    padding: 10px 25px;
+    border:1px solid #4e6389;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+	cursor:pointer;
+    -webkit-box-shadow:   1px 2px 3px #333;
+    box-shadow:   1px 2px 3px #333;
+
+}
+
+.privacy{
+	position:absolute;
+	color:#ececed;
+	bottom:40px;
+	font-size:1.2em;
+	width:100%;
+}

@@ -2,35 +2,36 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Socircle: Circular FB profile</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" href="socialike.ico" />
-	<link rel="stylesheet" href="css/socircle.css">
-	
-
+    <meta charset="UTF-8">
+    <title>Socircle: Circular FB profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body id="login">
-	<div id="fb-root"></div>
+<body>
+    <div id="fb-root"></div>
 
-	<a href="javascript:void(0)" class="logo">
-		<img src="images/logo.png" alt="logo">
-	</a>
+    <div class="logo">
+        <div class="logocontainer">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="logo_text">Socialike</div>
+        <div class="logo_inner">A facebook Javascript SDK &amp; Graph API demo</div>
+    </div>
+	<br />
+    <div onClick="fbLogin()" class="login_button">
+        Login with facebook
+    </div>
 
-	<div onClick="fbLogin()" class="login_button">
-		<img src="images/login.png" alt="Login With Facebook" />
-	</div>
+    <div class="privacy"> <b>Privacy Policy:</b> Socialike does not store or share any of your information.</div>
 
-	
+
 
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="js/fb.js"></script>
 <script src="js/custom.js"></script>
+
 </html>
-
-
-
-
-
