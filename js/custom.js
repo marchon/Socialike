@@ -50,6 +50,8 @@ function homePage() {
             inBday = typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?",
             inPicture = me.picture.data.url;
 
+            console.log(Bdayformatter(fbBday));
+
         $("#preloader h1").text("Howdy! " + inFirstName);
         document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
 
@@ -139,8 +141,8 @@ function homePage() {
                     detailListItems.appendChild(inHome);
                     break;
                 default:
-                    var formattedBday = document.createTextNode(Bdayformatter(inBday));
-                    detailListItems.appendChild(formattedBday);
+                    //var formattedBday = document.createTextNode(Bdayformatter(inBday));
+                    //detailListItems.appendChild();
                     break;
             }
 
