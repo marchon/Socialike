@@ -2,7 +2,10 @@ body{
 	margin:0;
 	padding:0;
 	background:url(../images/bg1.jpg) no-repeat 0 0;
-	background-size: cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 	font-family: 'Myriad Pro',Verdana,Arial,Helvetica,sans-serif;
 	font-size:62.5%;
 	text-align: center;
@@ -25,6 +28,9 @@ body{
     -ms-transition:     all 0.3s ease;
     -o-transition:      all 0.3s ease;
     transtion:all 0.3s ease;
+}
+.logocontainer img{
+	width:100%;
 }
 .logo:hover .logocontainer{
 	-webkit-transform: rotate(90deg);
@@ -59,7 +65,20 @@ body{
 .privacy{
 	position:absolute;
 	color:#ececed;
-	bottom:40px;
+	bottom:20px;
 	font-size:1.2em;
 	width:100%;
+}
+
+@media all and (max-width: 1366px) and (min-width: 1280px){
+
+  	.logocontainer{
+		width: 200px;
+		height:200px;
+	}
+
+	.logo_text{
+		font-size:4em;
+	}
+}
 }
