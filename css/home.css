@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	padding:0;
-	background:url(../images/bg1.jpg) no-repeat 0 0;
+	background:url(../images/bg1.jpg) no-repeat fixed 0 0;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -70,7 +70,7 @@ body{
 	width:100%;
 }
 
-@media all and (max-width: 1366px) and (min-width: 1280px){
+@media all and (max-width: 1366px) and (min-width: 768px){
 
   	.logocontainer{
 		width: 200px;
