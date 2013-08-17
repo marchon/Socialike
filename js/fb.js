@@ -60,7 +60,7 @@
           } else {
               // the user isn't logged in to Facebook.
           }
-      });
+      }, true);
 
       // FB.Event.subscribe('auth.statusChange', function (response) {
           
