@@ -476,13 +476,13 @@ ul{margin:0; padding:0; list-style-type:none;}
             width: 96.8%; 
     }
 
-    .grid_items{
-        width:195px;
+    .main_user {
+        width:100%;
     }
     
 }
 
-@media all and (min-width: 1023px){
+@media all and (min-width: 600px){
 
     .grid_items{
         width:195px;
