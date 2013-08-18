@@ -470,6 +470,13 @@ ul{margin:0; padding:0; list-style-type:none;}
  .light .picture_container{background:#ecf0f1;}
  .light h1{color: #34495E;}
 
+@media all and (max-width: 1024px)  and (min-width: 600px) {
+
+    #wrapper{
+            width: 96.4%; 
+    }
+    
+}
 
 @media all and (min-width: 1023px){
 
@@ -482,7 +489,6 @@ ul{margin:0; padding:0; list-style-type:none;}
     }
     
 }
-
 @media all and (min-width: 1280px){
         #wrapper{
             width: 93.489583333333%; /*1795px */
@@ -492,16 +498,4 @@ ul{margin:0; padding:0; list-style-type:none;}
         #wrapper{
             width: 1195px; 
         }
-}
-
-@media all and (max-width: 568px) and (min-width: 320px){
-
-    .grid_items{
-        width:100%;
-    }
-
-    .main_user {
-        width:100%;
-    }
-    
 }
