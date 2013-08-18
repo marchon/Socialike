@@ -543,8 +543,7 @@ function menuClick(elemId) {
                 picture: 'http://www.socialike.svsdesigns.in/images/shareicon.png',
                 name: 'Socialike: Facebook Javascrit SDK & Graph API demo',
                 caption: 'http://socialike.svsdesigns.in',
-                description: ' Facebook wrapper built using Node.js on Heroku, Galleria & Masonary',
-                message: 'An awesome app to showcase your facebook data #socialike'
+                description: ' Facebook wrapper built using Node.js on Heroku, Galleria & Masonary'
             }, function(response) {
                 FB.logout(function(response) {
                     window.top.location = "/";
