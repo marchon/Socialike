@@ -473,7 +473,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 @media all and (max-width: 1023px)  and (min-width: 600px) {
 
     #wrapper{
-            width: 96.8%; 
+            width: 99%; 
     }
 
     .grid_items{
@@ -484,6 +484,11 @@ ul{margin:0; padding:0; list-style-type:none;}
         width:100%;
     }
     
+}
+@media all and (width: 1024px){
+        #wrapper{
+            width: 97.2%; 
+        }
 }
 
 @media all and (min-width: 1024px){
