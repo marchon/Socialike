@@ -17,14 +17,11 @@
 
           if (response.status === 'connected') {
 
-              console.log('auth.login satisfied');
-
               window.top.location = "/home.html";
 
           } else if (response.status === 'not_authorized') {
 
               // FB.login();
-              console.log('auth.login not authorized');
 
           } else {
 
@@ -40,9 +37,6 @@
 
           if (response.status === 'connected') {
 
-
-              console.log('Logged in & authorized app');
-
               if (window.location.pathname == "/") {
 
                   window.top.location = "/home.html";
@@ -55,7 +49,6 @@
               // the user is logged in to Facebook, 
               // but has not authenticated your app
               //fbLogin();
-              console.log('FB.getLoginStatus not authorized');
 
           } else {
               // the user isn't logged in to Facebook.

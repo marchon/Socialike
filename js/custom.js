@@ -50,8 +50,6 @@ function homePage() {
             inBday = typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?",
             inPicture = me.picture.data.url;
 
-            console.log(bDayFormatter(inBday));
-
         $("#preloader h1").text("Howdy! " + inFirstName);
         document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
 
@@ -309,17 +307,13 @@ function highCharts(chartdat) {
 
     }
 
-    console.log("chartdat:" + chartdat);
-
     datasum1.sort(function(a, b) {
         return a[1] - b[1];
     }); // Sorted array
 
-    console.log("datasum1:" + datasum1);
 
     var chartInput = datasum1.slice(Math.max(datasum1.length - 5, 1)) // last five elements only
 
-    console.log('chartInput:' + chartInput);
     $(function() {
 
         Highcharts.setOptions({
