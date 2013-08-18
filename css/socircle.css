@@ -121,7 +121,6 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 
 .cover_photo {
-    min-height:293px;
     position: relative;
 }
 
@@ -481,6 +480,13 @@ ul{margin:0; padding:0; list-style-type:none;}
     .main_user {
         width:791px;
     }
+
+    @media all and (width: 1920px){
+        #container{
+            width: 93.489583333333%; /*1795px */
+        }
+    }
+
     
 }
 
