@@ -540,7 +540,7 @@ function menuClick(elemId) {
             FB.ui({
                 method: 'feed',
                 link: 'http://socialike.svsdesigns.in',
-                picture: 'http://www.socialike.svsdesigns.in/images/128x128.png',
+                picture: 'http://www.socialike.svsdesigns.in/images/shareicon.png',
                 name: 'Socialike: Facebook Javascrit SDK & Graph API demo',
                 caption: 'http://socialike.svsdesigns.in',
                 description: ' Facebook wrapper built using Node.js on Heroku, Galleria & Masonary'
