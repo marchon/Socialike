@@ -50,8 +50,19 @@
               // but has not authenticated your app
               //fbLogin();
 
+              if (window.location.pathname == "/home.html") {
+
+                  window.top.location = "/";
+
+              } 
+
           } else {
               // the user isn't logged in to Facebook.
+              if (window.location.pathname == "/home.html") {
+
+                  window.top.location = "/";
+
+              }
           }
       }, true);
 
