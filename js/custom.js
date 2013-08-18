@@ -411,8 +411,12 @@ function albums() {
                 var albumPic = pic(albumid, function(albPic) {
 
 
-
+if(typeof(albPic.data[0]!= 'undefined')){
                     var coverPic = albPic.data[0].source;
+                } else {
+
+                    console.log('Your album doesnt have any pics');
+                }
 
                     var list = document.createElement("li");
                     list.setAttribute("id", albumid);
