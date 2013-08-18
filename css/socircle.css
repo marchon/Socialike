@@ -470,10 +470,14 @@ ul{margin:0; padding:0; list-style-type:none;}
  .light .picture_container{background:#ecf0f1;}
  .light h1{color: #34495E;}
 
-@media all and (max-width: 1024px)  and (min-width: 600px) {
+@media all and (max-width: 1023px)  and (min-width: 600px) {
 
     #wrapper{
             width: 96.8%; 
+    }
+
+    .grid_items{
+        width:195px;
     }
 
     .main_user {
@@ -482,7 +486,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     
 }
 
-@media all and (min-width: 600px){
+@media all and (min-width: 1024px){
 
     .grid_items{
         width:195px;
