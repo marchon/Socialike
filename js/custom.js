@@ -411,38 +411,40 @@ function albums() {
                 var albumPic = pic(albumid, function(albPic) {
 
 
-if(typeof(albPic.data[0]) != 'undefined'){
-                    var coverPic = albPic.data[0].source;
-                } else {
+                    if (typeof(albPic.data[0]) != 'undefined') {
+                        var coverPic = albPic.data[0].source;
 
-                    console.log('Your album doesnt have any pics');
-                }
+                        var list = document.createElement("li");
+                        list.setAttribute("id", albumid);
+                        list.setAttribute("onClick", "albumPictures(this.id)");
 
-                    var list = document.createElement("li");
-                    list.setAttribute("id", albumid);
-                    list.setAttribute("onClick", "albumPictures(this.id)");
+                        var image = document.createElement("img");
+                        image.setAttribute("src", coverPic);
+                        image.setAttribute("id", albumid);
 
-                    var image = document.createElement("img");
-                    image.setAttribute("src", coverPic);
-                    image.setAttribute("id", albumid);
+                        var albumCoverCont = document.createElement("div");
+                        albumCoverCont.setAttribute("class", "img_container transition");
+                        albumCoverCont.appendChild(image);
 
-                    var albumCoverCont = document.createElement("div");
-                    albumCoverCont.setAttribute("class", "img_container transition");
-                    albumCoverCont.appendChild(image);
-
-                    var albumNameCont = document.createElement("div");
-                    albumNameCont.setAttribute("class", "album_title");
-                    albumNameCont.setAttribute("style", "background-color:" + flatColors() + ";");
-                    albumNameCont.appendChild(albumname);
+                        var albumNameCont = document.createElement("div");
+                        albumNameCont.setAttribute("class", "album_title");
+                        albumNameCont.setAttribute("style", "background-color:" + flatColors() + ";");
+                        albumNameCont.appendChild(albumname);
 
 
 
 
 
-                    list.appendChild(albumCoverCont);
-                    list.appendChild(albumNameCont);
+                        list.appendChild(albumCoverCont);
+                        list.appendChild(albumNameCont);
 
-                    document.getElementById("albums").appendChild(list);
+                        document.getElementById("albums").appendChild(list);
+                    } else {
+
+                        console.log('Your album doesnt have any pics');
+                    }
+
+
 
                 });
 
@@ -615,17 +617,17 @@ function fbLogin() {
 
 function bDayFormatter(fbBday) {
 
-if(fbBday != 'Birthday?'){
-    //var date = fbBday;
-    var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-    month = fbBday.split('/')[0],
-    date = fbBday.split('/')[1];
+    if (fbBday != 'Birthday?') {
+        //var date = fbBday;
+        var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            month = fbBday.split('/')[0],
+            date = fbBday.split('/')[1];
 
-    return(date + ' ' + monthArray[month - 1]);
-} else {
+        return (date + ' ' + monthArray[month - 1]);
+    } else {
 
-    return('Birthday?');
-}
+        return ('Birthday?');
+    }
 
 }
 
