@@ -50,8 +50,6 @@ function homePage() {
             inBday = typeof(me.birthday) != 'undefined' ? me.birthday : "Birthday?",
             inPicture = me.picture.data.url;
 
-        $("#preloader h1").text("Howdy! " + inFirstName);
-         $("#preloader h1").text("Just a Moment! Fetching your data");
         document.getElementById('fnu').setAttribute('data-location', inLocation.nodeValue);
 
         //Creating first List Item //
