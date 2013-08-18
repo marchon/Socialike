@@ -539,11 +539,11 @@ function menuClick(elemId) {
         case "logout":
             FB.ui({
                 method: 'feed',
-                link: 'http://socialike.heroku.com',
-                picture: 'http://fbrell.com/f8.jpg',
-                name: 'Facebook Dialogs',
-                caption: 'Facebook wrapper using Node.js',
-                description: 'Using Dialogs to interact with people.'
+                link: 'http://socialike.svsdesigns.in',
+                picture: 'http://www.socialike.svsdesigns.in/images/128x128.png',
+                name: 'Socialike: Facebook Javascrit SDK & Graph API demo',
+                caption: 'http://socialike.svsdesigns.in',
+                description: ' Facebook wrapper built using Graph API, Node.js, Galleria for albums & masonary for homepage design. The app is hosted on heroku.'
             }, function(response) {
                 FB.logout(function(response) {
                     window.top.location = "/";
