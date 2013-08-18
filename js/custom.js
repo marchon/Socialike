@@ -232,8 +232,8 @@ function homePage() {
 
                 document.getElementById('container').appendChild(docfrag);
 
-                if (i === (dostLength - 2)) {
-                    $('#preloader').hide();
+                if (i === (dostLength - 4)) {
+                    $('#preloader').addClass('slideLeft').hide();
                     //$('.topnav').slideDown();
                 }
 

@@ -438,18 +438,24 @@ ul{margin:0; padding:0; list-style-type:none;}
 
  #preloader{
     text-align: center;
-    width:397px;
-    position: relative;
-    margin: 0 auto;
+    width:405px;
+    position: absolute;
+    margin: -100px 0 0 -202px;
+    top:50%; left:50%; 
  }
 
  #preloader h1{
-    font-weight: 600;
-    font-size: 1.6em;
+    color: #ecf0f1;
+    font-weight: 400;
+    font-size: 1.9em;
  }
  #preloader h1 div{
-    text-align:right;
-    font-weight: 300;
+    color: #bdc3c7;
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: 600;
+    text-align: right;
+    margin: 8px;
  }
 
 
