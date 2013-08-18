@@ -482,7 +482,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     }
 
     @media all and (width: 1920px){
-        #container{
+        #wrapper{
             width: 93.489583333333%; /*1795px */
         }
     }
