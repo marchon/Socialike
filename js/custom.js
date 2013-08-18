@@ -411,7 +411,7 @@ function albums() {
                 var albumPic = pic(albumid, function(albPic) {
 
 
-if(typeof(albPic.data[0]!= 'undefined')){
+if(typeof(albPic.data[0]) != 'undefined'){
                     var coverPic = albPic.data[0].source;
                 } else {
 
