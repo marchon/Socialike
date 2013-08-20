@@ -239,7 +239,7 @@ function homePage() {
 
                 if (i === (dostLength - 4)) {
                     //$('#preloader').hide();
-                    $('.topnav').slideDown('slow');
+                    $('.topnav').addClass('slideDown');
                 }
             }
 
@@ -281,6 +281,10 @@ function homePage() {
 
 
         });
+        
+        //Feedback//
+        (function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/639NBCfh6bHS834mmtmCw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+        $('.feedback').addClass('slideUp');
     });
 }
 

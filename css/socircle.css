@@ -335,7 +335,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     z-index: 9;
     opacity: 0.95;
     border-bottom:1px solid #45596E;
-    display: none;
+    visibility: hidden;
 }
 
 #innerlogo{
@@ -462,11 +462,16 @@ ul{margin:0; padding:0; list-style-type:none;}
 
 .feedback{
     position: fixed;
-    background-position:-12px -300px;
+    background-position:1px -354px;
     width:42px;
     height:48px;
     right:10px;
     bottom:-6px;
+    text-indent: -999px;
+    visibility: hidden;
+}
+.feedback:hover{
+     background-position:1px -362px;
 }
 
  /*=====================================Dark Theme================================================*/
