@@ -49,7 +49,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 
 /*All sprite images*/
 
-.user_details span, .leftnav li, #innerlogo, .corner_menu, #theme{
+.user_details span, .leftnav li, #innerlogo, .corner_menu, #theme, .feedback{
     background-image: url(../images/socialike_sprite.png);
     background-repeat: no-repeat;
 }
@@ -460,6 +460,14 @@ ul{margin:0; padding:0; list-style-type:none;}
     margin: 8px;
  }
 
+.feedback{
+    position: fixed;
+    background-position:-12px -300px;
+    width:42px;
+    height:48px;
+    right:10px;
+    bottom:-6px;
+}
 
  /*=====================================Dark Theme================================================*/
  .light{background:#ecf0f1;} 
