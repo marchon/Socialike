@@ -336,6 +336,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     opacity: 0.95;
     border-bottom:1px solid #45596E;
     visibility: hidden;
+
 }
 
 #innerlogo{
@@ -467,8 +468,9 @@ ul{margin:0; padding:0; list-style-type:none;}
     height:48px;
     right:10px;
     bottom:-6px;
-    text-indent: -999px;
+    text-indent: -9999px;
     visibility: hidden;
+    overflow: hidden;
 }
 .feedback:hover{
      background-position:1px -362px;
