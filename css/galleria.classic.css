@@ -51,15 +51,15 @@
     z-index: 1;
 }
 .galleria-loader {
-    background: #000;
-    width: 20px;
-    height: 20px;
+    background: rgba(44,62,80,0.8);
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 50%;
+    left: 50%;
     z-index: 2;
     display: none;
-    background: url(../images/classic-loader.gif) no-repeat 2px 2px;
+    background: url(../images/classic-loader.gif) no-repeat center center;
 }
 .galleria-info {
     width: 50%;
