@@ -202,10 +202,10 @@ ul{margin:0; padding:0; list-style-type:none;}
     text-align: center;
 }
 
-.melist_0{background-position:2px 2px; background-color: #f1c40f;}
-.melist_1{background-position:6px -50px; background-color: #3498db;}
-.melist_2{background-position:3px -104px; background-color: #1abc9c;}
-.melist_3{background-position:4px -157px; background-color: #c0392b;}
+.melist_0{background-position:5px 2px; background-color: #f1c40f;}
+.melist_1{background-position:9px -50px; background-color: #3498db;}
+.melist_2{background-position:6px -104px; background-color: #1abc9c;}
+.melist_3{background-position:7px -157px; background-color: #c0392b;}
 
 #chart_container{
     width:350px;
