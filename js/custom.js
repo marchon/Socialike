@@ -491,6 +491,7 @@ function menuClick(elemId) {
             break;
 
         case "home":
+        case "innerlogo":
             if ($(".album_container").css('display') === 'block') {
 
                 $(".album_container").slideUp().removeClass('slideRight');
