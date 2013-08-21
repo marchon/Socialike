@@ -498,12 +498,14 @@ ul{margin:0; padding:0; list-style-type:none;}
     .main_user {
         width:100%;
     }
+    .album_container{width:77.5%;}
     
 }
 @media all and (width: 1024px){
         #wrapper{
             width: 97.2%; 
         }
+        .album_container{width:88.5%;}
 }
 
 @media all and (min-width: 1024px){
