@@ -402,11 +402,12 @@ function albums() {
         for (var i = 0; i < len; i++) {
 
             var picCounts = myalbum.albums.data[i].count;
+
             var albumid = myalbum.albums.data[i].id; //Album ID
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
 
-            (function(albumid, albumname) {
+            (function(albumid, albumname, picCounts) {
 
                 var albumPic = pic(albumid, function(albPic) {
 
@@ -428,7 +429,7 @@ function albums() {
 
                         var photoCount = document.createElement("div");
                         photoCount.setAttribute("class", "photo_count");
-                        photoCount.appendChild(picCounts+"<span>Photos</span>");
+                        photoCount.appendChild(picCounts);
 
                         var albumNameCont = document.createElement("div");
                         albumNameCont.setAttribute("class", "album_title");
@@ -453,7 +454,7 @@ function albums() {
 
                 });
 
-            })(albumid, albumname);
+            })(albumid, albumname, picCounts);
         }
 
     });
