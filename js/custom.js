@@ -54,7 +54,7 @@ function homePage() {
 
         //Creating first List Item //
         var listFirst = document.createElement("li");
-        listFirst.setAttribute("class", "grid_items main_user");
+        listFirst.setAttribute("class", "grid_items main_user slowtransition");
 
         //Creating Cover//
         var cover = document.createElement("div");
@@ -118,7 +118,7 @@ function homePage() {
         //---------Creating user details elements----------//
 
         var detailsList = document.createElement('ul');
-        detailsList.setAttribute('class', 'user_details');
+        detailsList.setAttribute('class', 'user_details slowtransition');
 
         for (j = 0; j < 4; j++) {
 
