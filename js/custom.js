@@ -24,7 +24,7 @@ function friends(callback) {
 
 function pic(album_id, callback) {
 
-    FB.api("/" + album_id + "/photos?limit=500", function(response) {
+    FB.api("/" + album_id + "/photos?limit=5000", function(response) {
 
         callback(response);
 
