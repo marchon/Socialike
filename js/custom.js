@@ -431,7 +431,7 @@ function albums() {
 
                         var photoCount = document.createElement("div");
                         photoCount.setAttribute("class", "photo_count");
-                        photoCount.appendChild(picCounts);
+                        photoCount.innerHTML(picCounts);
 
                         var albumNameCont = document.createElement("div");
                         albumNameCont.setAttribute("class", "album_title");
