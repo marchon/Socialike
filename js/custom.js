@@ -403,6 +403,8 @@ function albums() {
 
             var picCounts = myalbum.albums.data[i].count;
 
+            console.log(picCounts);
+
             var albumid = myalbum.albums.data[i].id; //Album ID
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
@@ -435,7 +437,7 @@ function albums() {
                         albumNameCont.setAttribute("class", "album_title");
                         albumNameCont.setAttribute("style", "background-color:" + flatColors() + ";");
                         albumNameCont.appendChild(albumname);
-                        albumNameCont.appendChild(photoCount);
+                        //albumNameCont.appendChild(photoCount);
 
 
 
