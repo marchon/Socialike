@@ -236,11 +236,6 @@ function homePage() {
                     $('#preloader').slideUp(300);
                     //$('.topnav').slideDown();
                 }
-
-                if (i === (dostLength - 4)) {
-                    //$('#preloader').hide();
-                    $('.topnav').addClass('slideDown');
-                }
             }
 
 
@@ -262,6 +257,7 @@ function homePage() {
 
             setTimeout(function() {
                 highCharts(chartdat);
+                $('.topnav').addClass('slideDown');
 
             }, 2000)
 
