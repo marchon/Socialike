@@ -431,13 +431,13 @@ function albums() {
 
                         var photoCount = document.createElement("div");
                         photoCount.setAttribute("class", "photo_count");
-                        photoCount.innerHTML(picCounts);
+                        photoCount.innerHTML(picCounts+"<span>Photos</span>");
 
                         var albumNameCont = document.createElement("div");
                         albumNameCont.setAttribute("class", "album_title");
                         albumNameCont.setAttribute("style", "background-color:" + flatColors() + ";");
                         albumNameCont.appendChild(albumname);
-                        //albumNameCont.appendChild(photoCount);
+                        albumNameCont.appendChild(photoCount);
 
 
 
