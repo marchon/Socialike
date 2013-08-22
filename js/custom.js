@@ -401,6 +401,7 @@ function albums() {
 
         for (var i = 0; i < len; i++) {
 
+            var picCounts = myalbum.albums.data[i].count;
             var albumid = myalbum.albums.data[i].id; //Album ID
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
@@ -425,10 +426,15 @@ function albums() {
                         albumCoverCont.setAttribute("class", "img_container transition");
                         albumCoverCont.appendChild(image);
 
+                        var photoCount = document.createElement("div");
+                        photoCount.setAttribute("class", "photo_count");
+                        photoCount.appendChild(picCounts+"<span>Photos</span>");
+
                         var albumNameCont = document.createElement("div");
                         albumNameCont.setAttribute("class", "album_title");
                         albumNameCont.setAttribute("style", "background-color:" + flatColors() + ";");
                         albumNameCont.appendChild(albumname);
+                        albumNameCont.appendChild(photoCount);
 
 
 
