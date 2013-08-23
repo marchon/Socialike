@@ -403,8 +403,8 @@ ul{margin:0; padding:0; list-style-type:none;}
     width:65%;
     height: 100%;
     right:0;
-    font-size:2.6em;
-    padding:5px;
+    font-size:2.2em;
+    padding:20px 10px 0;
     font-weight: 300;
     line-height: 25px;
     word-wrap:break-word;
@@ -414,9 +414,11 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 
 #albums li:hover .img_container{
-     transform: translateX(-55px);
-    -ms-transform: translateX(-55px); /* IE 9 */
-    -webkit-transform: translateX(-55px);
+     -webkit-transform: translateX(-55px);
+   -moz-transform: translateX(-55px);
+    -o-transform: translateX(-55px);
+    -ms-transform: translateX(-55px);
+   transform: translateX(-55px);
 }
 
 .albumpopup{
@@ -432,10 +434,10 @@ ul{margin:0; padding:0; list-style-type:none;}
 .photo_count{
     bottom: 3px;
     color: #FFFFFF;
-    font-size: 1.5em;
-    opacity: 0.3;
+    font-size: 1.4em;
+    opacity: 0.4;
     position: absolute;
-    right: 5px;
+    left: 10px;
 }
 .photo_count span{
     font-size: 0.5em;
