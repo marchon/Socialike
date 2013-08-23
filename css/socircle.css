@@ -504,7 +504,7 @@ ul{margin:0; padding:0; list-style-type:none;}
  .light .picture_container{background:#ecf0f1;}
  .light h1{color: #34495E;}
 
-@media all and (max-width: 1023px)  and (min-width: 600px) {
+@media (max-width: 1023px)  and (min-width: 600px) {
 
     #wrapper{
             width: 99%; 
@@ -521,14 +521,14 @@ ul{margin:0; padding:0; list-style-type:none;}
     
 }
 
-@media all and (width: 1024px){
+@media (width: 1024px){
         #wrapper{
             width: 97.2%; 
         }
         .album_container{width:88.5%;}
 }
 
-@media all and (min-width: 1024px){
+@media (min-width: 1024px){
 
     .grid_items{
         width:195px;
@@ -539,12 +539,12 @@ ul{margin:0; padding:0; list-style-type:none;}
     }
     
 }
-@media all and (min-width: 1280px){
+@media (min-width: 1280px){
         #wrapper{
             width: 94.499583333333%; /*1795px */
         }
 }
-@media all and (max-width: 1366px) and (min-width: 1365px){
+@media (max-width: 1366px) and (min-width: 1365px){
         #wrapper{
             width: 1195px; 
         }
