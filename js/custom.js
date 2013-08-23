@@ -248,8 +248,8 @@ function homePage() {
                 containerStyle: null,
                 //isAnimated: true,
                 columnWidth: 195,
-                "gutter": 4,
-                transitionDuration: '3s',
+                //"gutter": 4,
+                transitionDuration: '0.3s',
                 itemSelector: '.grid_items'
                 //"isFitWidth": true
             });
