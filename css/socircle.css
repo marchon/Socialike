@@ -43,7 +43,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     -o-transition:      all 0.9s ease;
     transtion:all 0.9s ease;
 }
-.no-flick{-webkit-transform:translate3d(0,0,0);}
+
 .circle{
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -521,6 +521,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     .album_container{width:77.5%;}
     
 }
+
 @media all and (width: 1024px){
         #wrapper{
             width: 97.2%; 
@@ -546,6 +547,16 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 @media all and (width: 1366px){
         #wrapper{
-            width: 1195px; 
+            width: 88%; 
         }
+}
+
+@media (orientation: portrait) {
+    body {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
 }
