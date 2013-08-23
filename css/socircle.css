@@ -16,8 +16,6 @@ body {
     color:#fff;
     margin:0;
     padding:0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform:translate3d(0,0,0);
 }
 
 
@@ -45,7 +43,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     -o-transition:      all 0.9s ease;
     transtion:all 0.9s ease;
 }
-
+.no-flick{-webkit-transform:translate3d(0,0,0);}
 .circle{
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
