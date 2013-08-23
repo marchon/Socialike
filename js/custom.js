@@ -593,14 +593,6 @@ function albumPictures(albumId) {
 
 
 /*-------------------------Logout Script ------------------------------*/
-
-// function fbLogout() {
-//     FB.logout(function(response) {
-//         window.top.location = "/";
-//     });
-// }
-
-
 function fbLogin() {
     FB.login(function(response) {
         if (response.authResponse) {
@@ -616,14 +608,6 @@ function fbLogin() {
 
 
 /*-------------------------format Birthday ------------------------------*/
-
-// function fbLogout() {
-//     FB.logout(function(response) {
-//         window.top.location = "/";
-//     });
-// }
-
-
 function bDayFormatter(fbBday) {
 
     if (fbBday != 'Birthday?') {
