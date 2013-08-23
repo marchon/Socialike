@@ -283,13 +283,11 @@ ul{margin:0; padding:0; list-style-type:none;}
     opacity: 0.95;
     border-right: 1px solid #46596b;
 
-    -webkit-transform: translate3d(0, 0, 0);
     -webkit-transform: translateX(-250px);
     -moz-transform: translateX(-250px);
     -o-transform: translateX(-250px);
     -ms-transform: translateX(-250px);
     transform: translateX(-250px);
-    
 }
 
 .leftnav:hover{
@@ -362,13 +360,11 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 
 .menupush{
-    -webkit-transform: translate3d(0, 0, 0);
     -webkit-transform: translateX(0px);
    -moz-transform: translateX(0px);
     -o-transform: translateX(0px);
     -ms-transform: translateX(0px);
    transform: translateX(0px);
-   
 }
 
 
@@ -399,7 +395,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     height:200px;
     position:absolute;
 }
-.img_container img{height:100%; }
+.img_container img{height:100%; -webkit-backface-visibility: hidden;}
 
 .album_title{
     background:#16a085;
@@ -418,14 +414,12 @@ ul{margin:0; padding:0; list-style-type:none;}
 }
 
 #albums li:hover .img_container{
-    -webkit-transform: translate3d(0, 0, 0);
-
      -webkit-transform: translateX(-55px);
    -moz-transform: translateX(-55px);
     -o-transform: translateX(-55px);
     -ms-transform: translateX(-55px);
    transform: translateX(-55px);
-   }
+}
 
 .albumpopup{
     display: none;
