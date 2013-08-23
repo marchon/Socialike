@@ -246,10 +246,10 @@ function homePage() {
                 // options
                 //isResizable: true,
                 containerStyle: null,
-                isAnimated: true,
+                //isAnimated: true,
                 columnWidth: 195,
                 "gutter": 4,
-                transitionDuration: '0.6s',
+                transitionDuration: '3s',
                 itemSelector: '.grid_items'
                 //"isFitWidth": true
             });
