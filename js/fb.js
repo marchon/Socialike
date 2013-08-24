@@ -64,19 +64,7 @@
 
               }
           }
-      }, true);
-
-      // FB.Event.subscribe('auth.statusChange', function (response) {
-          
-      //     // if (window.location.pathname == "/") {
-
-      //     //     console.log('auth.statusChange satisfied');
-
-      //     //     window.top.location = "/home.html";
-      //     // }
-      // });
-
-
+      });
 
   };
 
