@@ -431,7 +431,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     height: 100%;
     width: 100%;
     z-index:99;
-    background:rgba(0,0,0,0.9);
+    background:rgba(62,62,62,0.98);
 }
 .photo_count{
     bottom: 3px;
@@ -452,7 +452,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 
  #galleria{height:620px;}
 
- #close_gallery{
+ #close_gallery, #close_comments{
     position: absolute;
     top:-5px;
     right:40px;
@@ -495,11 +495,12 @@ ul{margin:0; padding:0; list-style-type:none;}
     text-indent: -9999px;
     visibility: hidden;
     overflow: hidden;
+    cursor:pointer;
 }
 .feedback:hover{
      bottom:0;
 }
-.bg_comment{
+.bgpopup{
     background:rgba(62,62,62,0.98);
     position: fixed;
     width: 100%;
@@ -507,6 +508,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     z-index: 9;
     left: 0;
     top: 0;
+    display: none;
 }
 .comments_container{
     position:absolute!important;
@@ -514,6 +516,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     top:20px;
     z-index:99;
     margin-left:-235px;
+    visibility: hidden;
 }
 .comment_heading{
     background-position: -50px -365px;

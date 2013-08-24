@@ -540,9 +540,19 @@ function menuClick(elemId) {
             $('.albumpopup').hide();
             break;
 
+        case "close_comments":
+            $('.comments_container').slideUp();
+            $('.bgpopup').hide();
+            break;
+
         case "theme":
             $('#' + elemId).toggleClass('light_bulb');
             $('body').toggleClass('light');
+            break;
+
+        case "feedback":
+            $('.comments_container').addClass('slideDown');
+            $('.bgpopup').hide();
             break;
 
         case "logout":
