@@ -551,8 +551,9 @@ function menuClick(elemId) {
             break;
 
         case "feedback":
+            $('.bgpopup').show();
             $('.comments_container').addClass('slideDown');
-            $('.bgpopup').hide();
+
             break;
 
         case "logout":
