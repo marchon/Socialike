@@ -60,8 +60,9 @@
     z-index: 2;
     display: none;
     opacity: 1 !important;
-    background: url(../images/classic-loader.gif) no-repeat center center rgba(44,62,80,0.98);
+    background: url(../images/classic-loader.gif) no-repeat center center #000;
     border-radius: 6px;
+    opacity: 0.8;
 }
 .galleria-info {
     width: 50%;
