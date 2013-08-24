@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Socialike: Facebook Javascrit SDK &amp; Graph API demo</title>
     <meta property="fb:app_id" content="488181561252340" />
-    <meta property="fb:admins" content="1524800660"/>
+    <meta property="fb:admins" content="1524800660" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" , user-scalable="0">
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -50,12 +50,13 @@
 
         <!-- Preloader -->
         <div id="preloader">
-            
+
             <img src="images/loader.gif" />
-            <br><br>
+            <br>
+            <br>
             <h1>
                 "When you create art, the world has to wait."
-                <div> -- Will Smith </div>
+                <div>-- Will Smith</div>
             </h1>
         </div>
 
@@ -63,11 +64,11 @@
     </div>
 
 
-<!-- A link to launch the Classic Widget -->
-<a href="javascript:void(0)" data-uv-lightbox="classic_widget" data-uv-mode="feedback" data-uv-primary-color="#bdc3c7" data-uv-link-color="#16a084" data-uv-forum-id="219511" data-uv-feedback-tab_name="Share your Thoughts" class="feedback transition">Feedback &amp; Support</a>
+    <!-- A link to launch the Classic Widget -->
+    <a href="javascript:void(0)" data-uv-lightbox="classic_widget" data-uv-mode="feedback" data-uv-primary-color="#bdc3c7" data-uv-link-color="#16a084" data-uv-forum-id="219511" data-uv-feedback-tab_name="Share your Thoughts" class="feedback transition">Feedback &amp; Support</a>
 
-<div></div>
-<div class="fb-comments" data-href="http://socialike.svsdesigns.in/home.html" data-colorscheme="dark" data-width="470"></div>
+    <div class="bg_comment"></div>
+    <div class="fb-comments" data-href="http://socialike.svsdesigns.in/home.html" data-colorscheme="dark" data-width="470"></div>
 </body>
 
 <script src="js/fb.js"></script>
@@ -76,17 +77,18 @@
 <script src="js/custom.js"></script>
 
 <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-43280605-1']);
+_gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-43280605-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
 </script>
 
 </html>
