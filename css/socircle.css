@@ -508,16 +508,14 @@ ul{margin:0; padding:0; list-style-type:none;}
     left: 0;
     top: 0;
 }
-.fb-comments{
+.comments_container{
     position:absolute!important;
     left:50%;
     top:80px;
     z-index:99;
     margin-left:-235px;
 }
-.fb-comments img{
-    border-radius:50%;
-}
+
 
 
 
