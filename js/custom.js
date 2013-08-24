@@ -421,7 +421,7 @@ function albums() {
                         var list = document.createElement("li");
                         list.setAttribute("id", albumid);
                         list.setAttribute("title", albumName);
-                        list.setAttribute("onClick", "albumPictures(this.id)");
+                        list.setAttribute("onClick", "albumPictures(this.id, this.title)");
 
                         var image = document.createElement("img");
                         image.setAttribute("src", coverPic);
@@ -583,14 +583,14 @@ function menuClick(elemId) {
 
 /*-------------------------User Album Ends ------------------------------*/
 
-function albumPictures(albumId) {
+function albumPictures(albumId, albumTitle) {
 
     pic(albumId, function(albumpict) {
 
         $('.albumpopup').show();
         $('.albumpopup').empty();
 
-        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)"><span>x</span> close</div><div class="galleria_container"><div id="galleria"></div></div>')
+        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)"><span>x</span> close</div><div class="galleria_container"><h1>'+albumTitle+'</h1><div id="galleria"></div></div>')
 
         for (var i = 0; i < albumpict.data.length; i++) {
 
