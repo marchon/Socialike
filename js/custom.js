@@ -541,7 +541,7 @@ function menuClick(elemId) {
             break;
 
         case "close_comments":
-            $('.comments_container').slideUp();
+            $('.comments_container').removeClass('slideDown');
             $('.bgpopup').hide();
             break;
 
