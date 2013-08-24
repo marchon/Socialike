@@ -57,7 +57,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 
 /*All sprite images*/
 
-.user_details span, .leftnav li, #innerlogo, .corner_menu, #theme, .feedback{
+.user_details span, .leftnav li, #innerlogo, .corner_menu, #theme, .feedback, .comment_heading{
     background-image: url(../images/socialike_sprite.png);
     background-repeat: no-repeat;
 }
@@ -500,7 +500,7 @@ ul{margin:0; padding:0; list-style-type:none;}
      bottom:0;
 }
 .bg_comment{
-    background:rgba(62,62,62,0.96);
+    background:rgba(62,62,62,0.98);
     position: fixed;
     width: 100%;
     height:100%;
@@ -511,9 +511,15 @@ ul{margin:0; padding:0; list-style-type:none;}
 .comments_container{
     position:absolute!important;
     left:50%;
-    top:80px;
+    top:20px;
     z-index:99;
     margin-left:-235px;
+}
+.comment_heading{
+    background-position: -33px -190px;
+    color:#fff;
+    margin:5px 0;
+    padding: 0 0 0 35px;
 }
 
 
