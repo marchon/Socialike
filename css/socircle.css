@@ -21,7 +21,7 @@ body {
 
 h1{
     font-weight: 300;
-    color: #BDC3C7;
+    color: #fff;
     font-size: 3em;
 }
 
@@ -376,7 +376,12 @@ ul{margin:0; padding:0; list-style-type:none;}
     width: 97.1%;
     margin: 70px auto 0 auto;
 }
-
+.albumheading{
+    color: #BDC3C7;
+}
+.galleryhead{
+    margin-left:10px;
+}
 #albums{
     
     padding: 0;
@@ -454,7 +459,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 
  #close_gallery, #close_comments{
     position: absolute;
-    top:47px;
+    top:30px;
     right:40px;
     font-size:3em;
     font-weight: 300;
@@ -544,8 +549,8 @@ ul{margin:0; padding:0; list-style-type:none;}
  .light .user_details span{border: 4px solid #ecf0f1;}
  .light .chart_title{color: #34495e;}
  .light .picture_container{background:#ecf0f1;}
- .light h1{color: #34495E;}
- .light .comment_heading{color: #fff;}
+ .light .albumheading{color: #34495E;}
+ /*.light .comment_heading{color: #fff;}*/
 
 @media all and (max-width: 1023px) and (min-width: 600px) {
 

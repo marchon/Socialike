@@ -11,6 +11,7 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    top:0 !important;
 }
 .galleria-stage {
     position: absolute;
