@@ -404,8 +404,6 @@ function albums() {
             var picCounts = myalbum.albums.data[i].count;
             var albumName = myalbum.albums.data[i].name;
 
-            console.log(picCounts);
-
             var albumid = myalbum.albums.data[i].id; //Album ID
 
             var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
