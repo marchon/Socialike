@@ -460,13 +460,17 @@ ul{margin:0; padding:0; list-style-type:none;}
     font-weight: 300;
     z-index: 9999;
     cursor: pointer;
+    line-height: 32px
  }
- #close_gallery span, #close_comments span{
-    background:#e74c3c;
-    width:20px; 
-    height:20px;
-    padding: 3px;
- }
+#close_gallery span, #close_comments span {
+    background: none repeat scroll 0 0 #E74C3C;
+    display: block;
+    float: left;
+    font-size: 1.3em;
+    line-height: 25px;
+    margin: 0 5px 0 0;
+    padding: 1px 10px 11px;
+}
 
  #preloader{
     text-align: center;
