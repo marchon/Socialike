@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 .galleria-thumbnails .galleria-image.active {
-    border-color: #c0392b;
+    border-color: #fff;
 }
 .galleria-counter {
     position: absolute;

@@ -320,10 +320,10 @@ ul{margin:0; padding:0; list-style-type:none;}
     position: relative;
 }
 .corner_menu span{
-    position: absolute; top: -200px; color: #95A5A6; font-size: 2em;
+    position: absolute; top: -200px; color: #95A5A6; font-size: 2em; line-height: 48px; height: 50px; padding:0 10px;
 }
 .corner_menu:hover span{
-    top:8px;
+    top:-2px;
 }
 
 #showhide{
@@ -331,14 +331,14 @@ ul{margin:0; padding:0; list-style-type:none;}
     border-right:1px solid #45596e;
 }
 #showhide span{
-    left: 60px;
+    left: 54px;
 }
 #theme{
     background-position:-33px -310px;
     border-left:1px solid #45596e;
 }
 #theme span{
-    right: 60px;
+    right: 54px;
 }
 #theme.light_bulb{
     background-position:15px -310px;
