@@ -454,9 +454,9 @@ ul{margin:0; padding:0; list-style-type:none;}
 
  #close_gallery, #close_comments{
     position: absolute;
-    top:-5px;
+    top:47px;
     right:40px;
-    font-size:6em;
+    font-size:3em;
     font-weight: 300;
     z-index: 9999;
     cursor: pointer;
