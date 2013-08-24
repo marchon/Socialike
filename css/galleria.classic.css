@@ -12,6 +12,7 @@
     -webkit-user-select: none;
     -o-user-select: none;
     top:0 !important;
+    box-shadow: 2px 1px 5px #000;
 }
 .galleria-stage {
     position: absolute;
@@ -38,9 +39,12 @@
     width: 60px;
     background: #000;
     margin: 0 5px 0 0;
-    border: 1px solid #000;
+    border: 2px solid #7f8c8d;
     float: left;
     cursor: pointer;
+}
+.galleria-thumbnails .galleria-image.active {
+    border-color: #c0392b;
 }
 .galleria-counter {
     position: absolute;

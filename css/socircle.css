@@ -317,15 +317,28 @@ ul{margin:0; padding:0; list-style-type:none;}
     height:49px;
     cursor: pointer;
     display: inline-block;
+    position: relative;
+}
+.corner_menu span{
+    position: absolute; top: -200px; color: #95A5A6; font-size: 2em;
+}
+.corner_menu:hover{
+    top:8px;
 }
 
 #showhide{
     background-position:10px -197px; 
     border-right:1px solid #45596e;
 }
+#showhide span{
+    left: 60px;
+}
 #theme{
     background-position:-33px -310px;
     border-left:1px solid #45596e;
+}
+#theme span{
+    right: 60px;
 }
 #theme.light_bulb{
     background-position:15px -310px;
@@ -468,7 +481,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     line-height: 32px
  }
 #close_gallery span, #close_comments span {
-    background: none repeat scroll 0 0 #E74C3C;
+    background: none repeat scroll 0 0 #c0392b;
     display: block;
     float: left;
     font-size: 1.3em;
