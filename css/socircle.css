@@ -500,16 +500,21 @@ ul{margin:0; padding:0; list-style-type:none;}
      bottom:0;
 }
 .bg_comment{
-    background:rgba(62,62,62,0.9);
+    background:rgba(62,62,62,0.96);
     position: fixed;
     width: 100%;
     height:100%;
     z-index: 99;
+    left: 0;
+    top: 0;
 }
 .fb-comments{
-    position:absolute;
+    position:absolute!important;
     left:50%;
     top:80px;
+}
+.fb-comments img{
+    border-radius:50%;
 }
 
 
