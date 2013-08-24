@@ -322,7 +322,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 .corner_menu span{
     position: absolute; top: -200px; color: #95A5A6; font-size: 2em;
 }
-.corner_menu:hover{
+.corner_menu:hover span{
     top:8px;
 }
 
