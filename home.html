@@ -24,9 +24,13 @@
 
         <!-- Top Navigation -->
         <div class="topnav">
-            <div id="showhide" class="corner_menu fleft" onClick="menuClick(this.id)"><span class="transition">Menu</span></div>
+            <div id="showhide" class="corner_menu fleft" onClick="menuClick(this.id)">
+                <span class="transition">Menu</span>
+            </div>
             <div id="innerlogo" title="Socialike" onClick="menuClick(this.id)"></div>
-            <div id="theme" class="corner_menu fright" onClick="menuClick(this.id)"><span class="transition">Theme</span></div>
+            <div id="theme" class="corner_menu fright" onClick="menuClick(this.id)">
+                <span class="transition">Theme</span>
+            </div>
         </div>
 
         <!-- Left Navigation -->
@@ -36,8 +40,6 @@
             <li id="photos" onClick="menuClick(this.id)">Photos</li>
             <li id="logout" onClick="menuClick(this.id)">Logout</li>
             <li class="copyright">&copy; Copyright SVSdesigns</li>
-            <!-- <li>Blog</li> -->
-
         </ul>
 
         <!-- Main container -->
@@ -48,7 +50,6 @@
             <h1 class="albumheading">Your Albums</h1>
             <ul id="albums"></ul>
         </div>
-
         <div class='albumpopup'></div>
 
 
@@ -66,22 +67,24 @@
 
 
     </div>
-    
-    <!-- Footer -->
-    
-    <!-- A link to launch the Classic Widget -->
+
+    <!-- Comment Widget-->
     <div class="feedback transition" id="feedback" onClick="menuClick(this.id)">Share some Love</div>
 
-    <div class="bgpopup"><div id="close_comments" onClick="menuClick(this.id)"><span>x</span> close</div></div>
+    <div class="bgpopup">
+        <div id="close_comments" onClick="menuClick(this.id)">
+            <span>x</span>close</div>
+    </div>
     <div class="comments_container">
         <h1 class="comment_heading">Share some love</h1>
-        <div class="fb-comments" data-href="http://socialike.svsdesigns.in/home.html" data-colorscheme="dark" data-width="470" ></div>
+        <div class="fb-comments" data-href="http://socialike.svsdesigns.in/home.html" data-colorscheme="dark" data-width="470"></div>
     </div>
+    
 </body>
 
 <script src="js/fb.js"></script>
 <script src="js/highcharts.js"></script>
-<script src="js/galleria.classic.min.js"></script>
+<!-- <script src="js/galleria.classic.min.js"></script> -->
 <script src="js/custom.js"></script>
 
 <script type="text/javascript">
