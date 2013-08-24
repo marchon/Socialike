@@ -499,7 +499,7 @@ ul{margin:0; padding:0; list-style-type:none;}
 .feedback:hover{
      bottom:0;
 }
-.bg_comments{
+.bg_comment{
     background:rgba(62,62,62,0.9);
     position: fixed;
     width: 100%;
