@@ -542,6 +542,11 @@ function menuClick(elemId) {
             $('.bgpopup').hide();
             break;
 
+        case "ignoreie":
+            $('.iemssg').hide();
+            $('.iepopup').hide();
+            break;
+
         case "theme":
             $('#' + elemId).toggleClass('light_bulb');
             $('body').toggleClass('light');
