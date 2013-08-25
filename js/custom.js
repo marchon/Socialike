@@ -549,7 +549,7 @@ function menuClick(elemId) {
 
         case "feedback":
             $('.bgpopup').show();
-            $('.comments_container')..show().addClass('slideDown');
+            $('.comments_container').show().addClass('slideDown');
 
             break;
 
