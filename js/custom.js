@@ -1,21 +1,16 @@
 /*---------------------------User Data-------------------------*/
 
 function users(callback) {
-
     FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
         callback(response);
-
     });
 }
 
 /*------------------------Friends Data------------------------------------*/
 
 function friends(callback) {
-
     FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
-
         callback(response);
-
     });
 }
 
@@ -23,14 +18,10 @@ function friends(callback) {
 /*---------------------------User Album Data-------------------------*/
 
 function pic(album_id, callback) {
-
     FB.api("/" + album_id + "/photos?limit=5000", function(response) {
-
         callback(response);
-
     });
 }
-
 
 /*---------------------------End Friends List------------------------------*/
 
@@ -70,13 +61,11 @@ function homePage() {
         if (me.cover) {
             var inCover = me.cover.source;
             inCover = inCover.replace(/s720/i, 'l720');
-            //var inCoverPos = me.cover.offset_y;
 
             coverImg.setAttribute('src', inCover);
-            //coverImg.setAttribute('style', "top:" + inCoverPos + "; width:100%;");
         } else {
 
-            coverImg.setAttribute("src", "http://www.coverbooth.com/uploads/covmg/the-three-choices-of-life-quotes-cool-facebook-timeline-covers.jpg");
+            coverImg.setAttribute("src", "images/headerimages.jpg");
         }
 
         //Creating Name & Picture Container//
@@ -244,14 +233,11 @@ function homePage() {
             var container = document.querySelector('#container');
             msnry = new Masonry(container, {
                 // options
-                //isResizable: true,
                 containerStyle: null,
-                //isAnimated: true,
                 columnWidth: 195,
                 "gutter": 4,
                 transitionDuration: '0.6s',
                 itemSelector: '.grid_items'
-                //"isFitWidth": true
             });
 
 
@@ -271,13 +257,12 @@ function homePage() {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 if (result) {
                     $(image.img).parents('.grid_items').addClass('bigEntrance');
-                    //$(image.img).fadeIn();
                 }
             });
 
 
         });
-        
+
     });
 }
 
@@ -297,10 +282,7 @@ function highCharts(chartdat) {
 
     var datasum1 = [];
     for (var j in chartdat) {
-        // if (chartdat[j] > 5) {
         datasum1.push([j, chartdat[j]]);
-        // }
-
     }
 
     datasum1.sort(function(a, b) {
@@ -428,7 +410,7 @@ function albums() {
 
                         var photoCount = document.createElement("div");
                         photoCount.setAttribute("class", "photo_count");
-                        photoCount.innerHTML = picCounts+"<span> Photos</span>";
+                        photoCount.innerHTML = picCounts + "<span> Photos</span>";
 
                         var albumNameCont = document.createElement("div");
                         albumNameCont.setAttribute("class", "album_title");
@@ -590,7 +572,7 @@ function albumPictures(albumId, albumTitle) {
         $('.albumpopup').show();
         $('.albumpopup').empty();
 
-        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)"><span>x</span> close</div><div class="galleria_container"><h1 class="galleryhead">'+albumTitle+'</h1><div id="galleria"></div></div>')
+        $('.albumpopup').append('<div id="close_gallery" onClick="menuClick(this.id)"><span>x</span> close</div><div class="galleria_container"><h1 class="galleryhead">' + albumTitle + '</h1><div id="galleria"></div></div>')
 
         for (var i = 0; i < albumpict.data.length; i++) {
 
@@ -606,6 +588,7 @@ function albumPictures(albumId, albumTitle) {
 
 
 /*-------------------------Logout Script ------------------------------*/
+
 function fbLogin() {
     FB.login(function(response) {
         if (response.authResponse) {
@@ -621,6 +604,7 @@ function fbLogin() {
 
 
 /*-------------------------format Birthday ------------------------------*/
+
 function bDayFormatter(fbBday) {
 
     if (fbBday != 'Birthday?') {

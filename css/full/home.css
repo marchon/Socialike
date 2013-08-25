@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	padding:0;
-	background:url(../../images/bg1.jpg) no-repeat fixed 0 0;
+	background:url(../images/bg1.jpg) no-repeat fixed 0 0;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -121,7 +121,7 @@ body{
 .browsers{list-style-type: none;overflow: hidden; display: inline-block; margin: 40px 0 0;}
 .browsers li{display: block; float: left;margin: 0 40px 0 0;}
 .browsers a{
-	background:url(../../images/socialike_sprite.png) no-repeat 2px -441px;
+	background:url(../images/socialike_sprite.png) no-repeat 2px -441px;
 	display: inline-block;
 	width: 63px;
 	height:63px;
