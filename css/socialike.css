@@ -492,7 +492,7 @@ ul{margin:0; padding:0; list-style-type:none;}
     margin:20px auto;
 }
 
- #galleria{height:600px;}
+ #galleria{height:580px;}
 
  #close_gallery, #close_comments{
     position: absolute;
@@ -603,6 +603,8 @@ ul{margin:0; padding:0; list-style-type:none;}
         width:100%;
     }
     .album_container{width:77.5%;}
+
+     #galleria{height:500px;}
     
 }
 
@@ -633,4 +635,6 @@ ul{margin:0; padding:0; list-style-type:none;}
         #wrapper{
             width: 1195px; 
         }
+
+         #galleria{height:520px;}
 }
