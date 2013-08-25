@@ -538,7 +538,7 @@ function menuClick(elemId) {
             break;
 
         case "close_comments":
-            $('.comments_container').removeClass('slideDown');
+            $('.comments_container').removeClass('slideDown').hide();
             $('.bgpopup').hide();
             break;
 
@@ -549,7 +549,7 @@ function menuClick(elemId) {
 
         case "feedback":
             $('.bgpopup').show();
-            $('.comments_container').addClass('slideDown');
+            $('.comments_container')..show().addClass('slideDown');
 
             break;
 
