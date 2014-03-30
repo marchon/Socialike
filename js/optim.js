@@ -18,11 +18,13 @@
 //     }
 // };
 
+var you = {};
 
 /*---------------------------User Data-------------------------*/
 
 function users(callback) {
     FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
+        you = response;
         console.log(response);
         callback(response);
     });
@@ -398,18 +400,18 @@ function highCharts(chartdat) {
 
 function albums() {
 
-    users(function(myalbum) {
+    // users(function(myalbum) {
 
-        var len = myalbum.albums.data.length;
+        var len = you.albums.data.length;
 
         for (var i = 0; i < len; i++) {
 
-            var picCounts = myalbum.albums.data[i].count;
-            var albumName = myalbum.albums.data[i].name;
+            var picCounts = you.albums.data[i].count;
+            var albumName = you.albums.data[i].name;
 
-            var albumid = myalbum.albums.data[i].id; //Album ID
+            var albumid = you.albums.data[i].id; //Album ID
 
-            var albumname = document.createTextNode(myalbum.albums.data[i].name); //Album Name
+            var albumname = document.createTextNode(you.albums.data[i].name); //Album Name
 
             (function(albumid, albumname, picCounts, albumName) {
 
@@ -462,7 +464,7 @@ function albums() {
             })(albumid, albumname, picCounts, albumName);
         }
 
-    });
+    // });
 }
 
 /*---------------------------Random Colors--------------------------*/
