@@ -2,7 +2,7 @@
 
 function users(callback) {
     FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
-        console(response);
+        console.log(response);
         callback(response)
     });
 }
