@@ -1,9 +1,30 @@
+// var populateData = {
+
+//     you: {},
+//     frnd: {};
+//     pict: {};
+
+//     user: function() {
+//         FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
+//             console.log(response);
+//             callback(response)
+//         });
+//     },
+
+//     friends: function () {
+//         FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
+//             callback(response);
+//         });
+//     }
+// };
+
+
 /*---------------------------User Data-------------------------*/
 
 function users(callback) {
     FB.api('/me?fields=name,first_name,username,birthday,hometown,albums,photos,location,picture.height(100).width(100),cover', function(response) {
         console.log(response);
-        callback(response)
+        callback(response);
     });
 }
 
@@ -11,6 +32,7 @@ function users(callback) {
 
 function friends(callback) {
     FB.api('/me/friends?fields=name,username,location,picture.height(80).width(80)', function(response) {
+        console.log(response);
         callback(response);
     });
 }
@@ -20,6 +42,7 @@ function friends(callback) {
 
 function pic(album_id, callback) {
     FB.api("/" + album_id + "/photos?limit=5000", function(response) {
+        console.log(response);
         callback(response);
     });
 }
