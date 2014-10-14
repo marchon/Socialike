@@ -13,10 +13,10 @@
   <div ng-controller="test">
     
     <div ng-cloak>{{name}}</div>
-    <input type="text" ng-model="svs">
+    <input type="text" ng-model="svs.name">
     <ul>
       <li ng-repeat=" friend in friends | filter:svs">
-          {{friend.name}}
+          <img src="{{friend.picture.data.url}}" alt=""> <span>{{friend.name}}</span>
       </li>
     </ul>
 
@@ -33,7 +33,7 @@
 
         FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
-                FB.api('/me/friends', function(response) {
+                FB.api('/me/friends?fields=name,picture.height(80).width(80)', function(response) {
                     //console.log(response);
                     //alert(JSON.stringify(response));
                     $scope.$apply(function() {
