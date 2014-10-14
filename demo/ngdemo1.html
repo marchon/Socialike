@@ -49,7 +49,7 @@
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
                     $rootScope.$apply(function() {
                        //console.log(response.data);
-                       resp(response);
+                       resp(response.data);
                     });
                 });
             } else {
