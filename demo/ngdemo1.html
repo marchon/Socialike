@@ -42,15 +42,14 @@
 
         var Facebook = {};
 
-        Facebook.getFriends = function() {
+        Facebook.getFriends = function(resp) {
          
           FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
-                    $rootScope.$apply(function(svs) {
+                    $rootScope.$apply(function() {
                        console.log(response.data);
-                       svs = response.data;
-                       return svs;
+                       resp(response);
                     });
                 });
             } else {
@@ -79,7 +78,9 @@
                 //do nothing..
             }
         });*/
-      $scope.friends = FbService.getFriends();
+      $scope.friends = FbService.getFriends(function(resp) {
+        return resp;
+      });
         
       }])
 </script>
