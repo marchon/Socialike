@@ -33,7 +33,7 @@
 
         FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
-                FB.api('/me/friends?fields=name,picture.height(80).width(80)', function(response) {
+                FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
                     //console.log(response);
                     //alert(JSON.stringify(response));
                     $scope.$apply(function() {
