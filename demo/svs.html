@@ -13,8 +13,9 @@
   <div ng-controller="test">
     
     <div ng-cloak>{{name}}</div>
+    <input type="text" ng-model="name">
     <ul>
-      <li ng-repeat=" friend in friends">
+      <li ng-repeat=" friend in friends | name">
           {{friend.name}}
       </li>
     </ul>
