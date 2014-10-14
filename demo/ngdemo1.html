@@ -58,7 +58,7 @@
         return Facebook;
       }])
       
-      .controller('test', ['$scope', '$rootScope', function($scope, $rootScope, FbService){
+      .controller('test', ['$scope', '$rootScope', 'FbService' function($scope, $rootScope, FbService){
 
         //$scope.name = 'Surendra'; 
         $scope.friends = FbService.getFriends();
