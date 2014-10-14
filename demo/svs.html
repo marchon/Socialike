@@ -29,7 +29,7 @@
             if (response.authResponse) {
                 FB.api('/me/friends', function(response) {
                     console.log(response);
-                    //alert(JSON.stringify(response));
+                    alert(JSON.stringify(response));
                     $scope.$apply(function() {
                        //$scope.name=response.name;
                     });
