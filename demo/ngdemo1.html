@@ -42,11 +42,12 @@
 
         var Facebook = {}
         Facebook.getFriends = function() {
+          var _self = this;
           FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
                     $rootScope.$apply(function() {
-                       console.log(response.data);
+                       response = response.data;
                     });
                 });
             } else {
