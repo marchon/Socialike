@@ -37,24 +37,30 @@
 <script>
 
       angular.module('FbTest', [])
-      
-      .controller('test', ['$scope', '$rootScope', function($scope, $rootScope){
 
-        $scope.name = 'Surendra'; 
+      .service('FbService', ['$rootScope', function($rootScope){
 
-        FB.login(function(response) {// fb login as soon as the ui loads
+        this.getFriends = function() {
+          FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
-                    //console.log(response);
-                    //alert(JSON.stringify(response));
-                    $scope.$apply(function() {
-                       $scope.friends=response.data;
+                    $rootScope.$apply(function() {
+                       return response.data;
                     });
                 });
             } else {
                 //do nothing..
             }
-        });
+          });
+
+        }
+        
+      }])
+      
+      .controller('test', ['$scope', '$rootScope', function($scope, $rootScope, FbService){
+
+        //$scope.name = 'Surendra'; 
+        $scope.friends = FbService.getFriends();
         
       }])
 </script>
