@@ -13,6 +13,11 @@
   <div ng-controller="test">
     
     <div ng-cloak>{{name}}</div>
+    <ul>
+      <li ng-repeat=" friend in friends">
+          {{friend.name}}
+      </li>
+    </ul>
 
   </div>
   
@@ -28,10 +33,10 @@
         FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
                 FB.api('/me/friends', function(response) {
-                    console.log(response);
-                    alert(JSON.stringify(response));
+                    //console.log(response);
+                    //alert(JSON.stringify(response));
                     $scope.$apply(function() {
-                       //$scope.name=response.name;
+                       $scope.friends=response.data;
                     });
                 });
             } else {
