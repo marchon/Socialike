@@ -78,8 +78,10 @@
                 //do nothing..
             }
         });*/
-      $scope.friends = FbService.getFriends(function(resp) {
-        return resp;
+      FbService.getFriends(function(resp) {
+        $scope.$apply(function() {
+          $scope.friends = resp;
+        })
       });
         
       }])
