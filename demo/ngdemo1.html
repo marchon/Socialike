@@ -38,9 +38,10 @@
 
       angular.module('FbTest', [])
 
-      .service('FbService', ['$rootScope', function($rootScope){
+      .factory('FbService', ['$rootScope', function($rootScope){
 
-        this.getFriends = function() {
+        var Facebook = {}
+        Facebook.getFriends = function() {
           FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
@@ -54,7 +55,7 @@
           });
 
         }
-        
+        return Facebook;
       }])
       
       .controller('test', ['$scope', '$rootScope', function($scope, $rootScope, FbService){
