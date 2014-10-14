@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body >
+
+  <div id="fb-root"></div>
+
+
+
+  <div ng-controller="test">
+    
+    <div ng-cloak>{{name}}</div>
+
+  </div>
+  
+<script src="/js/angular.js"></script>
+<script>
+
+      angular.module('FbTest', [])
+      
+      .controller('test', ['$scope', '$rootScope', function($scope, $rootScope){
+
+        $scope.name = 'Surendra'; 
+
+        FB.login(function(response) {// fb login as soon as the ui loads
+            if (response.authResponse) {
+                FB.api('/me/friends', function(response) {
+                    console.log(response);
+                    //alert(JSON.stringify(response));
+                    $scope.$apply(function() {
+                       //$scope.name=response.name;
+                    });
+                });
+            } else {
+                //do nothing..
+            }
+        });
+        
+      }])
+</script>
+<script>
+    window.fbAsyncInit = function() {
+          FB.init({
+              appId: '488181561252340', // App ID
+              channelUrl: 'https://socialike.herokuapp.com/home.html', // Channel File
+              status: true, // check login status
+              cookie: true, // enable cookies to allow the server to access the session
+              xfbml: false // parse XFBML
+
+          });
+
+          angular.bootstrap(document.body, ['FbTest']);
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>
