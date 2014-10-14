@@ -46,7 +46,7 @@
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
                     $rootScope.$apply(function() {
-                       return response.data;
+                       console.log(response.data);
                     });
                 });
             } else {
