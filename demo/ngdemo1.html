@@ -38,16 +38,14 @@
 
       angular.module('FbTest', [])
 
-      .factory('FbService', ['$rootScope', function($rootScope){
+      .service('FbService', ['$rootScope', function($rootScope){
 
-        var Facebook = {}
-        Facebook.getFriends = function() {
-          var _self = this;
+        this.getFriends = function() {
           FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
                     $rootScope.$apply(function() {
-                       response = response.data;
+                       return response.data;
                     });
                 });
             } else {
@@ -56,13 +54,24 @@
           });
 
         }
-        return Facebook;
+        
       }])
       
-      .controller('test', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
+      .controller('test', ['$scope', '$rootScope', function($scope, $rootScope){
 
         //$scope.name = 'Surendra'; 
-        $scope.friends = FbService.getFriends();
+
+        FB.login(function(response) {// fb login as soon as the ui loads
+            if (response.authResponse) {
+                FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
+                    $rootScope.$apply(function() {
+                       $scope.friends=response.data;
+                    });
+                });
+            } else {
+                //do nothing..
+            }
+        });
         
       }])
 </script>
