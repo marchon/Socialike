@@ -40,19 +40,23 @@
 
       .service('FbService', ['$rootScope', function($rootScope){
 
-        this.getFriends = function() {
+        this.checkLogin = function() {
           FB.login(function(response) {// fb login as soon as the ui loads
             if (response.authResponse) {
-                FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
-                    $rootScope.$apply(function() {
-                       return response.data;
-                    });
-                });
+                
             } else {
                 //do nothing..
             }
           });
 
+        };
+
+        this.getFriends = function() {
+          FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
+              $rootScope.$apply(function() {
+                 return response.data;
+              });
+          });
         }
         
       }])
@@ -72,7 +76,15 @@
                 //do nothing..
             }
         });*/
-      $scope.friends = FbService.getFriends();
+       FB.login(function(response) {// fb login as soon as the ui loads
+            if (response.authResponse) {
+                $scope.friends = FbService.getFriends();
+            } else {
+                //do nothing..
+            }
+          });
+
+        };
         
       }])
 </script>
