@@ -48,7 +48,7 @@
             if (response.authResponse) {
                 FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
                     $rootScope.$apply(function() {
-                       console.log(response.data);
+                       //console.log(response.data);
                        resp(response);
                     });
                 });
@@ -79,9 +79,8 @@
             }
         });*/
       FbService.getFriends(function(resp) {
-        $scope.$apply(function() {
+          console.log(resp);
           $scope.friends = resp;
-        })
       });
         
       }])
