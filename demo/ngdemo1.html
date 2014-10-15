@@ -1,123 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <style>
-    ul {
-      margin:0;
-      padding: 0;
-    }
-    li {
-      float:left;
-      list-style-type: none;
-      width: 280px;
-    }
-    li span {
-      position: absolute;
-    }
-    li img {
-      max-width:100%;
-    }
-  </style>
-</head>
-<body >
-
-  <div id="fb-root"></div>
-
-
-
-  <div ng-controller="test">
-    
-    <div ng-cloak>{{name}}</div>
-    <input type="text" ng-model="svs.name">
-    <ul>
-      <li ng-repeat=" friend in friends | filter:svs">
-          <img src="{{friend.picture.data.url}}" alt=""> <span>{{friend.name}}</span>
-      </li>
-    </ul>
-
-  </div>
-  
-<script src="angular.js"></script>
-<script>
-
-      angular.module('FbTest', [])
-
-      .factory('FbService', ['$rootScope', function($rootScope){
-
-        var Facebook = {};
-
-        Facebook.getFriends = function(resp) {
-         
-          FB.login(function(response) {// fb login as soon as the ui loads
-            if (response.authResponse) {
-                FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
-                    $rootScope.$apply(function() {
-                       //console.log(response.data);
-                       resp(response.data);
-                    });
-                });
-            } else {
-                //do nothing..
+    <head>
+        <meta charset="UTF-8">
+        <title>NgBook: An Angular &amp; Facebook authentication demo</title>
+        <style>
+            ul {
+                margin:0;
+                padding: 0;
             }
-          });
-
-        }
+            li {
+                float:left;
+                list-style-type: none;
+                width: 280px;
+            }
+            li span {
+                position: absolute;
+            }
+            li img {
+                max-width:100%;
+            }
+        </style>
+    </head>
+    <body>
         
-        return Facebook;
+        <div id="fb-root"></div>
 
-      }])
-      
-      .controller('test', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
+        <div ng-controller="test">
 
-        //$scope.name = 'Surendra'; 
+            <div ng-cloak>{{name}}</div>
+            <input type="text" ng-model="svs.name">
+            <ul>
+                <li ng-repeat=" friend in friends | filter:svs">
+                    <img src="{{friend.picture.data.url}}" alt=""> 
+                    <span>{{friend.name}}</span>
+                </li>
+            </ul>
+        </div>
 
-        /*FB.login(function(response) {// fb login as soon as the ui loads
-            if (response.authResponse) {
-                FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
-                    $rootScope.$apply(function() {
-                       $scope.friends=response.data;
-                    });
-                });
-            } else {
-                //do nothing..
-            }
-        });*/
-      FbService.getFriends(function(resp) {
-          console.log(resp);
-          $scope.friends = resp;
-      });
-        
-      }])
-</script>
-<script>
-    window.fbAsyncInit = function() {
-          FB.init({
-              appId: '488181561252340', // App ID
-              channelUrl: 'https://socialike.herokuapp.com/home.html', // Channel File
-              status: true, // check login status
-              cookie: true, // enable cookies to allow the server to access the session
-              xfbml: false // parse XFBML
+        <!-- All Scripts -->
+        <script src="angular.js"></script>
+        <script src="angular-route.js"></script>
+        <script src="app.js"></script>
 
-          });
-
-          angular.bootstrap(document.body, ['FbTest']);
-        };
-
-        // Load the SDK asynchronously
-        (function (d) {
-            var js, id = 'facebook-jssdk',
-                ref = d.getElementsByTagName('script')[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement('script');
-            js.id = id;
-            js.async = true;
-            js.src = "//connect.facebook.net/en_US/all.js";
-            ref.parentNode.insertBefore(js, ref);
-        }(document));
-  </script>
-</body>
+    </body>
 </html>
