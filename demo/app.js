@@ -5,7 +5,7 @@ angular.module('FbTest', ['ngRoute'])
 
 	$routeProvider
 		.when('/demo/ngdemo1.html', {
-			templateUrl: '/views/home.html',
+			templateUrl: '/demo/views/home.html',
 			controller: 'HomeController',
 			resolve: {
 				al: function() {
@@ -14,7 +14,7 @@ angular.module('FbTest', ['ngRoute'])
 			}
 		})
 		.when('/friends', {
-			templateUrl: '/views/friends.html',
+			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
 
