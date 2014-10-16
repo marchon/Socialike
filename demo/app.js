@@ -12,7 +12,7 @@ angular.module('FbTest', ['ngRoute'])
 
 					 if (response.status === 'connected') {
 
-					    $location.path('/demo/friends');
+					    
 
 					 } else if (response.status === 'not_authorized') {
 
@@ -64,7 +64,7 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 
 			if (response.authResponse) {
-								
+								$location.path('/demo/friends');
         	}
 
 		});
