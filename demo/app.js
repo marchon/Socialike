@@ -45,7 +45,10 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 
 			if (response.authResponse) {
-				$location.path('/demo/friends');
+				$scope.$apply(function() {
+					$location.path('/demo/friends');
+				})
+				
         	}
 
 		});
