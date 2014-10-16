@@ -52,7 +52,8 @@ angular.module('FbTest', ['ngRoute'])
 			if (response.authResponse) {
 				FbService.getFriends(function(resp) {
 					//console.log(resp);
-					$scope.friends = resp;
+					//$scope.friends = resp;
+					$location.path('/demo/friends');
 				});
         	}
 
