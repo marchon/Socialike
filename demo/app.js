@@ -38,7 +38,7 @@ angular.module('FbTest', ['ngRoute'])
 }])
 
 // Controllers
-.controller('HomeController', ['$scope', '$rootScope', 'FbService', '$route', '$routeParams', '$location', $ function($scope, $rootScope, FbService, $route, $routeParams, $location){
+.controller('HomeController', ['$scope', '$rootScope', 'FbService', '$route', '$routeParams', '$location', function($scope, $rootScope, FbService, $route, $routeParams, $location){
 
 	$scope.login = function() {
 
