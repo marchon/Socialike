@@ -7,6 +7,25 @@ angular.module('FbTest', ['ngRoute'])
 		.when('/demo/ngdemo1.html', {
 			templateUrl: '/demo/views/home.html',
 			controller: 'HomeController'
+			resolve: function() {
+				FB.Event.subscribe('auth.login', function (response) {
+
+					 if (response.status === 'connected') {
+
+					    $location.path('/demo/friends');
+
+					 } else if (response.status === 'not_authorized') {
+
+					     
+
+					 } else {
+
+					     
+					 }
+
+
+		      });
+			}
 		})
 		.when('/friends', {
 			templateUrl: '/demo/views/friends.html',
@@ -45,7 +64,7 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 
 			if (response.authResponse) {
-				$location.path('/demo/friends');				
+								
         	}
 
 		});
