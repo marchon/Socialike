@@ -1,37 +1,78 @@
-angular.module('FbTest', [])
+angular.module('FbTest', ['ngRoute'])
 
-	  	.factory('FbService', ['$rootScope', function($rootScope){
+// Config
+/*.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
-			var Facebook = {};
+	$routeProvider
+		.when('/', {
+			templateUrl: 'home.html',
+			controller: 'HomeController',
+		})
+		.when('/friends', {
+			templateUrl: 'friends.html',
+			controller: 'FriendsController'
+		});
 
-			Facebook.getFriends = function(resp) {
-			 
-			  FB.login(function(response) {// fb login as soon as the ui loads
-				if (response.authResponse) {
-					FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
-						$rootScope.$apply(function() {
-						   resp(response.data);
-						});
-					});
-				} else {
-					
-				}
-			  });
+	$locationProvider.html5Mode(true);
+	
+}])*/
 
-			}
-		
-			return Facebook;
+// Service
+.factory('FbService', ['$rootScope', function($rootScope){
 
-		}])
-	  
-		.controller('test', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
+	var Facebook = {};
 
-			FbService.getFriends(function(resp) {
-				console.log(resp);
-				$scope.friends = resp;
+	Facebook.isLogged = false;
+
+	Facebook.getFriends = function(resp) {
+
+		FB.api('/me/friends?fields=name,picture.height(280).width(280)', function(response) {
+			$rootScope.$apply(function() {
+			   resp(response.data);
 			});
+		});
+	}
 
-		}])
+	return Facebook;
+
+}])
+
+// Controllers
+.controller('HomeController', ['$scope', '$rootScope', 'FbService', '$route', '$routeParams', '$location', $ function($scope, $rootScope, FbService, $route, $routeParams, $location){
+
+	$scope.login = function() {
+
+		FB.login(function(response) {
+
+			if (response.authResponse) {
+				$location.path('/friends');
+        	}
+
+		});
+
+	}
+	// $scope.status = function() {
+
+	// 	FB.Event.subscribe('auth.login', function (response) {
+
+ //         if (response.status === 'connected') {
+
+ //            $location.path('/friends');
+
+ //         } //else if (response.status === 'not_authorized') {} else {}
+	// 	});
+	// }
+	
+}])
+
+/*.controller('FriendsController', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
+
+	FbService.getFriends(function(resp) {
+		console.log(resp);
+		$scope.friends = resp;
+	});
+
+}])*/
 
 
 // Facebook SDK Initialization
