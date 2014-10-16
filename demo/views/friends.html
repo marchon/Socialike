@@ -1,1 +1,9 @@
-<h1>Hello Friends</h1>
+<div ng-controller="friendsController">
+    <input type="text" ng-model="svs">
+    <ul>
+        <li ng-repeat=" friend in friends | filter:svs">
+            <img src="{{friend.picture.data.url}}" alt=""> 
+            <span>{{friend.name}}</span>
+        </li>
+    </ul>
+</div>

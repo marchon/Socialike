@@ -6,12 +6,7 @@ angular.module('FbTest', ['ngRoute'])
 	$routeProvider
 		.when('/demo/ngdemo1.html', {
 			templateUrl: '/demo/views/home.html',
-			controller: 'HomeController',
-			resolve: {
-				al: function() {
-					alert('Hoo=Haa');
-				}
-			}
+			controller: 'HomeController'
 		})
 		.when('/friends', {
 			templateUrl: '/demo/views/friends.html',
@@ -50,38 +45,20 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 
 			if (response.authResponse) {
-				FbService.getFriends(function(resp) {
-					//console.log(resp);
-					//$scope.friends = resp;
-					$location.path('/demo/friends');
-				});
+				$location.path('/demo/friends');
         	}
 
 		});
-
-	}
-	// $scope.status = function() {
-
-	// 	FB.Event.subscribe('auth.login', function (response) {
-
- //         if (response.status === 'connected') {
-
- //            $location.path('/friends');
-
- //         } //else if (response.status === 'not_authorized') {} else {}
-	// 	});
-	// }
-	
+	}	
 }])
 
-/*.controller('FriendsController', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
+.controller('FriendsController', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
 
 	FbService.getFriends(function(resp) {
-		console.log(resp);
 		$scope.friends = resp;
 	});
 
-}])*/
+}])
 
 
 // Facebook SDK Initialization
