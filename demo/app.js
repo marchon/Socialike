@@ -6,7 +6,7 @@ angular.module('FbTest', ['ngRoute'])
 	$routeProvider
 		.when('/demo/ngdemo1.html', {
 			templateUrl: '/demo/views/home.html',
-			controller: 'HomeController'
+			controller: 'HomeController',
 			resolve: function() {
 				FB.Event.subscribe('auth.login', function (response) {
 
