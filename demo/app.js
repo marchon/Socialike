@@ -4,7 +4,7 @@ angular.module('FbTest', ['ngRoute'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
-		.when('/', {
+		.when('/demo/ngdemo1.html', {
 			templateUrl: 'home.html',
 			controller: 'HomeController',
 			resolve: {
