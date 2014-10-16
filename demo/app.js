@@ -1,12 +1,17 @@
 angular.module('FbTest', ['ngRoute'])
 
 // Config
-/*.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
 		.when('/', {
 			templateUrl: 'home.html',
 			controller: 'HomeController',
+			resolve: {
+				al: function() {
+					alert('Hoo=Haa');
+				}
+			}
 		})
 		.when('/friends', {
 			templateUrl: 'friends.html',
@@ -15,7 +20,7 @@ angular.module('FbTest', ['ngRoute'])
 
 	$locationProvider.html5Mode(true);
 	
-}])*/
+}])
 
 // Service
 .factory('FbService', ['$rootScope', function($rootScope){
