@@ -66,13 +66,13 @@ angular.module('FbTest', ['ngRoute'])
 	$scope.login = function() {
 
 		FB.login(function(response) {
-
+			$scope.$apply(function() {
 			if (response.authResponse) {
 				//Facebook.isLogged = true;
-				//$location.path('/demo/friends');
-				alert('svs');
+				$location.path('/demo/friends');
+				//alert('svs');
         	}
-        	
+        	});
 
 		});
 	}
