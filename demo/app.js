@@ -6,8 +6,8 @@ angular.module('FbTest', ['ngRoute'])
 	$routeProvider
 		.when('/demo/ngdemo1.html', {
 			templateUrl: '/demo/views/home.html',
-			controller: 'HomeController',
-			resolve: {
+			controller: 'HomeController'
+			/*resolve: {
 				check: function() {
 
 		FB.Event.subscribe('auth.login', function (response) {
@@ -29,7 +29,7 @@ angular.module('FbTest', ['ngRoute'])
       });
 
 	}
-			}
+			}*/
 		})
 		.when('/friends', {
 			templateUrl: '/demo/views/friends.html',
@@ -67,10 +67,10 @@ angular.module('FbTest', ['ngRoute'])
 
 		FB.login(function(response) {
 
-			if (response.authResponse) {
+			//if (response.authResponse) {
 				//Facebook.isLogged = true;
 				$location.path('/demo/friends');
-        	}
+        	//}
 
 		});
 	}
