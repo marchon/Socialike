@@ -31,7 +31,7 @@ angular.module('FbTest', ['ngRoute'])
 	}
 			}*/
 		})
-		.when('/friends', {
+		.when('/demo/friends', {
 			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
