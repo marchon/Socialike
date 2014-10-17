@@ -69,8 +69,9 @@ angular.module('FbTest', ['ngRoute'])
 
 			//if (response.authResponse) {
 				//Facebook.isLogged = true;
-				$location.path('/demo/friends');
+				//$location.path('/demo/friends');
         	//}
+        	alert('svs');
 
 		});
 	}
