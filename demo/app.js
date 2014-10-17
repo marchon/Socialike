@@ -66,7 +66,7 @@ angular.module('FbTest', ['ngRoute'])
 	$scope.login = function() {
 
 		FB.login(function(response) {
-			$scope.$apply(function() {
+			$rootScope.$apply(function() {
 			if (response.authResponse) {
 				//Facebook.isLogged = true;
 				$location.path('/demo/friends');
