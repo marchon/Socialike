@@ -62,10 +62,11 @@ angular.module('FbTest', ['ngRoute'])
 
 .controller('FriendsController', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
 
-	$scope.friendsData = FbService.getFriends(function(resp) {
-		$scope.friends = resp;
-	});
-
+	$scope.friendsData = function() {
+		FbService.getFriends(function(resp) {
+			$scope.friends = resp;
+		});
+	}
 }])
 
 
