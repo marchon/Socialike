@@ -9,7 +9,7 @@ angular.module('FbTest', ['ngRoute'])
 			controller: 'HomeController'
 			
 		})
-		.when('/friends', {
+		.when('/demo/friends', {
 			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
