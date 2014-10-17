@@ -41,6 +41,8 @@ angular.module('FbTest', ['ngRoute'])
 // Controllers
 .controller('HomeController', ['$scope', '$rootScope', 'FbService', '$route', '$routeParams', '$location', function($scope, $rootScope, FbService, $route, $routeParams, $location){
 
+	$scope.isLogged = FbService.isLogged;
+	
 	$scope.login = function() {
 
 		FB.login(function(response) {
@@ -58,11 +60,10 @@ angular.module('FbTest', ['ngRoute'])
 
 .controller('FriendsController', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
 
-	$scope.friendsData = function() {
-		FbService.getFriends(function(resp) {
-			$scope.friends = resp;
-		});
-	}
+	FbService.getFriends(function(resp) {
+		$scope.friends = resp;
+	});
+
 }])
 
 
