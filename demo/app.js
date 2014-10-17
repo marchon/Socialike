@@ -8,7 +8,27 @@ angular.module('FbTest', ['ngRoute'])
 			templateUrl: '/demo/views/home.html',
 			controller: 'HomeController',
 			resolve: {
-				check: HomeController.getStatus()
+				check: function() {
+
+		FB.Event.subscribe('auth.login', function (response) {
+
+			if (response.status === 'connected') {
+
+			   
+
+			} else if (response.status === 'not_authorized') {
+
+			     
+
+			} else {
+
+			     
+			}
+
+
+      });
+
+	}
 			}
 		})
 		.when('/friends', {
