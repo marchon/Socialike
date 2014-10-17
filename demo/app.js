@@ -11,10 +11,7 @@ angular.module('FbTest', ['ngRoute'])
 		})
 		.when('/demo/friends', {
 			templateUrl: '/demo/views/friends.html',
-			controller: 'FriendsController',
-			resolve: {
-				loaded: FriendsController.friendsData
-			}
+			controller: 'FriendsController'
 		});
 
 	$locationProvider.html5Mode(true);
@@ -49,9 +46,8 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 			$rootScope.$apply(function() {
 			if (response.authResponse) {
-				//Facebook.isLogged = true;
+				Facebook.isLogged = true;
 				$location.path('/demo/friends');
-				//alert('svs');
         	}
         	});
 
