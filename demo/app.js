@@ -9,7 +9,7 @@ angular.module('FbTest', ['ngRoute'])
 			controller: 'HomeController'
 			
 		})
-		.when('/demo/friends', {
+		.when('/friends', {
 			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
@@ -49,7 +49,7 @@ angular.module('FbTest', ['ngRoute'])
 			$rootScope.$apply(function() {
 			if (response.authResponse) {
 				FbService.isLogged = true;
-				$location.path('/demo/friends');
+				$location.path('/friends');
         	}
         	});
 
