@@ -6,10 +6,7 @@ angular.module('FbTest', ['ngRoute'])
 	$routeProvider
 		.when('/demo/ngdemo1.html', {
 			templateUrl: '/demo/views/home.html',
-			controller: 'HomeController',
-			resolve: {
-				check: HomeController.getStatus
-			}
+			controller: 'HomeController'
 		})
 		.when('/friends', {
 			templateUrl: '/demo/views/friends.html',
