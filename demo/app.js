@@ -4,12 +4,12 @@ angular.module('FbTest', ['ngRoute'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
-		.when('/', {
+		.when('/demo/', {
 			templateUrl: '/demo/views/home.html',
 			controller: 'HomeController'
 			
 		})
-		.when('/friends', {
+		.when('/demo/friends', {
 			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
