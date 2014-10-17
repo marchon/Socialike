@@ -4,7 +4,7 @@ angular.module('FbTest', ['ngRoute'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
-		.when('/demo/ngdemo1.html', {
+		.when('/demo', {
 			templateUrl: '/demo/views/home.html',
 			controller: 'HomeController'
 			
@@ -42,7 +42,7 @@ angular.module('FbTest', ['ngRoute'])
 .controller('HomeController', ['$scope', '$rootScope', 'FbService', '$route', '$routeParams', '$location', function($scope, $rootScope, FbService, $route, $routeParams, $location){
 
 	$scope.isLogged = FbService.isLogged;
-	
+
 	$scope.login = function() {
 
 		FB.login(function(response) {
