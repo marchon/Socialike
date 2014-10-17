@@ -49,7 +49,7 @@ angular.module('FbTest', ['ngRoute'])
 			$rootScope.$apply(function() {
 			if (response.authResponse) {
 				FbService.isLogged = true;
-				$location.path('/friends');
+				$location.path('/demo/friends');
         	}
         	});
 
