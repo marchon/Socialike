@@ -7,33 +7,14 @@ angular.module('FbTest', ['ngRoute'])
 		.when('/demo/ngdemo1.html', {
 			templateUrl: '/demo/views/home.html',
 			controller: 'HomeController'
-			/*resolve: {
-				check: function() {
-
-		FB.Event.subscribe('auth.login', function (response) {
-
-			if (response.status === 'connected') {
-
-			   
-
-			} else if (response.status === 'not_authorized') {
-
-			     
-
-			} else {
-
-			     
-			}
-
-
-      });
-
-	}
-			}*/
+			
 		})
 		.when('/demo/friends', {
 			templateUrl: '/demo/views/friends.html',
-			controller: 'FriendsController'
+			controller: 'FriendsController',
+			resolve: {
+				loaded: FriendsController.friendsData
+			}
 		});
 
 	$locationProvider.html5Mode(true);
@@ -77,33 +58,11 @@ angular.module('FbTest', ['ngRoute'])
 		});
 	}
 
-	$scope.getStatus = function() {
-
-		FB.Event.subscribe('auth.login', function (response) {
-
-			if (response.status === 'connected') {
-
-			   
-
-			} else if (response.status === 'not_authorized') {
-
-			     
-
-			} else {
-
-			     
-			}
-
-
-      });
-
-	};
-
 }])
 
 .controller('FriendsController', ['$scope', '$rootScope', 'FbService', function($scope, $rootScope, FbService){
 
-	FbService.getFriends(function(resp) {
+	$scope.friendsData = FbService.getFriends(function(resp) {
 		$scope.friends = resp;
 	});
 
