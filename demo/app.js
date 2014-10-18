@@ -48,13 +48,29 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 			$rootScope.$apply(function() {
 			if (response.authResponse) {
-				FbService.isLogged = true;
 				$location.path('/demo/friends');
         	}
         	});
 
 		});
 	}
+
+    FB.getLoginStatus(function (response) {
+
+        if (response.status === 'connected') {
+
+            console.log('connected');
+
+        } else if (response.status === 'not_authorized') {
+
+            console.log('not authorized');
+
+        } else {
+
+            console.log('Kaun hai be!!');
+
+        }
+    });
 
 }])
 
