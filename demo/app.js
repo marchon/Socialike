@@ -59,7 +59,7 @@ angular.module('FbTest', ['ngRoute'])
 // Controllers
 .controller('HomeController', ['$scope', '$rootScope', 'FbService', '$route', '$routeParams', '$location', function($scope, $rootScope, FbService, $route, $routeParams, $location){
 
-	$scope.isLogged = FbService.isLogged;
+	$scope.isLogged = FbService.isLogged();
     console.log(isLogged);
 	$scope.login = function() {
 
