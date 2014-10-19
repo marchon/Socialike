@@ -21,26 +21,27 @@ angular.module('FbTest', ['ngRoute'])
 // Service
 .factory('FbService', ['$rootScope', function($rootScope){
 
-    FB.getLoginStatus(function (response) {
+    var Facebook = {};
 
-        if (response.status === 'connected') {
+	Facebook.isLogged = function() {
 
-            console.log('connected');
+        FB.getLoginStatus(function (response) {
 
-        } else if (response.status === 'not_authorized') {
+            if (response.status === 'connected') {
 
-            console.log('not authorized');
+                return true;
 
-        } else {
+            } else if (response.status === 'not_authorized') {
 
-            console.log('Kaun hai be!!');
+                return false;
 
-        }
-    });
+            } else {
 
-	var Facebook = {};
+                return false;
 
-	Facebook.isLogged = false;
+            }
+        });
+    }
 
 	Facebook.getFriends = function(resp) {
 
@@ -64,9 +65,9 @@ angular.module('FbTest', ['ngRoute'])
 
 		FB.login(function(response) {
 			$rootScope.$apply(function() {
-			if (response.authResponse) {
-				$location.path('/friends');
-        	}
+    			if (response.authResponse && FbService.isLogged) {
+    				$location.path('/friends');
+            	}
         	});
 
 		});
