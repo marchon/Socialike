@@ -14,7 +14,7 @@ angular.module('FbTest', ['ngRoute'])
 			controller: 'FriendsController'
 		});
 
-	//$locationProvider.html5Mode(true);
+	$locationProvider.html5Mode(true);
 	
 }])
 
@@ -48,7 +48,7 @@ angular.module('FbTest', ['ngRoute'])
 		FB.login(function(response) {
 			$rootScope.$apply(function() {
 			if (response.authResponse) {
-				$location.path('/demo/friends');
+				$location.path('/friends');
         	}
         	});
 
