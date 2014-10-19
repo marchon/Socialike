@@ -9,7 +9,7 @@ angular.module('FbTest', ['ngRoute'])
 			controller: 'HomeController'
 			
 		})
-		.when('/demo/friends', {
+		.when('/friends', {
 			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
@@ -20,6 +20,23 @@ angular.module('FbTest', ['ngRoute'])
 
 // Service
 .factory('FbService', ['$rootScope', function($rootScope){
+
+    FB.getLoginStatus(function (response) {
+
+        if (response.status === 'connected') {
+
+            console.log('connected');
+
+        } else if (response.status === 'not_authorized') {
+
+            console.log('not authorized');
+
+        } else {
+
+            console.log('Kaun hai be!!');
+
+        }
+    });
 
 	var Facebook = {};
 
@@ -55,22 +72,7 @@ angular.module('FbTest', ['ngRoute'])
 		});
 	}
 
-    FB.getLoginStatus(function (response) {
-
-        if (response.status === 'connected') {
-
-            console.log('connected');
-
-        } else if (response.status === 'not_authorized') {
-
-            console.log('not authorized');
-
-        } else {
-
-            console.log('Kaun hai be!!');
-
-        }
-    });
+    
 
 }])
 
