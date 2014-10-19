@@ -5,12 +5,12 @@ angular.module('FbTest', ['ngRoute'])
 
 	$routeProvider
 		.when('/demo', {
-			templateUrl: 'views/home.html',
+			templateUrl: '/views/home.html',
 			controller: 'HomeController'
 			
 		})
 		.when('/demo/friends', {
-			templateUrl: 'views/friends.html',
+			templateUrl: '/views/friends.html',
 			controller: 'FriendsController'
 		});
 
