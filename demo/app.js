@@ -9,12 +9,12 @@ angular.module('FbTest', ['ngRoute'])
 			controller: 'HomeController'
 			
 		})
-		.when('/friends', {
+		.when('/demo/friends', {
 			templateUrl: '/demo/views/friends.html',
 			controller: 'FriendsController'
 		});
 
-	$locationProvider.html5Mode(true);
+	//$locationProvider.html5Mode(true);
 	
 }])
 
