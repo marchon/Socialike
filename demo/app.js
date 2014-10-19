@@ -14,7 +14,7 @@ angular.module('FbTest', ['ngRoute'])
 			controller: 'FriendsController'
 		});
 
-	//$locationProvider.html5Mode(true);
+	$locationProvider.html5Mode(true);
 	
 }])
 
